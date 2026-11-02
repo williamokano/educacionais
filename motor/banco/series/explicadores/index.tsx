@@ -8,13 +8,16 @@ import { eletricista } from "./eletricista";
 import { inversor } from "./inversor";
 import { solar } from "./solar";
 import { pista } from "./pista";
+import { abrigo } from "./abrigo";
+import { CARTOES_BUNKER } from "./cartoes-bunker";
+import { MORADORES } from "./moradores";
 import { CARTOES_FREIO } from "./cartoes-freio";
 import { CARTOES_AR } from "./cartoes";
 import { ciclo } from "./ciclo";
 import { salaBalde } from "./sala";
 import { zeca } from "./zeca";
 
-// Pacote da série dos explicadores 3D (sala do balde, casa em corte, bancada, banho, solar, inversor e pista) + Zeca Parafuso.
+// Pacote da série dos explicadores 3D (sala do balde, casa em corte, bancada, banho, solar, inversor, pista e abrigo) + Zeca Parafuso.
 // Roteiros: episodios/<nome>/roteiro.json (slug "demo-3d", registrado em motor/banco/index.ts).
 
 const usePop = () => {
@@ -55,8 +58,8 @@ const Medida: React.FC<ElementoProps> = ({ d }) => {
 export const explicadores: Pacote = {
   nome: "Explicadores 3D",
   personagens: {},
-  personagens3d: { zeca, eletricista },
-  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista },
-  cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO },
+  personagens3d: { zeca, eletricista, ...MORADORES },
+  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo },
+  cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER },
   qualidade3d: "suave",
 };

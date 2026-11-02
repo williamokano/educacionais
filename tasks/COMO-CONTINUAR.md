@@ -20,15 +20,24 @@ morava no repositório do plugin, na branch `feat/motor-3d`).
   6. `abs`: "Por que o carro não para?" (freio de tambor, disco e ABS; `"episodio": 7`), cenário `pista`, cartões
      `fita` (rebobinar), `termometro`, `roda` e `chamada` (curta, comente, compartilhe e siga). 1:26, −14,1 LUFS.
      ESC, EBD, AEB e controle de tração ficaram de fora (pesquisa em `tasks/roteiro-abs.md`, "Fora do vídeo").
+  7. `bunker`: "Como montar um bunker, peça por peça" (`"episodio": 8`), cenário `abrigo`, cartões `peso`, `forcas`, `gas`, `cal`
+     e `perguntaFinal`. Texto aprovado em `tasks/roteiro-bunker.md` (31 batidas; gerador numa sala fechada (cano de escape, isolamento, detector)
+     que fica até o fim, apagado, como emergência; painel solar (2 painéis, face para a câmera); à noite a bateria cheia mantém a luz; sala extra de água e comida; sem a água; fecha com "preparado pro seu apocalipse nuclear?" e "siga pra saber como as coisas funcionam").
+     **Status: PUBLICANDO (03/11/2026).** Vídeo final aprovado pela pessoa: voz, som, mix e master prontos (1:59, −14,12 LUFS,
+     −2,37 dBTP, `motor/out/final-bunker.mp4`). A pessoa publica na sequência; **faltam** capa, textos de publicação, hashtags
+     (sugestão `#bunker #sobrevivencia` + as fixas) e a pasta `07-bunker/` no NAS. Gerador:
+     `python3 tasks/geradores/bunker.py episodios/bunker/roteiro.json`. Fecho com risada (`[laughs]` no `eleven_v4`) e 27,5 efeitos/min (aprovados).
 - **Gerador do roteiro.json:** `tasks/geradores/<tema>.py` lê a tabela do `.md` (as falas sempre iguais) e monta as
   cenas, os efeitos (`SFX`) e as ambiências por batida. Uso (da raiz do repositório):
   `python3 tasks/geradores/abs.py episodios/abs/roteiro.json`.
 - **Pacote da série:** `motor/banco/series/explicadores/` (slug `demo-3d`, registrado em `motor/banco/index.ts`):
   - `sala.tsx` (sala do balde e peças reaproveitadas: ventilador, árvore), `ciclo.tsx` (casa em corte; campo `etapa` 0–10
     monta o aparelho; `sentido: -1` inverte o ciclo), `bancada.tsx` (analogias e o inversor), `banho.tsx`, `solar.tsx`,
-    `inversor.tsx`, `pista.tsx` (pista molhada, carro com corte da roda, pedal suspenso, Zeca ao volante, etiquetas 3D).
+    `inversor.tsx`, `pista.tsx` (pista molhada, carro com corte da roda, pedal suspenso, Zeca ao volante, etiquetas 3D),
+    `abrigo.tsx` (quintal e terreno em corte; buraco, caixa de concreto, abóbada, canos, torre de cal, gerador, painel; os
+    personagens são desenhados pelo próprio cenário, campo `gente`; `moradores.ts` tem a vizinha, o menino e a vovó).
     A lista de campos de cada cenário está no comentário do topo do arquivo.
-  - `cartoes.tsx` e `cartoes-freio.tsx`: gráficos, onda, ponte H, circuito, termômetro, barra roda × carro, chamadas finais.
+  - `cartoes.tsx`, `cartoes-freio.tsx` e `cartoes-bunker.tsx`: gráficos, onda, ponte H, circuito, termômetro, barra roda × carro, chamadas finais.
     `index.tsx` registra tudo e define `rotulo` e `medida`.
   - A pessoa é o personagem `zeca` (id só no código; o nome nunca aparece no vídeo); `eletricista` no episódio 4.
 - **Publicação:** hashtags aprovadas em 30/10/2026 (as três últimas fixas: `#comofunciona #fisica #ciencia`; as duas

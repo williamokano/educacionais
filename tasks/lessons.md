@@ -67,7 +67,11 @@
   views. A pessoa pediu ganchos virais e linguagem do brasileiro médio, e aprovou as versões 4 (3, 4 e 5).
 - **Regra:** os 2 primeiros segundos são um gancho de impacto com risco ou contradição ("acabou a luz na hora do
   jogo", "a casa solar no escuro em pleno sol", "um quarto da conta desce pelo ralo"), de preferência um laço aberto
-  respondido no meio. Uma vitória até ~30–45 s. Alvo de 60–90 s.
+  respondido no meio. Uma vitória até ~30–45 s. Alvo de 60–90 s **quando o tema cabe**.
+- **Correção (03/11/2026, bunker):** 60–90 s é um alvo de prender atenção, **não o limite**. O limite da série é
+  **3 min, alvo 2:40** (a voz pode alongar, 3:00 é teto duro). Eu dimensionei o bunker em 3 episódios de ~1 min
+  tratando 60–90 s como teto. Regra: dimensione pelo conteúdo dentro de 2:40; só divida em mais episódios se não couber
+  nisso. Referência: ep. 3 = 2:03, ep. 4 = 1:39, ep. 6 = 1:26, cerca de 17 batidas por minuto.
 - **Regra:** fala com palavras do dia a dia (voltagem, balde de eletricidade, peça de um sentido só, pisca-pisca,
   poste); o nome técnico só no rótulo da tela. Mostre o princípio com algo físico antes da peça (trocar os fios com a
   mão antes das quatro chaves).
@@ -86,3 +90,28 @@
   em 3D cada peça** no momento em que a fala a cita. Mostrar a ação (o pé pisando) antes do efeito (o óleo, a sapata).
 - **Regra:** abrir sempre em movimento (carros andando) e só então o problema acontecer; conferir o sentido das
   animações (pedal pisando = vai para a frente). Não inventar cena fora do pedido (o caminhão).
+
+## Rótulos 3D: nunca cortar texto longo (03/11/2026, episódio 8)
+
+- **O que aconteceu:** o rótulo "GERADOR = EMERGÊNCIA" saiu cortado nos dois lados ("RADOR = EMERGÊNC"): a etiqueta é
+  um canvas de largura fixa (640 px) e o texto de 20 letras não cabia. Passou na folha pequena; a pessoa achou no vídeo.
+- **Regra:** etiqueta/rótulo 3D tem que medir o texto e encolher a letra para caber (`measureText`), nunca largura fixa.
+  Rótulo curto (1 a 2 palavras) é melhor que frase: "EMERGÊNCIA" ao lado do gerador diz o mesmo.
+- **Regra:** na revisão, tire um quadro em tamanho real de cada batida com rótulo longo (≥ 12 letras) e leia o texto
+  inteiro, como já valia para os cartões de painel.
+
+## Método do roteiro não vai para a fala (03/11/2026, episódio 8)
+
+- **O que aconteceu:** o fecho do bunker dizia "cada peça nasceu de um defeito" e "o bunker perfeito não existe: toda peça
+  troca um defeito por outro". Isso é a técnica de montar a corrente (e o meu jeito de explicar o formato), não conteúdo
+  para o espectador. A pessoa também achou "perfeito" prepotente.
+- **Regra:** a narração fala do assunto, nunca do método (corrente, "mas", defeito/solução, "nenhuma peça é perfeita").
+  Fecho de episódio: o que o espectador ganhou ("um bunker básico, já utilizável") e o gancho. Evite "perfeito", "ideal",
+  "definitivo": diga "básico", "utilizável".
+
+## O vídeo ensina a construir, não a operar (03/11/2026, episódio 8)
+
+- **O que aconteceu:** no bunker eu pus cenas de uso (à noite só a bateria, "gaste pouco", "ligue o gerador se acabar",
+  depois como filtrar e ferver água). O pedido era montar o bunker, peça por peça; como operar fica em aberto.
+- **Regra:** em episódio de construção, cada batida é uma peça que se instala ou um problema da peça. Operação, rotina e
+  racionamento ficam de fora; deixar o assunto em aberto é aceito.

@@ -1,0 +1,3167 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 8,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Esse abrigo *vai desabar* [leve] com você dentro.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "abrigo",
+    "furo": 1,
+    "desaba": {
+     "de": 0,
+     "para": 0.8,
+     "ini": 0.1,
+     "fim": 1
+    },
+    "umido": 1,
+    "chuva": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       1.0,
+       2.4,
+       14
+      ],
+      "alvo": [
+       -0.3,
+       -1.2,
+       -1
+      ],
+      "fov": 56
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": -4.0,
+      "z": -1.6,
+      "acao": "tremendo",
+      "exp": "medo"
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "POR QUÊ?",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 64
+     }
+    ],
+    "sfx": [
+     {
+      "som": "trovao",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Volta comigo [leve] e monte *um bunker* [leve] do jeito mais simples.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "abrigo",
+    "reverso": true,
+    "furo": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.35,
+     "fim": 1
+    },
+    "desaba": {
+     "de": 0.8,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "umido": {
+     "de": 1,
+     "para": 0.2
+    },
+    "chuva": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.0,
+       2.4,
+       14
+      ],
+      "alvo": [
+       -0.3,
+       -1.2,
+       -1
+      ],
+      "fov": 56
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": 0,
+       "para": -3.9,
+       "ini": 0,
+       "fim": 0.55
+      },
+      "y": {
+       "de": -4.0,
+       "para": 0,
+       "ini": 0,
+       "fim": 0.55
+      },
+      "z": -1.2,
+      "acao": "em-pe",
+      "exp": "surpreso"
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "fita",
+      "trecho": 0,
+      "dur": 2.4,
+      "texto": "REBOBINANDO"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh_reverso",
+      "trecho": 0,
+      "volume": 0.7
+     },
+     {
+      "som": "estatica",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cave um *buraco* no quintal [leve] e entre. [leve] [excited] Pronto: um *abrigo*!",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "abrigo",
+    "furo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.08,
+     "fim": 0.7
+    },
+    "umido": 0.2,
+    "pa": true,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.4,
+       1.4,
+       9.5
+      ],
+      "alvo": [
+       -2.4,
+       -1.4,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": -3.7,
+       "para": -0.2,
+       "ini": 0.72,
+       "fim": 0.92
+      },
+      "y": {
+       "de": 0,
+       "para": -4.0,
+       "ini": 0.72,
+       "fim": 0.92
+      },
+      "z": -0.8,
+      "acao": [
+       [
+        0.7,
+        "mexendo",
+        "concentrado"
+       ],
+       [
+        1.0,
+        "comemorando",
+        "sorriso"
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ABRIGO ✓",
+      "trecho": 2,
+      "y": 40,
+      "tamanho": 64
+     }
+    ],
+    "sfx": [
+     {
+      "som": "arrastar",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas *chove*. [leve] A água enche o buraco [leve] e a parede _desaba_.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "abrigo",
+    "furo": 1,
+    "chuva": 1,
+    "umido": {
+     "de": 0,
+     "para": 1
+    },
+    "agua": {
+     "de": 0,
+     "para": 2.0,
+     "ini": 0.05,
+     "fim": 0.95
+    },
+    "desaba": {
+     "de": 0,
+     "para": 0.85,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": {
+       "de": -4.0,
+       "para": -0.3,
+       "ini": 0.35,
+       "fim": 1
+      },
+      "z": -1.6,
+      "acao": [
+       [
+        0.35,
+        "tremendo",
+        "medo"
+       ],
+       [
+        1.0,
+        "mexendo",
+        "medo"
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.2
+    },
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.6
+     },
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *segure a parede*: [leve] uma caixa de *concreto* com *ferro* dentro, [leve] e uma *saída*.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "furo": 1,
+    "umido": 0.2,
+    "ferro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.45
+    },
+    "concreto": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.85
+    },
+    "raioX": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.78,
+     "fim": 0.9
+    },
+    "saida": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.8,
+     "fim": 1
+    },
+    "etiq": [
+     "ferro@0.3",
+     "concreto@0.55",
+     "saida@0.88"
+    ],
+    "etiqL": 3.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -4.0,
+      "y": 0,
+      "z": -0.6,
+      "rot": 0.4,
+      "acao": "apontando",
+      "exp": "eureka"
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas se a água do chão *subir*, [leve] a caixa vazia _flutua_, [leve] como um barco.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "umido": 1,
+    "chuva": 0.8,
+    "lencol": {
+     "de": -4.6,
+     "para": -1.7,
+     "ini": 0.1,
+     "fim": 0.75
+    },
+    "sobe": {
+     "de": 0,
+     "para": 0.9,
+     "ini": 0.45,
+     "fim": 0.95
+    },
+    "balanca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.7
+    },
+    "setas": "agua",
+    "setasDe": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       0.6,
+       15
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       0.6,
+       15
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": {
+       "de": -3.75,
+       "para": -2.85,
+       "ini": 0.45,
+       "fim": 0.95
+      },
+      "z": -0.8,
+      "acao": "tremendo",
+      "exp": "medo"
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.16
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "A ÁGUA EMPURRA PRA CIMA",
+      "trecho": 2,
+      "y": 40,
+      "tamanho": 52
+     }
+    ],
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "rangido",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então faça uma *laje grossa* no fundo, [leve] bem *pesada*.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "umido": 1,
+    "chuva": 0.6,
+    "lencol": -1.7,
+    "sobe": {
+     "de": 0.9,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.8
+    },
+    "etiq": [
+     "laje@0.5"
+    ],
+    "etiqL": 3.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": {
+       "de": -2.85,
+       "para": -3.75,
+       "ini": 0.3,
+       "fim": 0.8
+      },
+      "z": -0.8,
+      "acao": [
+       [
+        0.5,
+        "tremendo",
+        "medo"
+       ],
+       [
+        1.0,
+        "em-pe",
+        "eureka"
+       ]
+      ]
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Agora *cubra de terra*: [leve] o peso ajuda a segurar a caixa, [leve] e ninguém acha o seu bunker.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "umido": {
+     "de": 1,
+     "para": 0.3
+    },
+    "lencol": -1.7,
+    "terra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.8
+    },
+    "escavadeira": true,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.2,
+       1.4,
+       17
+      ],
+      "alvo": [
+       -3.2,
+       -0.9,
+       -1
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -3.2,
+       1.4,
+       17
+      ],
+      "alvo": [
+       -3.2,
+       -0.9,
+       -1
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -5.9,
+      "y": 0,
+      "z": 0.5,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "motor",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas um metro de terra pesa *uma tonelada e meia* [leve] em _cada quadrado_ do teto.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 0,
+    "grossa": 0,
+    "coluna": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "setas": "peso",
+    "etiq": [
+     "umMetro@0.5"
+    ],
+    "etiqL": 3.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": "em-pe",
+      "exp": "preocupado"
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "peso",
+      "trecho": 1,
+      "x": 210,
+      "y": 20
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O teto reto *entorta* [leve] e _racha_. [leve] Concreto aguenta ser *apertado*, [leve] mas não *esticado*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 0,
+    "grossa": 0,
+    "verga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.15,
+     "fim": 0.6
+    },
+    "racha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.85
+    },
+    "setas": "tracao",
+    "setasDe": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.5,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": "em-pe",
+      "exp": "medo"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "forcas",
+      "trecho": 2,
+      "modo": "par",
+      "troca": 1.8,
+      "x": 200,
+      "y": 30
+     }
+    ],
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.8
+     },
+     {
+      "som": "chocalho",
+      "trecho": 1,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Troque por uma *abóbada*: [leve] na curva o peso *escorre* [leve] pelas paredes, [leve] e o concreto só é *apertado*.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.9
+    },
+    "grossa": 0,
+    "setas": "curva",
+    "setasDe": 0.55,
+    "etiq": [
+     "abobada@0.45"
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.4,
+       18
+      ],
+      "alvo": [
+       0,
+       -1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": [
+       [
+        0.5,
+        "em-pe",
+        "preocupado"
+       ],
+       [
+        1.0,
+        "em-pe",
+        "eureka"
+       ]
+      ]
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "SÓ APERTA",
+      "trecho": 3,
+      "y": 40,
+      "tamanho": 64
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A abóbada *segura*. [leve] Mas ela *empurra as paredes* pros lados, [leve] então elas são *grossas* [leve] e ficam enterradas.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.9
+    },
+    "setas": "empuxo",
+    "setasDe": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.7,
+       11.5
+      ],
+      "alvo": [
+       0,
+       -2.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.7,
+       11.5
+      ],
+      "alvo": [
+       0,
+       -2.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": "em-pe",
+      "exp": "alivio"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PAREDE GROSSA E ENTERRADA",
+      "trecho": 3,
+      "y": 40,
+      "tamanho": 44
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Feche a tampa. [leve] Agora o problema é _o ar_.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "escuro": {
+     "de": 0,
+     "para": 0.75,
+     "ini": 0.5,
+     "fim": 1
+    },
+    "ar": true,
+    "co2": 0.1,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -2.7,
+       8.6
+      ],
+      "alvo": [
+       0,
+       -2.7,
+       -1.5
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": "em-pe",
+      "exp": "tenso"
+     }
+    ],
+    "ambiencia": {
+     "som": "drone",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "?",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 140
+     }
+    ],
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 0,
+      "volume": 0.6
+     },
+     {
+      "som": "coracao",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Você solta *quase um quilo* de gás carbônico por dia. [leve] Em quatro, num quarto pequeno, [leve] _em meio dia_ o ar fica perigoso.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "ar": true,
+    "co2": {
+     "de": 0.05,
+     "para": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -2.7,
+       8.6
+      ],
+      "alvo": [
+       0,
+       -2.7,
+       -1.5
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -2.7,
+       8.6
+      ],
+      "alvo": [
+       0,
+       -2.7,
+       -1.5
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "gas",
+      "trecho": 1,
+      "de": 0.05,
+      "para": 1,
+      "dur": 6,
+      "x": 230,
+      "y": 20
+     }
+    ],
+    "sfx": [
+     {
+      "som": "respiracao",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então abra *dois canos*: [leve] um *baixo*, que deixa o ar entrar, [leve] e um *alto*, que deixa sair o ar quente.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "ar": true,
+    "co2": 0.5,
+    "etiq": [
+     "canoBaixo@0.45",
+     "canoAlto@0.75"
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o ar só anda [leve] se tiver *diferença de calor*. [leve] Debaixo da terra, ele _fica parado_.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 0,
+    "vent": 0,
+    "vela": true,
+    "ar": true,
+    "co2": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 1,
+      "de": 0.5,
+      "para": 0.5,
+      "dur": 1,
+      "texto": "FORA",
+      "x": 60,
+      "y": 60
+     },
+     {
+      "tipo": "termometro",
+      "trecho": 1,
+      "de": 0.5,
+      "para": 0.5,
+      "dur": 1,
+      "texto": "DENTRO",
+      "x": 330,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "tique",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ponha um *ventilador* [leve] no cano, [leve] e o ar *anda*.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "ar": true,
+    "co2": {
+     "de": 0.9,
+     "para": 0.2
+    },
+    "etiq": [
+     "ventilador@0.35"
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "sorriso"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "sorriso"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "sorriso"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "sorriso"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "gas",
+      "trecho": 0,
+      "de": 0.9,
+      "para": 0.25,
+      "dur": 4,
+      "x": 230,
+      "y": 20
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.6
+     },
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e se você tiver que *fechar os canos*? [leve] O gás _volta a encher_.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "vent": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "fechados": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "ar": true,
+    "co2": {
+     "de": 0.2,
+     "para": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "tenso"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "tenso"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "tenso"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "tenso"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "gas",
+      "trecho": 1,
+      "de": 0.2,
+      "para": 0.9,
+      "dur": 3,
+      "x": 230,
+      "y": 20
+     }
+    ],
+    "sfx": [
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha uma *torre de cal*: [leve] o ar passa dentro dela [leve] e a cal *prende* o gás carbônico.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 0,
+    "vent": 0,
+    "fechados": 1,
+    "torre": true,
+    "cal": {
+     "de": 0,
+     "para": 0.35,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "fluxoTorre": 1,
+    "ar": true,
+    "co2": {
+     "de": 0.9,
+     "para": 0.15
+    },
+    "etiq": [
+     "torre@0.4"
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "neutro"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "gas",
+      "trecho": 1,
+      "de": 0.9,
+      "para": 0.2,
+      "dur": 5,
+      "x": 230,
+      "y": 20
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a torre *enche*. [leve] Quatro pessoas gastam [leve] *uns cinquenta quilos* de cal [leve] por semana.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 0,
+    "vent": 0,
+    "fechados": 1,
+    "torre": true,
+    "cal": {
+     "de": 0.35,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.9
+    },
+    "fluxoTorre": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.7,
+     "fim": 0.95
+    },
+    "ar": true,
+    "co2": {
+     "de": 0.15,
+     "para": 0.6
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "cansado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "cal",
+      "trecho": 2,
+      "dur": 2.4,
+      "x": 180,
+      "y": 20
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto_seco",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E o ventilador pede *luz*. [leve] Ligue um *gerador a gasolina*.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 1,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "fechados": 0,
+    "torre": true,
+    "cal": 1,
+    "gerador": "dentro",
+    "gerLigado": true,
+    "fumaca": 0.3,
+    "etiq": [
+     "gerador@0.4"
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       -1.6,
+       15.2
+      ],
+      "alvo": [
+       0,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.4,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.6
+     },
+     {
+      "som": "motor",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Mas ele solta *monóxido de carbono*: [leve] um gás _sem cheiro_ [leve] que a torre _não segura_.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 1,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "torre": true,
+    "cal": 0.3,
+    "fluxoTorre": 1,
+    "gerador": "dentro",
+    "gerLigado": true,
+    "fumaca": 0.5,
+    "monoxido": 1,
+    "ar": true,
+    "co2": 0.2,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       2.0,
+       10.5
+      ],
+      "alvo": [
+       0,
+       -3.3,
+       -1.2
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       0,
+       2.0,
+       10.5
+      ],
+      "alvo": [
+       0,
+       -3.3,
+       -1.2
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.15,
+      "y": -3.75,
+      "z": -0.5,
+      "deita": 1
+     },
+     {
+      "id": "vizinha",
+      "x": 1.7,
+      "y": -3.75,
+      "z": -0.5,
+      "deita": 1
+     },
+     {
+      "id": "vovo",
+      "x": -0.2,
+      "y": -3.75,
+      "z": -1.3,
+      "deita": 1
+     },
+     {
+      "id": "menino",
+      "x": 0.45,
+      "y": -3.75,
+      "z": -1.3,
+      "deita": -1
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "MONÓXIDO DE CARBONO",
+      "trecho": 0,
+      "y": 0,
+      "tamanho": 60
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "NÃO SAI NA TORRE",
+      "trecho": 2,
+      "y": 110,
+      "tamanho": 48
+     }
+    ],
+    "sfx": [
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "respiracao",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha o gerador *em outra sala*, [leve] fechada, [leve] com o escapamento num *cano* que sai bem *longe*.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.9,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerLigado": true,
+    "escape": true,
+    "detector": true,
+    "monoxido": 0.9,
+    "regua": true,
+    "fio": true,
+    "torre": true,
+    "cal": 1,
+    "fluxoTorre": 0,
+    "etiq": [
+     "salaGer@0.1-0.5",
+     "canoEsc@0.4-0.8",
+     "seis@0.7"
+    ],
+    "etiqL": 2.6,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.4,
+       -1.0,
+       11.5
+      ],
+      "alvo": [
+       -3.4,
+       -2.2,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -1.1,
+       0.6,
+       16.5
+      ],
+      "alvo": [
+       -1.1,
+       -1.4,
+       -1
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -2.6,
+      "y": 0,
+      "z": 0.2,
+      "rot": -0.5,
+      "acao": "apontando",
+      "exp": "eureka"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o gerador faz *barulho*, [leve] e o barulho _entrega_ o seu bunker.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.9,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerLigado": true,
+    "escape": true,
+    "detector": true,
+    "monoxido": 0.5,
+    "ruido": 1,
+    "vizinhos": true,
+    "torre": true,
+    "cal": 1,
+    "fluxoTorre": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.4,
+       0.6,
+       17
+      ],
+      "alvo": [
+       -3.4,
+       -1.6,
+       -1
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       -3.4,
+       0.6,
+       17
+      ],
+      "alvo": [
+       -3.4,
+       -1.6,
+       -1
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [],
+    "sfx": [
+     {
+      "som": "motor",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "latido",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Forre a sala com *isolamento*: [leve] o barulho *some*. [leve] [curious] Mas a gasolina _acaba_.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.9,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerLigado": true,
+    "escape": true,
+    "detector": true,
+    "monoxido": 0.5,
+    "isola": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.55
+    },
+    "ruido": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 0.75
+    },
+    "tanque": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.55,
+     "fim": 0.95
+    },
+    "torre": true,
+    "cal": 1,
+    "fluxoTorre": 0,
+    "etiq": [
+     "isolamento@0.15"
+    ],
+    "etiqL": 2.4,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.4,
+       -0.6,
+       10
+      ],
+      "alvo": [
+       -3.4,
+       -2.5,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -3.4,
+       -0.6,
+       10
+      ],
+      "alvo": [
+       -3.4,
+       -2.5,
+       0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então use *painel solar* [leve] no dia a dia, [leve] e deixe o gerador *de emergência*.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerCinza": 1,
+    "tanque": 0.6,
+    "escape": true,
+    "detector": true,
+    "isola": 1,
+    "painel": true,
+    "sol": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "fio": true,
+    "torre": true,
+    "cal": 1,
+    "fluxoTorre": 0,
+    "etiq": [
+     "painel@0.04-0.55",
+     "gerEmerg@0.6"
+    ],
+    "etiqL": 2.8,
+    "camera": {
+     "de": {
+      "pos": [
+       5.6,
+       1.0,
+       12.2
+      ],
+      "alvo": [
+       5.6,
+       0.6,
+       -1
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -3.4,
+       -0.5,
+       12
+      ],
+      "alvo": [
+       -3.4,
+       -2.2,
+       -1
+      ],
+      "fov": 52
+     }
+    },
+    "rota": [
+     {
+      "p": 0,
+      "pos": [
+       5.6,
+       1.0,
+       12.2
+      ],
+      "alvo": [
+       5.6,
+       0.6,
+       -1
+      ],
+      "fov": 52
+     },
+     {
+      "p": 0.52,
+      "pos": [
+       5.6,
+       1.0,
+       12.2
+      ],
+      "alvo": [
+       5.6,
+       0.6,
+       -1
+      ],
+      "fov": 52
+     },
+     {
+      "p": 0.66,
+      "pos": [
+       -3.4,
+       -0.5,
+       12
+      ],
+      "alvo": [
+       -3.4,
+       -2.2,
+       -1
+      ],
+      "fov": 52
+     },
+     {
+      "p": 1,
+      "pos": [
+       -3.4,
+       -0.5,
+       12
+      ],
+      "alvo": [
+       -3.4,
+       -2.2,
+       -1
+      ],
+      "fov": 52
+     }
+    ],
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 3.1,
+      "y": 0,
+      "z": 0.5,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "pula": 0.28
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas painel não gera *de noite*. [leve] Então ligue uma *bateria*: [leve] ela guarda a energia *do dia*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.9,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerCinza": 1,
+    "tanque": 0.6,
+    "escape": true,
+    "detector": true,
+    "isola": 1,
+    "painel": true,
+    "sol": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "noite": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "bateria": 0.95,
+    "fio": true,
+    "torre": true,
+    "cal": 1,
+    "fluxoTorre": 0,
+    "etiq": [
+     "bateria@0.45"
+    ],
+    "etiqL": 2.8,
+    "camera": {
+     "de": {
+      "pos": [
+       5.6,
+       1.0,
+       12.2
+      ],
+      "alvo": [
+       5.6,
+       0.6,
+       -1
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       0.4,
+       -0.5,
+       14
+      ],
+      "alvo": [
+       0.4,
+       -2.3,
+       -1
+      ],
+      "fov": 52
+     }
+    },
+    "rota": [
+     {
+      "p": 0,
+      "pos": [
+       5.6,
+       1.0,
+       12.2
+      ],
+      "alvo": [
+       5.6,
+       0.6,
+       -1
+      ],
+      "fov": 52
+     },
+     {
+      "p": 0.4,
+      "pos": [
+       5.6,
+       1.0,
+       12.2
+      ],
+      "alvo": [
+       5.6,
+       0.6,
+       -1
+      ],
+      "fov": 52
+     },
+     {
+      "p": 0.58,
+      "pos": [
+       0.4,
+       -0.5,
+       14
+      ],
+      "alvo": [
+       0.4,
+       -2.3,
+       -1
+      ],
+      "fov": 52
+     },
+     {
+      "p": 1,
+      "pos": [
+       0.4,
+       -0.5,
+       14
+      ],
+      "alvo": [
+       0.4,
+       -2.3,
+       -1
+      ],
+      "fov": 52
+     }
+    ],
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.4,
+      "y": -3.75,
+      "z": -0.8,
+      "acao": "em-pe",
+      "exp": "alivio"
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.14
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tenha uma *sala extra* [leve] com *água* [leve] e comida de *longa duração*.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.8,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerCinza": 1,
+    "tanque": 0.6,
+    "escape": true,
+    "detector": true,
+    "isola": 1,
+    "salaEx": true,
+    "porta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.3
+    },
+    "luzEx": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.18,
+     "fim": 0.32
+    },
+    "torre": true,
+    "cal": 1,
+    "fluxoTorre": 0,
+    "painel": true,
+    "sol": 1,
+    "bateria": 0.9,
+    "fio": true,
+    "etiq": [
+     "agua@0.25-0.8",
+     "comida@0.5-1.0"
+    ],
+    "etiqL": 2.2,
+    "camera": {
+     "de": {
+      "pos": [
+       3.2,
+       -0.6,
+       13.2
+      ],
+      "alvo": [
+       3.2,
+       -2.4,
+       -1
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       3.2,
+       -0.6,
+       13.2
+      ],
+      "alvo": [
+       3.2,
+       -2.4,
+       -1
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.5,
+      "y": -3.75,
+      "z": -0.8,
+      "rot": 1.0,
+      "exp": "surpreso"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.95,
+      "y": -3.75,
+      "z": -0.8,
+      "rot": 1.0,
+      "exp": "surpreso"
+     },
+     {
+      "id": "menino",
+      "x": 1.4,
+      "y": -3.75,
+      "z": -0.8,
+      "rot": 1.0,
+      "exp": "sorriso"
+     },
+     {
+      "id": "vovo",
+      "x": 1.75,
+      "y": -3.75,
+      "z": -0.8,
+      "rot": 1.0,
+      "exp": "surpreso"
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Pronto: um bunker *básico*, [leve] pronto pra *usar*.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 0.6,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerCinza": 1,
+    "tanque": 0.6,
+    "escape": true,
+    "detector": true,
+    "isola": 1,
+    "salaEx": true,
+    "porta": 1,
+    "luzEx": 1,
+    "torre": true,
+    "cal": 0.4,
+    "fluxoTorre": 1,
+    "painel": true,
+    "sol": 1,
+    "bateria": 0.9,
+    "fio": true,
+    "etiqL": 3.3,
+    "etiq": [
+     "salaGer@0.0-0.2",
+     "canoBaixo@0.06-0.28",
+     "ventilador@0.16-0.38",
+     "abobada@0.26-0.48",
+     "torre@0.36-0.58",
+     "canoAlto@0.46-0.7",
+     "saida@0.54-0.78",
+     "agua@0.6-0.82",
+     "comida@0.68-0.9",
+     "painel@0.74-0.98"
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       1.2,
+       0.6,
+       25
+      ],
+      "alvo": [
+       1.2,
+       -1.5,
+       -1
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       1.2,
+       0.6,
+       23.5
+      ],
+      "alvo": [
+       1.2,
+       -1.5,
+       -1
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 3.0,
+      "y": 0,
+      "z": 0.6,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "pula": 0.2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[laughs] E aí, [leve] preparado pro seu *apocalipse nuclear*?",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 1,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerCinza": 1,
+    "tanque": 0.6,
+    "escape": true,
+    "detector": true,
+    "isola": 1,
+    "salaEx": true,
+    "porta": 1,
+    "luzEx": 1,
+    "torre": true,
+    "cal": 0.6,
+    "fluxoTorre": 1,
+    "painel": false,
+    "bateria": 0.8,
+    "fade": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.85
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       10,
+       32
+      ],
+      "alvo": [
+       0.5,
+       10,
+       -1
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       0.5,
+       11,
+       38
+      ],
+      "alvo": [
+       0.5,
+       11,
+       -1
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.35,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "pensativo"
+     },
+     {
+      "id": "vizinha",
+      "x": 0.15,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "pensativo"
+     },
+     {
+      "id": "menino",
+      "x": 0.6,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "pensativo"
+     },
+     {
+      "id": "vovo",
+      "x": 1.0,
+      "y": -3.75,
+      "z": -0.8,
+      "exp": "pensativo"
+     }
+    ],
+    "ambiencia": {
+     "som": "drone",
+     "volume": 0.12
+    },
+    "cartoes": [
+     {
+      "tipo": "perguntaFinal",
+      "trecho": 1,
+      "y": 90,
+      "linhas": [
+       "PREPARADO PRO",
+       "SEU APOCALIPSE",
+       "NUCLEAR?"
+      ]
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* se você teria um bunker [leve] na sua casa. [leve] *Compartilhe* [leve] com aquele seu amigo que _definitivamente_ teria um [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 9.3,
+   "cena": {
+    "cenario": "abrigo",
+    "caixa": true,
+    "concreto": 1,
+    "ferro": 1,
+    "saida": 1,
+    "laje": 1,
+    "terra": 1,
+    "troca": 1,
+    "grossa": 1,
+    "tampa": 0,
+    "lampada": 1,
+    "canos": true,
+    "fluxo": 1,
+    "vent": 1,
+    "sala": true,
+    "gerador": "sala",
+    "gerCinza": 1,
+    "tanque": 0.6,
+    "escape": true,
+    "detector": true,
+    "isola": 1,
+    "salaEx": true,
+    "porta": 1,
+    "luzEx": 1,
+    "torre": true,
+    "cal": 0.6,
+    "fluxoTorre": 1,
+    "bateria": 0.8,
+    "fade": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       11,
+       38
+      ],
+      "alvo": [
+       0.5,
+       11,
+       -1
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       0.5,
+       11,
+       38
+      ],
+      "alvo": [
+       0.5,
+       11,
+       -1
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [],
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "se você teria um bunker na sua casa"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 3
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 5,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 5,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -15,6 +15,7 @@ textos de publicação. O motor de render e as skills vêm do plugin
 | 4 | `energia-solar` | Por que a casa com placa solar apaga no apagão | 5 |
 | 5 | `inversor` | Dá pra ligar a TV na bateria do carro? (o inversor por dentro) | 6 |
 | 6 | `abs` | Por que o carro não para? (freio de tambor, disco e ABS) | 7 |
+| 7 | `bunker` | Como montar um bunker, peça por peça (caixa, abóbada, ar e luz), **publicando** | 8 |
 
 Cada episódio tem o texto aprovado em `tasks/roteiro-<tema>.md`, o roteiro do motor em `episodios/<tema>/roteiro.json`
 (gerado por `tasks/geradores/<tema>.py` a partir da tabela do `.md`, para as falas ficarem sempre iguais) e os textos de
@@ -70,7 +71,7 @@ a pessoa já pediu, as pastas do NAS e o que ainda falta, está em [`tasks/COMO-
 ```
 episodios/<tema>/roteiro.json     roteiro do motor de cada episódio
 motor/banco/index.ts              registro de pacotes (slug "demo-3d" = série dos explicadores)
-motor/banco/series/explicadores/  cenários 3D (ciclo, bancada, banho, solar, inversor, pista), cartões, Zeca, eletricista
+motor/banco/series/explicadores/  cenários 3D (ciclo, bancada, banho, solar, inversor, pista, abrigo), cartões, Zeca, eletricista, moradores
 motor/                            núcleo do motor, instalado pelo plugin (não editar à mão: mudança vale no plugin)
 tasks/                            textos aprovados, geradores, publicação, lições, plano
 ```

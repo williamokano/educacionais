@@ -146,3 +146,15 @@ Texto aprovado em 02/11/2026 (`tasks/roteiro-abs.md` v1, 26 batidas, só a parte
 - [x] Capa, textos de publicação e NAS: `Videos Curtos/Educacionais/06-freio/{final.mp4,roteiro.md,publicacao/{capa.png,textos.md}}`
 - [ ] Pendências da pessoa: aprovar hashtags (#freioabs #carros), definir data e horário, revisar legenda e descrição
 - [ ] Ideia dela: versão mais calma (voz 1,0× e/ou frases extras em óleo/sapatas/sensor); ESC, EBD e AEB em outro episódio
+
+# Plano: episódio 8, bunker (pedido de 03/11/2026; um episódio só, teto 2:40)
+
+- [x] Pesquisa de fatos e fontes (CO₂, monóxido, peso da terra, concreto armado, abóbada, cal sodada, água)
+- [x] `tasks/roteiro-bunker.md` v3: 31 batidas em um episódio, sem a água (gancho do próximo), com a caixa que flutua; texto aprovado em 03/11/2026
+- [x] Cenário `abrigo` (`abrigo.tsx`), moradores (`moradores.ts`), cartões `peso`, `forcas`, `gas`, `cal`, `perguntaFinal` (`cartoes-bunker.tsx`), registro em `index.tsx`
+- [x] `tasks/geradores/bunker.py` → `episodios/bunker/roteiro.json` (`"episodio": 8`); `npx tsc --noEmit` limpo
+- [x] Rascunho mudo: 31 batidas, ≈ 2:27 estimado (teto 2:40); bunker 3,6 m de vão, parede que engrossa para fora, sala do gerador
+- [x] Render conferido (quadro do meio de cada batida em `motor/out/q/folha1..5.png`, recortes dos cartões de painel em `motor/out/cartoes/`) e ajustes de visual (3 rodadas)
+- [x] Visual aprovado; voz (ElevenLabs), som, mix e master: 1:59, −14,12 LUFS, −2,37 dBTP (`motor/out/final-bunker.mp4`); a pessoa aprovou em 03/11/2026 ("ficou muito bom")
+- [x] Ajustes finais: gerador em sala fechada com cano de escape (chapéu para cima), painel solar de frente, sala extra com água e comida, fecho "apocalipse nuclear" (risada) e chamadas "curta, comente, compartilhe, siga"
+- [ ] **Publicando** (03/11/2026): a pessoa publica na sequência; falta capa, textos de publicação, hashtags (sugestão `#bunker #sobrevivencia` + as fixas) e NAS (`07-bunker/{final.mp4,roteiro.md,publicacao/}`)
