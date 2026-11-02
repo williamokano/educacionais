@@ -1,0 +1,802 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 4,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Quase um quarto da sua conta de luz [leve] desce _pelo ralo_.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "eletrico",
+    "camera": {
+     "de": "banheiro"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "~1/4 DA CONTA DE LUZ",
+      "cor": "#ff5a3c",
+      "x": 130,
+      "y": 40,
+      "trecho": 1
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.25
+    },
+    "sfx": [
+     {
+      "som": "chuveiro",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] É o chuveiro. [leve] E dá pra cortar isso [leve] quase sem usar luz. [leve] Olha só.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "eletrico",
+    "camera": {
+     "de": "casa",
+     "para": "banheiro"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O chuveiro elétrico é uma *resistência*: [leve] chega um cano só, de água fria, [leve] e ela esquenta na hora.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "eletrico",
+    "camera": {
+     "de": "canos",
+     "para": "chuveiro"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "SÓ ÁGUA FRIA",
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pra isso, puxa até _7.500 watts_: [leve] o mesmo que 750 lâmpadas de LED acesas.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "eletrico",
+    "camera": {
+     "de": "chuveiro"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "ATÉ 7.500 W = 750 LEDs",
+      "cor": "#ff5a3c",
+      "x": 110,
+      "y": 40,
+      "trecho": 0
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 0,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Troque por uma *bomba de calor*: [leve] o mesmo truque do ar-condicionado. [leve] Gasta de 2 a 3 vezes menos.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "eletrico",
+    "camera": {
+     "de": "pessoa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "pensativo",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "comparacao",
+      "itens": [
+       {
+        "texto": "RESISTÊNCIA",
+        "valor": 1,
+        "rotulo": "1 kWh",
+        "cor": "#ff8a3d"
+       },
+       {
+        "texto": "BOMBA DE CALOR",
+        "valor": 2.5,
+        "rotulo": "2 a 3 kWh",
+        "cor": "#5bd47a"
+       }
+      ],
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ela esquenta *devagar*. [leve] Pra esquentar na hora, [leve] teria que ser do tamanho [leve] de um ar-condicionado grande.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "eletrico",
+    "gigante": true,
+    "camera": {
+     "de": "gigante"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "surpreso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.6
+     },
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Então esquente devagar [leve] e *guarde*: [leve] numa caixa que segura o calor, [leve] o *boiler*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "bomba",
+    "quente": {
+     "de": 0,
+     "para": 1
+    },
+    "canoQuente": 0,
+    "camera": {
+     "de": "boiler"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "BOILER",
+      "trecho": 3
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Na hora do banho, [leve] a água quente já tá lá.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "bomba",
+    "camera": {
+     "de": "casa",
+     "para": "banheiro"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "alivio",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas aí o banheiro precisa de *dois canos*: [leve] o frio, que vem da rua e da caixa-d'água, [leve] e o quente, só seu, que sai do boiler.",
+   "duracao": 9.0,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "bomba",
+    "canoQuente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": "casa-alta",
+     "para": "canos"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ÁGUA FRIA · ÁGUA QUENTE",
+      "trecho": 2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Um *misturador* junta os dois. [leve] Ou seja: [leve] tem que abrir a parede [leve] e trocar o cano.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "bomba",
+    "paredeAberta": true,
+    "camera": {
+     "de": "misturador"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "MISTURADOR",
+      "trecho": 0
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E de onde vem o calor? [leve] Do ar em volta: [leve] a área de serviço *esfria*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "bomba",
+    "esfria": {
+     "de": 0,
+     "para": 0.8
+    },
+    "camera": {
+     "de": "area"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mas no frio forte, [leve] ou com a família toda tomando banho seguido, [leve] ela não dá conta. [leve] Aí liga uma *resistência de reserva*.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "bomba",
+    "esfria": 1,
+    "quente": {
+     "de": 1,
+     "para": 0.15,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "apoio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.7,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": "boiler-perto"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "tremendo",
+      "expressao": "cansado",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "RESISTÊNCIA DE RESERVA",
+      "trecho": 3
+     }
+    ],
+    "sfx": [
+     {
+      "som": "zumbido",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Agora o jeito que quase não usa luz: [leve] uma *placa de aquecimento solar*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "camera": {
+     "de": "laje",
+     "para": "placa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "AQUECEDOR SOLAR",
+      "trecho": 1
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Uma chapa *preta*, [leve] tubos de cobre [leve] e um vidro por cima: [leve] o sol esquenta a água nos tubos.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "camera": {
+     "de": "placa-perto"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas como a água quente [leve] sobe pro boiler [leve] sem bomba nenhuma?",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "camera": {
+     "de": "termossifao"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Água quente é mais *leve*: [leve] sobe sozinha. [leve] A fria, mais pesada, desce pra placa. [leve] Só tem uma regra: [leve] o boiler fica *acima* da placa.",
+   "duracao": 8.3,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "camera": {
+     "de": "termossifao"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "TERMOSSIFÃO",
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Dia nublado? [leve] A resistência de reserva completa.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "nublado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "camera": {
+     "de": "placa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "trovao",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Num estudo, [leve] o aquecedor solar cortou perto de *70%* [leve] da energia pra esquentar a água.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "camera": {
+     "de": "casa-alta"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "~70% MENOS ENERGIA",
+      "cor": "#5bd47a",
+      "x": 130,
+      "y": 40,
+      "trecho": 1
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Tem outra placa, parecida, [leve] que faz *eletricidade*. [leve] Mas ligue ela direto na TV: [leve] _não liga_.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "fotovoltaica": true,
+    "camera": {
+     "de": "laje",
+     "para": "placa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "pensando",
+      "expressao": "pensativo",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No próximo vídeo, [leve] você vai entender por quê. [leve] Manda pra quem toma banho de meia hora, [leve] e siga pra não perder.",
+   "duracao": 7.2,
+   "cena": {
+    "cenario": "banho",
+    "aquecimento": "solar",
+    "fotovoltaica": true,
+    "camera": {
+     "de": "casa-alta"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -2.6,
+       -0.75
+      ],
+      "rot": 0,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "SIGA PRA VER",
+      "trecho": 2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.7
+     }
+    ]
+   }
+  }
+ ]
+}

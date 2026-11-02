@@ -1,0 +1,1433 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 7,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Esse carro *vai bater*. [leve] A roda travou [leve] e ele não para.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": 10,
+     "para": -24.9
+    },
+    "carroX": {
+     "de": 0,
+     "para": 0.3,
+     "ini": 0.4,
+     "fim": 1
+    },
+    "guinada": {
+     "de": 0,
+     "para": 0.16,
+     "ini": 0.4,
+     "fim": 1
+    },
+    "giro": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.45
+    },
+    "derrapa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.5
+    },
+    "obstZ": {
+     "de": -8,
+     "para": -30,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "luzFreio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.18,
+     "fim": 0.2
+    },
+    "haz": false,
+    "camera": {
+     "de": {
+      "pos": [
+       2.6,
+       2.8,
+       15
+      ],
+      "alvo": [
+       0,
+       0.9,
+       0
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       2.8,
+       2.3,
+       -13
+      ],
+      "alvo": [
+       0,
+       0.9,
+       -30
+      ],
+      "fov": 50
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "POR QUE ELE NÃO PAROU?",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 64
+     }
+    ],
+    "sfx": [
+     {
+      "som": "freada",
+      "trecho": 0,
+      "volume": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Volta comigo [leve] e vamos ver *como o freio funciona*.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "pista",
+    "reverso": true,
+    "carroZ": {
+     "de": -24.9,
+     "para": 10
+    },
+    "carroX": {
+     "de": 0.3,
+     "para": 0
+    },
+    "guinada": {
+     "de": 0.16,
+     "para": 0
+    },
+    "giro": 1,
+    "derrapa": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.5
+    },
+    "obstZ": {
+     "de": -30,
+     "para": -8,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "luzFreio": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.7,
+     "fim": 0.75
+    },
+    "haz": false,
+    "camera": {
+     "de": {
+      "pos": [
+       2.8,
+       2.3,
+       -13
+      ],
+      "alvo": [
+       0,
+       0.9,
+       -30
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.6,
+       2.8,
+       15
+      ],
+      "alvo": [
+       0,
+       0.9,
+       0
+      ],
+      "fov": 54
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "fita",
+      "trecho": 0,
+      "dur": 2.4,
+      "texto": "REBOBINANDO"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh_reverso",
+      "trecho": 0,
+      "volume": 0.7
+     },
+     {
+      "som": "estatica",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Você pisa no pedal. [leve] E o pedal [leve] empurra *óleo*.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "oleo": true,
+    "pedal": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.65
+    },
+    "camera": {
+     "de": "pedal"
+    },
+    "etiq": [
+     "pedal",
+     "mestre@0.5"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Na roda, o óleo chega [leve] num tambor [leve] cheio de peças.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "oleo": true,
+    "pedal": 0.4,
+    "camera": {
+     "de": "oleo",
+     "para": "roda"
+    },
+    "etiq": [
+     "oleo",
+     "tambor@0.45"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    }
+   }
+  },
+  {
+   "texto": "O óleo empurra [leve] as duas *sapatas* [leve] pra fora.",
+   "duracao": 2.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "oleo": true,
+    "pedal": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.6
+    },
+    "giro": 0.3,
+    "camera": {
+     "de": "roda"
+    },
+    "etiq": [
+     "tambor",
+     "sapata@0.3",
+     "cilindro@0.55"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elas esfregam por dentro [leve] e o *atrito* [leve] segura a roda.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "oleo": true,
+    "pedal": 1,
+    "giro": {
+     "de": 0.5,
+     "para": 0.12,
+     "ini": 0.1,
+     "fim": 1
+    },
+    "calor": {
+     "de": 0,
+     "para": 0.12
+    },
+    "camera": {
+     "de": "roda",
+     "para": "roda-perto"
+    },
+    "etiq": [
+     "sapata",
+     "tambor"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ATRITO",
+      "trecho": 1,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] O carro freia! [leve] Parece resolvido.",
+   "duracao": 2.2,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": -2,
+     "para": -20
+    },
+    "giro": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       14.6,
+       1.6,
+       -12
+      ],
+      "alvo": [
+       1.5,
+       1.0,
+       -6
+      ],
+      "fov": 56
+     },
+     "para": {
+      "pos": [
+       14.6,
+       1.6,
+       -12
+      ],
+      "alvo": [
+       1.5,
+       1.0,
+       -20
+      ],
+      "fov": 56
+     }
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "alivio",
+      "pos": [
+       12.2,
+       -12.7
+      ],
+      "rot": -1.5708,
+      "fala": false
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "freada",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas freio *esquenta*. [leve] Freie de novo, [leve] e de novo, [leve] numa descida.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "oleo": true,
+    "pedal": 1,
+    "giro": 0.5,
+    "calor": {
+     "de": 0.1,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": "roda"
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 1,
+      "de": 0.1,
+      "para": 1,
+      "dur": 4.0,
+      "texto": "CALOR",
+      "x": 120,
+      "y": 70
+     }
+    ],
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tambor é fechado: [leve] o calor *fica preso* [leve] lá dentro.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "pedal": 1,
+    "giro": 0.3,
+    "calor": 1,
+    "fumaca": {
+     "de": 0,
+     "para": 0.7,
+     "ini": 0.2,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": "roda",
+     "para": "roda-perto"
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    }
+   }
+  },
+  {
+   "texto": "Quente, o freio *perde força*. [leve] O pedal afunda, [leve] e o carro não para.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "oleo": true,
+    "pedal": {
+     "de": 0.45,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.7
+    },
+    "giro": 0.3,
+    "calor": 1,
+    "fumaca": 0.6,
+    "camera": {
+     "de": "pedal"
+    },
+    "etiq": [
+     "pedal"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PEDAL NO FUNDO",
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E na chuva, [leve] a água dentro do tambor [leve] *atrapalha* o atrito.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "tambor",
+    "pedal": 0.6,
+    "giro": 0.6,
+    "calor": 0.2,
+    "gotas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.6
+    },
+    "camera": {
+     "de": "roda"
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    }
+   }
+  },
+  {
+   "texto": "[amazed] Então *volta de novo*: [leve] troque o tambor por um *disco*.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "pista",
+    "reverso": true,
+    "carroZ": 0,
+    "corte": true,
+    "freio": "troca",
+    "troca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.85
+    },
+    "pedal": 0,
+    "giro": 0.2,
+    "camera": {
+     "de": "roda"
+    },
+    "etiq": [
+     "disco@0.7"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "fita",
+      "trecho": 0,
+      "dur": 1.8,
+      "texto": "REBOBINANDO"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh_reverso",
+      "trecho": 0,
+      "volume": 0.7
+     },
+     {
+      "som": "estatica",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Agora o óleo empurra [leve] a *pinça*, [leve] que aperta *pastilhas* [leve] dos dois lados do disco.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "disco",
+    "oleo": true,
+    "pedal": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.6
+    },
+    "giro": 0.4,
+    "camera": {
+     "de": "roda"
+    },
+    "etiq": [
+     "pinca@0.15",
+     "pastilha@0.35",
+     "disco@0.55"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O disco fica *ao ar livre*. [leve] O calor sai [leve] e a água sai [leve] girando.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "disco",
+    "pedal": 1,
+    "giro": 0.7,
+    "calor": {
+     "de": 0.1,
+     "para": 0.35
+    },
+    "gotas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": "roda"
+    },
+    "etiq": [
+     "disco"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 0,
+      "de": 0.1,
+      "para": 0.35,
+      "dur": 4.0,
+      "texto": "CALOR",
+      "x": 120,
+      "y": 70
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] O carro para, [leve] a metros do outro.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": -2,
+     "para": -22.6
+    },
+    "giro": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       14.6,
+       1.6,
+       -12
+      ],
+      "alvo": [
+       1.5,
+       1.0,
+       -6
+      ],
+      "fov": 56
+     },
+     "para": {
+      "pos": [
+       14.6,
+       1.6,
+       -12
+      ],
+      "alvo": [
+       1.5,
+       1.0,
+       -21
+      ],
+      "fov": 56
+     }
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "alivio",
+      "pos": [
+       12.2,
+       -12.7
+      ],
+      "rot": -1.5708,
+      "fala": false
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "freada",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas pise *de uma vez*, [leve] no molhado… [leve] _a roda trava_.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": -7,
+     "para": -13
+    },
+    "giro": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.25
+    },
+    "derrapa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.4
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       2.8,
+       2.2,
+       -4
+      ],
+      "alvo": [
+       0,
+       0.8,
+       -16
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.5,
+       2.0,
+       -9
+      ],
+      "alvo": [
+       0,
+       0.8,
+       -24
+      ],
+      "fov": 50
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "roda",
+      "modo": "travada",
+      "trecho": 0,
+      "x": 130,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "freada",
+      "trecho": 1,
+      "volume": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O pneu escorrega [leve] sobre a água, [leve] e o carro *bate*.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": -17,
+     "para": -25.8
+    },
+    "giro": 0,
+    "derrapa": 1,
+    "batida": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.72,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       2.8,
+       2.2,
+       -9
+      ],
+      "alvo": [
+       0,
+       0.8,
+       -22
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.6,
+       1.8,
+       -17
+      ],
+      "alvo": [
+       0,
+       0.8,
+       -29
+      ],
+      "fov": 46
+     },
+     "tremor": true
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] *Volta mais uma vez.* [leve] Roda travada [leve] _não dirige_.",
+   "duracao": 2.8,
+   "cena": {
+    "cenario": "pista",
+    "reverso": true,
+    "carroZ": {
+     "de": -25.8,
+     "para": -10
+    },
+    "batida": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "giro": 0,
+    "derrapa": {
+     "de": 1,
+     "para": 0.5
+    },
+    "esterco": {
+     "de": 0,
+     "para": -0.5,
+     "ini": 0.55,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       2.6,
+       1.8,
+       -17
+      ],
+      "alvo": [
+       0,
+       0.8,
+       -29
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       -2.4,
+       1.0,
+       -8
+      ],
+      "alvo": [
+       0,
+       0.55,
+       -13
+      ],
+      "fov": 40
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "fita",
+      "trecho": 0,
+      "dur": 1.6,
+      "texto": "REBOBINANDO"
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "RODA TRAVADA NÃO DIRIGE",
+      "trecho": 2,
+      "tamanho": 56
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh_reverso",
+      "trecho": 0,
+      "volume": 0.7
+     },
+     {
+      "som": "estatica",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Roda *girando* [leve] segura o chão [leve] e *faz o carro virar*.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": -10,
+     "para": -20
+    },
+    "carroX": {
+     "de": 0,
+     "para": 1.6
+    },
+    "guinada": {
+     "de": 0,
+     "para": -0.12,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "esterco": {
+     "de": 0,
+     "para": -0.35,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "giro": 1,
+    "derrapa": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       4.4,
+       1.3,
+       -6
+      ],
+      "alvo": [
+       0.6,
+       0.7,
+       -14
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       4.8,
+       1.4,
+       -14
+      ],
+      "alvo": [
+       1.4,
+       0.7,
+       -22
+      ],
+      "fov": 46
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "RODA GIRANDO DIRIGE",
+      "trecho": 1,
+      "tamanho": 56
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então é só *não deixar a roda travar*. [leve] Mas ninguém solta o pedal [leve] tão rápido.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "disco",
+    "oleo": true,
+    "pedal": {
+     "de": 1,
+     "para": 0.2,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "giro": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.35,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": "pedal",
+     "para": "roda"
+    },
+    "etiq": [
+     "pedal"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    }
+   }
+  },
+  {
+   "texto": "Quem faz isso é o *ABS*: [leve] um *sensor* em cada roda [leve] conta a rotação.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "disco",
+    "oleo": true,
+    "pedal": 1,
+    "giro": 1,
+    "abs": true,
+    "camera": {
+     "de": "roda",
+     "para": "abs"
+    },
+    "etiq": [
+     "sensor@0.3"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Se a roda *quase para*, [leve] o *controlador* [leve] manda o óleo *soltar*… [leve] e apertar de novo.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "disco",
+    "oleo": true,
+    "pedal": 1,
+    "giro": 1,
+    "abs": true,
+    "ciclo": true,
+    "camera": {
+     "de": "abs"
+    },
+    "etiq": [
+     "controlador@0.1",
+     "valvulas@0.5"
+    ],
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.6
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Trava, solta. [leve] Trava, solta. [leve] *Várias vezes por segundo.* [leve] O pedal treme, [leve] e isso é normal.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": 0,
+    "corte": true,
+    "freio": "disco",
+    "oleo": true,
+    "pedal": 1,
+    "giro": 1,
+    "abs": true,
+    "ciclo": true,
+    "camera": {
+     "de": "roda",
+     "para": "pedal"
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "roda",
+      "modo": "ciclo",
+      "trecho": 0,
+      "x": 130,
+      "y": 60
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "VÁRIAS VEZES POR SEGUNDO",
+      "trecho": 2,
+      "y": 560,
+      "tamanho": 52
+     }
+    ],
+    "sfx": [
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Você *pisa fundo*, [leve] vira o volante [leve] e o carro *desvia* [leve] e para a centímetros.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": {
+     "de": -6,
+     "para": -27
+    },
+    "carroX": {
+     "de": 0,
+     "para": 2.4
+    },
+    "guinada": {
+     "de": -0.14,
+     "para": 0,
+     "ini": 0.35,
+     "fim": 0.95
+    },
+    "esterco": {
+     "de": -0.3,
+     "para": 0,
+     "ini": 0.4,
+     "fim": 0.9
+    },
+    "giro": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       -4.5,
+       2.2,
+       -4
+      ],
+      "alvo": [
+       1,
+       0.8,
+       -16
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -4.8,
+       1.6,
+       -18
+      ],
+      "alvo": [
+       1.2,
+       0.7,
+       -28
+      ],
+      "fov": 44
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "sfx": [
+     {
+      "som": "freada",
+      "trecho": 0,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] *Esse é o freio ABS.*",
+   "duracao": 2.2,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": -27,
+    "carroX": 2.4,
+    "giro": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -5,
+       1.6,
+       -20
+      ],
+      "alvo": [
+       1,
+       0.8,
+       -28
+      ],
+      "fov": 44
+     },
+     "para": {
+      "pos": [
+       5,
+       15,
+       8
+      ],
+      "alvo": [
+       0,
+       0,
+       -30
+      ],
+      "fov": 54
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ABS",
+      "trecho": 1,
+      "tamanho": 120
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* se você sabia [leve] que é o ABS que faz o _pedal tremer_. [leve] *Compartilhe* [leve] com quem pisa fundo [leve] e *siga pra mais.*",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "pista",
+    "carroZ": -27,
+    "carroX": 2.4,
+    "giro": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       5,
+       15,
+       8
+      ],
+      "alvo": [
+       0,
+       0,
+       -30
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       -3,
+       18,
+       14
+      ],
+      "alvo": [
+       0,
+       0,
+       -26
+      ],
+      "fov": 54
+     }
+    },
+    "personagens": [],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.18
+    },
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "se você sabia que o ABS faz o pedal tremer"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 3
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA PRA MAIS",
+      "trecho": 5
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 5,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

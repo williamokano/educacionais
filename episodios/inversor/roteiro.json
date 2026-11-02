@@ -1,0 +1,966 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 6,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Acabou a luz [leve] bem na hora do jogo. [leve] Só sobrou [leve] a bateria do carro.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "noite": 1,
+    "forcaSol": 0,
+    "hora": 0.95,
+    "rede": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.25,
+     "fim": 0.3
+    },
+    "tv": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.32
+    },
+    "lampada": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.32
+    },
+    "camera": {
+     "de": "casa",
+     "para": "sala"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+surpreso",
+      "expressao": "surpreso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ACABOU A LUZ",
+      "trecho": 1
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.25
+    },
+    "sfx": [
+     {
+      "som": "queda_energia",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ligue a TV nela: [leve] _nada_. [leve] [curious] Mas dá pra fazer funcionar. [leve] Olha só.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "inversor",
+    "chaves1": 0,
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "geral",
+     "para": "bateria-tv"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "cocando-cabeca",
+      "expressao": "cansado",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A bateria empurra a corrente [leve] num sentido só. [leve] A tomada [leve] *vai e volta*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "inversor",
+    "chaves1": 0,
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "bateria-tv"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "explicando",
+      "expressao": "neutro",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "retacurva",
+      "trecho": 0,
+      "cor": "#ffd23f",
+      "rotulo": "BATERIA: UM SENTIDO · TOMADA: VAI E VOLTA",
+      "titulo": "BATERIA × TOMADA"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então pegue os dois fios [leve] e encoste na TV. [leve] A corrente vai pra um lado.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "inversor",
+    "maos": true,
+    "troca": 0,
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "maos"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Agora *troque os fios de lugar*. [leve] Ela vai pro outro lado.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "inversor",
+    "maos": true,
+    "troca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.45
+    },
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "maos"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "surpreso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Troque e destroque [leve] *60 vezes por segundo*: [leve] pronto, [leve] você fez a corrente da tomada.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "inversor",
+    "maos": true,
+    "trocaRapida": {
+     "de": 0.05,
+     "para": 1
+    },
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "maos"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "comemorando",
+      "expressao": "eureka",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "60 TROCAS POR SEGUNDO",
+      "cor": "#ffd23f",
+      "x": 130,
+      "y": 40,
+      "trecho": 2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Só que ninguém tem mão pra isso. [leve] Ponha *quatro chaves*: [leve] duas ligam normal, [leve] duas ligam *trocado*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "inversor",
+    "chaves1": 1,
+    "par": "alterna",
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "chaves"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "ponteh",
+      "simples": true,
+      "trecho": 1,
+      "ritmo": 0.6
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elas revezam sozinhas [leve] e a corrente vai e volta. [leve] [curious] Mas a TV continua apagada.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "inversor",
+    "chaves1": 1,
+    "par": "alterna",
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "bateria-tv"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "pensando",
+      "expressao": "pensativo",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PONTE H",
+      "trecho": 0
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A bateria tem *12 volts*. [leve] A tomada diz 220, [leve] mas no pico [leve] chega a _311_.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "inversor",
+    "chaves1": 1,
+    "par": "alterna",
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "bateria-tv"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "senoide",
+      "trecho": 1,
+      "cor": "#7fd3ff",
+      "alto": 0.9,
+      "marcas": [
+       "+311 V",
+       "−311 V"
+      ],
+      "rotulo": "BATERIA 12 V · TOMADA: PICO DE 311 V",
+      "titulo": "A TOMADA"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pra subir a voltagem, [leve] use uma *bobina*: [leve] poucas voltas de um lado, [leve] muitas do outro. [leve] Ela multiplica.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "grande",
+    "rapido": 0,
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "fila",
+     "para": "bobina"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "TRANSFORMADOR",
+      "trecho": 2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "zumbido",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas trocando só 60 vezes por segundo, [leve] essa bobina pesaria [leve] _mais de 6 quilos_.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "grande",
+    "rapido": 0,
+    "balanca": true,
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "bobina"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "preocupado",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "MAIS DE 6 kg",
+      "cor": "#ff5a3c",
+      "x": 130,
+      "y": 40,
+      "trecho": 2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Então troque *mais rápido*: [leve] 40 mil vezes por segundo. [leve] Aí ela cabe na mão.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "grande",
+    "balanca": true,
+    "rapido": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.15,
+     "fim": 0.25
+    },
+    "encolhe": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.85
+    },
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "bobina"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "comemorando",
+      "expressao": "eureka",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "40 MIL POR SEGUNDO",
+      "cor": "#ffd23f",
+      "x": 130,
+      "y": 40,
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sai voltagem alta, [leve] mas tremendo. [leve] Uma peça que só deixa passar num sentido [leve] e um *balde de eletricidade* [leve] deixam tudo liso: [leve] *311 volts*.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.9
+    },
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "retificador"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "reta",
+      "trecho": 3,
+      "cor": "#ffd23f",
+      "alto": 0.9,
+      "rotulo": "311 V, LISO",
+      "titulo": "DEPOIS DO BALDE"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Só que agora ela vai num sentido só [leve] *de novo*. [leve] Fácil: [leve] mais quatro chaves, [leve] trocando 60 vezes por segundo.",
+   "duracao": 6.6,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "tv": 0,
+    "apagao": true,
+    "camera": {
+     "de": "ponte2"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "cocando-cabeca",
+      "expressao": "pensativo",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] E a TV liga! [leve] Bem na hora do gol.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "tv": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.12
+    },
+    "apagao": true,
+    "camera": {
+     "de": "tv",
+     "para": "fila"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "comemorando",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.7
+     },
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ligue um ventilador: [leve] ele esquenta e chia. [leve] A corrente saiu em *degraus*. [leve] A da tomada faz *curva*.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "tv": 1,
+    "apagao": true,
+    "ventilador": true,
+    "ventQuente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.6
+    },
+    "camera": {
+     "de": "ventilador"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "preocupado",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "quadrada",
+      "trecho": 2,
+      "cor": "#ffd23f",
+      "alto": 0.9,
+      "marcas": [
+       "+311 V",
+       "−311 V"
+      ],
+      "rotulo": "DEGRAUS",
+      "titulo": "SAÍDA"
+     },
+     {
+      "tipo": "aguenta",
+      "motor": "VENTILADOR",
+      "trecho": 2,
+      "y": 430
+     }
+    ],
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Chave só liga e desliga. [leve] O truque é *piscar*: [leve] ligada pouco tempo, fraco. [leve] Muito tempo, forte.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "pwm": true,
+    "tv": 1,
+    "apagao": true,
+    "ventilador": true,
+    "ventQuente": 1,
+    "camera": {
+     "de": "ponte2"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "pensando",
+      "expressao": "pensativo",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "media",
+      "trecho": 1,
+      "cor": "#ffd23f",
+      "rotulo": "POUCO TEMPO: FRACO · MUITO: FORTE",
+      "titulo": "PISCA-PISCA"
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Pisque fraco, forte, fraco… [leve] e a média [leve] vira *curva*.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "pwm": true,
+    "tv": 1,
+    "apagao": true,
+    "ventilador": true,
+    "ventQuente": 1,
+    "camera": {
+     "de": "ponte2"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "comemorando",
+      "expressao": "eureka",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "pulsos",
+      "trecho": 0,
+      "cor": "#ffd23f",
+      "rotulo": "A MÉDIA VIRA CURVA",
+      "titulo": "PISCA-PISCA"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Uma bobina e um balde na saída [leve] alisam o resto. [leve] Ventilador liso, [leve] sem chiar.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "pwm": true,
+    "filtro": true,
+    "tv": 1,
+    "apagao": true,
+    "ventilador": true,
+    "ventQuente": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": "ventilador"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "em-pe",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "FILTRO",
+      "trecho": 0
+     }
+    ],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tudo isso cabe numa caixinha: [leve] o *inversor*. [leve] Manda pra quem não sabia disso. [leve] E siga pra mais.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "inversor",
+    "fila": true,
+    "chaves1": 1,
+    "bobina": "pequena",
+    "rapido": 1,
+    "retificador": true,
+    "capacitor": 1,
+    "chaves2": true,
+    "pwm": true,
+    "filtro": true,
+    "tv": 1,
+    "apagao": true,
+    "ventilador": true,
+    "ventQuente": 0,
+    "camera": {
+     "de": "fila"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "explicando",
+      "expressao": "sorriso",
+      "pos": [
+       -0.9,
+       -0.85
+      ],
+      "rot": 0.3,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "circuito",
+      "destaque": "percorre",
+      "trecho": 0
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "SIGA PRA MAIS",
+      "trecho": 3,
+      "y": 560
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.7
+     }
+    ]
+   }
+  }
+ ]
+}

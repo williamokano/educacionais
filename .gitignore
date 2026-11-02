@@ -1,0 +1,10 @@
+node_modules/
+motor/node_modules/
+motor/out/
+motor/.motor-backup/
+# gerados pelo pipeline (voz, áudio e episode.json de cada episódio): ficam fora do git
+motor/public/*/
+!motor/public/fonts/
+.DS_Store
+__pycache__/
+*.pyc

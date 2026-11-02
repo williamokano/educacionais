@@ -1,0 +1,907 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 5,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Placa solar no telhado, [leve] sol rachando… [leve] e a casa _no escuro_.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "hora": 0.5,
+    "rede": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.35
+    },
+    "tv": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.4,
+     "fim": 0.42
+    },
+    "lampada": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.4,
+     "fim": 0.42
+    },
+    "led": "vermelho",
+    "camera": {
+     "de": "casa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+surpreso",
+      "expressao": "surpreso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "POR QUÊ?",
+      "trecho": 2
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "queda_energia",
+      "trecho": 1,
+      "volume": 0.6
+     },
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Parece defeito. [leve] Não é. [leve] Pra entender, [leve] comece do zero.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "tv": 0,
+    "camera": {
+     "de": "casa",
+     "para": "telhado"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+pensando",
+      "expressao": "pensativo",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ligue uma placa direto na TV: [leve] _nada_. [leve] Ela dá uns 40 volts. [leve] A TV quer 220.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "solar",
+    "direto": true,
+    "placas": 1,
+    "stringbox": 0,
+    "offgrid": 1,
+    "tv": 0,
+    "camera": {
+     "de": "tv"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+cocando-cabeca",
+      "expressao": "pensativo",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "PLACA ~40 V · TV 220 V",
+      "cor": "#ffd23f",
+      "x": 130,
+      "y": 40,
+      "trecho": 2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ligue 6 placas em fila: [leve] 240 volts. [leve] [curious] E a TV… [leve] continua apagada.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "solar",
+    "direto": true,
+    "placas": {
+     "de": 1,
+     "para": 6,
+     "ini": 0.05,
+     "fim": 0.45
+    },
+    "stringbox": 0,
+    "offgrid": 1,
+    "tv": 0,
+    "camera": {
+     "de": "telhado"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+cocando-cabeca",
+      "expressao": "pensativo",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "6 PLACAS ≈ 240 V",
+      "cor": "#ffd23f",
+      "x": 130,
+      "y": 40,
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] É que a placa empurra a corrente [leve] *num sentido só*. [leve] A tomada [leve] *vai e volta*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "solar",
+    "direto": true,
+    "placas": 6,
+    "stringbox": 0,
+    "offgrid": 1,
+    "tv": 0,
+    "camera": {
+     "de": "fio"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "pensativo",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "onda",
+      "modo": "retacurva",
+      "rotulo": "PLACA: UM SENTIDO · TOMADA: VAI E VOLTA",
+      "trecho": 0,
+      "cor": "#ffd23f",
+      "titulo": "PLACA × TOMADA"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Ponha um *inversor*: [leve] ele faz a corrente ir e voltar. [leve] A TV liga!",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "stringbox": 0,
+    "offgrid": 1,
+    "tv": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.65
+    },
+    "camera": {
+     "de": "aparelhos",
+     "para": "sala"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "sorriso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "INVERSOR",
+      "trecho": 0
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.8
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o sol vai embora [leve] e a TV _apaga_. [leve] Ligue a casa no poste.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "hora": {
+     "de": 0.6,
+     "para": 1.0
+    },
+    "noite": {
+     "de": 0,
+     "para": 0.8,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "forcaSol": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "tv": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.33
+    },
+    "offgrid": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.65,
+     "fim": 0.85
+    },
+    "camera": {
+     "de": "casa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "cansado",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.25
+    },
+    "sfx": [
+     {
+      "som": "queda_energia",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Só que ao meio-dia [leve] sobra energia. [leve] Mande a sobra *pro poste*.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "hora": 0.5,
+    "exporta": 1,
+    "camera": {
+     "de": "casa",
+     "para": "rua"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "sorriso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Um relógio que conta pros dois lados [leve] vira a sobra em *crédito*. [leve] À noite, você usa de volta. [leve] A conta quase zera: [leve] fica uma taxa mínima.",
+   "duracao": 9.0,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "exporta": {
+     "de": 1,
+     "para": -1,
+     "ini": 0.35,
+     "fim": 0.55
+    },
+    "noite": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.55
+    },
+    "hora": 0.95,
+    "camera": {
+     "de": "medidor",
+     "para": "casa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "alivio",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "RELÓGIO BIDIRECIONAL",
+      "trecho": 0
+     },
+     {
+      "tipo": "conta",
+      "texto": "TAXA MÍNIMA",
+      "fica": 0.2,
+      "trecho": 3,
+      "y": 420
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.25
+    },
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E agora a resposta: [leve] falta luz no bairro… [leve] e a sua casa *apaga junto*.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "rede": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.35,
+     "fim": 0.4
+    },
+    "tv": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.6,
+     "fim": 0.62
+    },
+    "lampada": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.6,
+     "fim": 0.62
+    },
+    "camera": {
+     "de": "casa"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+surpreso",
+      "expressao": "surpreso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "queda_energia",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] É de propósito: [leve] tem gente consertando o fio [leve] lá no poste.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "rede": 0,
+    "tv": 0,
+    "led": "vermelho",
+    "camera": {
+     "de": "poste"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+surpreso",
+      "expressao": "surpreso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     },
+     {
+      "id": "eletricista",
+      "acao": "mexendo",
+      "expressao": "concentrado",
+      "pos": [
+       4.16,
+       -0.4
+      ],
+      "rot": -1.57,
+      "elev": 2.25,
+      "fala": false
+     }
+    ],
+    "escada": true
+   }
+  },
+  {
+   "texto": "Se a sua placa mandasse energia pra lá, [leve] o fio que ele acha desligado [leve] estaria _vivo_. [leve] Por isso o inversor *desliga sozinho*.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "rede": 0,
+    "tv": 0,
+    "led": "vermelho",
+    "faisca": true,
+    "exporta": 1,
+    "camera": {
+     "de": "poste"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "sorriso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     },
+     {
+      "id": "eletricista",
+      "acao": "surpreso",
+      "expressao": "medo",
+      "pos": [
+       4.16,
+       -0.4
+      ],
+      "rot": -1.57,
+      "elev": 2.25,
+      "fala": false
+     }
+    ],
+    "escada": true,
+    "cartoes": [
+     {
+      "tipo": "medida",
+      "texto": "DESLIGA SOZINHO",
+      "cor": "#ff5a3c",
+      "x": 130,
+      "y": 40,
+      "trecho": 3
+     }
+    ],
+    "sfx": [
+     {
+      "som": "raio",
+      "trecho": 1,
+      "volume": 0.6
+     },
+     {
+      "som": "bips",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Quer luz no apagão? [leve] Ponha uma *bateria*.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "hibrido": true,
+    "bateria": {
+     "de": 0.3,
+     "para": 0.9
+    },
+    "carga": 1,
+    "camera": {
+     "de": "bateria"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "sorriso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "BATERIA",
+      "trecho": 1
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Faltou luz? [leve] Uma chave *separa a casa do poste*, [leve] e a bateria acende tudo. [leve] O fio do eletricista continua desligado.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "hibrido": true,
+    "bateria": 0.9,
+    "carga": -1,
+    "rede": 0,
+    "chave": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.3
+    },
+    "tv": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.5
+    },
+    "lampada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": "chave"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "sorriso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     },
+     {
+      "id": "eletricista",
+      "acao": "mexendo",
+      "expressao": "concentrado",
+      "pos": [
+       4.16,
+       -0.4
+      ],
+      "rot": -1.57,
+      "elev": 2.25,
+      "fala": false
+     }
+    ],
+    "escada": true,
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas vem um temporal: [leve] dias sem luz e sem sol. [leve] A bateria _acaba_. [leve] Ligue um *gerador*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "bidirecional": true,
+    "hibrido": true,
+    "nublado": 1,
+    "rede": 0,
+    "chave": 1,
+    "bateria": {
+     "de": 0.6,
+     "para": 0.05,
+     "ini": 0.15,
+     "fim": 0.6
+    },
+    "carga": -1,
+    "gerador": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.75,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": "casa",
+     "para": "gerador"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "preocupado",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "GERADOR",
+      "trecho": 3
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "trovao",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "motor",
+      "trecho": 3,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E quem não quer pagar [leve] nem a taxa mínima? [leve] Corte o fio do poste: [leve] é o *off-grid*. [leve] Bateria pra dias, [leve] gerador de reserva.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "hibrido": true,
+    "controlador": true,
+    "bateria": 0.8,
+    "gerador": 0,
+    "offgrid": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.55
+    },
+    "camera": {
+     "de": "rua"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+relaxado",
+      "expressao": "sorriso",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "OFF-GRID",
+      "trecho": 2
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.3
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas como essa caixinha [leve] faz a corrente ir e voltar? [leve] No próximo vídeo, ela abre. [leve] Manda pra quem tem placa solar, [leve] e siga pra não perder.",
+   "duracao": 9.0,
+   "cena": {
+    "cenario": "solar",
+    "placas": 6,
+    "hibrido": true,
+    "bateria": 0.8,
+    "bidirecional": true,
+    "camera": {
+     "de": "sala",
+     "para": "inversor"
+    },
+    "personagens": [
+     {
+      "id": "zeca",
+      "acao": "sentado+pensando",
+      "expressao": "pensativo",
+      "pos": [
+       -2.65,
+       0.05
+      ],
+      "rot": 1.15,
+      "fala": false
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "SIGA PRA VER",
+      "trecho": 3
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.7
+     }
+    ]
+   }
+  }
+ ]
+}
