@@ -24,8 +24,8 @@ morava no repositório do plugin, na branch `feat/motor-3d`).
      e `perguntaFinal`. Texto aprovado em `tasks/roteiro-bunker.md` (31 batidas; gerador numa sala fechada (cano de escape, isolamento, detector)
      que fica até o fim, apagado, como emergência; painel solar (2 painéis, face para a câmera); à noite a bateria cheia mantém a luz; sala extra de água e comida; sem a água; fecha com "preparado pro seu apocalipse nuclear?" e "siga pra saber como as coisas funcionam").
      **Status: PUBLICANDO (03/11/2026).** Vídeo final aprovado pela pessoa: voz, som, mix e master prontos (1:59, −14,12 LUFS,
-     −2,37 dBTP, `motor/out/final-bunker.mp4`). A pessoa publica na sequência; **faltam** capa, textos de publicação, hashtags
-     (sugestão `#bunker #sobrevivencia` + as fixas) e a pasta `07-bunker/` no NAS. Gerador:
+     −2,37 dBTP, `motor/out/final-bunker.mp4`). A pessoa publica na sequência; capa, textos (`tasks/publicacao/bunker-textos.md`), hashtags
+     (`#bunker #sobrevivencia` + as fixas, aprovadas) e a pasta `07-bunker/` no NAS **prontos**; a pessoa posta quando sentir. Gerador:
      `python3 tasks/geradores/bunker.py episodios/bunker/roteiro.json`. Fecho com risada (`[laughs]` no `eleven_v4`) e 27,5 efeitos/min (aprovados).
 - **Gerador do roteiro.json:** `tasks/geradores/<tema>.py` lê a tabela do `.md` (as falas sempre iguais) e monta as
   cenas, os efeitos (`SFX`) e as ambiências por batida. Uso (da raiz do repositório):

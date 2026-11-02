@@ -109,8 +109,8 @@ cenas={
    etiq=["agua@0.25-0.8","comida@0.5-1.0"],etiqL=2.2,camera=cam(EX,EX),
    gente=[G("zeca",0.5,rot=1.0,exp="surpreso"),G("vizinha",0.95,rot=1.0,exp="surpreso"),G("menino",1.4,rot=1.0,exp="sorriso"),G("vovo",1.75,rot=1.0,exp="surpreso")],c=[]),
 # 29: um bunker básico, pronto pra usar: a câmera mostra as duas salas e o bunker inteiros, com as peças etiquetadas
-29:P(tampa=0,lampada=0.6,**CANOS,**SALAP,**EXTRA,torre=True,cal=0.4,fluxoTorre=1,painel=True,sol=1,bateria=0.9,fio=True,etiqL=3.3,
-   etiq=["salaGer@0.0-0.2","canoBaixo@0.06-0.28","ventilador@0.16-0.38","abobada@0.26-0.48","torre@0.36-0.58","canoAlto@0.46-0.7","saida@0.54-0.78","agua@0.6-0.82","comida@0.68-0.9","painel@0.74-0.98"],
+29:P(tampa=0,lampada=0.6,**CANOS,**SALAP,**EXTRA,torre=True,cal=0.4,fluxoTorre=1,painel=True,sol=1,bateria=0.9,fio=True,etiqL=3.3,etiqK=1.5,
+   etiq=["salaGer@0.0-0.3","torre@0.25-0.55","painel@0.5-0.8","comida@0.75-1.0"],
    camera=cam(AMPLO2,AMPLO2B),gente=[G("zeca",3.0,0,0.6,acao="comemorando",exp="sorriso",pula=0.2)],c=[]),
 # 30: "E aí, preparado pro seu apocalipse nuclear?": a câmera se afasta, o quintal some no escuro e sobe o cartão de texto (o bunker fica embaixo)
 30:P(tampa=0,lampada=1,**CANOS,**SALAP,**EXTRA,torre=True,cal=0.6,fluxoTorre=1,painel=False,bateria=0.8,fade=V(0,1,0.2,0.85),camera=cam(PERTO,LONGE),

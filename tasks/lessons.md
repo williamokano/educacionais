@@ -115,3 +115,13 @@
   depois como filtrar e ferver água). O pedido era montar o bunker, peça por peça; como operar fica em aberto.
 - **Regra:** em episódio de construção, cada batida é uma peça que se instala ou um problema da peça. Operação, rotina e
   racionamento ficam de fora; deixar o assunto em aberto é aceito.
+
+## Rótulos 3D presos ao quadro, em vários momentos da janela (03/11/2026, episódio 8)
+
+- **O que aconteceu:** a simulação do iPhone mostrou rótulos 3D (TORRE DE CAL, GERADOR) cortados na borda esquerda quando a câmera
+  ainda andava; depois do ajuste à borda, ÁGUA e COMIDA grudaram, o cartão do gás cobriu o VENTILADOR e 10 rótulos de 0,6 s na
+  tomada larga eram ilegíveis. Um quadro por rótulo não pegou nada disso.
+- **Regra:** rótulo 3D projeta a âncora na tela e desliza para dentro da área segura (esquerda e os 12% da direita); rótulos
+  que dividem a borda ficam em alturas diferentes; tomada larga usa multiplicador de largura (`etiqK`) e poucos rótulos (≤ 4,
+  ≥ ~1,2 s cada, quase sem sobreposição).
+- **Regra:** conferir rótulos em **três momentos** de cada janela e com o cartão de HUD da batida na tela, não em um quadro só.

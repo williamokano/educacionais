@@ -2862,17 +2862,12 @@
     "bateria": 0.9,
     "fio": true,
     "etiqL": 3.3,
+    "etiqK": 1.5,
     "etiq": [
-     "salaGer@0.0-0.2",
-     "canoBaixo@0.06-0.28",
-     "ventilador@0.16-0.38",
-     "abobada@0.26-0.48",
-     "torre@0.36-0.58",
-     "canoAlto@0.46-0.7",
-     "saida@0.54-0.78",
-     "agua@0.6-0.82",
-     "comida@0.68-0.9",
-     "painel@0.74-0.98"
+     "salaGer@0.0-0.3",
+     "torre@0.25-0.55",
+     "painel@0.5-0.8",
+     "comida@0.75-1.0"
     ],
     "camera": {
      "de": {

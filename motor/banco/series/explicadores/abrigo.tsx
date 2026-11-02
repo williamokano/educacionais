@@ -40,7 +40,7 @@ import { MORADORES } from "./moradores";
 //           regua: true (cota de ≈ 6 m entre a tampa e o cano) · fio: true · painel: true · sol 0..1 · bateria 0..1 (nível; some se faltar) · vizinhos: true
 //   gente   lista de { id: "zeca"|"vizinha"|"menino"|"vovo", x, y, z (Valor), rot, esc, deita (Valor 0..1), acao, exp }; `acao` pode
 //           ser uma lista [[ate, acao, exp]…] (ate = 0..1 da batida)
-//   etiq    lista de etiquetas 3D, cada uma "chave" ou "chave@0.4" (aparece aos 40% da batida) · etiqL (largura, m; padrão 2,3)
+//   etiq    lista de etiquetas 3D, cada uma "chave" ou "chave@0.4" (aparece aos 40% da batida) · etiqL (largura, m; padrão 2,3) · etiqK (multiplicador da largura, p. ex. 1,5 nas tomadas largas)
 //   casa: false tira a casa e as árvores.
 
 type V = V3;
@@ -284,12 +284,12 @@ const ETIQ: Record<string, Etiq> = {
   abobada: { texto: "ABÓBADA", de: [-2.9, -1.35, 0.5], para: [-1.3, -1.3, 0.12] },
   canoBaixo: { texto: "CANO BAIXO", de: [-2.9, 1.3, 0.5], para: [-1.45, 0.5, 0.18] },
   canoAlto: { texto: "CANO ALTO", de: [2.3, 2.4, 0.5], para: [1.45, 1.4, 0.18] },
-  ventilador: { texto: "VENTILADOR", de: [-2.9, -0.3, 0.5], para: [-1.45, -0.7, 0.3] },
+  ventilador: { texto: "VENTILADOR", de: [-2.9, -1.3, 0.5], para: [-1.45, -0.7, 0.3] },
   torre: { texto: "TORRE DE CAL", de: [-2.9, -3.3, 0.5], para: [-1.25, -2.9, -1.6] },
   gerador: { texto: "GERADOR", de: [-2.9, -2.9, 0.5], para: [0.35, -3.3, -1.6] },
   painel: { texto: "PAINEL", de: [5.0, 3.6, 0.5], para: [5.0, 1.9, -0.8] },
-  agua: { texto: "ÁGUA", de: [4.0, -0.7, 0.5], para: [4.2, -3.1, -2.6], esc: 2.0 },
-  comida: { texto: "COMIDA", de: [5.7, -0.7, 0.5], para: [5.9, -2.4, -2.6], esc: 2.1 },
+  agua: { texto: "ÁGUA", de: [4.0, -0.35, 0.5], para: [4.2, -3.1, -2.6], esc: 2.0 },
+  comida: { texto: "COMIDA", de: [5.7, -1.05, 0.5], para: [5.9, -2.4, -2.6], esc: 2.1 },
   gerEmerg: { texto: "EMERGÊNCIA", de: [-3.9, -0.9, 0.5], para: [-3.9, -3.0, -1.4], esc: 3.0 },
   bateria: { texto: "BATERIA", de: [-1.4, -4.8, 0.5], para: [1.35, -3.4, -1.9] },
   salaGer: { texto: "SALA DO GERADOR", de: [-3.9, -0.9, 0.5], para: [-3.9, -2.1, 0.1], esc: 3.2 },
@@ -299,7 +299,8 @@ const ETIQ: Record<string, Etiq> = {
   seis: { texto: "≈ 6 m", de: [-0.4, 2.3, 0.5], para: [-0.4, 1.7, 0.1], esc: 2.0 },
 };
 
-const EtiquetaS: React.FC<{ e: Etiq; larg: number }> = ({ e, larg }) => {
+const EtiquetaS: React.FC<{ e: Etiq; larg: number; k?: number }> = ({ e, larg, k = 1 }) => {
+  const { camera } = useThree();
   const tex = useMemo(() => {
     const c = document.createElement("canvas");
     c.width = 640;
@@ -322,14 +323,26 @@ const EtiquetaS: React.FC<{ e: Etiq; larg: number }> = ({ e, larg }) => {
     t.colorSpace = THREE.SRGBColorSpace;
     return t;
   }, [e.texto]);
-  const dir = new THREE.Vector3(...e.para).sub(new THREE.Vector3(...e.de));
+  const l = (e.esc ?? larg) * k;
+  // Prende o rótulo ao quadro: se a âncora cairia fora da tela (câmera ainda andando) ou nos 12% da direita, desliza para dentro.
+  // A câmera já foi posta por este render (RotaCamera é o primeiro filho e roda antes).
+  const cam = camera as THREE.PerspectiveCamera;
+  cam.updateMatrixWorld();
+  const de0 = new THREE.Vector3(...e.de);
+  const ndc = de0.clone().project(cam);
+  const prof = -de0.clone().applyMatrix4(cam.matrixWorldInverse).z;
+  const meia = prof > 0 ? prof * Math.tan(THREE.MathUtils.degToRad(cam.fov / 2)) * cam.aspect : 0;
+  const hw = meia > 0 ? l / 2 / meia : 0;
+  const xmin = -0.96 + hw, xmax = 0.74 - hw;
+  if (prof > 0 && xmin < xmax) ndc.x = Math.min(xmax, Math.max(xmin, ndc.x));
+  const de: V = prof > 0 ? (ndc.unproject(cam).toArray() as V) : e.de;
+  const dir = new THREE.Vector3(...e.para).sub(new THREE.Vector3(...de));
   const comp = dir.length();
   const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir.clone().normalize());
-  const meio: V = [(e.de[0] + e.para[0]) / 2, (e.de[1] + e.para[1]) / 2, (e.de[2] + e.para[2]) / 2];
-  const l = e.esc ?? larg;
+  const meio: V = [(de[0] + e.para[0]) / 2, (de[1] + e.para[1]) / 2, (de[2] + e.para[2]) / 2];
   return (
     <group>
-      <sprite position={e.de} scale={[l, l * 0.2, 1]} renderOrder={20}><spriteMaterial map={tex} transparent depthTest={false} /></sprite>
+      <sprite position={de} scale={[l, l * 0.2, 1]} renderOrder={20}><spriteMaterial map={tex} transparent depthTest={false} /></sprite>
       <mesh position={meio} quaternion={q} renderOrder={19}><cylinderGeometry args={[0.018, 0.018, comp, 6]} /><meshBasicMaterial color={AMARELO} depthTest={false} /></mesh>
       <mesh position={e.para} renderOrder={19}><sphereGeometry args={[0.06, 8, 8]} /><meshBasicMaterial color={AMARELO} depthTest={false} /></mesh>
     </group>
@@ -1193,7 +1206,7 @@ const AbrigoCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, tEpisodio: t
         </group>
       )}
       {gente.map((g, i) => <Gente key={`${g.id}${i}`} g={g} p={p} t={t} />)}
-      {etiqs.map((k) => <EtiquetaS key={k} e={ETIQ[k]} larg={n("etiqL", 2.2)} />)}
+      {etiqs.map((k) => <EtiquetaS key={k} e={ETIQ[k]} larg={n("etiqL", 2.2)} k={n("etiqK", 1)} />)}
     </group>
   );
 };

@@ -157,4 +157,5 @@ Texto aprovado em 02/11/2026 (`tasks/roteiro-abs.md` v1, 26 batidas, só a parte
 - [x] Render conferido (quadro do meio de cada batida em `motor/out/q/folha1..5.png`, recortes dos cartões de painel em `motor/out/cartoes/`) e ajustes de visual (3 rodadas)
 - [x] Visual aprovado; voz (ElevenLabs), som, mix e master: 1:59, −14,12 LUFS, −2,37 dBTP (`motor/out/final-bunker.mp4`); a pessoa aprovou em 03/11/2026 ("ficou muito bom")
 - [x] Ajustes finais: gerador em sala fechada com cano de escape (chapéu para cima), painel solar de frente, sala extra com água e comida, fecho "apocalipse nuclear" (risada) e chamadas "curta, comente, compartilhe, siga"
-- [ ] **Publicando** (03/11/2026): a pessoa publica na sequência; falta capa, textos de publicação, hashtags (sugestão `#bunker #sobrevivencia` + as fixas) e NAS (`07-bunker/{final.mp4,roteiro.md,publicacao/}`)
+- [x] Capa, textos de publicação (`tasks/publicacao/bunker-textos.md`), hashtags `#bunker #sobrevivencia` aprovadas e NAS `07-bunker/` (03/11/2026)
+- [ ] **Publicando**: a pessoa posta quando sentir, sem data fixa
