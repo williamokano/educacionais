@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "skills-motion-videos": {
+      "source": {
+        "source": "github",
+        "repo": "williamokano/skills-motion-videos"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "motion-videos@skills-motion-videos": true
+  }
+}
