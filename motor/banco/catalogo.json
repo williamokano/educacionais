@@ -1,0 +1,50 @@
+{
+  "_sobre": "Catálogo do banco de assets. Roteiros só podem usar itens com status 'aprovado'. Status: rascunho → em-revisao → aprovado | ajustar. 'benchmark' = material de regressão do motor; 'serie' = série em produção.",
+  "temas": {
+    "plano": {
+      "status": "aprovado",
+      "arquivo": "banco/temas/plano.ts"
+    }
+  },
+  "personagens": {},
+  "aderecos": {
+    "molho-chaves": {
+      "status": "aprovado"
+    },
+    "chave-triangular": {
+      "status": "aprovado"
+    },
+    "walkie": {
+      "status": "aprovado"
+    },
+    "lanterna": {
+      "status": "aprovado"
+    },
+    "gravata-mao": {
+      "status": "aprovado",
+      "conhecido": "a gota acompanha a mão em vez de cair (artefato aceito)"
+    },
+    "celular": {
+      "status": "em-revisao"
+    },
+    "carteira": {
+      "status": "em-revisao"
+    },
+    "notas": {
+      "status": "em-revisao"
+    },
+    "documento": {
+      "status": "em-revisao"
+    }
+  },
+  "cenarios": {
+    "escuro": {
+      "status": "aprovado",
+      "pacote": "genérico"
+    },
+    "cor-solida": {
+      "status": "aprovado",
+      "pacote": "genérico"
+    }
+  }
+}

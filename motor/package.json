@@ -1,0 +1,32 @@
+{
+  "name": "webseries",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "voice": "python3 pipeline/voice.py",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "folha": "sh -c 'mkdir -p out/folhas && remotion still src/index.ts folha out/folhas/$0.png --props=\"{\\\"personagem\\\":\\\"$0\\\",\\\"tema\\\":\\\"plano\\\"}\" && remotion render src/index.ts folha out/folhas/$0.mp4 --props=\"{\\\"personagem\\\":\\\"$0\\\",\\\"tema\\\":\\\"plano\\\"}\" --scale=0.5'",
+    "benchmark": "python3 pipeline/benchmark_personagem.py",
+    "teste-rig": "esbuild tools/cotovelo.ts --bundle --platform=node --log-level=error --outfile=out/teste-rig.js && node out/teste-rig.js"
+  },
+  "dependencies": {
+    "@fontsource/oswald": "5.2.6",
+    "@react-three/fiber": "9.1.2",
+    "@remotion/cli": "4.0.538",
+    "@remotion/fonts": "4.0.538",
+    "@remotion/three": "4.0.538",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.538",
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.8",
+    "@types/three": "0.170.0",
+    "typescript": "5.8.3"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}

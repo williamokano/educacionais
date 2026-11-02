@@ -1,0 +1,6 @@
+# gerado pelo motion-videos-motor: dependências e saídas ficam fora do git
+node_modules/
+out/
+public/*/
+!public/fonts/
+.motor-backup/

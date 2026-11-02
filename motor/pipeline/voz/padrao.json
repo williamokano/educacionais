@@ -1,0 +1,11 @@
+{
+  "_sobre": "Voz padrão do projeto (teste e ajuste fino): VoiceStudio local. O bloco 'voz' do roteiro.json sobrescreve qualquer chave. Para o ElevenLabs: \"tts\": \"elevenlabs\", \"id\": <voice_id>.",
+  "tts": "voicestudio",
+  "stt": "voicestudio",
+  "idioma": "pt",
+  "motor": "omnivoice",
+  "perfil": "f33c0e39",
+  "velocidade": 1.08,
+  "seed": 11,
+  "pausa": 0.18
+}
