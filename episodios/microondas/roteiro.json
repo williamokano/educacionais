@@ -1,0 +1,1843 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 10,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Esquente a sopa no fogo [leve] e o fundo _queima_ [leve] enquanto o meio continua *frio*.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "microondas",
+    "fogo": 1,
+    "queima": {
+     "de": 0,
+     "para": 0.85,
+     "ini": 0.2,
+     "fim": 0.8
+    },
+    "calor": 0.12,
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.55,
+       1.406,
+       2.9
+      ],
+      "alvo": [
+       -0.55,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.55,
+       1.378,
+       2.7
+      ],
+      "alvo": [
+       -0.55,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.15,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "mexendo",
+      "exp": "dor"
+     }
+    ],
+    "etiq": [
+     "fundo@0.3-0.6",
+     "meio@0.62"
+    ],
+    "etiqS": 0.35,
+    "ambiencia": {
+     "som": "fogo",
+     "volume": 0.15
+    },
+    "visor": "0:00",
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 2,
+      "de": 0.18,
+      "para": 0.2,
+      "dur": 1,
+      "texto": "MEIO",
+      "x": 10,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "tosse",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.35,
+      "em": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O fogo esquenta a *panela*, [leve] a panela esquenta a comida, [leve] de _fora_ pra dentro [leve] e _devagar_.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "microondas",
+    "fogo": 1,
+    "queima": 0.85,
+    "calor": {
+     "de": 0.1,
+     "para": 0.5
+    },
+    "fumaca": 0.6,
+    "setasCalor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.85
+    },
+    "relogio": true,
+    "relogioVel": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       1.406,
+       2.9
+      ],
+      "alvo": [
+       -0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       1.378,
+       2.7
+      ],
+      "alvo": [
+       -0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.1,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "bracos-cruzados",
+      "exp": "cansado"
+     }
+    ],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "tique_relogio",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "tique_relogio",
+      "trecho": 3,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Então faça o calor nascer *dentro* da comida. [leve] Quase toda comida é cheia de *água*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "microondas",
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.15
+    },
+    "lupaX": -0.75,
+    "lupaY": 1.45,
+    "fogo": 0.3,
+    "queima": 0.5,
+    "calor": 0.4,
+    "lupaModo": "agua",
+    "agua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "lasanha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.75,
+       1.466,
+       1.9
+      ],
+      "alvo": [
+       -0.75,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.75,
+       1.452,
+       1.8
+      ],
+      "alvo": [
+       -0.75,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "etiq": [
+     "agua@0.25"
+    ],
+    "etiqS": 0.3,
+    "ambiencia": "nenhuma",
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.35,
+      "em": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Cada gotinha tem *moléculas* de água, [leve] e cada molécula é um *ímã* minúsculo: [leve] um lado _mais_, [leve] outro _menos_.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "microondas",
+    "lupa": 1,
+    "lupaX": -0.75,
+    "lupaY": 1.45,
+    "fogo": 0.3,
+    "queima": 0.5,
+    "calor": 0.4,
+    "lupaModo": "mol",
+    "sinais": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.85
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.75,
+       1.466,
+       1.9
+      ],
+      "alvo": [
+       -0.75,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.75,
+       1.452,
+       1.8
+      ],
+      "alvo": [
+       -0.75,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "etiq": [
+     "molecula@0.2"
+    ],
+    "etiqS": 0.25,
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Gire esses ímãs pra um lado, [leve] pro outro, [leve] bem rápido: [leve] eles esfregam nos vizinhos [leve] e *esquentam*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "microondas",
+    "lupa": 1,
+    "lupaX": -0.75,
+    "lupaY": 1.45,
+    "fogo": 0.3,
+    "queima": 0.5,
+    "calor": 0.4,
+    "lupaModo": "giro",
+    "gira": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "quente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 1
+    },
+    "termoL": {
+     "de": 0.05,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 1
+    },
+    "campo": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.75,
+       1.466,
+       1.9
+      ],
+      "alvo": [
+       -0.75,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.75,
+       1.452,
+       1.8
+      ],
+      "alvo": [
+       -0.75,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "chocalho",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "zumbido",
+      "trecho": 2,
+      "volume": 0.25
+     },
+     {
+      "som": "chiado",
+      "trecho": 3,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas como virar *bilhões* de ímãs de uma vez? [leve] Com uma _onda_ invisível [leve] que troca de lado [leve] bilhões de vezes por segundo.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "microondas",
+    "lupa": 1,
+    "lupaX": -0.75,
+    "lupaY": 1.35,
+    "fogo": 0.3,
+    "queima": 0.5,
+    "calor": 0.4,
+    "lupaModo": "onda",
+    "gira": 1,
+    "quente": 1,
+    "onda": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "campo": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.75,
+       1.416,
+       1.9
+      ],
+      "alvo": [
+       -0.75,
+       1.15,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.75,
+       1.402,
+       1.8
+      ],
+      "alvo": [
+       -0.75,
+       1.15,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "visor": "0:00",
+    "cartoes": [
+     {
+      "tipo": "contador245",
+      "trecho": 3,
+      "y": 40,
+      "dur": 1.2
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "zumbido",
+      "trecho": 2,
+      "volume": 0.3
+     },
+     {
+      "som": "bips",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha um *tubo* que cria essa onda.",
+   "duracao": 2.8,
+   "cena": {
+    "cenario": "microondas",
+    "tubo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "aneis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.5
+    },
+    "fio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.6,
+       1.146,
+       0.9
+      ],
+      "alvo": [
+       0.6,
+       1.02,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.6,
+       1.139,
+       0.85
+      ],
+      "alvo": [
+       0.6,
+       1.02,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "magnetron@0.35"
+    ],
+    "etiqS": 0.2,
+    "ambiencia": {
+     "som": "drone",
+     "volume": 0.1
+    },
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.6
+     },
+     {
+      "som": "zumbido",
+      "trecho": 0,
+      "volume": 0.3,
+      "em": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a onda vai pra *todo lado* [leve] e se _perde_ pela cozinha.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "microondas",
+    "tubo": 1,
+    "fio": 1,
+    "espalha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.4
+    },
+    "tigela": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "fogo": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.2,
+       1.564,
+       2.6
+      ],
+      "alvo": [
+       0.2,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.2,
+       1.536,
+       2.4
+      ],
+      "alvo": [
+       0.2,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.8,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "mao-na-testa",
+      "exp": "cansado"
+     }
+    ],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "estatica",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "passos",
+      "trecho": 1,
+      "volume": 0.3,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então feche tudo numa *caixa de metal*: [leve] o metal _rebate_ a onda [leve] e prende ela com a comida.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "microondas",
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "caixa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.55
+    },
+    "ondasDentro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.253,
+       1.45
+      ],
+      "alvo": [
+       0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.239,
+       1.35
+      ],
+      "alvo": [
+       0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "caixa@0.3"
+    ],
+    "etiqS": 0.25,
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.9
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas fechada, [leve] você não *vê* a comida.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "frente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.05,
+       1.52,
+       3.0
+      ],
+      "alvo": [
+       0.05,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.05,
+       1.506,
+       2.9
+      ],
+      "alvo": [
+       0.05,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.28,
+      "z": 0.1,
+      "rot": 1.4,
+      "acao": "em-pe",
+      "exp": "tenso",
+      "incl": {
+       "de": 0,
+       "para": 0.5,
+       "ini": 0.2,
+       "fim": 0.6
+      }
+     }
+    ],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 0,
+      "volume": 0.25
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha uma porta com uma *tela* de furinhos: [leve] a luz passa pelos furos, [leve] e a onda grande _não passa_.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "frente": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "tela": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.4
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.55
+    },
+    "lupaModo": "tela",
+    "lupaX": 0.42,
+    "lupaY": 1.6,
+    "lupaR": 0.36,
+    "zoomDe": [
+     0.4,
+     1.05,
+     0.0
+    ],
+    "grade": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.42,
+       1.524,
+       1.6
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       1.51,
+       1.5
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "onda@0.55",
+     "furo@0.75"
+    ],
+    "etiqS": 0.3,
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a onda *quica* nas paredes [leve] e faz pontos _quentes_ [leve] e pontos _frios_.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "prato": 1,
+    "tela": 1,
+    "mapa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "mapaX": 0.42,
+    "mapaY": 1.6,
+    "mapaEsc": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       0.42,
+       1.51,
+       1.5
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       1.503,
+       1.45
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "quente@0.45",
+     "frio@0.7"
+    ],
+    "etiqS": 0.3,
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha a comida num *prato giratório*: [leve] ela passa por todos os pontos [leve] e esquenta *mais por igual*.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "prato": 1,
+    "tela": 1,
+    "mapa": 1,
+    "mapaMix": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.9
+    },
+    "giraPrato": 1,
+    "aquece": {
+     "de": 0,
+     "para": 0.6
+    },
+    "vapor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.9
+    },
+    "mapaX": 0.42,
+    "mapaY": 1.6,
+    "mapaEsc": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       0.42,
+       1.51,
+       1.5
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       1.503,
+       1.45
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "prato@0.2"
+    ],
+    "etiqS": 0.3,
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pronto: a sopa esquenta [leve] sem fogo [leve] e sem queimar o fundo.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "prato": 1,
+    "tela": 1,
+    "abre": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.35
+    },
+    "aquece": 1,
+    "vapor": 1,
+    "giraPrato": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.338,
+       1.7
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.324,
+       1.6
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar o *micro-ondas*!",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "prato": 1,
+    "tela": 1,
+    "raiox": 1,
+    "abre": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.25
+    },
+    "corpo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "aquece": 1,
+    "vapor": 0.6,
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.331,
+       1.65
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.317,
+       1.55
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "mMagnetron@0.4-0.6",
+     "mCaixa@0.5-0.75",
+     "mTela@0.66-0.88",
+     "mPrato@0.8"
+    ],
+    "etiqS": 0.25,
+    "etiqYmax": 0.2,
+    "ambiencia": "nenhuma",
+    "visor": "0:00",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "MICRO-ONDAS",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 120
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.4
+     },
+     {
+      "som": "jingle",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5,
+      "em": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No fundo, ele é uma *caixa de metal* [leve] com um tubo que faz *onda* [leve] pra mexer na água da comida.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "raiox": 1,
+    "prato": 1,
+    "corpo": 1,
+    "ondasDentro": 1,
+    "aquece": 0.6,
+    "vapor": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.26,
+       1.5
+      ],
+      "alvo": [
+       0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.246,
+       1.4
+      ],
+      "alvo": [
+       0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "mCaixa@0.05-0.4",
+     "mMagnetron@0.4-0.7",
+     "mPrato@0.72"
+    ],
+    "etiqS": 0.25,
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "zumbido",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E ele _não_ esquenta de dentro pra fora, [leve] como todo mundo acha.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 0,
+    "prato": 1,
+    "corpo": 1,
+    "fatia": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.303,
+       1.45
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.289,
+       1.35
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A onda entra *uns três centímetros*. [leve] O resto esquenta [leve] pelo *calor* que anda por dentro da comida.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 0,
+    "prato": 1,
+    "corpo": 1,
+    "fatia": 1,
+    "corte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.15
+    },
+    "pen": {
+     "de": 0,
+     "para": 5.6,
+     "ini": 0.4,
+     "fim": 1
+    },
+    "regua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.35
+    },
+    "corteX": 0.42,
+    "corteY": 1.5,
+    "corteL": 0.52,
+    "camera": {
+     "de": {
+      "pos": [
+       0.42,
+       1.524,
+       1.6
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       1.51,
+       1.5
+      ],
+      "alvo": [
+       0.42,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "tique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas _atenção_: [leve] *nunca* ponha garfo [leve] ou papel alumínio lá dentro.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "prato": 1,
+    "tela": 1,
+    "corpo": 1,
+    "abre": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "aquece": 0.3,
+    "garfoAr": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.438,
+       1.7
+      ],
+      "alvo": [
+       0.5,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.424,
+       1.6
+      ],
+      "alvo": [
+       0.5,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "visor": "0:00",
+    "cartoes": [
+     {
+      "tipo": "atencao",
+      "trecho": 1,
+      "y": 40,
+      "dx": 90
+     }
+    ],
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O metal faz _faísca_, [leve] a onda bate nele [leve] e pode até pegar _fogo_.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 0,
+    "prato": 1,
+    "corpo": 1,
+    "garfo": 1,
+    "faisca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "aluminio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.45
+    },
+    "fogoAl": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.289,
+       1.35
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.275,
+       1.25
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": -0.1,
+       "para": -1.2,
+       "ini": 0.5,
+       "fim": 1
+      },
+      "z": 0.3,
+      "rot": -1.4,
+      "acao": "andando",
+      "exp": "medo"
+     }
+    ],
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "raio",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "fogo",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 2,
+      "volume": 0.4,
+      "em": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Manda pra quem *jura* que ele esquenta de dentro pra fora. [leve] E você sabe como o *fogão de indução* [leve] esquenta a panela [leve] sem esquentar a mão? [leve] Siga pra descobrir.",
+   "duracao": 10.0,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "prato": 1,
+    "tela": 1,
+    "corpo": 1,
+    "indu": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.5
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.65,
+       1.55,
+       2.5
+      ],
+      "alvo": [
+       0.65,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.65,
+       1.522,
+       2.3
+      ],
+      "alvo": [
+       0.65,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "visor": "0:00",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* o que você já esqueceu lá dentro. [leve] *Compartilhe* [leve] com quem acha que é de dentro pra fora [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 9.3,
+   "cena": {
+    "cenario": "microondas",
+    "caixa": 1,
+    "tubo": 1,
+    "fio": 1,
+    "tigela": 1,
+    "raiox": 1,
+    "prato": 1,
+    "corpo": 1,
+    "ondasDentro": 1,
+    "aquece": 1,
+    "vapor": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       0.42,
+       2.136,
+       2.4
+      ],
+      "alvo": [
+       0.42,
+       1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       2.122,
+       2.3
+      ],
+      "alvo": [
+       0.42,
+       1.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "visor": "0:00",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "o que você já esqueceu lá dentro"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 4,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

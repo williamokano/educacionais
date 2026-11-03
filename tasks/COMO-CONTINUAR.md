@@ -27,6 +27,17 @@ morava no repositório do plugin, na branch `feat/motor-3d`).
      −2,37 dBTP, `motor/out/final-bunker.mp4`). A pessoa publica na sequência; capa, textos (`tasks/publicacao/bunker-textos.md`), hashtags
      (`#bunker #sobrevivencia` + as fixas, aprovadas) e a pasta `07-bunker/` no NAS **prontos**; a pessoa posta quando sentir. Gerador:
      `python3 tasks/geradores/bunker.py episodios/bunker/roteiro.json`. Fecho com risada (`[laughs]` no `eleven_v4`) e 27,5 efeitos/min (aprovados).
+  8. `airfryer`: "Como fritar batata sem fritura?" (revela a **airfryer** só na batida 24; `"episodio": 9`), cenário `cozinha` (fogão com forno,
+     caixinha na bancada, airfryer, micro-ondas), cartão `atencao`. Texto v2 em `tasks/roteiro-airfryer.md` (30 batidas). **Status: vídeo
+     pronto para a pessoa assistir (02/11/2026)**, `motor/out/final-airfryer.mp4`, 1:56, −14,1 LUFS, −2,4 dBTP. **Aprovado pela pessoa (03/11/2026)**, pasta `08-airfryer/` no NAS pronta. Publisher (série `educativos`, conta `curiosidades_desenroladas`, terça/quinta/sábado 18:00): conteúdo cadastrado como rascunho (id `10ffd41a590a349f484a1f50ff4ad36b`); **pronto e agendado para 04/11 18:00 (03/11/2026)**. O micro-ondas já está agendado para 06/11 18:00 (id do conteúdo `287e858af4a6a34f6083be6eb8b8aee0`). Stories "já saiu" agendados 10 min depois de cada vídeo (sem link). **Primeiro comentário fixado** (revela o nome do aparelho, pergunta algo e avisa o próximo) configurado nos dois vídeos via `update_content`; episódios novos precisam do próprio `first_comment` (a série não tem padrão). Publisher: `http://192.168.178.79:9090/mcp`; se as ferramentas sumirem, `/mcp` e reconectar. Gerador:
+     `python3 tasks/geradores/airfryer.py episodios/airfryer/roteiro.json`. Gancho final: micro-ondas (próximo episódio).
+  9. `microondas`: "Como esquentar comida sem fogo?" (revela o **micro-ondas** só na batida 15; `"episodio": 10`), cenário `microondas`
+     (reaproveita `cozinha-*`; lupas com a molécula de água, magnetron, caixa de metal, tela da porta, prato giratório), cartão `contador245`.
+     Texto aprovado em `tasks/roteiro-microondas.md` (22 batidas). **Status: vídeo pronto para a pessoa assistir (02/11/2026)**,
+     `motor/out/final-microondas.mp4`, 1:34, −14,2 LUFS, pico −3,8 dBFS (remasterizado em 03/11/2026 com limite de −3 dBTP, porque o
+     pico passava de −2 depois do AAC). Capa (`episodios/microondas/publicacao/capa.png`), textos (`tasks/publicacao/microondas-textos.md`)
+     e a pasta `09-microondas/` no NAS **prontos (03/11/2026)**. **Refeito em 03/11/2026** a pedido da pessoa: prato centralizado, magnetron dentro da carcaça (ao lado da cavidade) e carcaça em raio-X só nas batidas 15, 16 e 22 (campo `raiox`); NAS atualizado. Falta: a pessoa ouvir e aprovar as hashtags `#cozinha #curiosidades`. Gerador: `python3 tasks/geradores/microondas.py
+     episodios/microondas/roteiro.json`. Gancho final: fogão de indução (próximo episódio).
 - **Gerador do roteiro.json:** `tasks/geradores/<tema>.py` lê a tabela do `.md` (as falas sempre iguais) e monta as
   cenas, os efeitos (`SFX`) e as ambiências por batida. Uso (da raiz do repositório):
   `python3 tasks/geradores/abs.py episodios/abs/roteiro.json`.

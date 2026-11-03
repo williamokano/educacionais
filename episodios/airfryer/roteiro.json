@@ -1,0 +1,3014 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 9,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Jogue a batata no óleo quente [leve] e _ai_! [leve] O óleo *pula* na sua mão.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "cozinha",
+    "fogo": 1,
+    "chia": {
+     "de": 0.7,
+     "para": 1
+    },
+    "bolhas": {
+     "de": 0.2,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "cai": {
+     "de": 0,
+     "para": 1.4,
+     "ini": 0.04,
+     "fim": 0.5
+    },
+    "espirra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       1.298,
+       3.2
+      ],
+      "alvo": [
+       -0.6,
+       0.85,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       1.256,
+       2.9
+      ],
+      "alvo": [
+       -0.6,
+       0.85,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.1,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": [
+       [
+        0.3,
+        "mexendo",
+        "concentrado"
+       ],
+       [
+        1,
+        "mexendo",
+        "dor"
+       ]
+      ],
+      "exp": "neutro",
+      "queima": {
+       "de": 0,
+       "para": 0.95,
+       "ini": 0.38,
+       "fim": 0.62
+      },
+      "braco": "E"
+     }
+    ],
+    "ambiencia": {
+     "som": "fogo",
+     "volume": 0.15
+    },
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.6,
+      "em": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.6
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O óleo *espirra* pra todo lado, [leve] _queima_ a pele [leve] e suja *tudo*.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "cozinha",
+    "fogo": 1,
+    "chia": 1,
+    "bolhas": 1,
+    "cai": 1.4,
+    "espirra": 1,
+    "sujo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       1.284,
+       3.1
+      ],
+      "alvo": [
+       -0.6,
+       0.85,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       1.242,
+       2.8
+      ],
+      "alvo": [
+       -0.6,
+       0.85,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.1,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "mexendo",
+      "exp": "dor",
+      "queima": 0.95,
+      "oleoBraco": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.1,
+       "fim": 0.8
+      },
+      "manchas": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.2,
+       "fim": 0.9
+      },
+      "braco": "E"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "chiado",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *tampe a panela*.",
+   "duracao": 2.2,
+   "cena": {
+    "cenario": "cozinha",
+    "fogo": 0.5,
+    "chia": {
+     "de": 1,
+     "para": 0.2,
+     "ini": 0.4,
+     "fim": 0.9
+    },
+    "bolhas": {
+     "de": 1,
+     "para": 0.1,
+     "ini": 0.4,
+     "fim": 0.9
+    },
+    "cai": 1.4,
+    "tampa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.08,
+     "fim": 0.5
+    },
+    "espirra": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 0.65
+    },
+    "sujo": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.55,
+     "fim": 0.98
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.206,
+       2.9
+      ],
+      "alvo": [
+       -0.5,
+       0.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.178,
+       2.7
+      ],
+      "alvo": [
+       -0.5,
+       0.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.3,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "em-pe",
+      "exp": "alivio",
+      "manchas": {
+       "de": 1,
+       "para": 0,
+       "ini": 0.55,
+       "fim": 0.98
+      }
+     }
+    ],
+    "etiq": [
+     "tampa@0.3"
+    ],
+    "etiqS": 0.4,
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a batata *boia no óleo* [leve] e sai _encharcada_.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "cozinha",
+    "fogo": 0.5,
+    "chia": 0.6,
+    "bolhas": 0.4,
+    "cai": 1.4,
+    "tampa": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.3
+    },
+    "saida": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.95
+    },
+    "guardanapo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.45
+    },
+    "mancha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.7,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.25,
+       1.276,
+       3.4
+      ],
+      "alvo": [
+       -0.25,
+       0.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.25,
+       1.248,
+       3.2
+      ],
+      "alvo": [
+       -0.25,
+       0.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.45,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "mao-na-testa",
+      "exp": "tenso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "papel",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *tire o óleo*. [leve] Leve a batata pro *forno* bem quente.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 0,
+    "bandeja": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.75
+    },
+    "pilha": true,
+    "res": 0.5,
+    "vent": 0,
+    "fan": 0,
+    "sai": 0,
+    "porta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.9
+    },
+    "panela": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.25
+    },
+    "fogo": {
+     "de": 0.5,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.25
+    },
+    "luzForno": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.7,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.4,
+       1.152,
+       3.8
+      ],
+      "alvo": [
+       -0.4,
+       0.62,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.4,
+       1.124,
+       3.6
+      ],
+      "alvo": [
+       -0.4,
+       0.62,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.05,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": [
+       [
+        0.3,
+        "em-pe",
+        "concentrado"
+       ],
+       [
+        0.8,
+        "mexendo",
+        "concentrado"
+       ],
+       [
+        1,
+        "em-pe",
+        "concentrado"
+       ]
+      ],
+      "exp": "concentrado"
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "rangido",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.6,
+      "em": 0.9
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.22,
+      "em": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas sem óleo ela só *seca*: [leve] fica _pálida_ [leve] e dura.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 0,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 0,
+    "fan": 0,
+    "sai": 0,
+    "porta": 1,
+    "luzForno": 1,
+    "panela": 0,
+    "seca": {
+     "de": 0,
+     "para": 1
+    },
+    "doura": {
+     "de": 0,
+     "para": 0.08
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.4,
+       1.138,
+       3.7
+      ],
+      "alvo": [
+       -0.4,
+       0.62,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.4,
+       1.11,
+       3.5
+      ],
+      "alvo": [
+       -0.4,
+       0.62,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.05,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "bracos-cruzados",
+      "exp": "cansado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "cronometro",
+      "trecho": 0,
+      "de": "0:00",
+      "ate": "0:25"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "tique_relogio",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "rangido",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Passe só *um fio de óleo*: [leve] ele leva o calor pra batata [leve] e ajuda a *dourar*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 0,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 0,
+    "fan": 0,
+    "sai": 0,
+    "porta": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.12
+    },
+    "panela": 0,
+    "luzForno": {
+     "de": 1,
+     "para": 0.3,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "seca": {
+     "de": 1,
+     "para": 0.1,
+     "ini": 0.4,
+     "fim": 0.8
+    },
+    "doura": {
+     "de": 0.08,
+     "para": 0.46,
+     "ini": 0.45,
+     "fim": 1
+    },
+    "brilho": {
+     "de": 0,
+     "para": 0.7,
+     "ini": 0.4,
+     "fim": 0.7
+    },
+    "garrafa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.02,
+     "fim": 0.2
+    },
+    "fio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.4
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       1.096,
+       3.4
+      ],
+      "alvo": [
+       -0.45,
+       0.62,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       1.0,
+       3.0
+      ],
+      "alvo": [
+       -0.45,
+       0.58,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.0,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "explicando",
+      "exp": "eureka"
+     }
+    ],
+    "etiq": [
+     "fio@0.3"
+    ],
+    "etiqS": 0.3,
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o ar do forno fica *parado*, [leve] e em volta da batata nasce uma *capa de ar* [leve] que _segura_ o calor lá fora.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 0,
+    "bandeja": 1,
+    "pilha": false,
+    "res": 0.5,
+    "vent": 0,
+    "fan": 0,
+    "sai": 0,
+    "porta": 0,
+    "panela": 0,
+    "solo": 1,
+    "doura": 0.2,
+    "setasDe": 0.12,
+    "capa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       0.688,
+       1.7
+      ],
+      "alvo": [
+       -0.6,
+       0.45,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       0.66,
+       1.5
+      ],
+      "alvo": [
+       -0.6,
+       0.45,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "capa@0.45"
+    ],
+    "etiqS": 0.2,
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 0,
+      "de": 0.12,
+      "para": 0.36,
+      "dur": 5.5,
+      "texto": "BATATA",
+      "x": 10,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha um *ventilador*. [leve] O ar *gira* [leve] e varre essa capa.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 0,
+    "bandeja": 1,
+    "pilha": false,
+    "res": 0.5,
+    "vent": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.35
+    },
+    "fan": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "sai": 0,
+    "porta": 0,
+    "panela": 0,
+    "solo": 1,
+    "doura": {
+     "de": 0.2,
+     "para": 0.3,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "setasDe": 0.0,
+    "capa": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.3,
+     "fim": 0.75
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       0.752,
+       1.8
+      ],
+      "alvo": [
+       -0.6,
+       0.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       0.724,
+       1.6
+      ],
+      "alvo": [
+       -0.6,
+       0.5,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "ventilador@0.2"
+    ],
+    "etiqS": 0.22,
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 0,
+      "de": 0.35,
+      "para": 0.85,
+      "dur": 3.5,
+      "texto": "BATATA",
+      "x": 10,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o forno é _grande_: [leve] o ar *demora* pra esquentar [leve] e perde força.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 0,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": 0,
+    "porta": 0,
+    "panela": 0,
+    "doura": 0.3,
+    "setas": "fraco",
+    "camera": {
+     "de": {
+      "pos": [
+       -0.4,
+       1.138,
+       3.7
+      ],
+      "alvo": [
+       -0.4,
+       0.62,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.4,
+       1.11,
+       3.5
+      ],
+      "alvo": [
+       -0.4,
+       0.62,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.05,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "mao-na-testa",
+      "exp": "cansado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "cronometro",
+      "trecho": 0,
+      "de": "0:00",
+      "ate": "0:40"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "rangido",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "tique_relogio",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *encolha o forno*. [leve] Menos espaço, [leve] ar quente *mais rápido*.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.5
+    },
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.95
+    },
+    "porta": 0,
+    "panela": 0,
+    "doura": {
+     "de": 0.3,
+     "para": 0.36
+    },
+    "setas": "forte",
+    "camera": {
+     "de": {
+      "pos": [
+       0.15,
+       1.372,
+       4.8
+      ],
+      "alvo": [
+       0.15,
+       0.7,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.25,
+       1.338,
+       4.2
+      ],
+      "alvo": [
+       0.25,
+       0.75,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": 0.1,
+       "para": 1.05,
+       "ini": 0.0,
+       "fim": 0.4
+      },
+      "z": 0.3,
+      "rot": {
+       "de": 1.3,
+       "para": -1.0,
+       "ini": 0.3,
+       "fim": 0.45
+      },
+      "acao": [
+       [
+        0.4,
+        "andando",
+        "sorriso"
+       ],
+       [
+        1,
+        "explicando",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 1,
+      "de": 0.2,
+      "para": 0.95,
+      "dur": 2.6,
+      "texto": "FORNO",
+      "x": 10,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o ar só bate nas batatas *de fora*. [leve] As do meio e as de baixo ficam _cruas_.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "doura": 0.5,
+    "expo": 0,
+    "frio": 1,
+    "setas": "topo",
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.38,
+       2.0
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.352,
+       1.8
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.6,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "cocando-cabeca",
+      "exp": "cansado"
+     }
+    ],
+    "etiq": [
+     "cru@0.3"
+    ],
+    "etiqS": 0.25,
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Troque a assadeira por um *cesto furado*, [leve] com espaço *embaixo*: [leve] o ar *dá a volta*, [leve] sobe pelos furos [leve] e pega _tudo_.",
+   "duracao": 7.2,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "cesto": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.5
+    },
+    "doura": {
+     "de": 0.5,
+     "para": 0.46,
+     "ini": 0.45,
+     "fim": 0.9
+    },
+    "expo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.9
+    },
+    "frio": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.5,
+     "fim": 0.9
+    },
+    "setas": "laco",
+    "setasDe": 0.33,
+    "brilho": 0.7,
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.23,
+       1.5
+      ],
+      "alvo": [
+       0.45,
+       1.02,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.209,
+       1.35
+      ],
+      "alvo": [
+       0.45,
+       1.02,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "cesto@0.3"
+    ],
+    "etiqS": 0.22,
+    "sfx": [
+     {
+      "som": "arrastar",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "sopro",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o ar só esquenta a *casca*. [leve] O calor *anda* até o meio, [leve] e por isso a batata é em *palito*: [leve] o meio fica _pertinho_.",
+   "duracao": 8.6,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "fatia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "fatiaTam": 1.0,
+    "pen": {
+     "de": 0.1,
+     "para": 2.4,
+     "ini": 0.2,
+     "fim": 0.75
+    },
+    "fantasma": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.4
+    },
+    "penF": {
+     "de": 0.08,
+     "para": 0.5,
+     "ini": 0.3,
+     "fim": 1.0
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.36,
+       1.316,
+       1.9
+      ],
+      "alvo": [
+       0.36,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.36,
+       1.295,
+       1.75
+      ],
+      "alvo": [
+       0.36,
+       1.05,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "casca@0.12"
+    ],
+    "etiqS": 0.2,
+    "cartoes": [
+     {
+      "tipo": "termometro",
+      "trecho": 1,
+      "de": 0.2,
+      "para": 0.85,
+      "dur": 4.0,
+      "texto": "CENTRO",
+      "x": 10,
+      "y": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "tique_relogio",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o óleo que sobra *pinga pelos furos* [leve] e _suja_ o fundo.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "cesto": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "pinga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "mancha1": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.21,
+       1.5
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.189,
+       1.35
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ponha uma *gaveta* embaixo [leve] pra pegar o que pinga.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.5,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "cesto": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "pinga": 1,
+    "gaveta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.5
+    },
+    "mancha1": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.4,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.21,
+       1.5
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.189,
+       1.35
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "gaveta@0.15"
+    ],
+    "etiqS": 0.2,
+    "sfx": [
+     {
+      "som": "arrastar",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.9
+     },
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.3,
+      "em": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a resistência ainda está *longe* da batata. [leve] O calor chega _devagar_.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "res": 0.6,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 0,
+    "dist": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.38,
+       2.0
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.359,
+       1.85
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.15,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "bracos-cruzados",
+      "exp": "cansado"
+     }
+    ],
+    "ambiencia": {
+     "som": "drone",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "cronometro",
+      "trecho": 0,
+      "de": "0:00",
+      "ate": "0:15"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "tique_relogio",
+      "trecho": 1,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *encolha tudo* [leve] e ponha a *resistência* bem pertinho, [leve] com o ventilador soprando o calor.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": {
+     "de": 1,
+     "para": 2,
+     "ini": 0,
+     "fim": 0.45
+    },
+    "bandeja": 1,
+    "pilha": true,
+    "res": {
+     "de": 0.6,
+     "para": 0.95,
+     "ini": 0.3,
+     "fim": 0.8
+    },
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "porta": 0,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.8
+    },
+    "setas": "quente",
+    "setasDe": 0.7,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.366,
+       1.9
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       1.262,
+       1.3
+      ],
+      "alvo": [
+       0.42,
+       1.08,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.5,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "explicando",
+      "exp": "sorriso"
+     }
+    ],
+    "etiq": [
+     "resistencia@0.45"
+    ],
+    "etiqS": 0.2,
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a resistência *não para* de esquentar, [leve] e a batata _queima_.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "brilho": 0.7,
+    "porta": 0,
+    "resPos": 1,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "res": {
+     "de": 0.6,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.8
+    },
+    "temp": {
+     "de": 0.45,
+     "para": 1.12,
+     "ini": 0,
+     "fim": 1
+    },
+    "termo": true,
+    "linha": 1,
+    "doura": {
+     "de": 0.46,
+     "para": 0.8,
+     "ini": 0.15,
+     "fim": 1
+    },
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.4,
+       1.255,
+       1.25
+      ],
+      "alvo": [
+       0.4,
+       1.08,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.4,
+       1.241,
+       1.15
+      ],
+      "alvo": [
+       0.4,
+       1.08,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.5,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "surpreso",
+      "exp": "preocupado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "cronometro",
+      "trecho": 0,
+      "de": "0:00",
+      "ate": "0:30"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "tique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 0,
+      "volume": 0.4,
+      "em": 0.8
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha um *termostato*: [leve] ele sente o calor, [leve] *desliga* a resistência [leve] e *liga* de novo quando esfria.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "brilho": 0.7,
+    "porta": 0,
+    "resPos": 1,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "termostato": true,
+    "termo": true,
+    "linha": 1,
+    "sensor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.25
+    },
+    "doura": 0.46,
+    "camera": {
+     "de": {
+      "pos": [
+       0.4,
+       1.255,
+       1.25
+      ],
+      "alvo": [
+       0.4,
+       1.08,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.4,
+       1.241,
+       1.15
+      ],
+      "alvo": [
+       0.4,
+       1.08,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.4,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "apontando",
+      "exp": "eureka"
+     }
+    ],
+    "etiq": [
+     "termostato@0.1"
+    ],
+    "etiqS": 0.15,
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.4,
+      "em": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e se você *esquecer*? [leve] A batata vira _carvão_.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "brilho": 0.7,
+    "porta": 0,
+    "resPos": 1,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "res": 0.55,
+    "doura": {
+     "de": 0.46,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.6
+    },
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.6
+    },
+    "relogio": true,
+    "relogioVel": 0.9,
+    "sensor": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.332,
+       1.3
+      ],
+      "alvo": [
+       0.5,
+       1.15,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.318,
+       1.2
+      ],
+      "alvo": [
+       0.5,
+       1.15,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": 1.0,
+       "para": 2.8,
+       "ini": 0.12,
+       "fim": 0.9
+      },
+      "z": 0.3,
+      "rot": 1.4,
+      "acao": "andando",
+      "exp": "preocupado"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "passos",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "tique_relogio",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha um *temporizador*: [leve] acabou o tempo, [leve] ele *desliga* o aparelho [leve] e *apita*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "brilho": 0.7,
+    "porta": 0,
+    "resPos": 1,
+    "vent": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.5,
+     "fim": 0.58
+    },
+    "fan": 1,
+    "sai": 1,
+    "painel": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "contagem": {
+     "de": 5,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 0.52
+    },
+    "res": {
+     "de": 0.95,
+     "para": 0,
+     "ini": 0.5,
+     "fim": 0.58
+    },
+    "sino": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.56,
+     "fim": 0.62
+    },
+    "doura": 0.46,
+    "sensor": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.332,
+       1.3
+      ],
+      "alvo": [
+       0.5,
+       1.15,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.318,
+       1.2
+      ],
+      "alvo": [
+       0.5,
+       1.15,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": 2.8,
+       "para": 1.05,
+       "ini": 0.5,
+       "fim": 0.95
+      },
+      "z": 0.3,
+      "rot": -1.4,
+      "acao": [
+       [
+        0.92,
+        "andando",
+        "eureka"
+       ],
+       [
+        1,
+        "em-pe",
+        "eureka"
+       ]
+      ],
+      "exp": "eureka"
+     }
+    ],
+    "etiq": [
+     "temporizador@0.05"
+    ],
+    "etiqS": 0.22,
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "tique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.6,
+      "em": 0.5
+     },
+     {
+      "som": "passos_rapidos",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pronto: a batata fica *crocante* [leve] com só *um fio de óleo*.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "brilho": 0.7,
+    "porta": 0,
+    "resPos": 1,
+    "vent": 1,
+    "fan": 1,
+    "sai": 1,
+    "painel": 1,
+    "doura": 0.46,
+    "vapor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "partida": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.55
+    },
+    "res": 0.4,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.218,
+       1.2
+      ],
+      "alvo": [
+       0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       1.197,
+       1.05
+      ],
+      "alvo": [
+       0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.3,
+      "z": 0.3,
+      "rot": -0.7,
+      "acao": [
+       [
+        0.5,
+        "pensando",
+        "sorriso"
+       ],
+       [
+        1,
+        "comemorando",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "segura": "palito",
+      "braco": "D"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5,
+      "em": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar a *airfryer*!",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.35
+    },
+    "painel": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 1,
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.34,
+     "fim": 1
+    },
+    "puxaPulso": [
+     0.4,
+     0.8
+    ],
+    "res": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.168,
+       1.2
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.154,
+       1.1
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0.72,
+      "z": 0.0,
+      "rot": -0.6,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": 0.9,
+      "esc": 0.26
+     }
+    ],
+    "etiq": [
+     "afVentilador@0.36-0.56",
+     "afResistencia@0.5-0.72",
+     "afCesto@0.66-0.88",
+     "afGaveta@0.82"
+    ],
+    "etiqS": 0.17,
+    "etiqYmax": 0.3,
+    "etiqK": 0.6,
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "AIRFRYER",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 130
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.4
+     },
+     {
+      "som": "jingle",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5,
+      "em": 0.6
+     },
+     {
+      "som": "rangido",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No fundo, ela é um *forninho minúsculo*, [leve] com ventilador forte [leve] e resistência pertinho.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": 1,
+    "painel": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 1,
+    "res": {
+     "de": 0.4,
+     "para": 0.9,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "setas": "quente",
+    "setasDe": 0.2,
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.203,
+       1.45
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.182,
+       1.3
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.45,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "explicando",
+      "exp": "sorriso"
+     }
+    ],
+    "etiq": [
+     "afVentilador@0.28-0.62",
+     "afResistencia@0.55"
+    ],
+    "etiqS": 0.17,
+    "etiqK": 0.65,
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas _atenção_: [leve] *nunca* ponha papel manteiga _solto_ lá dentro.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": 1,
+    "painel": 1,
+    "bandeja": 1,
+    "pilha": false,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 0.4,
+    "papel": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.15,
+     "fim": 0.55
+    },
+    "papelEntra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.15,
+     "fim": 0.55
+    },
+    "res": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       0.42,
+       1.182,
+       1.3
+      ],
+      "alvo": [
+       0.42,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.42,
+       1.168,
+       1.2
+      ],
+      "alvo": [
+       0.42,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.42,
+      "z": 0.3,
+      "rot": 1.1,
+      "acao": "mexendo",
+      "exp": "alerta"
+     }
+    ],
+    "ambiencia": {
+     "som": "drone",
+     "volume": 0.12
+    },
+    "cartoes": [
+     {
+      "tipo": "atencao",
+      "trecho": 1,
+      "y": 40
+     }
+    ],
+    "sfx": [
+     {
+      "som": "papel",
+      "trecho": 0,
+      "volume": 0.55
+     },
+     {
+      "som": "bips",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O vento *sopra o papel pra cima*, [leve] ele encosta na _resistência_ [leve] e pode pegar _fogo_.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": 1,
+    "painel": 1,
+    "bandeja": 1,
+    "pilha": false,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 1,
+    "papel": 1,
+    "ventoPapel": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.55
+    },
+    "fogoPapel": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 1
+    },
+    "res": 1,
+    "setasDe": 0.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.225,
+       1.25
+      ],
+      "alvo": [
+       0.45,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.234,
+       1.1
+      ],
+      "alvo": [
+       0.45,
+       1.08,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "papel",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Deixe sempre *comida pesada* em cima dele, [leve] e _nunca_ ligue com o papel vazio.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": 1,
+    "painel": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.12,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 0,
+    "papel": 1,
+    "queda": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.4
+    },
+    "qtd": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.5,
+     "fim": 0.62
+    },
+    "marcas": "ambas",
+    "marcaK": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.12,
+     "fim": 0.22
+    },
+    "marcaK2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.62,
+     "fim": 0.72
+    },
+    "res": 0.2,
+    "camera": {
+     "de": {
+      "pos": [
+       0.45,
+       1.182,
+       1.3
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.45,
+       1.168,
+       1.2
+      ],
+      "alvo": [
+       0.45,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.05,
+      "z": 0.3,
+      "rot": -1.0,
+      "acao": "em-pe",
+      "exp": "alivio"
+     }
+    ],
+    "etiq": [
+     "pesado@0.15-0.52",
+     "vazio@0.64"
+    ],
+    "etiqS": 0.17,
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "impacto",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Manda pra quem *jura* que airfryer é mágica. [leve] E você sabe como o *micro-ondas* esquenta a comida *sem fogo*? [leve] Siga pra descobrir.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": 1,
+    "painel": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 1,
+    "res": 0.3,
+    "micro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.5
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.95,
+       1.468,
+       3.7
+      ],
+      "alvo": [
+       0.95,
+       0.95,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.95,
+       1.426,
+       3.4
+      ],
+      "alvo": [
+       0.95,
+       0.95,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.42,
+      "z": 0.3,
+      "rot": -0.4,
+      "acao": "pensando",
+      "exp": "pensativo"
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5,
+      "em": 0.6
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* o que você faz na sua. [leve] *Compartilhe* [leve] com quem só come batata [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "cozinha",
+    "forno": 2,
+    "corpo": 1,
+    "painel": 1,
+    "bandeja": 1,
+    "pilha": true,
+    "cesto": 1,
+    "gaveta": 1,
+    "doura": 0.46,
+    "brilho": 0.7,
+    "resPos": 1,
+    "sai": 1,
+    "fan": 1,
+    "vent": 1,
+    "res": 0.3,
+    "micro": 1,
+    "interroga": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.95,
+       2.95,
+       5.0
+      ],
+      "alvo": [
+       0.95,
+       2.25,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.95,
+       2.922,
+       4.8
+      ],
+      "alvo": [
+       0.95,
+       2.25,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 1.42,
+      "z": 0.3,
+      "rot": -0.4,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "o que você faz na sua"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 4,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

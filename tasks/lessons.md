@@ -125,3 +125,30 @@
   que dividem a borda ficam em alturas diferentes; tomada larga usa multiplicador de largura (`etiqK`) e poucos rótulos (≤ 4,
   ≥ ~1,2 s cada, quase sem sobreposição).
 - **Regra:** conferir rótulos em **três momentos** de cada janela e com o cartão de HUD da batida na tela, não em um quadro só.
+
+## Escala dos aparelhos, o que já existe na casa e a ordem das peças (02/11/2026, episódio 9)
+
+- **O que aconteceu:** no explicador da airfryer, o forno, a airfryer e o micro-ondas saíram gigantes ao lado do Zeca; usei um
+  "forno de embutir" novo em vez do forno do próprio fogão; o forno "grande" já tinha ventilador antes de eu "ensinar" o
+  ventilador; a batata aparecia em pedaços e o corte em palito só entrava no fim; e a fala dava a conta da água e o 180° para
+  explicar o respingo.
+- **Regra:** aparelho e móvel têm o tamanho real ao lado do Zeca (~1,7 m): airfryer ~30 cm, micro-ondas ~50 cm, forno do fogão
+  na altura do joelho/cintura. Ao acertar a escala, aproxime a câmera dos objetos (≥ 45% da largura nas batidas que explicam a peça)
+  e deixe o Zeca na borda ou fora do quadro, em vez de deixar o aparelho minúsculo.
+- **Regra:** use o que a casa já tem (o forno do próprio fogão) antes de inventar um objeto novo na cena.
+- **Regra:** uma peça só aparece na tela quando a fala a introduz. Se a cena de antes já mostra a peça (ventilador no forno),
+  o "ponha um ventilador" fica sem sentido.
+- **Regra:** o ingrediente já vem do jeito que a pessoa faz na vida real (batata frita é palito desde a primeira cena). Detalhe
+  de preparo não vira "passo novo" no fim.
+- **Regra:** o respingo do óleo é só "espirra". Nada de física da água nem de temperatura na fala quando a cena já mostra.
+- **Regra:** a nota do "papel manteiga": é *parchment paper*, o termo está certo. Papel encerado/parafinado é outro produto.
+  Antes de duvidar do termo da pessoa, pesquise.
+
+## Aparelho com peças internas: centro da cavidade e carcaça em raio-X (03/11/2026, episódio 10)
+
+- **Prato no centro da cavidade.** O prato e a tigela estavam 10 cm fora do centro (x 0,32 numa caixa de 0,22 a 0,62). Derive o centro
+  da peça do centro da cavidade (`PX = CXM`, `PZ` = meio da profundidade) e não de um número solto.
+- **Peça de máquina não fica na área de uso.** O magnetron estava dentro da cavidade, onde vai a comida. Ele mora na carcaça, ao lado
+  da cavidade (atrás do painel), e a onda entra por uma abertura na parede. Vale para qualquer aparelho: a cavidade é só para a comida.
+- **Mostrar por dentro = raio-X.** Para explicar as peças, a carcaça vira vidro com contorno (`raiox` 1) e a peça interna aparece.
+  Com o aparelho fechado (uso normal), a carcaça é opaca e só a comida aparece. Nunca deixe a peça interna visível com a carcaça fechada.

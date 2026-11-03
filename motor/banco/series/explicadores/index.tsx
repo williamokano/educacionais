@@ -9,7 +9,10 @@ import { inversor } from "./inversor";
 import { solar } from "./solar";
 import { pista } from "./pista";
 import { abrigo } from "./abrigo";
+import { cozinha } from "./cozinha";
+import { microondas } from "./microondas";
 import { CARTOES_BUNKER } from "./cartoes-bunker";
+import { CARTOES_AIRFRYER } from "./cartoes-airfryer";
 import { MORADORES } from "./moradores";
 import { CARTOES_FREIO } from "./cartoes-freio";
 import { CARTOES_AR } from "./cartoes";
@@ -17,7 +20,7 @@ import { ciclo } from "./ciclo";
 import { salaBalde } from "./sala";
 import { zeca } from "./zeca";
 
-// Pacote da série dos explicadores 3D (sala do balde, casa em corte, bancada, banho, solar, inversor, pista e abrigo) + Zeca Parafuso.
+// Pacote da série dos explicadores 3D (sala do balde, casa em corte, bancada, banho, solar, inversor, pista, abrigo, cozinha e micro-ondas) + Zeca Parafuso.
 // Roteiros: episodios/<nome>/roteiro.json (slug "demo-3d", registrado em motor/banco/index.ts).
 
 const usePop = () => {
@@ -59,7 +62,7 @@ export const explicadores: Pacote = {
   nome: "Explicadores 3D",
   personagens: {},
   personagens3d: { zeca, eletricista, ...MORADORES },
-  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo },
-  cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER },
+  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas },
+  cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER, ...CARTOES_AIRFRYER },
   qualidade3d: "suave",
 };
