@@ -1,0 +1,1622 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 11,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Pegue um *pedaço de pau*, [leve] acenda [leve] e ponha a panela em cima.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "inducao",
+    "acamp": true,
+    "pote": "aluminio",
+    "fogo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       0.762,
+       3.3
+      ],
+      "alvo": [
+       -0.45,
+       0.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       0.748,
+       3.1999999999999997
+      ],
+      "alvo": [
+       -0.45,
+       0.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "mexendo",
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "fogo",
+     "volume": 0.15
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "fogo",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o calor _sobe_ [leve] e se espalha pelo ar, [leve] e quase nada chega na *panela*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "inducao",
+    "acamp": true,
+    "pote": "aluminio",
+    "fogo": 1,
+    "setasCalor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.9
+    },
+    "barras": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.5
+    },
+    "barrasModo": "ar",
+    "barrasX": -0.45,
+    "barrasY": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       0.84,
+       3.5
+      ],
+      "alvo": [
+       -0.45,
+       0.35,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       0.826,
+       3.4
+      ],
+      "alvo": [
+       -0.45,
+       0.35,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "bracos-cruzados",
+      "exp": "preocupado"
+     }
+    ],
+    "etiq": [
+     "panela@0.3",
+     "ar@0.45"
+    ],
+    "etiqS": 0.35,
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha *mais madeira*.",
+   "duracao": 2.2,
+   "cena": {
+    "cenario": "inducao",
+    "acamp": true,
+    "pote": "aluminio",
+    "lenha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "fogo": {
+     "de": 1,
+     "para": 1.5
+    },
+    "quente": {
+     "de": 0,
+     "para": 0.8,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "bolhas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       0.762,
+       3.3
+      ],
+      "alvo": [
+       -0.45,
+       0.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       0.748,
+       3.1999999999999997
+      ],
+      "alvo": [
+       -0.45,
+       0.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "mexendo",
+      "exp": "eureka"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a madeira queima mal [leve] e solta _fumaça_ [leve] e deixa a panela *preta*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "inducao",
+    "acamp": true,
+    "pote": "aluminio",
+    "lenha": 1,
+    "fogo": 1.3,
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "fuligem": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "quente": 0.7,
+    "bolhas": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       0.89,
+       3.5
+      ],
+      "alvo": [
+       -0.45,
+       0.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       0.876,
+       3.4
+      ],
+      "alvo": [
+       -0.45,
+       0.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "abanando",
+      "exp": "dor"
+     }
+    ],
+    "etiq": [
+     "fumaca@0.35"
+    ],
+    "etiqS": 0.35,
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "tosse",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "chiado",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E o fogo _cresce_, [leve] o vento joga ele pro lado [leve] e você não consegue *regular*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "inducao",
+    "acamp": true,
+    "pote": "aluminio",
+    "lenha": 1,
+    "fogo": {
+     "de": 1.3,
+     "para": 1.6
+    },
+    "vento": {
+     "de": 0.2,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.6
+    },
+    "faiscas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.8
+    },
+    "fumaca": 0.7,
+    "fuligem": 1,
+    "quente": 0.7,
+    "bolhas": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.45,
+       0.868,
+       3.7
+      ],
+      "alvo": [
+       -0.45,
+       0.35,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.45,
+       0.854,
+       3.6
+      ],
+      "alvo": [
+       -0.45,
+       0.35,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": -0.05,
+       "para": 0.3,
+       "ini": 0.4,
+       "fim": 0.9
+      },
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "abanando",
+      "exp": "medo"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então use *gás*: [leve] um botão que você gira [leve] e o fogo *obedece*.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "gas",
+    "pote": "aluminio",
+    "gas": {
+     "de": 0.3,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.9
+    },
+    "botao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.9
+    },
+    "quente": {
+     "de": 0.2,
+     "para": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       1.364,
+       2.6
+      ],
+      "alvo": [
+       -0.6,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       1.116,
+       1.9
+      ],
+      "alvo": [
+       -0.7,
+       0.85,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "apontando",
+      "exp": "eureka"
+     }
+    ],
+    "etiq": [
+     "botao@0.5"
+    ],
+    "etiqS": 0.3,
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.55
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a chama é _aberta_: [leve] ela lambe a panela dos lados, [leve] esquenta a cozinha [leve] e _queima_ a mão.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "gas",
+    "pote": "aluminio",
+    "gas": 1,
+    "botao": 1,
+    "lambe": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "ondasCalor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.7
+    },
+    "quente": 0.7,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.548,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.534,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": 0.0,
+       "para": -0.35,
+       "ini": 0.4,
+       "fim": 0.9
+      },
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "abanando",
+      "exp": "dor",
+      "queima": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.5,
+       "fim": 1
+      }
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então tire a chama: [leve] ponha uma *resistência* [leve] embaixo de um vidro liso.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "res": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.9
+    },
+    "quente": 0.2,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.298,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       0.85,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.284,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       0.85,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "apontando",
+      "exp": "eureka"
+     }
+    ],
+    "etiq": [
+     "resistencia@0.45"
+    ],
+    "etiqS": 0.3,
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o vidro tem que esquentar _primeiro_, [leve] demora [leve] e fica quente depois de desligar [leve] e _queima_ a mão.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "res": {
+     "de": 1,
+     "para": 0.3,
+     "ini": 0.0,
+     "fim": 0.4
+    },
+    "vidroQuente": {
+     "de": 0.2,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "luzH": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.7
+    },
+    "quente": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.348,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       0.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.334,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       0.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": {
+       "de": 0.0,
+       "para": -0.35,
+       "ini": 0.65,
+       "fim": 0.95
+      },
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "abanando",
+      "exp": "dor",
+      "queima": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.7,
+       "fim": 1
+      }
+     }
+    ],
+    "etiq": [
+     "hq@0.55"
+    ],
+    "etiqS": 0.3,
+    "sfx": [
+     {
+      "som": "tique",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "sino",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E se esquentasse *só a panela* [leve] e não o vidro?",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "vidroQuente": 0.15,
+    "luzH": 0.6,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.448,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.434,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "cocando-cabeca",
+      "exp": "pensativo"
+     }
+    ],
+    "interroga": 0,
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Ponha embaixo do vidro uma *bobina* de fio, [leve] com uma corrente que _troca de lado_ [leve] muito rápido: [leve] ela cria um campo que também troca de lado.",
+   "duracao": 9.0,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.3
+    },
+    "corrente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.5
+    },
+    "campo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.7,
+       1.23,
+       2.0
+      ],
+      "alvo": [
+       -0.7,
+       0.95,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       1.202,
+       1.8
+      ],
+      "alvo": [
+       -0.7,
+       0.95,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "bobina@0.15",
+     "campo@0.6"
+    ],
+    "etiqS": 0.3,
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] O campo entra na panela de *ferro* [leve] e faz correntes girarem dentro do metal; [leve] o metal _resiste_ [leve] e *esquenta*.",
+   "duracao": 6.6,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 1,
+    "corrente": 1,
+    "campo": 1,
+    "quente": {
+     "de": 0.1,
+     "para": 0.8,
+     "ini": 0.4,
+     "fim": 1
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.15
+    },
+    "lupaX": -0.55,
+    "lupaY": 1.55,
+    "lupaR": 0.34,
+    "redemoinho": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.65,
+       1.55,
+       2.5
+      ],
+      "alvo": [
+       -0.65,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.65,
+       1.536,
+       2.4
+      ],
+      "alvo": [
+       -0.65,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "corrente@0.35"
+    ],
+    "etiqS": 0.3,
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "chiado",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Pronto: [leve] a panela esquenta [leve] e o vidro só pega o *calor dela*. [leve] Fora da panela, ele fica _frio_.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 1,
+    "corrente": 1,
+    "campo": 0.6,
+    "quente": 1,
+    "bolhas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.8
+    },
+    "vidroFrio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.448,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.434,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "queima": 0
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas só serve panela de *ferro*: [leve] alumínio, vidro [leve] e cobre _ficam frios_.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "aluminio",
+    "bobina": 1,
+    "corrente": 1,
+    "campo": 1,
+    "quente": {
+     "de": 0.6,
+     "para": 0.0,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.448,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.434,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "bracos-cruzados",
+      "exp": "preocupado"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Passe um *ímã* no fundo: [leve] se gruda, [leve] serve.",
+   "duracao": 2.8,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 0,
+    "ima": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 1
+    },
+    "imaGruda": true,
+    "quente": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.8,
+       1.33,
+       2.0
+      ],
+      "alvo": [
+       -0.8,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.8,
+       1.252,
+       1.8
+      ],
+      "alvo": [
+       -0.8,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "ima@0.2"
+    ],
+    "etiqS": 0.3,
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "metal",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar o *fogão de indução*!",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 1,
+    "corrente": 1,
+    "campo": 1,
+    "quente": 1,
+    "vidroFrio": 0.8,
+    "painel": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.3
+    },
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.448,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.434,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "vBobina@0.4-0.6",
+     "vVidro@0.55-0.8",
+     "vPanela@0.75"
+    ],
+    "etiqS": 0.3,
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "FOGÃO DE INDUÇÃO",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "jingle",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No fundo, ele é uma *bobina* [leve] que faz a própria *panela* [leve] virar o fogo.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 1,
+    "corrente": 1,
+    "campo": 1,
+    "quente": 1,
+    "vidroFrio": 0.8,
+    "painel": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.7,
+       1.272,
+       2.3
+      ],
+      "alvo": [
+       -0.7,
+       0.95,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       1.244,
+       2.1
+      ],
+      "alvo": [
+       -0.7,
+       0.95,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "etiq": [
+     "vBobina@0.1",
+     "vPanela@0.5"
+    ],
+    "etiqS": 0.3,
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Tire a panela [leve] e ele para; [leve] e quase todo o calor vai pra *comida*, [leve] bem mais que no _gás_.",
+   "duracao": 6.6,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": {
+     "de": 1,
+     "para": 0.2,
+     "ini": 0.1,
+     "fim": 0.3
+    },
+    "corrente": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.1,
+     "fim": 0.3
+    },
+    "campo": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.1,
+     "fim": 0.3
+    },
+    "quente": {
+     "de": 1,
+     "para": 0.2,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "vidroFrio": {
+     "de": 0.8,
+     "para": 0,
+     "ini": 0.1,
+     "fim": 0.3
+    },
+    "barras": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.6
+    },
+    "barrasModo": "ef",
+    "barrasX": -0.45,
+    "barrasY": 1.5,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.498,
+       3.2
+      ],
+      "alvo": [
+       -0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.484,
+       3.1
+      ],
+      "alvo": [
+       -0.5,
+       1.05,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.05,
+      "z": 0.3,
+      "rot": -1.2,
+      "acao": "em-pe",
+      "exp": "sorriso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Manda pra quem *chama* de fogão elétrico. [leve] Tem muita coisa da sua casa [leve] que você usa sem saber como funciona. [leve] Siga pra _descobrir_.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 0,
+    "corrente": 0,
+    "quente": 0,
+    "painel": 0.6,
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.3,
+       1.414,
+       2.6
+      ],
+      "alvo": [
+       -0.3,
+       1.05,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       1.386,
+       2.4
+      ],
+      "alvo": [
+       -0.3,
+       1.05,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "sfx": [
+     {
+      "som": "bips",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* o que você queimou na mão. [leve] *Compartilhe* [leve] com quem ainda cozinha no gás [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "inducao",
+    "fogao": "vidro",
+    "pote": "ferro",
+    "bobina": 1,
+    "corrente": 1,
+    "campo": 1,
+    "quente": 1,
+    "vidroFrio": 0.8,
+    "painel": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.7,
+       1.592,
+       2.8
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       1.564,
+       2.6
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "o que você queimou na mão"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 4,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

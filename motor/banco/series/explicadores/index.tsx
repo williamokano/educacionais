@@ -11,6 +11,7 @@ import { pista } from "./pista";
 import { abrigo } from "./abrigo";
 import { cozinha } from "./cozinha";
 import { microondas } from "./microondas";
+import { inducao } from "./inducao";
 import { CARTOES_BUNKER } from "./cartoes-bunker";
 import { CARTOES_AIRFRYER } from "./cartoes-airfryer";
 import { MORADORES } from "./moradores";
@@ -62,7 +63,7 @@ export const explicadores: Pacote = {
   nome: "Explicadores 3D",
   personagens: {},
   personagens3d: { zeca, eletricista, ...MORADORES },
-  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas },
+  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas, inducao },
   cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER, ...CARTOES_AIRFRYER },
   qualidade3d: "suave",
 };

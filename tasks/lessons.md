@@ -152,3 +152,13 @@
   da cavidade (atrás do painel), e a onda entra por uma abertura na parede. Vale para qualquer aparelho: a cavidade é só para a comida.
 - **Mostrar por dentro = raio-X.** Para explicar as peças, a carcaça vira vidro com contorno (`raiox` 1) e a peça interna aparece.
   Com o aparelho fechado (uso normal), a carcaça é opaca e só a comida aparece. Nunca deixe a peça interna visível com a carcaça fechada.
+
+## Publisher: caminho de mídia sempre relativo à pasta de conteúdo (03/11/2026)
+
+- O servidor do publisher monta o NAS em `/content` (`/volume3/media:/content:ro`), então `media_path` e `cover_path` têm que ser **relativos**
+  (`Videos Curtos/Educacionais/08-airfryer/final.mp4`), nunca `/mnt/nas-dxp6800pro/...`. Com caminho absoluto o story falhou 3 vezes
+  com `FileNotFoundError` em `/tmp/ig_post_*/`.
+- Cada episódio leva **dois stories**: teaser (arte `story-horario.png`) 4–5 h antes e "já saiu" 1–2 min depois do vídeo (18:01).
+- Ao gerar a arte pela composição `capa`, o `episode` é `demo-3d/ep<NN>` onde NN = pasta do NAS + 1 (airfryer `ep09`, micro-ondas `ep10`).
+- Conta errada no Instagram (03/11/2026): o publisher usava sessão em **cache** de outra conta; `check_connection` dizia "ok" mesmo assim (só prova que a sessão vive, não de quem é).
+  Depois de mexer em credencial, a prova é um story de teste e a pessoa olhar o perfil. Antes de agendar vídeo, confirme o primeiro post na conta certa.
