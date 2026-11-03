@@ -73,7 +73,7 @@ Quanto tempo o vidro do fogão fica quente depois de desligar?
 
 ## Artes
 
-- Capa: `publicacao/capa.png`. Arte de horário: `publicacao/story-horario.png` ("Amanhã às 18h"). Arte de "já saiu": `publicacao/story-ja-saiu.png` (mesmo quadro da capa, selo NOVO EPISÓDIO).
+- Capa: `publicacao/capa.png`. Arte de horário: `publicacao/story-horario.png` ("Hoje às 18h", o aviso sai no mesmo dia, às 13:30). Arte de "já saiu": `publicacao/story-ja-saiu.png` (mesmo quadro da capa, selo NOVO EPISÓDIO).
 
 ## Checklist
 
