@@ -162,3 +162,41 @@
 - Ao gerar a arte pela composição `capa`, o `episode` é `demo-3d/ep<NN>` onde NN = pasta do NAS + 1 (airfryer `ep09`, micro-ondas `ep10`).
 - Conta errada no Instagram (03/11/2026): o publisher usava sessão em **cache** de outra conta; `check_connection` dizia "ok" mesmo assim (só prova que a sessão vive, não de quem é).
   Depois de mexer em credencial, a prova é um story de teste e a pessoa olhar o perfil. Antes de agendar vídeo, confirme o primeiro post na conta certa.
+
+## Voz: `pausa` só vale entre pedidos; rótulo 3D depende da distância (04/11/2026, episódio 12)
+
+- **O que aconteceu:** pus `pausa: 1.5` numa batida para segurar o close do cachorro em silêncio, mas a voz sai num pedido só para todas as batidas
+  com a mesma configuração, e a pausa só é inserida entre pedidos: não houve silêncio. Os rótulos 3D (`etiqK`) que ficaram bons num quadro de teste saíram
+  enormes no vídeo, porque a câmera andou e a letra é proporcional à distância da âncora.
+- **Regra:** para ter silêncio no meio da fala, separe as batidas seguintes num `falante` com outra `seed` em `vozes` (gera outro pedido). Confira o
+  `narrar` ("Gerando … em N pedido(s)").
+- **Regra:** `etiqK` se confere no **vídeo final** (quadro no momento em que o rótulo aparece), nunca só nos quadros de teste; com câmera andando, escolha o
+  valor pelo ponto em que o rótulo entra.
+- **Regra:** cortes dentro de uma batida (vinhetas) devem seguir `trechos` e o tempo da fala, não frações da batida.
+
+## Peça na mão, andor no ombro, rosto alegre e multidão de verdade (04/11/2026, episódio 12)
+
+- **O que aconteceu:** no primeiro vídeo da procissão (1) a cruz e os ciriais atravessavam o corpo dos coroinhas; (2) o andor passava na altura do rosto, porque eu
+  supus a altura do ombro sem medir; (3) a abertura mostrava o Zeca de costas; (4) quase todo mundo parecia triste: a expressão padrão `neutro` desse rosto tem
+  pálpebra caída e eu ainda pus `preocupado` nas pessoas; (5) as velas ficaram todas na mesma altura, sem acompanhar a mão de cada pessoa; (6) a procissão tinha 8
+  figurantes. A pessoa achou tudo isso vendo o vídeo, não os quadros de teste.
+- **Regra:** objeto carregado fica **na frente do corpo, com as mãos nele** (pose própria dos braços), nunca no eixo do tronco. Objeto preso a uma pessoa escala
+  com `altura / 1,6` do personagem (a mão muda de altura com a pessoa).
+- **Regra:** altura de ombro do boneco ≈ 1,09 × (`altura`/1,6) × `esc`; para varas no ombro, iguale a altura dos carregadores (`esc = 1,06 × 1,6 / altura`) e ponha cada
+  um **ao lado** da vara (x = vara ± 0,2), não embaixo dela.
+- **Regra:** expressão padrão de figurante e de personagem principal é `sorriso` (ou `surpreso`); `neutro` e `preocupado` leem como tristeza. Só use triste quando a
+  fala pede.
+- **Regra:** procissão, torcida, fila e multidão têm **dezenas** de pessoas (30+), em fileiras; 8 parece cena de teatro. Abertura: câmera **na frente** do personagem
+  principal, com o cenário atrás, nunca nas costas dele, salvo pedido.
+- **Regra:** depois de mudar pose ou escala, confira o **vídeo final** em quadros de cada batida, não só os quadros de teste.
+
+## Todo objeto levado está nas mãos, em toda vinheta; e o cenário vai para o palco certo (04/11/2026, episódio 12)
+
+- **O que aconteceu:** depois de corrigir a cruz e os ciriais da rua, deixei objetos soltos no ar nas vinhetas: o livro do Evangelho na altura do rosto do padre, o pão e o
+  vinho das ofertas, os ramos, a hóstia, a cruz da Sexta-feira Santa; os coroinhas da missa com os braços soltos ao lado dos ciriais; e o andor da festa do padroeiro
+  desenhado em x = 0 enquanto o palco estava em x = 40 (só a imagem aparecia, "voando"). A boca aberta do Caramelo tinha a língua desenhada abaixo do queixo.
+- **Regra:** ao corrigir um erro de um tipo (objeto na mão), procure **todas** as ocorrências do tipo no episódio, não só a que a pessoa apontou: busque cada objeto
+  levado (`grep` pelo nome) e confira a pose de quem o leva (`SEGURA`, `SEGURA_D`, `COMUNHAO`).
+- **Regra:** peça de cenário que não recebe `x` (andor, cruz) vai num `<group position>` do palco; confira no quadro que ela aparece junto das pessoas.
+- **Regra:** boca aberta de bicho: interior escuro entre o focinho e a mandíbula, a mandíbula desce, a língua apoia nela; nunca uma faixa rosa solta abaixo do queixo.
+- **Regra:** ao calcular quadros de conferência, leia o `fps` do `episode.json` (30), nunca suponha 25.

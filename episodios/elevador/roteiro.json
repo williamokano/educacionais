@@ -1,0 +1,2390 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 14,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] A corda _estala_ [leve] com você lá em cima!",
+   "duracao": 2.8,
+   "cena": {
+    "cenario": "elevador",
+    "plat": {
+     "de": 0.9,
+     "para": 2.6
+    },
+    "ajuda": 1,
+    "desfia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -1.3,
+       3.06,
+       7.2
+      ],
+      "alvo": [
+       0.85,
+       2.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.9,
+       4.128,
+       6.8
+      ],
+      "alvo": [
+       0.85,
+       3.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.15,
+      "rot": 0.25,
+      "acao": [
+       [
+        0.55,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "surpreso",
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "naPlat": true,
+      "pose": [
+       [
+        0.55,
+        {
+         "ombroE.x": -1.0,
+         "ombroD.x": -1.0,
+         "cotoveloE.x": -0.4,
+         "cotoveloD.x": -0.4,
+         "ombroE.z": 0.1,
+         "ombroD.z": -0.1,
+         "maos": 0.3
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ]
+     },
+     {
+      "id": "ajudante",
+      "x": 2.0,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "puxa": 1,
+      "suor": 0.6
+     },
+     {
+      "id": "ajudante2",
+      "x": 2.65,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "puxa": 1,
+      "suor": 0.6
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] É só uma plataforma, [leve] uma *corda* [leve] e uma *polia*. [leve] Quando a corda arrebenta, [leve] ninguém _segura_.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 2.8,
+    "ajuda": 1,
+    "corte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.8,
+     "fim": 0.87
+    },
+    "corteAt": 2.8,
+    "corteOff": 1.2,
+    "quedaIni": 0.88,
+    "quedaFim": 1.0,
+    "quedaD": 2.15,
+    "etiq": [
+     "corda@0.333-0.4",
+     "polia@0.533-0.6"
+    ],
+    "etiqS": 0.9,
+    "etiqK": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.4,
+       6.22,
+       6.6
+      ],
+      "alvo": [
+       0.7,
+       5.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.3,
+       4.37,
+       7.6
+      ],
+      "alvo": [
+       0.7,
+       4.0,
+       0
+      ],
+      "fov": 50
+     },
+     "tremor": true
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.15,
+      "rot": 0.2,
+      "acao": "em-pe",
+      "exp": "medo",
+      "naPlat": true,
+      "pose": {
+       "ombroE.x": -1.0,
+       "ombroD.x": -1.0,
+       "cotoveloE.x": -0.4,
+       "cotoveloD.x": -0.4,
+       "ombroE.z": 0.1,
+       "ombroD.z": -0.1,
+       "maos": 0.3
+      }
+     },
+     {
+      "id": "ajudante",
+      "x": 2.0,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "surpreso",
+      "exp": "surpreso"
+     },
+     {
+      "id": "ajudante2",
+      "x": 2.65,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "surpreso",
+      "exp": "surpreso"
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto",
+      "trecho": 4,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então prenda na plataforma uma *mola em arco*, [leve] esticada pela corda, [leve] e ponha *trilhos com dentes* dos lados.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 0.8,
+    "ajuda": 0,
+    "mola": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.222,
+     "fim": 0.389
+    },
+    "trilhos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.722,
+     "fim": 0.889
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.444,
+     "fim": 0.5
+    },
+    "lupaX": -0.45,
+    "lupaY": 4.05,
+    "lupaR": 0.32,
+    "lupaModo": "mola",
+    "etiq": [
+     "mola@0.278",
+     "trilho@0.722"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.9,
+       3.368,
+       4.6
+      ],
+      "alvo": [
+       0.1,
+       3.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       3.336,
+       4.199999999999999
+      ],
+      "alvo": [
+       0.1,
+       3.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.1,
+      "rot": 0.1,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "naPlat": true
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Se a corda arrebenta, [leve] a mola _solta_ [leve] e as pontas travam nos dentes.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 2.4,
+    "mola": 1,
+    "trilhos": 1,
+    "corte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.268,
+     "fim": 0.368
+    },
+    "corteAt": 2.4,
+    "corteOff": 0.9,
+    "freia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.348,
+     "fim": 0.508
+    },
+    "freiaD": 0.28,
+    "lupa": 1,
+    "lupaX": -0.85,
+    "lupaY": 5.9,
+    "lupaR": 0.4,
+    "lupaModo": "mola",
+    "etiq": [
+     "trava@0.769"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.8,
+       5.17,
+       5.4
+      ],
+      "alvo": [
+       -0.1,
+       4.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       5.055,
+       5.1000000000000005
+      ],
+      "alvo": [
+       -0.1,
+       4.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.1,
+      "rot": 0.1,
+      "acao": "surpreso",
+      "exp": "eureka",
+      "naPlat": true
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Em 1854, Elisha Otis subiu numa plataforma assim [leve] e mandou _cortar a corda_ [leve] na frente de todo mundo.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "elevador",
+    "feira": true,
+    "trilhos": 1,
+    "mola": 1,
+    "plat": 1.6,
+    "corteLado": "dir",
+    "corte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.84,
+     "fim": 0.97
+    },
+    "machado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.556,
+     "fim": 0.722
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       41.2,
+       3.48,
+       11.5
+      ],
+      "alvo": [
+       40.8,
+       2.1,
+       0
+      ],
+      "fov": 56
+     },
+     "para": {
+      "pos": [
+       41.0,
+       2.804,
+       8.8
+      ],
+      "alvo": [
+       40.7,
+       2.1,
+       0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "id": "casaca",
+      "x": 0,
+      "z": 0.1,
+      "rot": 0.1,
+      "acao": "acenando",
+      "exp": "sorriso",
+      "naPlat": true
+     },
+     {
+      "id": "ajudante",
+      "x": 2.2,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.556,
+        {
+         "ombroE.x": -0.7,
+         "ombroD.x": -0.7,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 0.3
+        }
+       ],
+       [
+        0.656,
+        {
+         "ombroE.x": -2.6,
+         "ombroD.x": -2.6,
+         "cotoveloE.x": -0.4,
+         "cotoveloD.x": -0.4,
+         "tronco.x": -0.15,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.722,
+        {
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2,
+         "tronco.x": 0.35,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.7,
+         "ombroD.x": -0.7,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 0.3
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "cidade",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A plataforma *parou*. [leve] Só desceu um pouquinho.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "elevador",
+    "feira": true,
+    "trilhos": 1,
+    "mola": 1,
+    "plat": 1.6,
+    "corteLado": "dir",
+    "corte": 1,
+    "freia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.02,
+     "fim": 0.3
+    },
+    "freiaD": 0.28,
+    "aplauso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.6
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       40.8,
+       2.33,
+       8.8
+      ],
+      "alvo": [
+       40.7,
+       1.9,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       40.3,
+       2.4,
+       7.0
+      ],
+      "alvo": [
+       40.5,
+       2.3,
+       0.8
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "id": "casaca",
+      "x": 0,
+      "z": 0.1,
+      "rot": 0.1,
+      "acao": "acenando",
+      "exp": "sorriso",
+      "naPlat": true
+     },
+     {
+      "id": "ajudante",
+      "x": 2.2,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "surpreso",
+      "exp": "sorriso"
+     },
+     {
+      "id": "zeca",
+      "x": -0.5,
+      "z": 2.3,
+      "rot": 0,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "cidade",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "impacto_seco",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "jingle",
+      "trecho": 1,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas puxar na mão _cansa_: [leve] gente e carga pesam demais.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 0.9,
+    "mola": 1,
+    "trilhos": 1,
+    "ajuda": 1,
+    "carga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.35
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -1.3,
+       2.492,
+       7.6
+      ],
+      "alvo": [
+       1.1,
+       1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.0,
+       2.444,
+       7.0
+      ],
+      "alvo": [
+       1.1,
+       1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "mulher",
+      "x": -0.35,
+      "z": 0.3,
+      "rot": 0.15,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "naPlat": true
+     },
+     {
+      "id": "homemB",
+      "x": 0.3,
+      "z": 0.3,
+      "rot": -0.15,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "naPlat": true
+     },
+     {
+      "id": "ajudante",
+      "x": 2.0,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": [
+       [
+        1,
+        "em-pe",
+        "cansado"
+       ]
+      ],
+      "exp": "cansado",
+      "puxa": {
+       "de": 1,
+       "para": 0,
+       "ini": 0.5,
+       "fim": 0.6
+      },
+      "suor": 1,
+      "incl": {
+       "de": 0,
+       "para": 0.35,
+       "ini": 0.5,
+       "fim": 0.7
+      }
+     },
+     {
+      "id": "ajudante2",
+      "x": 2.65,
+      "z": 0,
+      "rot": -1.5707963267948966,
+      "acao": "em-pe",
+      "exp": "cansado",
+      "puxa": {
+       "de": 1,
+       "para": 0,
+       "ini": 0.5,
+       "fim": 0.6
+      },
+      "suor": 1,
+      "incl": {
+       "de": 0,
+       "para": 0.35,
+       "ini": 0.5,
+       "fim": 0.7
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "respiracao",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "rangido",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha um *motor* [leve] pra girar a polia. [leve] A corda de aço fica presa nos sulcos, por _atrito_.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "elevador",
+    "plat": {
+     "de": 2.2,
+     "para": 4.3,
+     "ini": 0.18,
+     "fim": 1.0
+    },
+    "mola": 1,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.22
+    },
+    "aco": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.611,
+     "fim": 0.667
+    },
+    "sulcos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.833,
+     "fim": 0.889
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.833,
+     "fim": 0.889
+    },
+    "lupaX": -0.45,
+    "lupaY": 9.9,
+    "lupaR": 0.45,
+    "lupaModo": "sulcos",
+    "etiq": [
+     "motor@0.167-0.333",
+     "polia@0.389-0.5"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       7.648,
+       6.2
+      ],
+      "alvo": [
+       0.7,
+       7.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       7.428,
+       5.7
+      ],
+      "alvo": [
+       0.7,
+       7.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": {
+     "som": "motor",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "motor",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "rangido",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ele levanta a plataforma _inteira_, [leve] com todo mundo, [leve] e gasta energia demais.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "elevador",
+    "plat": {
+     "de": 4.3,
+     "para": 4.7
+    },
+    "mola": 1,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "carga": 1,
+    "esforco": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.7
+    },
+    "etiq": [
+     "motor@0.05-0.4"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       6.672,
+       6.8
+      ],
+      "alvo": [
+       0.7,
+       6.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       6.848,
+       6.2
+      ],
+      "alvo": [
+       0.7,
+       6.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "mulher",
+      "x": -0.35,
+      "z": 0.3,
+      "rot": 0.15,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "naPlat": true
+     },
+     {
+      "id": "homemB",
+      "x": 0.3,
+      "z": 0.3,
+      "rot": -0.15,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "naPlat": true
+     }
+    ],
+    "ambiencia": {
+     "som": "motor",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "comparacao",
+      "titulo": "ESFORÇO DO MOTOR",
+      "itens": [
+       {
+        "texto": "SEM PESO",
+        "valor": 2.7,
+        "rotulo": "ALTO",
+        "cor": "#ff6a3a"
+       }
+      ],
+      "trecho": 2,
+      "y": 40
+     }
+    ],
+    "sfx": [
+     {
+      "som": "motor",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "chiado",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então pendure do outro lado um *peso*, [leve] quase igual à plataforma [leve] mais metade da lotação.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 5.0,
+    "mola": 1,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.45
+    },
+    "etiq": [
+     "contrapeso@0.4"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       0.6,
+       1.8,
+       5.0
+      ],
+      "alvo": [
+       1.5,
+       1.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.9,
+       1.676,
+       4.6
+      ],
+      "alvo": [
+       1.5,
+       1.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 2.35,
+      "z": 0.1,
+      "rot": -1.5707963267948966,
+      "acao": [
+       [
+        0.4,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "eureka"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.45,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.3,
+         "cotoveloD.x": -0.3,
+         "ombroE.z": 0.05,
+         "ombroD.z": -0.05,
+         "maos": 0.3,
+         "tronco.x": 0.12
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "motor",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Quando um *sobe*, [leve] o outro *desce*. [leve] O motor só empurra a _diferença_.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "elevador",
+    "plat": {
+     "de": 0.6,
+     "para": 3.6,
+     "ini": 0.02,
+     "fim": 0.9
+    },
+    "mola": 1,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "etiq": [],
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       3.0,
+       8.0
+      ],
+      "alvo": [
+       0.7,
+       3.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.2,
+       3.0,
+       8.0
+      ],
+      "alvo": [
+       0.7,
+       3.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.1,
+      "rot": 0.1,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "naPlat": true
+     }
+    ],
+    "ambiencia": {
+     "som": "motor",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "comparacao",
+      "titulo": "ESFORÇO DO MOTOR",
+      "itens": [
+       {
+        "texto": "SEM PESO",
+        "valor": 2.7,
+        "rotulo": "ALTO",
+        "cor": "#ff6a3a"
+       },
+       {
+        "texto": "COM PESO",
+        "valor": 0.8,
+        "rotulo": "BAIXO",
+        "cor": "#5bd47a"
+       }
+      ],
+      "trecho": 2,
+      "y": 40
+     }
+    ],
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "rangido",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas uma corda só ainda é _arriscada_. [leve] Então use *várias* cordas de aço, [leve] cada uma de fios *trançados*.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 2.6,
+    "mola": 1,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "cordas": {
+     "de": 1,
+     "para": 4,
+     "ini": 0.5,
+     "fim": 0.611
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.824,
+     "fim": 0.944
+    },
+    "lupaX": 0.55,
+    "lupaY": 5.2,
+    "lupaR": 0.62,
+    "lupaModo": "corda",
+    "rompe": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.88,
+     "fim": 0.98
+    },
+    "etiq": [
+     "cordas@0.5-0.722"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.0,
+       5.68,
+       6.6
+      ],
+      "alvo": [
+       0.4,
+       5.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -2.6,
+       5.76,
+       6.199999999999999
+      ],
+      "alvo": [
+       0.4,
+       5.5,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.1,
+      "rot": 0.1,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "naPlat": true
+     }
+    ],
+    "ambiencia": {
+     "som": "motor",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e se a plataforma descer _rápido demais_ [leve] com as cordas inteiras?",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "elevador",
+    "plat": {
+     "de": 5.0,
+     "para": 2.4,
+     "ini": 0.12,
+     "fim": 0.95
+    },
+    "mola": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "raiox": 1,
+    "veloz": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.4
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -1.4,
+       5.0,
+       8.0
+      ],
+      "alvo": [
+       0.5,
+       5.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.2,
+       3.4,
+       7.4
+      ],
+      "alvo": [
+       0.5,
+       3.4,
+       0
+      ],
+      "fov": 50
+     },
+     "tremor": true
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.15,
+      "rot": 0.1,
+      "acao": "surpreso",
+      "exp": "surpreso",
+      "naPlat": true,
+      "pose": {
+       "ombroE.x": -1.0,
+       "ombroD.x": -1.0,
+       "cotoveloE.x": -0.4,
+       "cotoveloD.x": -0.4,
+       "ombroE.z": 0.1,
+       "ombroD.z": -0.1,
+       "maos": 0.3
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha um *regulador de velocidade*: [leve] passou do limite, [leve] ele aciona a trava [leve] que agarra os *trilhos*.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "elevador",
+    "plat": {
+     "de": 5.0,
+     "para": 2.9,
+     "ini": 0.32,
+     "fim": 0.58
+    },
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "raiox": 1,
+    "regOn": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.02,
+     "fim": 0.16
+    },
+    "reg": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.5
+    },
+    "freia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.75
+    },
+    "freiaD": 0.45,
+    "garras": {
+     "de": 0.05,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.62
+    },
+    "fagulha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.9
+    },
+    "etiq": [
+     "regulador@0.176-0.353",
+     "trava@0.706"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.6,
+       5.3,
+       8.8
+      ],
+      "alvo": [
+       -0.3,
+       5.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.2,
+       4.6,
+       8.0
+      ],
+      "alvo": [
+       -0.2,
+       4.6,
+       0
+      ],
+      "fov": 50
+     },
+     "tremor": false
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.15,
+      "rot": 0.1,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "naPlat": true,
+      "pose": {
+       "ombroE.x": -1.0,
+       "ombroD.x": -1.0,
+       "cotoveloE.x": -0.4,
+       "cotoveloD.x": -0.4,
+       "ombroE.z": 0.1,
+       "ombroD.z": -0.1,
+       "maos": 0.3
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "tique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 3,
+      "volume": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas agora tem um _buraco_ aberto em cada andar. [leve] Abriu a porta, [leve] não tem plataforma.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 5.0,
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "frente": 1,
+    "porta2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.74
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.4,
+       3.904,
+       7.6
+      ],
+      "alvo": [
+       0.1,
+       3.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       3.88,
+       7.0
+      ],
+      "alvo": [
+       0.1,
+       3.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -0.8,
+      "z": {
+       "de": 1.5,
+       "para": 2.0,
+       "ini": 0.6,
+       "fim": 0.8
+      },
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 2.5,
+      "pose": [
+       [
+        0.6,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -1.7,
+         "ombroD.x": -1.7,
+         "cotoveloE.x": -0.6,
+         "cotoveloD.x": -0.6,
+         "tronco.x": -0.25,
+         "maos": 0.9
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "coracao",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então trave as portas: [leve] só abrem com a plataforma *ali*. [leve] E ela só anda com tudo *fechado*.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "elevador",
+    "plat": [
+     [
+      0,
+      5.0
+     ],
+     [
+      0.22,
+      5.0
+     ],
+     [
+      0.5,
+      2.5
+     ],
+     [
+      0.9,
+      2.5
+     ],
+     [
+      1.0,
+      4.2
+     ]
+    ],
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "frente": 1,
+    "raiox": 0.7,
+    "pino": [
+     [
+      0,
+      1
+     ],
+     [
+      0.5,
+      1
+     ],
+     [
+      0.58,
+      0
+     ],
+     [
+      0.78,
+      0
+     ],
+     [
+      0.86,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "porta2": [
+     [
+      0,
+      0
+     ],
+     [
+      0.58,
+      0
+     ],
+     [
+      0.7,
+      1
+     ],
+     [
+      0.78,
+      1
+     ],
+     [
+      0.86,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "cabine": 0.0,
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.04,
+     "fim": 0.18
+    },
+    "lupaX": -1.0,
+    "lupaY": 5.5,
+    "lupaR": 0.5,
+    "lupaModo": "pino",
+    "etiq": [
+     "pino@0.02-0.3",
+     "porta@0.5-0.72"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.4,
+       4.004,
+       7.6
+      ],
+      "alvo": [
+       0.1,
+       3.7,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       3.88,
+       7.0
+      ],
+      "alvo": [
+       0.1,
+       3.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "porta",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "porta",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar o *elevador*!",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 2.5,
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "cabine": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.5
+    },
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 1.0
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       3.288,
+       7.2
+      ],
+      "alvo": [
+       0.35,
+       3.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       3.264,
+       6.6
+      ],
+      "alvo": [
+       0.35,
+       3.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -1.05,
+      "z": 1.5,
+      "rot": 0.3,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ELEVADOR",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 110
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "É uma *cabine* presa a *cordas de aço*, [leve] com *contrapeso*, [leve] *trilhos* [leve] e *trava*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 2.5,
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "cabine": 1,
+    "etiq": [
+     "cabine@0.154-0.385",
+     "cordas@0.385-0.692",
+     "contrapeso@0.692-0.769",
+     "trilho@0.769-0.923",
+     "trava@0.923"
+    ],
+    "etiqS": 0.85,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.0,
+       3.664,
+       6.6
+      ],
+      "alvo": [
+       0.5,
+       3.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       3.544,
+       6.1
+      ],
+      "alvo": [
+       0.5,
+       3.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Por isso ele sobe gastando menos, [leve] e, se a corda arrebentar, [leve] a trava *segura*.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "elevador",
+    "plat": [
+     [
+      0,
+      0.8
+     ],
+     [
+      0.786,
+      3.4
+     ],
+     [
+      1,
+      3.4
+     ]
+    ],
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "cabine": 1,
+    "corte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.786,
+     "fim": 0.866
+    },
+    "corteAt": 3.4,
+    "corteOff": 1.2,
+    "garras": {
+     "de": 0.05,
+     "para": 1,
+     "ini": 0.786,
+     "fim": 0.866
+    },
+    "freia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.826,
+     "fim": 0.986
+    },
+    "freiaD": 0.3,
+    "fagulha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.846,
+     "fim": 0.97
+    },
+    "etiq": [
+     "trava@0.857"
+    ],
+    "etiqS": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.2,
+       4.4,
+       7.0
+      ],
+      "alvo": [
+       0.5,
+       4.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.9,
+       4.8,
+       6.4
+      ],
+      "alvo": [
+       0.5,
+       4.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "elevador",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Manda pra quem *tem medo* de elevador. [leve] Agora ele sabe que tem peso, [leve] cordas [leve] e trava.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 0.0,
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "cabine": 1,
+    "cabPorta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.15
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       1.78,
+       4.3
+      ],
+      "alvo": [
+       0.0,
+       1.35,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       0.25,
+       1.74,
+       3.9
+      ],
+      "alvo": [
+       0.0,
+       1.35,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "naPlat": true,
+      "pose": {
+       "ombroD.x": -1.25,
+       "cotoveloD.x": -1.5,
+       "ombroD.z": -0.12,
+       "maos": 0.05,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E você sabe por onde os degraus da escada rolante _somem_? [leve] Siga pra *descobrir*.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 0.0,
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "cabine": 1,
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.45
+    },
+    "escada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.42,
+     "fim": 0.62
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -1.9,
+       2.87,
+       9.4
+      ],
+      "alvo": [
+       -2.4,
+       2.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -2.1,
+       2.83,
+       8.6
+      ],
+      "alvo": [
+       -2.5,
+       2.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* o andar mais alto onde você já foi. [leve] *Compartilhe* [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 6.6,
+   "cena": {
+    "cenario": "elevador",
+    "plat": 0.0,
+    "mola": 0,
+    "trilhos": 1,
+    "sala": 1,
+    "motor": 1,
+    "aco": 1,
+    "sulcos": 1,
+    "cw": 1,
+    "predio": 1,
+    "cordas": 4,
+    "regOn": 1,
+    "garras": 0.05,
+    "cabine": 1,
+    "cabPorta": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       2.788,
+       7.2
+      ],
+      "alvo": [
+       0.4,
+       2.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       2.772,
+       6.8
+      ],
+      "alvo": [
+       0.4,
+       2.5,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "o andar mais alto onde você já foi"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

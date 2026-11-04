@@ -1,0 +1,1710 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 16,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Quase *80 toneladas* no ar, [leve] e _nada_ embaixo segurando. [leve] Como isso não cai?",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "aviao",
+    "aviao": true,
+    "aviaoX": {
+     "de": 46,
+     "para": -46
+    },
+    "aviaoY": 26,
+    "aviaoZ": -52,
+    "barra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.9
+    },
+    "caminhao": true,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.5,
+       1.0,
+       10.5
+      ],
+      "alvo": [
+       0.5,
+       9.5,
+       -26
+      ],
+      "fov": 58
+     },
+     "para": {
+      "pos": [
+       -2.0,
+       1.0,
+       10.5
+      ],
+      "alvo": [
+       -0.5,
+       10.5,
+       -26
+      ],
+      "fov": 58
+     }
+    },
+    "gente": [
+     {
+      "x": -1.0,
+      "z": 3.5,
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": {
+       "cabeca.x": -0.55,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Comece como um pássaro: [leve] ponha penas nos braços [leve] e *bata*.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "aviao",
+    "camera": {
+     "de": {
+      "pos": [
+       -2.2,
+       1.9,
+       8.2
+      ],
+      "alvo": [
+       0.2,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.5,
+       1.9,
+       7.2
+      ],
+      "alvo": [
+       0.2,
+       1.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0,
+      "z": 2.4,
+      "rot": 0.3,
+      "acao": [
+       [
+        0.55,
+        "em-pe",
+        "animado"
+       ],
+       [
+        1,
+        "sentado",
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "penas": true,
+      "bate": [
+       0.2,
+       0.58
+      ],
+      "y": [
+       [
+        0,
+        0
+       ],
+       [
+        0.5,
+        0
+       ],
+       [
+        0.58,
+        0.6
+       ],
+       [
+        0.7,
+        0
+       ],
+       [
+        0.82,
+        -0.34
+       ],
+       [
+        1,
+        -0.34
+       ]
+      ],
+      "pose": [
+       [
+        0.58,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "ombroE.x": -0.3,
+         "ombroD.x": -0.3
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas bater algo desse tamanho é _pesado demais_ [leve] e gasta demais.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "aviao",
+    "aviao": true,
+    "aviaoPenas": true,
+    "aviaoX": -4,
+    "aviaoY": 2.0,
+    "aviaoZ": -12,
+    "camera": {
+     "de": {
+      "pos": [
+       6.5,
+       2.3,
+       12.5
+      ],
+      "alvo": [
+       -1,
+       3.2,
+       -8
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       5.5,
+       2.2,
+       11.0
+      ],
+      "alvo": [
+       -1,
+       3.0,
+       -8
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "x": 3.2,
+      "z": 6.0,
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "cansado",
+      "suor": 1.0,
+      "penas": true,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2,
+       "cotoveloE.x": -0.2,
+       "cotoveloD.x": -0.2
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "respiracao",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então deixe uma *placa* parada [leve] e ponha um motor pra _empurrar_ tudo pra frente.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "aviao",
+    "modelo": "placa",
+    "modeloX": {
+     "de": 1.5,
+     "para": -4.0,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "helice": {
+     "de": 0.2,
+     "para": 1.0
+    },
+    "empurra": true,
+    "etiq": [
+     "placaM@0.214"
+    ],
+    "etiqS": 0.9,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       -6.5,
+       2.0,
+       5.5
+      ],
+      "alvo": [
+       -0.5,
+       1.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -8.0,
+       2.0,
+       5.0
+      ],
+      "alvo": [
+       -2.8,
+       1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": 4.0,
+       "para": -1.9,
+       "ini": 0.0,
+       "fim": 1.0
+      },
+      "z": 0.0,
+      "rot": -1.5707963267948966,
+      "acao": "andando",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -1.25,
+       "ombroD.x": -1.25,
+       "cotoveloE.x": -0.2,
+       "cotoveloD.x": -0.2,
+       "ombroE.z": 0.05,
+       "ombroD.z": -0.05,
+       "tronco.x": 0.28,
+       "maos": 0.5
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "motor",
+      "trecho": 1,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas deitada, [leve] a placa só _corta_ o ar [leve] e não levanta nada.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "tunel",
+    "modelo": "placa",
+    "anguloAtaque": 0,
+    "sobe": 0,
+    "linhasAr": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.4
+    },
+    "forca0": true,
+    "etiq": [
+     "placa@0.1-0.9"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       61.4,
+       1.799,
+       8.4
+      ],
+      "alvo": [
+       60.0,
+       1.295,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       61.0,
+       1.818,
+       7.6
+      ],
+      "alvo": [
+       60.0,
+       1.362,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *incline* a placa, [leve] como a mão pra fora da janela do carro.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "carro",
+    "mao": {
+     "de": 0,
+     "para": 0.32,
+     "ini": 0.45,
+     "fim": 0.95
+    },
+    "maoSobe": 0,
+    "linhasAr": {
+     "de": 0,
+     "para": 0.5,
+     "ini": 0.6,
+     "fim": 1.0
+    },
+    "carroVel": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       115.4,
+       1.9,
+       2.6
+      ],
+      "alvo": [
+       119.2,
+       0.9,
+       0.2
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       117.3,
+       1.3,
+       1.5
+      ],
+      "alvo": [
+       118.9,
+       0.9,
+       0.1
+      ],
+      "fov": 46
+     }
+    },
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "carro_passando",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] O ar bate, [leve] é jogado pra _baixo_, [leve] e a mão sobe!",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "carro",
+    "mao": 0.32,
+    "maoSobe": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.818,
+     "fim": 0.95
+    },
+    "linhasAr": 1,
+    "setasForca": {
+     "de": 0,
+     "para": 0.34,
+     "ini": 0.7679999999999999,
+     "fim": 0.95
+    },
+    "carroVel": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       117.3,
+       1.3,
+       1.5
+      ],
+      "alvo": [
+       118.9,
+       0.9,
+       0.1
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       117.7,
+       1.25,
+       1.25
+      ],
+      "alvo": [
+       118.9,
+       0.95,
+       0.1
+      ],
+      "fov": 46
+     }
+    },
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "AR PRA BAIXO",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 92
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas incline _demais_ [leve] e o ar solta da placa: [leve] ela perde a força de uma vez.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "tunel",
+    "modelo": "placa",
+    "anguloAtaque": {
+     "de": 0.3,
+     "para": 0.62,
+     "ini": 0.12,
+     "fim": 0.55
+    },
+    "sobe": {
+     "de": 0.9,
+     "para": 0.0,
+     "ini": 0.55,
+     "fim": 0.95
+    },
+    "linhasAr": 1,
+    "solta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.6
+    },
+    "setasForca": {
+     "de": 1.2,
+     "para": 0,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       61.0,
+       1.813,
+       7.8
+      ],
+      "alvo": [
+       60.0,
+       1.345,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       61.2,
+       1.613,
+       7.8
+      ],
+      "alvo": [
+       60.0,
+       1.145,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "SOLTA",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *arredonde* a placa em cima. [leve] O ar passa pela curva [leve] e também é dobrado pra baixo, [leve] mesmo com pouca inclinação.",
+   "duracao": 7.2,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "tunel",
+    "anguloAtaque": {
+     "de": 0.12,
+     "para": 0.12
+    },
+    "curva": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.048,
+     "fim": 0.286
+    },
+    "sobe": {
+     "de": 0,
+     "para": 0.9,
+     "ini": 0.5,
+     "fim": 0.95
+    },
+    "linhasAr": 1,
+    "setasAr": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.667,
+     "fim": 0.97
+    },
+    "setasForca": {
+     "de": 0,
+     "para": 1.1,
+     "ini": 0.667,
+     "fim": 0.97
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       61.2,
+       2.013,
+       7.8
+      ],
+      "alvo": [
+       60.0,
+       1.545,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       61.0,
+       2.218,
+       7.6
+      ],
+      "alvo": [
+       60.0,
+       1.762,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.95,
+      "z": 2.3,
+      "rot": 0.35,
+      "acao": "explicando",
+      "exp": "eureka",
+      "pose": {
+       "ombroE.x": -1.0,
+       "ombroD.x": -1.0,
+       "cotoveloE.x": -1.0,
+       "cotoveloD.x": -1.0,
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "maos": 1
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "CURVA",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Aquele papo de que o ar de cima tem que _alcançar_ o de baixo? [leve] É _mito_. [leve] Um não espera o outro.",
+   "duracao": 7.2,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "tunel",
+    "anguloAtaque": 0.12,
+    "curva": 1,
+    "sobe": 0.9,
+    "linhasAr": 0.9,
+    "bolas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.476,
+     "fim": 0.97
+    },
+    "mito": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.714,
+     "fim": 0.8939999999999999
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       61.0,
+       2.313,
+       7.8
+      ],
+      "alvo": [
+       60.0,
+       1.845,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       60.8,
+       2.323,
+       7.4
+      ],
+      "alvo": [
+       60.0,
+       1.879,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "carimbo",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Em cima, o ar corre mais *rápido* [leve] e a pressão _cai_; [leve] embaixo é maior. [leve] A diferença empurra a placa pra *cima*.",
+   "duracao": 7.2,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "tunel",
+    "anguloAtaque": 0.12,
+    "curva": 1,
+    "sobe": {
+     "de": 0.9,
+     "para": 1.4
+    },
+    "linhasAr": 1,
+    "pressao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.429,
+     "fim": 0.629
+    },
+    "setasForca": {
+     "de": 0.6,
+     "para": 1.4,
+     "ini": 0.714,
+     "fim": 0.97
+    },
+    "etiq": [
+     "pressao@0.429-0.78"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       61.0,
+       2.299,
+       8.4
+      ],
+      "alvo": [
+       60.0,
+       1.795,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       60.8,
+       2.509,
+       8.0
+      ],
+      "alvo": [
+       60.0,
+       2.029,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Empurrar o ar pra baixo [leve] e a pressão são o *mesmo* efeito, [leve] contado de dois jeitos.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "tunel",
+    "anguloAtaque": 0.12,
+    "curva": 1,
+    "sobe": 1.4,
+    "linhasAr": 0.8,
+    "pressao": 0.9,
+    "setasAr": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.5
+    },
+    "setasForca": {
+     "de": 1.0,
+     "para": 1.9,
+     "ini": 0.625,
+     "fim": 0.97
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       61.0,
+       2.499,
+       8.4
+      ],
+      "alvo": [
+       60.0,
+       1.995,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       60.8,
+       2.704,
+       8.2
+      ],
+      "alvo": [
+       60.0,
+       2.212,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "jingle",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas parada, a placa não levanta _nada_. [leve] Então *corra*: [leve] dobre a velocidade [leve] e a força *quadruplica*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "pista",
+    "modelo": "curva",
+    "modeloX": {
+     "de": 0,
+     "para": -24,
+     "ini": 0.5,
+     "fim": 1.0
+    },
+    "velocimetro": {
+     "de": 0.0,
+     "para": 0.62,
+     "ini": 0.5,
+     "fim": 0.98
+    },
+    "forca": {
+     "de": 0,
+     "para": 1.3,
+     "ini": 0.562,
+     "fim": 0.98
+    },
+    "peso": 1.9,
+    "x4": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.938,
+     "fim": 0.98
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       174.0,
+       2.4,
+       8.5
+      ],
+      "alvo": [
+       180,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       150.0,
+       2.4,
+       8.5
+      ],
+      "alvo": [
+       155.5,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": -4.8,
+       "para": -9.0,
+       "ini": 0.5,
+       "fim": 1.0
+      },
+      "z": -3.4,
+      "rot": 0.3,
+      "acao": [
+       [
+        0.5,
+        "em-pe",
+        "cansado"
+       ],
+       [
+        1,
+        "andando",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "motor",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Corra até a força passar do _peso_, [leve] e as rodas largam o chão.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "pista",
+    "modelo": "curva",
+    "modeloX": {
+     "de": -24,
+     "para": -75
+    },
+    "nariz": {
+     "de": 0,
+     "para": 0.35,
+     "ini": 0.5,
+     "fim": 0.9
+    },
+    "modeloY": {
+     "de": 0,
+     "para": 0.1,
+     "ini": 0.6,
+     "fim": 1.0
+    },
+    "velocimetro": {
+     "de": 0.62,
+     "para": 1.0
+    },
+    "forca": {
+     "de": 1.3,
+     "para": 2.3
+    },
+    "peso": 1.9,
+    "camera": {
+     "de": {
+      "pos": [
+       150.0,
+       2.4,
+       8.5
+      ],
+      "alvo": [
+       155.5,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       100.0,
+       2.4,
+       8.5
+      ],
+      "alvo": [
+       105,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "motor",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E no fim da pista, [leve] levante o *nariz*: [leve] mais inclinação, [leve] mais força.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "pista",
+    "modelo": "curva",
+    "modeloX": {
+     "de": -75,
+     "para": -130
+    },
+    "nariz": {
+     "de": 0.35,
+     "para": 1.0,
+     "ini": 0.0,
+     "fim": 0.6
+    },
+    "modeloY": {
+     "de": 0.1,
+     "para": 3.0,
+     "ini": 0.3,
+     "fim": 1.0
+    },
+    "velocimetro": 1.0,
+    "forca": {
+     "de": 2.3,
+     "para": 3.0
+    },
+    "peso": 1.9,
+    "camera": {
+     "de": {
+      "pos": [
+       98.0,
+       2.6,
+       8.5
+      ],
+      "alvo": [
+       105,
+       1.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       44.0,
+       4.0,
+       9.0
+      ],
+      "alvo": [
+       50,
+       2.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar a *asa* de avião.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "pista",
+    "modelo": "curva",
+    "modeloX": -140,
+    "modeloY": {
+     "de": 3.0,
+     "para": 3.4
+    },
+    "nariz": 0.55,
+    "velocimetro": 1.0,
+    "forca": 3.0,
+    "peso": 1.9,
+    "aviao": true,
+    "aviaoX": {
+     "de": 30,
+     "para": -40
+    },
+    "aviaoY": 40,
+    "aviaoZ": -110,
+    "etiq": [
+     "asa@0.667-0.95"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       33.0,
+       3.8,
+       9.0
+      ],
+      "alvo": [
+       40,
+       3.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       35.0,
+       3.6,
+       8.0
+      ],
+      "alvo": [
+       40,
+       3.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -136.0,
+      "z": -3.0,
+      "rot": 0.4,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "de": 0.0
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "ASA",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 110
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Voando reto, [leve] a asa segura o *peso* [leve] e o motor só vence o vento.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "ceu",
+    "aviaoX": 0,
+    "aviaoY": 30,
+    "aviaoZ": 0,
+    "setas4": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       218,
+       26.076,
+       88.0
+      ],
+      "alvo": [
+       240,
+       26.076,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       228,
+       26.523,
+       80.0
+      ],
+      "alvo": [
+       240,
+       26.523,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E as 80 toneladas? [leve] Ficam _penduradas_ na asa, [leve] que joga o ar pra baixo o tempo todo.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "ceu",
+    "aviaoX": 0,
+    "aviaoY": 30,
+    "aviaoZ": 0,
+    "setas4": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.3
+    },
+    "corteAsa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       228,
+       26.523,
+       80.0
+      ],
+      "alvo": [
+       240,
+       26.523,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       246.5,
+       36.5,
+       22.0
+      ],
+      "alvo": [
+       243.4,
+       29.8,
+       8.2
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Manda pra quem acha que avião só _boia_ no ar. [leve] E como ele *vira*, sobe e desce? [leve] Siga pra descobrir.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "aviao",
+    "palco": "ceu",
+    "aviaoX": {
+     "de": 0,
+     "para": -90
+    },
+    "aviaoY": {
+     "de": 30,
+     "para": 44
+    },
+    "aviaoZ": {
+     "de": 0,
+     "para": -150
+    },
+    "aviaoRoll": {
+     "de": 0,
+     "para": 0.6
+    },
+    "aviaoYaw": {
+     "de": 0,
+     "para": 0.5
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.98
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       226,
+       28.852,
+       92.0
+      ],
+      "alvo": [
+       232,
+       28.852,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       222,
+       30.852,
+       92.0
+      ],
+      "alvo": [
+       226,
+       30.852,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* MITO [leve] se já ouviu que o ar de cima precisa alcançar o de baixo. [leve] *Compartilhe* [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 8.6,
+   "cena": {
+    "cenario": "aviao",
+    "aviao": true,
+    "aviaoX": {
+     "de": 34,
+     "para": 16
+    },
+    "aviaoY": 28,
+    "aviaoZ": -62,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.8,
+       1.5,
+       7.8
+      ],
+      "alvo": [
+       0.6,
+       4.6,
+       -8
+      ],
+      "fov": 56
+     },
+     "para": {
+      "pos": [
+       -1.4,
+       1.5,
+       7.0
+      ],
+      "alvo": [
+       0.6,
+       4.4,
+       -8
+      ],
+      "fov": 56
+     }
+    },
+    "gente": [
+     {
+      "x": 0.2,
+      "z": 2.4,
+      "rot": 0.15,
+      "acao": "acenando",
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.12
+    },
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE MITO",
+      "trecho": 1,
+      "sub": "se já ouviu que o ar de cima precisa alcançar o de baixo"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2,
+      "sub": "com quem acha que avião só boia"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.55
+     }
+    ]
+   }
+  }
+ ]
+}

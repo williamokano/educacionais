@@ -12,6 +12,12 @@ import { abrigo } from "./abrigo";
 import { cozinha } from "./cozinha";
 import { microondas } from "./microondas";
 import { inducao } from "./inducao";
+import { procissao } from "./procissao";
+import { panela } from "./panela";
+import { elevador } from "./elevador";
+import { pararaios } from "./pararaios";
+import { aviao } from "./aviao";
+import { FIEIS } from "./fieis";
 import { CARTOES_BUNKER } from "./cartoes-bunker";
 import { CARTOES_AIRFRYER } from "./cartoes-airfryer";
 import { MORADORES } from "./moradores";
@@ -62,8 +68,8 @@ const Medida: React.FC<ElementoProps> = ({ d }) => {
 export const explicadores: Pacote = {
   nome: "Explicadores 3D",
   personagens: {},
-  personagens3d: { zeca, eletricista, ...MORADORES },
-  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas, inducao },
+  personagens3d: { zeca, eletricista, ...MORADORES, ...FIEIS },
+  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas, inducao, procissao, panela, elevador, pararaios, aviao },
   cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER, ...CARTOES_AIRFRYER },
   qualidade3d: "suave",
 };

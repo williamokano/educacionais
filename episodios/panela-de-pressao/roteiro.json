@@ -1,0 +1,1878 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 13,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Panela *fechada* na marra, [leve] fogo no máximo: [leve] a tampa _treme_.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": {
+     "de": 0.6,
+     "para": 1.6,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "treme": {
+     "de": 0.3,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.7
+    },
+    "vapor": {
+     "de": 0,
+     "para": 0.9,
+     "ini": 0.2,
+     "fim": 0.6
+    },
+    "fumaca": {
+     "de": 0,
+     "para": 0.5,
+     "ini": 0.3,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -1.2,
+       1.91,
+       3.0
+      ],
+      "alvo": [
+       -0.65,
+       1.55,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.0,
+       1.54,
+       2.0
+      ],
+      "alvo": [
+       -0.62,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.15,
+      "z": 0.42,
+      "rot": -1.5,
+      "acao": [
+       [
+        0.5,
+        "em-pe"
+       ],
+       [
+        1,
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.5,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.4,
+         "cotoveloD.x": -0.4,
+         "ombroE.z": -0.1,
+         "ombroD.z": 0.1,
+         "maos": 0.2,
+         "tronco.x": 0.3,
+         "tronco.y": -0.5
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "fogo",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o vapor _foge_ pelas frestas [leve] e a água não passa de *100 graus*. [leve] O feijão continua duro.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "corte": true,
+    "vapor": 1,
+    "bolhas": 1,
+    "quente": {
+     "de": 0.2,
+     "para": 0.7,
+     "ini": 0,
+     "fim": 0.5
+    },
+    "termo": 1,
+    "temp": {
+     "de": 20,
+     "para": 100,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "relogio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.45
+    },
+    "relogioV": 0.5,
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.65,
+     "fim": 0.78
+    },
+    "lupaX": -0.85,
+    "lupaY": 1.7,
+    "lupaR": 0.24,
+    "lupaModo": "feijao",
+    "feijao": 0,
+    "colher": {
+     "de": 0,
+     "para": 0.5,
+     "ini": 0.7,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.85,
+       1.488,
+       2.4
+      ],
+      "alvo": [
+       -0.85,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.85,
+       1.478,
+       2.32
+      ],
+      "alvo": [
+       -0.85,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.4,
+      "rot": -1.3,
+      "acao": "bracos-cruzados",
+      "exp": "preocupado"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "100 °C",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então tape as frestas [leve] com uma *borracha* [leve] em volta da tampa.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "corte": true,
+    "bolhas": 1,
+    "quente": 0.7,
+    "termo": 1,
+    "temp": 100,
+    "borracha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.4
+    },
+    "tampa": {
+     "de": 0.55,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.75
+    },
+    "vapor": {
+     "de": 0.9,
+     "para": 0,
+     "ini": 0.7,
+     "fim": 0.85
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.82,
+       1.342,
+       1.6
+      ],
+      "alvo": [
+       -0.82,
+       1.15,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.82,
+       1.324,
+       1.45
+      ],
+      "alvo": [
+       -0.82,
+       1.15,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "etiq": [
+     "borracha@0.45"
+    ],
+    "etiqS": 0.35,
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Agora o vapor fica _preso_ [leve] e empurra tudo: [leve] é a *pressão*.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "borracha": 1,
+    "corte": true,
+    "bolhas": 1,
+    "quente": 0.7,
+    "termo": 1,
+    "temp": 100,
+    "pressao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "manOn": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "manV": {
+     "de": 0.1,
+     "para": 0.6,
+     "ini": 0.2,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.7,
+       1.404,
+       1.7
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       1.394,
+       1.6199999999999999
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "etiq": [
+     "pressao@0.3"
+    ],
+    "etiqS": 0.35,
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Com a pressão em cima, [leve] a água custa a virar vapor [leve] e precisa de mais *calor*.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "panela",
+    "gas": {
+     "de": 1,
+     "para": 1.6,
+     "ini": 0.5,
+     "fim": 0.85
+    },
+    "borracha": 1,
+    "corte": true,
+    "bolhas": 1,
+    "quente": 0.7,
+    "termo": 1,
+    "temp": 100,
+    "pressao": 1,
+    "manOn": 1,
+    "manV": 0.6,
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.15
+    },
+    "lupaX": -0.78,
+    "lupaY": 1.68,
+    "lupaR": 0.23,
+    "lupaModo": "bolhas",
+    "bolhaSobe": {
+     "de": 0.1,
+     "para": 0.95,
+     "ini": 0.5,
+     "fim": 0.85
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.78,
+       1.516,
+       1.8
+      ],
+      "alvo": [
+       -0.78,
+       1.3,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.78,
+       1.506,
+       1.72
+      ],
+      "alvo": [
+       -0.78,
+       1.3,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "sopro",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Ela ferve mais *quente*: [leve] uns _120 graus_.",
+   "duracao": 2.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "borracha": 1,
+    "corte": true,
+    "bolhas": 1,
+    "quente": {
+     "de": 0.7,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "termo": 1,
+    "temp": {
+     "de": 100,
+     "para": 120,
+     "ini": 0.1,
+     "fim": 0.8
+    },
+    "pressao": 0.8,
+    "manOn": 1,
+    "manV": 0.6,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.85,
+       1.416,
+       1.8
+      ],
+      "alvo": [
+       -0.85,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.85,
+       1.406,
+       1.72
+      ],
+      "alvo": [
+       -0.85,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "~120 °C",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 1,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] E o feijão amolece em *minutos*, [leve] não em uma hora.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1,
+    "borracha": 1,
+    "corte": true,
+    "bolhas": 0.5,
+    "quente": 1,
+    "pressao": 0.5,
+    "feijao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.45
+    },
+    "colherPote": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.85
+    },
+    "manOn": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.76,
+       1.342,
+       1.6
+      ],
+      "alvo": [
+       -0.76,
+       1.15,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.76,
+       1.332,
+       1.52
+      ],
+      "alvo": [
+       -0.76,
+       1.15,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "cartoes": [
+     {
+      "tipo": "comparacao",
+      "titulo": "TEMPO PRA COZINHAR",
+      "itens": [
+       {
+        "texto": "PANELA COMUM",
+        "valor": 2.7,
+        "rotulo": "DEMORA",
+        "cor": "#ff8a3d"
+       },
+       {
+        "texto": "PANELA FECHADA",
+        "valor": 0.9,
+        "rotulo": "EM MINUTOS",
+        "cor": "#5bd47a"
+       }
+      ],
+      "trecho": 0,
+      "y": 40
+     }
+    ],
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a pressão _não para de subir_ [leve] e empurra a tampa.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "borracha": 1,
+    "pressao": 1,
+    "manOn": 1,
+    "manV": {
+     "de": 0.6,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.5
+    },
+    "estufa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.15,
+     "fim": 0.9
+    },
+    "treme": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 1
+    },
+    "vapor": {
+     "de": 0,
+     "para": 0.7,
+     "ini": 0.5,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.9,
+       1.6,
+       2.5
+      ],
+      "alvo": [
+       -0.65,
+       1.3,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.85,
+       1.564,
+       2.2
+      ],
+      "alvo": [
+       -0.65,
+       1.3,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.25,
+      "z": 0.5,
+      "rot": -1.5,
+      "acao": [
+       [
+        0.4,
+        "surpreso"
+       ],
+       [
+        1,
+        "surpreso"
+       ]
+      ],
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.45,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -2.5,
+         "ombroD.x": -2.5,
+         "cotoveloE.x": -1.3,
+         "cotoveloD.x": -1.3,
+         "tronco.x": 0.55,
+         "cabeca.x": 0.3
+        }
+       ]
+      ]
+     }
+    ],
+    "sfx": [
+     {
+      "som": "batimento_rapido",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "rangido",
+      "trecho": 1,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] E a tampa _voa_ [leve] e fura o *teto*!",
+   "duracao": 2.8,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "borracha": 1,
+    "manOn": 1,
+    "manV": 1,
+    "estufa": {
+     "de": 1,
+     "para": 0.2,
+     "ini": 0.3,
+     "fim": 0.6
+    },
+    "voo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.28,
+     "fim": 0.72
+    },
+    "furo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.6
+    },
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.4,
+     "fim": 0.6
+    },
+    "chuva": {
+     "de": 0,
+     "para": 1.7,
+     "ini": 0.58,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.9,
+       1.97,
+       3.5
+      ],
+      "alvo": [
+       -0.5,
+       1.55,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -0.9,
+       1.946,
+       3.3
+      ],
+      "alvo": [
+       -0.55,
+       1.55,
+       0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": 0.25,
+      "z": 0.5,
+      "rot": -1.6,
+      "acao": "surpreso",
+      "exp": "surpreso",
+      "pose": {
+       "ombroE.x": -2.5,
+       "ombroD.x": -2.5,
+       "cotoveloE.x": -1.3,
+       "cotoveloD.x": -1.3,
+       "tronco.x": 0.55,
+       "cabeca.x": 0.3
+      },
+      "coberto": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.7,
+       "fim": 1
+      }
+     }
+    ],
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Já em *1679*, [leve] o francês Denis Papin fez uma assim. [leve] E ela _explodia_.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "panela",
+    "epoca": true,
+    "bulge": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.55
+    },
+    "estoura": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.58,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       40.1,
+       1.35,
+       2.6
+      ],
+      "alvo": [
+       40,
+       1.1,
+       -0.1
+      ],
+      "fov": 42
+     },
+     "para": {
+      "pos": [
+       40.0,
+       1.3,
+       2.3
+      ],
+      "alvo": [
+       40,
+       1.1,
+       -0.1
+      ],
+      "fov": 42
+     }
+    },
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1679",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 130
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "DENIS PAPIN",
+      "trecho": 1,
+      "y": 210,
+      "tamanho": 70
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "carimbo",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A saída dele: [leve] um *furo* na tampa [leve] tapado por um *peso*. [leve] Passou da conta, [leve] o peso levanta [leve] e o vapor _sai_.",
+   "duracao": 7.2,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.2,
+    "borracha": 1,
+    "corte": true,
+    "bolhas": 1,
+    "quente": 1,
+    "manOn": 1,
+    "manV": 0.6,
+    "peso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.12,
+     "fim": 0.3
+    },
+    "pesoUp": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.6
+    },
+    "pesoOsc": true,
+    "chia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.7
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.25
+    },
+    "lupaX": -0.78,
+    "lupaY": 1.55,
+    "lupaR": 0.2,
+    "lupaModo": "tampa",
+    "camera": {
+     "de": {
+      "pos": [
+       -0.78,
+       1.524,
+       1.7
+      ],
+      "alvo": [
+       -0.78,
+       1.32,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.78,
+       1.514,
+       1.6199999999999999
+      ],
+      "alvo": [
+       -0.78,
+       1.32,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "etiq": [
+     "peso@0.3"
+    ],
+    "etiqS": 0.35,
+    "ambiencia": {
+     "som": "fogo",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 3,
+      "volume": 0.35
+     },
+     {
+      "som": "chiado",
+      "trecho": 5,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o furo _entope_ com a comida. [leve] Faça uma *segunda saída*, [leve] que abre se a primeira trancar.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.2,
+    "borracha": 1,
+    "peso": 1,
+    "corte": true,
+    "bolhas": 1,
+    "quente": 1,
+    "manOn": 1,
+    "manV": {
+     "de": 0.6,
+     "para": 0.95,
+     "ini": 0.2,
+     "fim": 0.65
+    },
+    "entope": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.08,
+     "fim": 0.3
+    },
+    "reserva": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.62
+    },
+    "resUp": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.68,
+     "fim": 0.82
+    },
+    "lupa": 1,
+    "lupaX": -0.78,
+    "lupaY": 1.55,
+    "lupaR": 0.2,
+    "lupaModo": "tampa",
+    "camera": {
+     "de": {
+      "pos": [
+       -0.78,
+       1.524,
+       1.7
+      ],
+      "alvo": [
+       -0.78,
+       1.32,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.78,
+       1.514,
+       1.6199999999999999
+      ],
+      "alvo": [
+       -0.78,
+       1.32,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "etiq": [
+     "reserva@0.62"
+    ],
+    "etiqS": 0.35,
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E se você _abrir_ a tampa [leve] com pressão lá dentro?",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.6,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "manOn": 1,
+    "manV": 0.7,
+    "tampa": {
+     "de": 1,
+     "para": 0.9,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "jato": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.15,
+     "fim": 0.45
+    },
+    "vapor": 0.4,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.9,
+       1.5,
+       2.5
+      ],
+      "alvo": [
+       -0.5,
+       1.2,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.85,
+       1.476,
+       2.3
+      ],
+      "alvo": [
+       -0.55,
+       1.2,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": -0.15,
+       "para": 0.4,
+       "ini": 0.4,
+       "fim": 0.9
+      },
+      "z": 0.42,
+      "rot": -1.5,
+      "acao": [
+       [
+        0.4,
+        "em-pe"
+       ],
+       [
+        1,
+        "surpreso"
+       ]
+      ],
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.4,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.4,
+         "cotoveloD.x": -0.4,
+         "ombroE.z": -0.1,
+         "ombroD.z": 0.1,
+         "maos": 0.2,
+         "tronco.x": 0.3,
+         "tronco.y": -0.5
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -1.7,
+         "ombroD.x": -1.7,
+         "cotoveloE.x": -0.6,
+         "cotoveloD.x": -0.6,
+         "tronco.x": -0.25,
+         "maos": 0.9
+        }
+       ]
+      ]
+     }
+    ],
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então *trave* a tampa: [leve] só abre quando a pressão _acaba_.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.2,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "corte": true,
+    "bolhas": 1,
+    "quente": 1,
+    "manOn": 1,
+    "manV": {
+     "de": 0.6,
+     "para": 0.05,
+     "ini": 0.62,
+     "fim": 0.95
+    },
+    "raiox": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "trava": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.2
+    },
+    "travaUp": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.4
+    },
+    "travaDesce": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.7,
+     "fim": 0.9
+    },
+    "tampa": {
+     "de": 1,
+     "para": 0.92,
+     "ini": 0.92,
+     "fim": 1
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.88,
+       1.404,
+       1.7
+      ],
+      "alvo": [
+       -0.88,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.88,
+       1.394,
+       1.6199999999999999
+      ],
+      "alvo": [
+       -0.88,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "etiq": [
+     "trava@0.25"
+    ],
+    "etiqS": 0.35,
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar a *panela de pressão*!",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.2,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 1,
+    "manV": 0.6,
+    "corte": true,
+    "raiox": 0.4,
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.85
+    },
+    "bolhas": 1,
+    "quente": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.7,
+       1.416,
+       1.8
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.7,
+       1.406,
+       1.72
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "etiq": [
+     "borracha@0.1-0.38",
+     "peso@0.3-0.6",
+     "reserva@0.5-0.8",
+     "trava@0.72"
+    ],
+    "etiqS": 0.3,
+    "gente": [
+     {
+      "x": 0.05,
+      "z": 0.44,
+      "rot": -1.2,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PANELA DE PRESSÃO",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 76
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Borracha que *veda*, [leve] peso que *alivia*, [leve] saída de reserva [leve] e trava: [leve] quatro peças numa tampa.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.2,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 1,
+    "manV": 0.6,
+    "corte": true,
+    "raiox": 1,
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.9
+    },
+    "bolhas": 1,
+    "quente": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.8,
+       1.428,
+       1.9
+      ],
+      "alvo": [
+       -0.8,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.8,
+       1.418,
+       1.8199999999999998
+      ],
+      "alvo": [
+       -0.8,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O _chiado_ que você ouve [leve] é o vapor que sobra saindo pelo peso, [leve] segurando a pressão no ponto.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.0,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 1,
+    "manV": 0.6,
+    "pesoUp": 1,
+    "pesoOsc": true,
+    "chia": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.428,
+       1.9
+      ],
+      "alvo": [
+       -0.7,
+       1.2,
+       0
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       -0.55,
+       1.404,
+       1.7
+      ],
+      "alvo": [
+       -0.72,
+       1.2,
+       0
+      ],
+      "fov": 45
+     }
+    },
+    "sfx": [
+     {
+      "som": "chiado",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E o feijão cozinha em até *um terço* do tempo.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.0,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 0,
+    "manV": 0.6,
+    "pesoUp": 1,
+    "pesoOsc": true,
+    "chia": 1,
+    "relogio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.15
+    },
+    "relogioV": {
+     "de": 0.3,
+     "para": 3.0,
+     "ini": 0,
+     "fim": 0.8
+    },
+    "prato": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.3,
+       1.624,
+       2.7
+      ],
+      "alvo": [
+       -0.5,
+       1.3,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.35,
+       1.6,
+       2.5
+      ],
+      "alvo": [
+       -0.5,
+       1.3,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "sfx": [
+     {
+      "som": "tique_relogio",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Manda pra quem ainda _tem medo_ [leve] de panela de pressão.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.0,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 1,
+    "manV": 0.6,
+    "pesoUp": 1,
+    "pesoOsc": true,
+    "chia": 1,
+    "prato": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.3,
+       1.648,
+       2.9
+      ],
+      "alvo": [
+       -0.4,
+       1.3,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       1.624,
+       2.7
+      ],
+      "alvo": [
+       -0.4,
+       1.3,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": 0.12,
+      "z": 0.45,
+      "rot": -0.45,
+      "acao": "acenando",
+      "exp": "sorriso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] E você sabe como a *geladeira* gela? [leve] Siga pra _descobrir_.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "panela",
+    "gas": 0,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 0,
+    "manV": 0.6,
+    "prato": 1,
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.6
+    },
+    "geladeira": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.1,
+       1.704,
+       4.2
+      ],
+      "alvo": [
+       0.1,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.1,
+       1.73,
+       4.0
+      ],
+      "alvo": [
+       0.1,
+       1.25,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* se você já ouviu o chiado: [leve] a primeira panela dessas, de 1679, explodia. [leve] *Compartilhe* [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 8.3,
+   "cena": {
+    "cenario": "panela",
+    "gas": 1.0,
+    "borracha": 1,
+    "peso": 1,
+    "reserva": 1,
+    "trava": 1,
+    "manOn": 0,
+    "manV": 0.6,
+    "pesoUp": 1,
+    "pesoOsc": true,
+    "chia": 1,
+    "prato": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       1.61,
+       3.0
+      ],
+      "alvo": [
+       -0.6,
+       1.25,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.586,
+       2.8
+      ],
+      "alvo": [
+       -0.6,
+       1.25,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "se já ouviu o chiado"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 3
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 4,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

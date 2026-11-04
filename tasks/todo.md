@@ -159,3 +159,41 @@ Texto aprovado em 02/11/2026 (`tasks/roteiro-abs.md` v1, 26 batidas, só a parte
 - [x] Ajustes finais: gerador em sala fechada com cano de escape (chapéu para cima), painel solar de frente, sala extra com água e comida, fecho "apocalipse nuclear" (risada) e chamadas "curta, comente, compartilhe, siga"
 - [x] Capa, textos de publicação (`tasks/publicacao/bunker-textos.md`), hashtags `#bunker #sobrevivencia` aprovadas e NAS `07-bunker/` (03/11/2026)
 - [ ] **Publicando**: a pessoa posta quando sentir, sem data fixa
+
+# Plano: episódio 12, procissão (pedido de 04/11/2026)
+
+- [x] Pesquisa em `pesquisa/procissao/` e texto aprovado; fatos conferidos (quatro procissões da missa, tapete, vela do batismo); "geralmente quatro" mantido com aviso na tela
+- [x] `tasks/roteiro-procissao.md` (30 batidas), decisões: Sagrado Coração, cidade do interior, Caramelo no adro, fim com envio e "siga"
+- [x] Cenário `procissao` (`procissao.tsx`), pessoas (`fieis.ts`), registro em `index.tsx`, gerador `tasks/geradores/procissao.py`
+- [x] Rascunho, quadros de conferência, voz (ElevenLabs), som, mix e master: `episodios/procissao/final.mp4` (2:12, −14,0 LUFS, −2,3 dBTP)
+- [x] A pessoa assistiu e aprovou (03/11/2026, horário de Brasília)
+- [x] Capa, textos, NAS `11-procissao/`, publisher (vídeo 21:25 BRT, story "já saiu" 21:27 BRT; sem story de aviso)
+- [ ] Conferir no perfil `curiosidades_desenroladas` que o vídeo e o story saíram na conta certa; simulação do iPhone e hashtags `#procissao #tradicao` pendentes
+
+# Plano: roteiros novos em rascunho (pedido de 04/11/2026)
+
+Ranking em `tasks/ranking-temas.md`. Só texto (`tasks/roteiro-<tema>.md`, v1 rascunho): sem assets, voz, render nem gerador. A pessoa ajusta um a um ao lançar.
+
+- [x] 1 Panela de pressão (`tasks/roteiro-panela-de-pressao.md`, 21 batidas, ~1:45–1:55, revelação na batida 15)
+- [x] 2 Elevador (`tasks/roteiro-elevador.md`, 22 batidas, ~1:55–2:10, revelação na batida 17)
+- [x] 3 Para-raios (`tasks/roteiro-para-raios.md`, 21 batidas, ~2:00–2:10, revelação na batida 12)
+- [x] 4 Avião (`tasks/roteiro-aviao.md`, 20 batidas, ~1:55–2:10, revelação na batida 16)
+- [x] 5 Descarga do vaso (`tasks/roteiro-descarga.md`, 20 batidas, ~1:55–2:05, revelação na batida 15)
+- [x] 6 Hidrelétrica (`tasks/roteiro-hidreletrica.md`, 25 batidas, ~2:00–2:15, revelação na batida 18)
+- [ ] 7 a 13 (submarino, cadeado, zíper, paraquedas, ponte, relógio, farol): próximo lote
+
+# Plano: episódio 13, panela de pressão, rascunho mudo (pedido de 04/11/2026)
+
+- [x] Cenário `panela` (`panela.tsx`, registrado em `index.tsx`), gerador `tasks/geradores/panela-de-pressao.py`, `episodios/panela-de-pressao/roteiro.json` (21 batidas, `"episodio": 13`)
+- [x] Render mudo `episodios/panela-de-pressao/rascunho-mudo.mp4` e rodadas de conferência por quadros
+- [ ] Pessoa aprova o texto; depois voz, som, mix, capa, textos e publicação (não feitos de propósito)
+
+# Plano: episódio 14, elevador, rascunho mudo (pedido de 04/11/2026)
+
+- [x] Cenário `elevador` (`elevador.tsx`, registrado em `index.tsx`), gerador `tasks/geradores/elevador.py`, `episodios/elevador/roteiro.json` (22 batidas, `"episodio": 14`)
+- [x] Render mudo `episodios/elevador/rascunho-mudo.mp4` e rodadas de conferência por quadros
+- [ ] Pessoa aprova o texto; depois voz, som, mix, capa, textos e publicação (não feitos de propósito)
+
+# Plano: episódio 15, para-raios, rascunho mudo (pedido de 04/11/2026)
+- [x] Cenário `pararaios` (`pararaios.tsx`, registrado em `index.tsx`; `Auto` exportado de `pista.tsx` com `vidroOp`), gerador `tasks/geradores/para-raios.py`, `episodios/para-raios/roteiro.json` (21 batidas, `"episodio": 15`)
+- [x] Render mudo `episodios/para-raios/rascunho-mudo.mp4` e conferência por quadros

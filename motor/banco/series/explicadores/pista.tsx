@@ -125,8 +125,8 @@ const VARIANTES = {
 } as Record<string, { corpo: [number, number][]; cab: [number, number][] }>;
 
 const VIDRO = "#6fd3f0";
-type AutoProps = { cor: string; variante?: string; op?: number; rodas?: boolean; freio?: number; pisca?: number };
-const Auto: React.FC<AutoProps> = ({ cor, variante = "sedan", op, rodas = true, freio = 0, pisca = 0 }) => {
+type AutoProps = { cor: string; variante?: string; op?: number; rodas?: boolean; freio?: number; pisca?: number; vidroOp?: number };
+export const Auto: React.FC<AutoProps> = ({ cor, variante = "sedan", op, rodas = true, freio = 0, pisca = 0, vidroOp }) => {
   const v = VARIANTES[variante];
   const cab = v.cab;
   const frente = v.corpo[0][0];
@@ -137,7 +137,7 @@ const Auto: React.FC<AutoProps> = ({ cor, variante = "sedan", op, rodas = true, 
     <group>
       <Perfil pts={v.corpo} larg={1.8} cor={cor} op={op} />
       {/* cabine: vidro, com o teto e os pilares na cor do carro */}
-      <Perfil pts={cab} larg={1.5} cor={VIDRO} op={op} verniz={1} bisel={0.01} />
+      <Perfil pts={cab} larg={1.5} cor={VIDRO} op={op ?? vidroOp} verniz={1} bisel={0.01} />
       <Caixa p={[0, cab[1][1] + 0.01, (cab[1][0] + cab[2][0]) / 2]} t={[1.6, 0.08, cab[2][0] - cab[1][0] + 0.14]} cor={cor} raio={0.02} op={op} />
       {sx.map((x) => (
         <group key={x}>

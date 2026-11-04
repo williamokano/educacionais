@@ -1,0 +1,2182 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 12,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "vozes": {
+  "fim": {
+   "seed": 3
+  }
+ },
+ "batidas": [
+  {
+   "texto": "[excited] Se você saísse da igreja *sozinho*, [leve] com a imagem no colo, [leve] ia parecer que estava _roubando_ a igreja.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.2,
+    "imagem": 1,
+    "imgLugar": 0,
+    "imgX": 0,
+    "imgY": 0.82,
+    "imgZ": {
+     "de": -3.3,
+     "para": 5.6
+    },
+    "dog": 1,
+    "dogX": 0.6,
+    "dogZ": {
+     "de": -6.5,
+     "para": 2.0
+    },
+    "dogModo": "trota",
+    "camera": {
+     "de": {
+      "pos": [
+       2.7,
+       1.6,
+       6.6
+      ],
+      "alvo": [
+       0.1,
+       1.5,
+       0.5
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       3.3,
+       1.6,
+       8.4
+      ],
+      "alvo": [
+       0.1,
+       1.5,
+       1.0
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": 0.0,
+      "z": {
+       "de": -3.8,
+       "para": 5.1
+      },
+      "rot": 0,
+      "acao": "andando",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -0.95,
+       "ombroD.x": -0.95,
+       "cotoveloE.x": -0.65,
+       "cotoveloD.x": -0.65,
+       "ombroE.z": -0.28,
+       "ombroD.z": 0.28,
+       "maos": 0.2
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "passos",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "latido",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então chame *algumas pessoas* pra ir junto, [leve] e ninguém mais acha que é roubo.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.45,
+    "imagem": 1,
+    "imgLugar": 0,
+    "imgX": 0,
+    "imgY": 0.82,
+    "imgZ": 1.4,
+    "dog": 1,
+    "dogX": 0.9,
+    "dogZ": 0.2,
+    "dogModo": "fica",
+    "camera": {
+     "de": {
+      "pos": [
+       2.6,
+       2.0,
+       7.0
+      ],
+      "alvo": [
+       0,
+       1.3,
+       0.9
+      ],
+      "fov": 58
+     },
+     "para": {
+      "pos": [
+       3.2,
+       2.2,
+       9.4
+      ],
+      "alvo": [
+       0,
+       1.3,
+       0.9
+      ],
+      "fov": 58
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": 0.0,
+      "z": 0.9,
+      "rot": 0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -0.95,
+       "ombroD.x": -0.95,
+       "cotoveloE.x": -0.65,
+       "cotoveloD.x": -0.65,
+       "ombroE.z": -0.28,
+       "ombroD.z": 0.28,
+       "maos": 0.2
+      }
+     },
+     {
+      "id": "vizinha",
+      "x": {
+       "de": -3.4,
+       "para": -1.3
+      },
+      "y": 0.0,
+      "z": 1.7,
+      "rot": 1.4,
+      "acao": "andando",
+      "exp": "neutro"
+     },
+     {
+      "id": "homemA",
+      "x": {
+       "de": 3.5,
+       "para": 1.4
+      },
+      "y": 0.0,
+      "z": 2.0,
+      "rot": -1.4,
+      "acao": "andando",
+      "exp": "neutro"
+     },
+     {
+      "id": "mulher",
+      "x": {
+       "de": -4.2,
+       "para": -2.0
+      },
+      "y": 0.0,
+      "z": 3.0,
+      "rot": 1.3,
+      "acao": "andando",
+      "exp": "neutro"
+     },
+     {
+      "id": "vovo",
+      "x": {
+       "de": 4.3,
+       "para": 2.0
+      },
+      "y": 0.0,
+      "z": 3.3,
+      "rot": -1.3,
+      "acao": "andando",
+      "exp": "neutro"
+     },
+     {
+      "id": "menino",
+      "x": {
+       "de": -3.0,
+       "para": -0.8
+      },
+      "y": 0.0,
+      "z": 0.6,
+      "rot": 1.5,
+      "acao": "andando",
+      "exp": "neutro"
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "passo_leve",
+      "trecho": 1,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas no colo de uma pessoa só, a imagem _balança_, [leve] e quem vem atrás nem enxerga.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.45,
+    "imagem": 1,
+    "imgLugar": 0,
+    "imgX": 0,
+    "imgY": 0.82,
+    "imgZ": 1.1,
+    "balanca": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       1.9,
+       1.4,
+       4.0
+      ],
+      "alvo": [
+       0,
+       1.1,
+       0.9
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       1.5,
+       1.4,
+       3.5
+      ],
+      "alvo": [
+       0,
+       1.1,
+       0.9
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": 0.0,
+      "z": 0.6,
+      "rot": 0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -0.95,
+       "ombroD.x": -0.95,
+       "cotoveloE.x": -0.65,
+       "cotoveloD.x": -0.65,
+       "ombroE.z": -0.28,
+       "ombroD.z": 0.28,
+       "maos": 0.2
+      }
+     },
+     {
+      "id": "vizinha",
+      "x": -0.85,
+      "y": 0.0,
+      "z": -0.9,
+      "rot": 0,
+      "acao": "pensando",
+      "exp": "surpreso"
+     },
+     {
+      "id": "homemA",
+      "x": 0.85,
+      "y": 0.0,
+      "z": -0.9,
+      "rot": 0,
+      "acao": "pensando",
+      "exp": "surpreso"
+     },
+     {
+      "id": "mulher",
+      "x": 0.0,
+      "y": 0.0,
+      "z": -1.8,
+      "rot": 0,
+      "acao": "em-pe",
+      "exp": "surpreso"
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "batimento_rapido",
+      "trecho": 1,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha a imagem numa *base com duas varas*. [leve] Geralmente quatro pessoas levam nos ombros, bem no alto. [leve] Esse é o *andor*.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.5,
+    "pz": 6.9,
+    "andor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.5
+    },
+    "ombros": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.55,
+     "fim": 0.95
+    },
+    "led": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.7,
+     "fim": 1
+    },
+    "imagem": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.18
+    },
+    "imgLugar": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.6
+    },
+    "imgX": -0.5,
+    "imgY": 0.82,
+    "imgZ": 2.8,
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       0.7,
+       7.2
+      ],
+      "alvo": [
+       0,
+       1.4,
+       1.8
+      ],
+      "fov": 55
+     },
+     "para": {
+      "pos": [
+       1.7,
+       1.0,
+       6.4
+      ],
+      "alvo": [
+       0,
+       1.5,
+       1.8
+      ],
+      "fov": 55
+     }
+    },
+    "etiq": [
+     "andor@0.78"
+    ],
+    "etiqK": 1.2,
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "o número de carregadores pode variar",
+      "trecho": 1,
+      "y": 70,
+      "tamanho": 50
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Assim, lá do fim da rua, todo mundo vê a imagem.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "escuro": 0.6,
+    "pz": 15,
+    "anda": 5,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       1.5,
+       26
+      ],
+      "alvo": [
+       0,
+       2.1,
+       9.6
+      ],
+      "fov": 32
+     },
+     "para": {
+      "pos": [
+       0,
+       1.5,
+       26
+      ],
+      "alvo": [
+       0,
+       2.1,
+       14.4
+      ],
+      "fov": 32
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas quem chega na esquina não sabe se aquilo é _festa_, [leve] desfile [leve] ou mudança.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "escuro": 0.6,
+    "pz": 9,
+    "anda": 5,
+    "moto": true,
+    "camera": {
+     "de": {
+      "pos": [
+       1.0,
+       1.6,
+       14.8
+      ],
+      "alvo": [
+       -1.5,
+       1.4,
+       8.0
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       1.0,
+       1.6,
+       14.8
+      ],
+      "alvo": [
+       -1.5,
+       1.4,
+       8.0
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "id": "motoboy",
+      "x": -3.1,
+      "y": 0.2,
+      "z": 9.6,
+      "rot": 1.1,
+      "acao": "cocando-cabeca",
+      "exp": "surpreso"
+     },
+     {
+      "id": "vizinha",
+      "x": 3.5,
+      "y": 0.2,
+      "z": 2.2,
+      "rot": -1.2,
+      "acao": "em-pe",
+      "exp": "surpreso"
+     },
+     {
+      "id": "vovo",
+      "x": 4.1,
+      "y": 0.2,
+      "z": 3.4,
+      "rot": -1.2,
+      "acao": "em-pe",
+      "exp": "surpreso"
+     },
+     {
+      "id": "homemB",
+      "x": 3.0,
+      "y": 0.2,
+      "z": 0.8,
+      "rot": -1.2,
+      "acao": "em-pe",
+      "exp": "neutro"
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "motor",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "buzina",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha na frente de tudo uma *cruz* bem alta, numa vara comprida. [leve] Essa é a *cruz processional*.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "escuro": 0.6,
+    "pz": 11,
+    "anda": 4,
+    "cruz": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.5
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0.8,
+       0.45,
+       15.8
+      ],
+      "alvo": [
+       0.1,
+       3.0,
+       11
+      ],
+      "fov": 62
+     },
+     "para": {
+      "pos": [
+       0.8,
+       0.7,
+       19.3
+      ],
+      "alvo": [
+       0.1,
+       3.2,
+       15.5
+      ],
+      "fov": 62
+     }
+    },
+    "etiq": [
+     "cruz@0.55"
+    ],
+    "etiqK": 1.3,
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A cruz representa Jesus: quem vai na frente é ele, [leve] e todo o resto vai atrás.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "escuro": 0.6,
+    "pz": 13,
+    "anda": 5,
+    "camera": {
+     "de": {
+      "pos": [
+       4.6,
+       2.4,
+       20.5
+      ],
+      "alvo": [
+       0,
+       1.8,
+       10.5
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       4.0,
+       2.4,
+       25.5
+      ],
+      "alvo": [
+       0,
+       1.8,
+       15.5
+      ],
+      "fov": 48
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "passos",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas à noite, a cruz quase _some_ no meio da rua.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "escuro": {
+     "de": 0.7,
+     "para": 1.0
+    },
+    "pz": 40,
+    "anda": 4,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       1.2,
+       47.5
+      ],
+      "alvo": [
+       0,
+       3.6,
+       40.5
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       0,
+       1.2,
+       50.5
+      ],
+      "alvo": [
+       0,
+       3.9,
+       44.5
+      ],
+      "fov": 52
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sino_longe",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha uma *vela acesa* de cada lado dela. [leve] Esses são os *ciriais*. [leve] É a luz que abre o caminho.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "escuro": 1,
+    "pz": 42,
+    "anda": 3,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       1.5,
+       49.5
+      ],
+      "alvo": [
+       0,
+       2.3,
+       42
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0,
+       1.6,
+       52.0
+      ],
+      "alvo": [
+       0,
+       2.3,
+       45.0
+      ],
+      "fov": 50
+     }
+    },
+    "etiq": [
+     "ciriais@0.5"
+    ],
+    "etiqK": 0.8,
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "fogo",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas pra quem está na calçada, ainda parece só gente _andando_.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "escuro": 1,
+    "pz": 46,
+    "anda": 5,
+    "camera": {
+     "de": {
+      "pos": [
+       0.8,
+       1.6,
+       53
+      ],
+      "alvo": [
+       3.0,
+       1.4,
+       49.5
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       0.8,
+       1.6,
+       53
+      ],
+      "alvo": [
+       3.0,
+       1.4,
+       49.5
+      ],
+      "fov": 45
+     }
+    },
+    "gente": [
+     {
+      "id": "mulher",
+      "x": 3.7,
+      "y": 0.2,
+      "z": 49.0,
+      "rot": -1.3,
+      "acao": "explicando",
+      "exp": "surpreso"
+     }
+    ],
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "passo_leve",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então acenda brasa com *incenso*, numa vasilha com correntes, [leve] e o coroinha vai balançando. [leve] Esse é o *turíbulo*.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0,
+     "fim": 0.3
+    },
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.6
+    },
+    "escuro": 1,
+    "pz": 50,
+    "anda": 3,
+    "camera": {
+     "de": {
+      "pos": [
+       4.2,
+       1.4,
+       49.4
+      ],
+      "alvo": [
+       0,
+       1.0,
+       47.7
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       4.2,
+       1.4,
+       52.4
+      ],
+      "alvo": [
+       0,
+       1.0,
+       50.7
+      ],
+      "fov": 46
+     }
+    },
+    "etiq": [
+     "turibulo@0.5"
+    ],
+    "etiqK": 0.7,
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A fumaça subindo é a oração subindo pra Deus, como diz o *Salmo*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "escuro": 1,
+    "pz": 54,
+    "anda": 2,
+    "camera": {
+     "de": {
+      "pos": [
+       0.8,
+       1.0,
+       55.4
+      ],
+      "alvo": [
+       0,
+       1.0,
+       51.7
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.8,
+       1.0,
+       57.4
+      ],
+      "alvo": [
+       0,
+       3.8,
+       53.7
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a rua está escura, e o povo atrás do andor fica no _breu_.",
+   "duracao": 4.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 34,
+    "escuro": 1,
+    "pz": 58,
+    "anda": 3,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       2.6,
+       69
+      ],
+      "alvo": [
+       0,
+       1.5,
+       52
+      ],
+      "fov": 58
+     },
+     "para": {
+      "pos": [
+       0,
+       2.6,
+       69
+      ],
+      "alvo": [
+       0,
+       1.5,
+       52
+      ],
+      "fov": 58
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então cada um leva uma *vela*, com um copinho de papel pra cera não pingar na mão.",
+   "duracao": 5.9,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 34,
+    "velas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.85
+    },
+    "escuro": 1,
+    "pz": 60,
+    "anda": 2,
+    "camera": {
+     "de": {
+      "pos": [
+       1.0,
+       1.6,
+       54
+      ],
+      "alvo": [
+       -0.8,
+       1.2,
+       50.8
+      ],
+      "fov": 45
+     },
+     "para": {
+      "pos": [
+       0,
+       3.4,
+       70
+      ],
+      "alvo": [
+       0,
+       1.3,
+       52
+      ],
+      "fov": 56
+     }
+    },
+    "etiq": [
+     "vela@0.1-0.5"
+    ],
+    "etiqK": 1.7,
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "fogo",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Elas lembram a luz de Cristo, a mesma da vela do *batismo*.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 34,
+    "velas": 1,
+    "escuro": 1,
+    "pz": 62,
+    "anda": 2,
+    "baixa": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       0.6,
+       1.6,
+       54.4
+      ],
+      "alvo": [
+       -0.8,
+       1.45,
+       52.8
+      ],
+      "fov": 34
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       1.6,
+       54.4
+      ],
+      "alvo": [
+       0.8,
+       1.45,
+       52.8
+      ],
+      "fov": 34
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "sino",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas andando em silêncio, cada um vai pensando na própria vida.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 34,
+    "velas": 1,
+    "escuro": 1,
+    "pz": 64,
+    "anda": 4,
+    "baixa": {
+     "de": 0,
+     "para": 0.3
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       7.0,
+       1.6,
+       57
+      ],
+      "alvo": [
+       0,
+       1.4,
+       56
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       7.0,
+       1.6,
+       53
+      ],
+      "alvo": [
+       0,
+       1.4,
+       55
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "passos_lentos",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então alguém puxa um *canto*. [leve] O povo responde. [leve] E de vez em quando todo mundo *para* pra rezar.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 34,
+    "velas": 1,
+    "escuro": 1,
+    "pz": 66,
+    "anda": 6,
+    "pare": 0.6,
+    "canto": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.45
+    },
+    "baixa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.62,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       6.4,
+       77
+      ],
+      "alvo": [
+       0,
+       1.5,
+       60
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       0,
+       3.4,
+       72
+      ],
+      "alvo": [
+       0,
+       1.5,
+       58
+      ],
+      "fov": 52
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sino_longe",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "É por isso que procissão tem canto, oração e parada.",
+   "duracao": 3.4,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 34,
+    "velas": 1,
+    "escuro": 1,
+    "pz": 68,
+    "anda": 4,
+    "canto": {
+     "de": 1,
+     "para": 0
+    },
+    "baixa": {
+     "de": 0.8,
+     "para": 0
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       2.3,
+       76
+      ],
+      "alvo": [
+       0,
+       1.6,
+       60
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       0,
+       2.3,
+       76
+      ],
+      "alvo": [
+       0,
+       1.6,
+       60
+      ],
+      "fov": 52
+     }
+    },
+    "ambiencia": {
+     "som": "noite",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "passos",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas por que andar, se dava pra rezar sentado na igreja?",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.2,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       1.7,
+       -5.5
+      ],
+      "alvo": [
+       0,
+       1.6,
+       -16
+      ],
+      "fov": 55
+     },
+     "para": {
+      "pos": [
+       0,
+       1.7,
+       -7.5
+      ],
+      "alvo": [
+       0,
+       1.6,
+       -16
+      ],
+      "fov": 55
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Porque a procissão mostra quem a gente é: um povo a caminho, andando junto pra casa de Deus.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 12,
+    "velas": 1,
+    "escuro": 0.5,
+    "pz": 2,
+    "anda": 14,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       1.8,
+       16
+      ],
+      "alvo": [
+       0,
+       1.8,
+       2
+      ],
+      "fov": 55
+     },
+     "para": {
+      "pos": [
+       0,
+       8.2,
+       22
+      ],
+      "alvo": [
+       0,
+       3.0,
+       -2
+      ],
+      "fov": 55
+     }
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sino",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] E olha só: você faz procissão em toda a missa sem perceber, [leve] na entrada, no evangelho, nas ofertas [leve] e na fila da comunhão.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "procissao",
+    "missa": true,
+    "escuro": 0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       -40,
+       1.8,
+       6.2
+      ],
+      "alvo": [
+       -40,
+       1.45,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -40,
+       1.8,
+       5.5
+      ],
+      "alvo": [
+       -40,
+       1.45,
+       0
+      ],
+      "fov": 52
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E tem as grandes do ano: Ramos, Sexta-feira Santa, a festa do padroeiro [leve] e a do Corpo de Deus, com um tapete colorido na rua.",
+   "duracao": 8.6,
+   "cena": {
+    "cenario": "procissao",
+    "vinheta": true,
+    "dia": 0.5,
+    "escuro": 0.2,
+    "camera": {
+     "de": {
+      "pos": [
+       40,
+       1.9,
+       6.6
+      ],
+      "alvo": [
+       40,
+       1.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       40,
+       4.8,
+       6.8
+      ],
+      "alvo": [
+       40,
+       0.4,
+       0.4
+      ],
+      "fov": 50
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sino",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Na festa do padroeiro, a imagem sai no andor.",
+   "duracao": 3.1,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 30,
+    "velas": 1,
+    "escuro": 0.5,
+    "pz": -1,
+    "anda": 8,
+    "camera": {
+     "de": {
+      "pos": [
+       0,
+       2.2,
+       13
+      ],
+      "alvo": [
+       0,
+       1.8,
+       2
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       0,
+       2.2,
+       13
+      ],
+      "alvo": [
+       0,
+       1.8,
+       2
+      ],
+      "fov": 52
+     }
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No fim, a procissão volta pra igreja, onde o padre costuma dar a *bênção* na porta.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": 1,
+    "led": 1,
+    "imagem": 1,
+    "imgLugar": 1,
+    "cruz": 1,
+    "ciriais": 1,
+    "turibulo": 1,
+    "fumaca": 1,
+    "povo": 30,
+    "velas": 1,
+    "escuro": 0.5,
+    "volta": true,
+    "pz": 10,
+    "anda": -9,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       3.9,
+       30
+      ],
+      "alvo": [
+       0,
+       1.3,
+       1.0
+      ],
+      "fov": 30
+     },
+     "para": {
+      "pos": [
+       0.0,
+       3.9,
+       30
+      ],
+      "alvo": [
+       0,
+       1.3,
+       1.0
+      ],
+      "fov": 30
+     }
+    },
+    "gente": [
+     {
+      "id": "padre",
+      "x": 0,
+      "y": 0.16,
+      "z": -2.7,
+      "rot": 0,
+      "acao": "acenando",
+      "exp": "sorriso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sino",
+      "trecho": 0,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Depois é só guardar o andor até o ano que vem.",
+   "duracao": 3.8,
+   "cena": {
+    "cenario": "procissao",
+    "andor": 1,
+    "ombros": {
+     "de": 1,
+     "para": 0,
+     "ini": 0,
+     "fim": 0.4
+    },
+    "led": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 0.7
+    },
+    "imagem": 1,
+    "imgLugar": 1,
+    "semGente": true,
+    "pz": -1.6,
+    "apaga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 1
+    },
+    "escuro": {
+     "de": 0.3,
+     "para": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       2.8,
+       1.9,
+       -4.0
+      ],
+      "alvo": [
+       0,
+       1.0,
+       -7.0
+      ],
+      "fov": 55
+     },
+     "para": {
+      "pos": [
+       2.8,
+       1.9,
+       -4.0
+      ],
+      "alvo": [
+       0,
+       1.0,
+       -7.0
+      ],
+      "fov": 55
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "porta",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "queda_energia",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Parabéns, você montou uma *procissão*.",
+   "duracao": 2.2,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.4,
+    "camera": {
+     "de": {
+      "pos": [
+       2.6,
+       1.5,
+       6.0
+      ],
+      "alvo": [
+       0,
+       1.5,
+       0.5
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.6,
+       1.5,
+       6.0
+      ],
+      "alvo": [
+       0,
+       1.5,
+       0.5
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": 0,
+      "y": 0.12,
+      "z": 0.5,
+      "rot": 0,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "E pode reparar: o primeiro a entrar na procissão foi o *Caramelo*, [leve] e ninguém chamou.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.4,
+    "dog": 1,
+    "dogX": 0.3,
+    "dogZ": 1.9,
+    "dogModo": "fica",
+    "cambalhota": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.74
+    },
+    "boca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.82,
+     "fim": 0.9
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       3.6,
+       1.4,
+       6.0
+      ],
+      "alvo": [
+       0.2,
+       0.8,
+       2.2
+      ],
+      "fov": 42
+     },
+     "para": {
+      "pos": [
+       0.3,
+       0.7,
+       6.2
+      ],
+      "alvo": [
+       0.3,
+       0.95,
+       3.0
+      ],
+      "fov": 28
+     }
+    },
+    "gente": [
+     {
+      "id": "zeca",
+      "x": -1.5,
+      "y": 0.12,
+      "z": 0.2,
+      "rot": 0,
+      "acao": "comemorando",
+      "exp": "sorriso"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   },
+   "pausa": 1.5
+  },
+  {
+   "texto": "Se você sabia o nome de cada parte, comente *Devoto*. [leve] Se aprendeu agora, comente *Curioso*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.4,
+    "dog": 1,
+    "dogX": 0.3,
+    "dogZ": 1.9,
+    "dogModo": "fica",
+    "cambalhota": 1,
+    "boca": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.3,
+       0.7,
+       6.2
+      ],
+      "alvo": [
+       0.3,
+       0.95,
+       3.0
+      ],
+      "fov": 28
+     },
+     "para": {
+      "pos": [
+       0.3,
+       0.7,
+       6.2
+      ],
+      "alvo": [
+       0.3,
+       0.95,
+       3.0
+      ],
+      "fov": 28
+     }
+    },
+    "cartoes": [
+     {
+      "tipo": "perguntaFinal",
+      "trecho": 0,
+      "y": 90,
+      "linhas": [
+       "DEVOTO OU",
+       "CURIOSO?"
+      ]
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   },
+   "falante": "fim"
+  },
+  {
+   "texto": "Manda pra quem ainda acha que procissão é só andar, [leve] e *siga* pra descobrir como as coisas *funcionam*.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "procissao",
+    "escuro": 0.4,
+    "dog": 1,
+    "dogX": 0.3,
+    "dogZ": 1.9,
+    "dogModo": "fica",
+    "cambalhota": 1,
+    "boca": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.3,
+       0.7,
+       6.2
+      ],
+      "alvo": [
+       0.3,
+       0.95,
+       3.0
+      ],
+      "fov": 28
+     },
+     "para": {
+      "pos": [
+       0.3,
+       0.7,
+       6.2
+      ],
+      "alvo": [
+       0.3,
+       0.95,
+       3.0
+      ],
+      "fov": 28
+     }
+    },
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 0,
+      "sub": "com quem acha que procissão é só andar"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 1,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.6
+     }
+    ]
+   },
+   "falante": "fim"
+  }
+ ]
+}
