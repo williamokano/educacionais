@@ -1,0 +1,3126 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 21,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Você está atrasado, [leve] a calça não fecha, [leve] e o *botão* voa e cai na sopa do chefe.",
+   "duracao": 4.966,
+   "cena": {
+    "cenario": "ziper",
+    "palco": "corredor",
+    "botaoV": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.568,
+     "fim": 0.788
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        56.6
+       ],
+       [
+        0.8,
+        68.3
+       ],
+       [
+        1,
+        68.5
+       ]
+      ],
+      "z": 0.3,
+      "rot": 1.0,
+      "acao": "surpreso",
+      "exp": "surpreso",
+      "corre": [
+       [
+        0,
+        1
+       ],
+       [
+        0.74,
+        1
+       ],
+       [
+        0.84,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "seg": 1,
+      "pose": [
+       [
+        0.8,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.6,
+         "ombroD.z": -0.6,
+         "cotoveloE.x": -0.6,
+         "cotoveloD.x": -0.6,
+         "maos": 1
+        }
+       ]
+      ]
+     }
+    ],
+    "camK": [
+     [
+      0.0,
+      48,
+      5,
+      4.4,
+      58.1,
+      0.742,
+      0.3,
+      48
+     ],
+     [
+      0.4,
+      50,
+      7,
+      4.6,
+      63.4,
+      0.728,
+      0.3,
+      48
+     ],
+     [
+      0.62,
+      36,
+      9,
+      5.8,
+      67.2,
+      0.694,
+      0.1,
+      48
+     ],
+     [
+      0.8,
+      20,
+      10,
+      6.8,
+      69.0,
+      0.674,
+      0,
+      48
+     ],
+     [
+      1.0,
+      10,
+      11,
+      7.2,
+      69.7,
+      0.696,
+      -0.1,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       61.357,
+       1.125,
+       3.233
+      ],
+      "alvo": [
+       58.1,
+       0.742,
+       0.3
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       70.927,
+       2.07,
+       6.86
+      ],
+      "alvo": [
+       69.7,
+       0.696,
+       -0.1
+      ],
+      "fov": 48
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas botão fecha um pontinho de cada vez, [leve] e entre dois sempre sobra uma _fresta_, [leve] por onde o vento entra. [leve] Ponha *ganchos* e argolas na borda toda: [leve] a borda cola, sem fresta.",
+   "duracao": 9.222,
+   "cena": {
+    "cenario": "ziper",
+    "botoes": [
+     [
+      0,
+      1
+     ],
+     [
+      0.563,
+      1
+     ],
+     [
+      0.633,
+      0
+     ]
+    ],
+    "ganchos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.593,
+     "fim": 0.673
+    },
+    "fecha": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      0.06,
+      0.0
+     ],
+     [
+      0.07,
+      0.0
+     ],
+     [
+      0.095,
+      0.0283
+     ],
+     [
+      0.116,
+      0.0283
+     ],
+     [
+      0.141,
+      0.1903
+     ],
+     [
+      0.162,
+      0.1903
+     ],
+     [
+      0.187,
+      0.3522
+     ],
+     [
+      0.208,
+      0.3522
+     ],
+     [
+      0.233,
+      0.5142
+     ],
+     [
+      0.254,
+      0.5142
+     ],
+     [
+      0.279,
+      0.6761
+     ],
+     [
+      0.3,
+      0.6761
+     ],
+     [
+      0.325,
+      0.8381
+     ],
+     [
+      0.346,
+      0.8381
+     ],
+     [
+      0.371,
+      1.0
+     ],
+     [
+      0.52,
+      1.0
+     ],
+     [
+      0.6,
+      0.0
+     ],
+     [
+      0.7,
+      0.0
+     ],
+     [
+      1.0,
+      0.95
+     ]
+    ],
+    "frestas": [
+     [
+      0,
+      0
+     ],
+     [
+      0.353,
+      0
+     ],
+     [
+      0.433,
+      1
+     ],
+     [
+      0.553,
+      1
+     ],
+     [
+      0.603,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "etiq": [
+     "botoes@0.02-0.3",
+     "ganchos@0.643-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      -26,
+      8,
+      5.9,
+      -0.3,
+      1.887,
+      0,
+      48
+     ],
+     [
+      0.5,
+      -20,
+      10,
+      5.5,
+      -0.3,
+      1.915,
+      0,
+      48
+     ],
+     [
+      1,
+      -6,
+      10,
+      5.2,
+      -0.3,
+      1.936,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.861,
+       2.708,
+       5.251
+      ],
+      "alvo": [
+       -0.3,
+       1.887,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.835,
+       2.839,
+       5.093
+      ],
+      "alvo": [
+       -0.3,
+       1.936,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "olha": true,
+      "rotOff": -0.15,
+      "ant": {
+       "acao": "surpreso",
+       "pose": {
+        "ombroE.z": 0.6,
+        "ombroD.z": -0.6,
+        "cotoveloE.x": -0.6,
+        "cotoveloD.x": -0.6,
+        "maos": 1
+       },
+       "x": 68.5,
+       "z": 0.3,
+       "rot": 1.0,
+       "dur": 4.966,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "tique",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.3
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 4,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ainda é um por um, [leve] com os dedos, [leve] o dia inteiro. Troque por *dentes* que se alternam: [leve] cada um no vão do vizinho, [leve] como os dedos de duas mãos entrelaçadas. [leve] Um engenheiro pôs uns dez dentes onde havia quatro.",
+   "duracao": 11.067,
+   "cena": {
+    "cenario": "ziper",
+    "ganchos": [
+     [
+      0,
+      1
+     ],
+     [
+      0.259,
+      1
+     ],
+     [
+      0.359,
+      0
+     ]
+    ],
+    "g0": {
+     "de": 0,
+     "para": 0.15,
+     "ini": 0.259,
+     "fim": 0.359
+    },
+    "dentes": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.289,
+     "fim": 0.619
+    },
+    "fecha": [
+     [
+      0,
+      0.0
+     ],
+     [
+      0.269,
+      0.52
+     ],
+     [
+      1,
+      0.52
+     ]
+    ],
+    "maos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.525,
+     "fim": 0.685
+    },
+    "etiq": [
+     "dentes@0.659-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      24,
+      8,
+      5.8,
+      -0.3,
+      1.794,
+      0,
+      48
+     ],
+     [
+      0.45,
+      22,
+      10,
+      5.2,
+      -0.3,
+      1.636,
+      0,
+      48
+     ],
+     [
+      1,
+      14,
+      12,
+      4.9,
+      -0.3,
+      1.557,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       2.036,
+       2.601,
+       5.247
+      ],
+      "alvo": [
+       -0.3,
+       1.794,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.86,
+       2.576,
+       4.651
+      ],
+      "alvo": [
+       -0.3,
+       1.557,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 9.222,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "tique",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas os dois lados não se encontram sozinhos. [leve] Ponha um *carrinho* com um canal em *Y*: [leve] as fileiras entram separadas, [leve] se juntam no bico [leve] e saem _encaixadas_, [leve] tudo de uma vez. [leve] Puxando de volta, o Y separa tudo.",
+   "duracao": 11.8,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "solto": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.02,
+     "fim": 0.2
+    },
+    "carrinho": 1,
+    "mont": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.186,
+     "fim": 0.426
+    },
+    "raioxC": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.386,
+     "fim": 0.486
+    },
+    "setaY": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.486,
+     "fim": 0.566
+    },
+    "tab": 2.9,
+    "fecha": [
+     [
+      0,
+      0.3117
+     ],
+     [
+      0.404,
+      0.3117
+     ],
+     [
+      0.754,
+      0.8178
+     ],
+     [
+      1,
+      0.4939
+     ]
+    ],
+    "etiq": [
+     "carrinho@0.426-0.6",
+     "y@0.586-0.99"
+    ],
+    "etiqS": 0.7,
+    "camK": [
+     [
+      0,
+      -30,
+      12,
+      5.4,
+      -0.3,
+      -0.578,
+      0,
+      48
+     ],
+     [
+      0.35,
+      -14,
+      14,
+      4.8,
+      -0.25,
+      -0.236,
+      0,
+      48
+     ],
+     [
+      0.7,
+      14,
+      12,
+      4.8,
+      -0.25,
+      -0.236,
+      0,
+      48
+     ],
+     [
+      1,
+      24,
+      12,
+      5.0,
+      -0.3,
+      -0.45,
+      0,
+      48
+     ]
+    ],
+    "camRel": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.941,
+       2.295,
+       4.574
+      ],
+      "alvo": [
+       -0.3,
+       1.172,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       1.689,
+       2.339,
+       4.468
+      ],
+      "alvo": [
+       -0.3,
+       1.3,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.5,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 11.067,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 5,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "De perto, o carrinho sobe: [leve] o Y empurra um dente da esquerda [leve] no vão de um da direita, [leve] um de cada vez, [leve] em zigue-zague. [leve] Desce, e o bico separa tudo de volta.",
+   "duracao": 8.867,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "carrinho": 1,
+    "raioxC": 0.85,
+    "tab": 2.9,
+    "fecha": [
+     [
+      0,
+      0.2915
+     ],
+     [
+      0.1,
+      0.2915
+     ],
+     [
+      0.76,
+      0.6356
+     ],
+     [
+      0.8,
+      0.6356
+     ],
+     [
+      1,
+      0.413
+     ]
+    ],
+    "etiq": [
+     "zig@0.62-0.82"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.6,
+    "camK": [
+     [
+      0,
+      40,
+      24,
+      2.3,
+      0.02,
+      -0.041,
+      0,
+      44
+     ],
+     [
+      0.2,
+      22,
+      16,
+      1.55,
+      0.0,
+      -0.129,
+      0.0,
+      44
+     ],
+     [
+      0.45,
+      -22,
+      10,
+      1.35,
+      0.0,
+      -0.115,
+      0.0,
+      44
+     ],
+     [
+      0.62,
+      -38,
+      8,
+      1.3,
+      0.0,
+      -0.141,
+      0.0,
+      44
+     ],
+     [
+      0.78,
+      3,
+      28,
+      1.9,
+      0.0,
+      -0.133,
+      0.0,
+      44
+     ],
+     [
+      1,
+      34,
+      15,
+      2.1,
+      0.0,
+      -0.147,
+      0,
+      44
+     ]
+    ],
+    "camRel": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       1.371,
+       2.594,
+       1.61
+      ],
+      "alvo": [
+       0.02,
+       1.659,
+       0
+      ],
+      "fov": 44
+     },
+     "para": {
+      "pos": [
+       1.134,
+       2.097,
+       1.682
+      ],
+      "alvo": [
+       0.0,
+       1.553,
+       0
+      ],
+      "fov": 44
+     }
+    },
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.3
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.3
+     },
+     {
+      "som": "clique",
+      "trecho": 4,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 5,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas dente solto _cai_. [leve] Prenda cada um numa *fita* de tecido, [leve] e costure a fita na roupa: [leve] os dentes ficam em fila certinha, [leve] na distância certa.",
+   "duracao": 7.922,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "tab": 2.9,
+    "fecha": 0.6356,
+    "cai": [
+     [
+      0,
+      0
+     ],
+     [
+      0.03,
+      0
+     ],
+     [
+      0.28,
+      1
+     ],
+     [
+      0.34,
+      1
+     ],
+     [
+      0.62,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "dsolta": 1,
+    "fita": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.32,
+     "fim": 0.62
+    },
+    "costura": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.93
+    },
+    "etiq": [
+     "fita@0.34-0.62"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      -22,
+      7,
+      6.8,
+      -0.3,
+      1.424,
+      0,
+      48
+     ],
+     [
+      0.3,
+      -12,
+      8,
+      6.4,
+      -0.3,
+      1.452,
+      0,
+      48
+     ],
+     [
+      0.5,
+      18,
+      12,
+      4.4,
+      -0.2,
+      1.692,
+      0,
+      48
+     ],
+     [
+      0.66,
+      26,
+      14,
+      3.0,
+      0.0,
+      1.99,
+      0.0,
+      48
+     ],
+     [
+      1,
+      10,
+      10,
+      5.2,
+      -0.3,
+      2.136,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.828,
+       2.253,
+       6.258
+      ],
+      "alvo": [
+       -0.3,
+       1.424,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.589,
+       3.039,
+       5.043
+      ],
+      "alvo": [
+       -0.3,
+       2.136,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e se puxarem os dois lados pra longe? [leve] Cada dente trava no vizinho, [leve] como um *grampo* de cabelo: [leve] só o carrinho solta. [leve] Nem a barriga depois do almoço de domingo abre.",
+   "duracao": 8.688,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "tab": 2.9,
+    "fecha": [
+     [
+      0,
+      0.6964
+     ],
+     [
+      0.576,
+      0.6964
+     ],
+     [
+      0.716,
+      0.2105
+     ],
+     [
+      0.729,
+      0.2105
+     ],
+     [
+      0.849,
+      0.6964
+     ],
+     [
+      1,
+      0.6964
+     ]
+    ],
+    "forca": [
+     [
+      0,
+      0
+     ],
+     [
+      0.06,
+      1
+     ],
+     [
+      0.556,
+      1
+     ],
+     [
+      0.616,
+      0
+     ],
+     [
+      0.749,
+      0
+     ],
+     [
+      0.819,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "corte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.277,
+     "fim": 0.397
+    },
+    "etiq": [
+     "grampo@0.437-0.596"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      -4,
+      5,
+      7.8,
+      0.0,
+      1.554,
+      0,
+      48
+     ],
+     [
+      0.5,
+      0,
+      5,
+      7.6,
+      0.0,
+      1.568,
+      0,
+      48
+     ],
+     [
+      1,
+      6,
+      6,
+      7.4,
+      0.0,
+      1.582,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.542,
+       2.234,
+       7.751
+      ],
+      "alvo": [
+       0.0,
+       1.554,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.769,
+       2.356,
+       7.319
+      ],
+      "alvo": [
+       0.0,
+       1.582,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "surpreso",
+      "exp": "surpreso",
+      "olha": true,
+      "rotOff": -0.15,
+      "pose": [
+       [
+        0.719,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.9,
+         "ombroD.x": -0.9,
+         "cotoveloE.x": -1.3,
+         "cotoveloD.x": -1.3,
+         "ombroE.z": 0.15,
+         "ombroD.z": -0.15,
+         "maos": 0.5,
+         "tronco.x": -0.15
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 7.922,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o carrinho pode sair pela ponta. [leve] Ponha um *batente* em cada ponta: [leve] ele para o carrinho no fim da fileira, [leve] e as duas fileiras não se soltam.",
+   "duracao": 7.056,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "tab": 2.9,
+    "fecha": [
+     [
+      0,
+      0.5749
+     ],
+     [
+      0.2,
+      1.0
+     ],
+     [
+      0.5,
+      1.0
+     ],
+     [
+      0.373,
+      1.0
+     ],
+     [
+      0.523,
+      1.0
+     ],
+     [
+      0.629,
+      0.6559
+     ],
+     [
+      0.88,
+      1.0
+     ],
+     [
+      0.94,
+      0.985
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "voa": [
+     [
+      0,
+      0
+     ],
+     [
+      0.2,
+      0
+     ],
+     [
+      0.46,
+      1
+     ],
+     [
+      0.393,
+      1
+     ],
+     [
+      0.533,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "batentes": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.313,
+     "fim": 0.573
+    },
+    "etiq": [
+     "batente@0.573-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      -22,
+      6,
+      6.6,
+      -0.3,
+      2.138,
+      0,
+      48
+     ],
+     [
+      0.3,
+      -10,
+      8,
+      6.6,
+      -0.3,
+      2.338,
+      0,
+      48
+     ],
+     [
+      0.62,
+      14,
+      10,
+      5.6,
+      -0.3,
+      2.608,
+      0,
+      48
+     ],
+     [
+      0.8,
+      24,
+      14,
+      3.0,
+      0.1,
+      3.29,
+      0.1,
+      48
+     ],
+     [
+      1,
+      30,
+      14,
+      2.6,
+      0.1,
+      3.368,
+      0.1,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.759,
+       2.828,
+       6.086
+      ],
+      "alvo": [
+       -0.3,
+       2.138,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       1.361,
+       3.997,
+       2.285
+      ],
+      "alvo": [
+       0.1,
+       3.368,
+       0.1
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "ant": {
+       "acao": "surpreso",
+       "pose": {
+        "ombroE.x": -0.9,
+        "ombroD.x": -0.9,
+        "cotoveloE.x": -1.3,
+        "cotoveloD.x": -1.3,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "maos": 0.5,
+        "tronco.x": -0.15
+       },
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 8.688,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o carrinho escorrega pra baixo sozinho, [leve] e a calça abre no meio da rua, [leve] com o chefe olhando. [leve] Ponha uma *trava*: [leve] um pininho que entra entre os dentes e segura.",
+   "duracao": 8.0,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "batentes": 1,
+    "tab": 2.9,
+    "janela": 1,
+    "raioxC": {
+     "de": 0.55,
+     "para": 0.85,
+     "ini": 0.542,
+     "fim": 0.692
+    },
+    "fecha": [
+     [
+      0,
+      1.0
+     ],
+     [
+      0.1,
+      1.0
+     ],
+     [
+      0.428,
+      0.3725
+     ],
+     [
+      0.602,
+      0.3725
+     ],
+     [
+      1,
+      0.3725
+     ]
+    ],
+    "alinha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.622,
+     "fim": 0.742
+    },
+    "trava": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.742,
+     "fim": 0.902
+    },
+    "etiq": [
+     "trava@0.782-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      -18,
+      6,
+      7.0,
+      0.25,
+      1.91,
+      0,
+      48
+     ],
+     [
+      0.508,
+      -22,
+      8,
+      6.4,
+      0.1,
+      1.752,
+      0,
+      48
+     ],
+     [
+      0.622,
+      -34,
+      10,
+      3.0,
+      0.0,
+      1.69,
+      0,
+      46
+     ],
+     [
+      1,
+      -52,
+      12,
+      1.8,
+      -0.1,
+      1.824,
+      0.1,
+      44
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.901,
+       2.642,
+       6.621
+      ],
+      "alvo": [
+       0.25,
+       1.91,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -1.487,
+       2.198,
+       1.184
+      ],
+      "alvo": [
+       -0.1,
+       1.824,
+       0.1
+      ],
+      "fov": 44
+     }
+    },
+    "gente": [
+     {
+      "x": 1.0,
+      "z": 0.9,
+      "rot": 0.0,
+      "acao": "surpreso",
+      "exp": "surpreso",
+      "olha": true,
+      "rotOff": 0.1,
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 7.056,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas cuidado com a camisa: [leve] se ela enroscar no carrinho, [leve] não adianta ter pressa: [leve] só um pulinho e um \"ai\" resolvem.",
+   "duracao": 6.211,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "trava": 1,
+    "tab": 2.9,
+    "fecha": 0.2308,
+    "camisa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.04,
+     "fim": 0.22
+    },
+    "estrelas": [
+     [
+      0,
+      0
+     ],
+     [
+      0.656,
+      0
+     ],
+     [
+      0.716,
+      1
+     ],
+     [
+      0.876,
+      0.7
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camK": [
+     [
+      0,
+      -18,
+      7,
+      5.4,
+      -0.3,
+      1.122,
+      0,
+      48
+     ],
+     [
+      0.5,
+      -10,
+      8,
+      4.8,
+      -0.3,
+      1.164,
+      0.1,
+      48
+     ],
+     [
+      0.646,
+      8,
+      6,
+      4.4,
+      -0.3,
+      1.092,
+      0.2,
+      48
+     ],
+     [
+      1,
+      14,
+      6,
+      4.6,
+      -0.3,
+      1.078,
+      0.2,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.956,
+       1.78,
+       5.097
+      ],
+      "alvo": [
+       -0.3,
+       1.122,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.807,
+       1.559,
+       4.639
+      ],
+      "alvo": [
+       -0.3,
+       1.078,
+       0.2
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.65,
+      "rot": 0.0,
+      "acao": "surpreso",
+      "exp": "surpreso",
+      "olha": true,
+      "rotOff": 0.5,
+      "y": [
+       [
+        0,
+        0
+       ],
+       [
+        0.636,
+        0
+       ],
+       [
+        0.716,
+        0.45
+       ],
+       [
+        0.796,
+        0
+       ],
+       [
+        0.856,
+        0.28
+       ],
+       [
+        0.916,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "sq": [
+       [
+        0,
+        0
+       ],
+       [
+        0.626,
+        0
+       ],
+       [
+        0.666,
+        -1
+       ],
+       [
+        0.716,
+        0
+       ],
+       [
+        0.796,
+        1
+       ],
+       [
+        0.836,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "verm": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.656,
+       "fim": 0.776
+      },
+      "ant": {
+       "acao": "surpreso",
+       "pose": {},
+       "x": 1.0,
+       "z": 0.9,
+       "rot": 0.0,
+       "dur": 8.0,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "zumbido",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a jaqueta precisa abrir de cima a baixo. [leve] Ponha um *pino* numa ponta [leve] e uma *caixa* na outra: [leve] o pino entra na caixa e começa o encaixe, [leve] e a jaqueta abre inteira pra você tirar.",
+   "duracao": 9.256,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "trava": 1,
+    "tab": 2.9,
+    "jaqueta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "fecha": [
+     [
+      0,
+      0.2308
+     ],
+     [
+      0.12,
+      0.2308
+     ],
+     [
+      0.26,
+      0.0
+     ],
+     [
+      0.695,
+      0.0
+     ],
+     [
+      0.875,
+      0.5344
+     ],
+     [
+      0.819,
+      0.5344
+     ],
+     [
+      0.949,
+      0.0
+     ],
+     [
+      1,
+      0.0
+     ]
+    ],
+    "caixa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.258,
+     "fim": 0.418
+    },
+    "sep": [
+     [
+      0,
+      0
+     ],
+     [
+      0.24,
+      0
+     ],
+     [
+      0.32,
+      1
+     ],
+     [
+      0.525,
+      1
+     ],
+     [
+      0.655,
+      0
+     ],
+     [
+      0.909,
+      0
+     ],
+     [
+      1.049,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "sepY": [
+     [
+      0,
+      0
+     ],
+     [
+      0.24,
+      0
+     ],
+     [
+      0.32,
+      1
+     ],
+     [
+      0.635,
+      1
+     ],
+     [
+      0.735,
+      0
+     ],
+     [
+      0.949,
+      0
+     ],
+     [
+      1.049,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "etiq": [
+     "pino@0.298-0.675",
+     "caixa@0.424-0.675"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.8,
+    "camK": [
+     [
+      0,
+      -24,
+      8,
+      6.2,
+      -0.3,
+      1.666,
+      0,
+      48
+     ],
+     [
+      0.3,
+      -22,
+      10,
+      5.4,
+      -0.2,
+      1.122,
+      0,
+      48
+     ],
+     [
+      0.6,
+      18,
+      14,
+      3.4,
+      0.1,
+      0.762,
+      0,
+      48
+     ],
+     [
+      0.85,
+      20,
+      12,
+      5.2,
+      -0.3,
+      1.536,
+      0,
+      48
+     ],
+     [
+      1,
+      8,
+      8,
+      6.2,
+      -0.4,
+      1.766,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.797,
+       2.529,
+       5.609
+      ],
+      "alvo": [
+       -0.3,
+       1.666,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.454,
+       2.629,
+       6.08
+      ],
+      "alvo": [
+       -0.4,
+       1.766,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "surpreso",
+       "pose": {},
+       "x": -0.95,
+       "y": 0,
+       "z": 0.65,
+       "rot": 0.0,
+       "dur": 6.211,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas dente de metal é duro e pesado. [leve] Troque por um fio de plástico enrolado em *espiral*: [leve] ele dobra junto com o pano, [leve] e fica leve no bolso. [leve] A maioria é assim.",
+   "duracao": 8.8,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "trava": 1,
+    "tab": 2.9,
+    "jaqueta": 1,
+    "fecha": 0.6154,
+    "espiral": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.265,
+     "fim": 0.565
+    },
+    "costE": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.525,
+     "fim": 0.765
+    },
+    "dobra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.508,
+     "fim": 0.668
+    },
+    "etiq": [
+     "espiral@0.565-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      -28,
+      8,
+      6.2,
+      -0.3,
+      2.066,
+      0,
+      48
+     ],
+     [
+      0.16,
+      26,
+      10,
+      2.8,
+      0.0,
+      1.504,
+      0,
+      48
+     ],
+     [
+      0.45,
+      -22,
+      8,
+      2.9,
+      0.0,
+      1.597,
+      0,
+      48
+     ],
+     [
+      1,
+      10,
+      8,
+      5.4,
+      -0.4,
+      1.822,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.182,
+       2.929,
+       5.421
+      ],
+      "alvo": [
+       -0.3,
+       2.066,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.529,
+       2.574,
+       5.266
+      ],
+      "alvo": [
+       -0.4,
+       1.822,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 9.256,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Agora a jaqueta abre e fecha [leve] num puxão, [leve] sem nenhum botão pra voar [leve] e sem sopa pra estragar.",
+   "duracao": 4.814,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "trava": 0,
+    "tab": 2.9,
+    "jaqueta": 1,
+    "espiral": 1,
+    "costE": 1,
+    "dobra": 0.3,
+    "sopa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.5,
+     "fim": 0.6
+    },
+    "fecha": [
+     [
+      0,
+      0.6154
+     ],
+     [
+      0.2,
+      0.0486
+     ],
+     [
+      0.42,
+      0.0486
+     ],
+     [
+      0.68,
+      0.7773
+     ],
+     [
+      1,
+      0.7773
+     ]
+    ],
+    "camK": [
+     [
+      0,
+      -8,
+      6,
+      6.8,
+      -0.1,
+      1.824,
+      0,
+      48
+     ],
+     [
+      1,
+      6,
+      6,
+      6.4,
+      -0.1,
+      1.852,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.041,
+       2.535,
+       6.697
+      ],
+      "alvo": [
+       -0.1,
+       1.824,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.565,
+       2.521,
+       6.33
+      ],
+      "alvo": [
+       -0.1,
+       1.852,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 8.8,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Pronto: você acabou de inventar o *zíper*.",
+   "duracao": 2.453,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "costE": 1,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "batentes": 1,
+    "tab": 2.9,
+    "jaqueta": 1,
+    "espiral": 1,
+    "dobra": 0.15,
+    "fecha": 0.7773,
+    "raioxC": 1,
+    "setaY": 0,
+    "etiq": [
+     "ziper@0.5-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      10,
+      58,
+      4.4,
+      -0.2,
+      2.592,
+      0.4,
+      48
+     ],
+     [
+      0.55,
+      14,
+      22,
+      6.2,
+      -0.3,
+      1.866,
+      0,
+      48
+     ],
+     [
+      1,
+      0,
+      4,
+      7.0,
+      -0.3,
+      1.71,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.205,
+       6.323,
+       2.696
+      ],
+      "alvo": [
+       -0.2,
+       2.592,
+       0.4
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       2.198,
+       6.983
+      ],
+      "alvo": [
+       -0.3,
+       1.71,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 0.7,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 4.814,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A ideia é velha: [leve] a de Elias Howe, de *1851*, nunca foi vendida. [leve] A de Whitcomb Judson, de *1893*, [leve] era pra fechar sapato, [leve] emperrava [leve] e vendeu pouco.",
+   "duracao": 10.066,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "patente": "1851",
+    "patente2": "1893",
+    "patX": -0.46,
+    "patX2": 0.46,
+    "patE": 0.56,
+    "patK": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.12
+    },
+    "patS": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.321,
+     "fim": 0.421
+    },
+    "patK2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.43,
+     "fim": 0.53
+    },
+    "patS2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.824,
+     "fim": 0.904
+    },
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "tab": 2.9,
+    "jaqueta": 1,
+    "espiral": 1,
+    "costE": 1,
+    "fecha": 0.7773,
+    "camK": [
+     [
+      0,
+      0,
+      4,
+      6.8,
+      0.0,
+      1.624,
+      0,
+      48
+     ],
+     [
+      1,
+      0,
+      5,
+      6.4,
+      0.0,
+      1.702,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       2.098,
+       6.783
+      ],
+      "alvo": [
+       0.0,
+       1.624,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       0.0,
+       2.26,
+       6.376
+      ],
+      "alvo": [
+       0.0,
+       1.702,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.9,
+      "z": 2.0,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -0.95,
+       "z": 0.7,
+       "rot": 0.0,
+       "dur": 2.453,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1851",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 96
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "1893",
+      "trecho": 2,
+      "y": 150,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 4,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O do sueco Gideon Sundbäck foi pra loja em *1913*, [leve] com o carrinho em Y e dentes bem mais juntos. [leve] E o nome pegou em *1923*, numa galocha de borracha.",
+   "duracao": 10.223,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "patente": "1913",
+    "patX": -0.4,
+    "patE": 0.6,
+    "patK": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "patS": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.163,
+     "fim": 0.263
+    },
+    "galocha": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.667,
+     "fim": 0.767
+    },
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "tab": 2.9,
+    "jaqueta": 1,
+    "espiral": 1,
+    "costE": 1,
+    "fecha": 0.7773,
+    "etiq": [
+     "zipper@0.643-0.99"
+    ],
+    "etiqS": 1.0,
+    "camK": [
+     [
+      0,
+      0,
+      4,
+      6.4,
+      0.0,
+      1.452,
+      0.5,
+      48
+     ],
+     [
+      1,
+      -8,
+      6,
+      5.6,
+      0.2,
+      1.308,
+      0.5,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       1.898,
+       6.884
+      ],
+      "alvo": [
+       0.0,
+       1.452,
+       0.5
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.575,
+       1.893,
+       6.015
+      ],
+      "alvo": [
+       0.2,
+       1.308,
+       0.5
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": -0.95,
+      "z": 2.4,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.9,
+       "z": 2.0,
+       "rot": 0.0,
+       "dur": 10.066,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1913",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 96
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "1923",
+      "trecho": 2,
+      "y": 150,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Manda pra quem vive com o zíper aberto [leve] e nem percebe. [leve] E um pano que segura uma pessoa caindo do céu? [leve] Siga pra descobrir.",
+   "duracao": 7.311,
+   "cena": {
+    "cenario": "ziper",
+    "dentes": 1,
+    "g0": 0.15,
+    "costE": 1,
+    "dsolta": 1,
+    "fita": 1,
+    "costura": 1,
+    "carrinho": 1,
+    "raioxC": 0.55,
+    "batentes": 1,
+    "tab": 2.9,
+    "jaqueta": 1,
+    "espiral": 1,
+    "fecha": [
+     [
+      0,
+      0.0486
+     ],
+     [
+      0.4,
+      0.7773
+     ],
+     [
+      1,
+      0.7773
+     ]
+    ],
+    "pano": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 1.0
+    },
+    "janela": 2,
+    "camK": [
+     [
+      0,
+      -22,
+      7,
+      6.4,
+      0.7,
+      1.852,
+      0,
+      48
+     ],
+     [
+      1,
+      -8,
+      6,
+      6.0,
+      0.8,
+      1.88,
+      0,
+      48
+     ]
+    ],
+    "camRel": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -1.68,
+       2.632,
+       5.89
+      ],
+      "alvo": [
+       0.7,
+       1.852,
+       0
+      ],
+      "fov": 48
+     },
+     "para": {
+      "pos": [
+       -0.03,
+       2.507,
+       5.909
+      ],
+      "alvo": [
+       0.8,
+       1.88,
+       0
+      ],
+      "fov": 48
+     }
+    },
+    "gente": [
+     {
+      "x": 0.95,
+      "z": 1.1,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "olha": true,
+      "rotOff": -0.15,
+      "pose": {
+       "ombroD.x": -1.2,
+       "ombroD.z": -0.5,
+       "cotoveloD.x": -0.1,
+       "dedo": 1,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.95,
+       "z": 2.4,
+       "rot": 0.0,
+       "dur": 10.223,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 1,
+      "sub": "pra quem vive com o zíper aberto"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 2,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  }
+ ]
+}

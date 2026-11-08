@@ -18,6 +18,53 @@ const respira = (t: number): Pose3D => ({ "tronco.x": 0.02 + Math.sin(t * 2.1) *
 
 const braçosSoltos: Pose3D = { "ombroE.z": 0.12, "ombroD.z": -0.12, "cotoveloE.x": -0.18, "cotoveloD.x": -0.18 };
 
+// ---- Pulo de comemoração (fases: antecipação, impulso, voo, amortecimento, pausa) ----
+// Keyframes [tempo no ciclo (s), valor, "o"?]: entre pontos, suavizado (smoothstep); "o" = ease-out (arranque rápido).
+type KF = [number, number, "o"?];
+const kf = (s: number, pts: KF[]): number => {
+  if (s <= pts[0][0]) return pts[0][1];
+  for (let i = 1; i < pts.length; i++) {
+    if (s <= pts[i][0]) {
+      const [t0, v0] = pts[i - 1];
+      const [t1, v1, e] = pts[i];
+      const x = (s - t0) / (t1 - t0);
+      const k = e === "o" ? 1 - (1 - x) * (1 - x) : x * x * (3 - 2 * x);
+      return v0 + (v1 - v0) * k;
+    }
+  }
+  return pts[pts.length - 1][1];
+};
+const CICLO = 1.19, T_IMP = 0.35, T_POUSO = 0.84, ALT = 0.3;
+// Quanto o quadril precisa descer para o pé continuar no chão com a coxa a (flexão, rad) e o joelho k.
+const descidaQuadril = (a: number, k: number) => 0.29 * (Math.cos(a) - 1) + 0.27 * (Math.cos(a - k) - 1);
+
+const pulo = (t: number): Pose3D => {
+  const s = ((t % CICLO) + CICLO) % CICLO;
+  const voo = s > T_IMP && s < T_POUSO;
+  const u = voo ? (s - T_IMP) / (T_POUSO - T_IMP) : 0;
+  const alt = voo ? ALT * 4 * u * (1 - u) : 0;
+  const tuck = voo ? Math.pow(Math.sin(Math.PI * u), 0.7) : 0;
+  const c = kf(s, [[0, 0], [0.25, 1], [T_IMP, 0, "o"], [T_POUSO, 0], [0.94, 1, "o"], [1.06, 0.1], [CICLO, 0]]);
+  const a = 0.95 * c + 0.4 * tuck;
+  const k = 1.8 * c + 1.1 * tuck;
+  const vida = Math.sin(t * 9) * 0.07 + (voo ? Math.sin(u * Math.PI * 3) * 0.13 : 0);
+  const az = kf(s, [[0, 2.3], [0.25, 0.4], [T_IMP, 2.9, "o"], [0.5, 2.7], [T_POUSO, 2.55], [0.94, 1.0, "o"], [1.06, 2.0], [CICLO, 2.3]]) + vida;
+  const ax = kf(s, [[0, 0], [0.25, 0.85], [T_IMP, -0.15, "o"], [0.5, 0], [T_POUSO, 0], [0.94, 0.35, "o"], [CICLO, 0]]);
+  const ex = kf(s, [[0, 0], [0.25, -0.4], [T_IMP, -0.05, "o"], [T_POUSO, 0], [0.94, -0.45, "o"], [CICLO, 0]]);
+  const ez = 0.3 + (voo ? Math.sin(u * Math.PI * 3 + 0.8) * 0.3 : Math.sin(t * 9 + 1) * 0.1);
+  return {
+    "quadril.y": descidaQuadril(a, k) + alt,
+    "tronco.x": 0.3 * c - 0.06 - 0.06 * tuck,
+    "ombroE.x": ax, "ombroD.x": ax,
+    "ombroE.z": az, "ombroD.z": -az,
+    "cotoveloE.x": ex, "cotoveloD.x": ex,
+    "cotoveloE.z": ez, "cotoveloD.z": -ez,
+    "maos": 1,
+    "pernaE.x": -a, "pernaD.x": -a, "joelhoE.x": k, "joelhoD.x": k,
+    "cabeca.x": -0.12 - 0.12 * c,
+  };
+};
+
 export const ACOES_3D: Record<string, (t: number) => Pose3D> = {
   "em-pe": (t) => ({ ...braçosSoltos, ...respira(t), "maos": 0.2 }),
 
@@ -52,16 +99,7 @@ export const ACOES_3D: Record<string, (t: number) => Pose3D> = {
     "cabeca.z": 0.12 + Math.sin(t * 1.2) * 0.02, "cabeca.x": -0.08, "tronco.y": 0.05,
   }),
 
-  comemorando: (t) => {
-    const pulo = Math.max(0, Math.sin(t * 7.5));
-    return {
-      "quadril.y": pulo * 0.09, "tronco.x": -0.06,
-      "ombroE.z": 2.55 + Math.sin(t * 7.5) * 0.12, "ombroD.z": -2.55 - Math.sin(t * 7.5) * 0.12,
-      "cotoveloE.z": 0.25, "cotoveloD.z": -0.25, "maos": 1,
-      "pernaE.x": -pulo * 0.25, "pernaD.x": -pulo * 0.25, "joelhoE.x": pulo * 0.5, "joelhoD.x": pulo * 0.5,
-      "cabeca.x": -0.12,
-    };
-  },
+  comemorando: (t) => pulo(t),
 
   andando: (t) => {
     const c = t * 6.8; // passos por segundo ~ 1,1

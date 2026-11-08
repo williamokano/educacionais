@@ -53,6 +53,28 @@ const Camera: React.FC<{ de: PontoCamera; para: PontoCamera; k: number }> = ({ d
   return null;
 };
 
+/**
+ * Materiais que mudam `transparent` entre quadros (parede que vira vidro, peça que some) precisam recompilar: o three.js põe
+ * `transparent === false` no programa do shader (define OPAQUE, alfa fixo em 1), e mudar a flag sem `needsUpdate` deixa o
+ * programa antigo valendo. Aí o quadro sai opaco ou translúcido conforme o histórico de cada aba do render em paralelo
+ * (a piscada "translúcida, material, translúcida"). Este componente confere a flag a cada commit e força a recompilação.
+ */
+const MateriaisEstaveis: React.FC = () => {
+  const { scene } = useThree();
+  React.useLayoutEffect(() => {
+    scene.traverse((o) => {
+      const mats = (o as THREE.Mesh).material;
+      if (!mats) return;
+      for (const m of Array.isArray(mats) ? mats : [mats]) {
+        const visto = m.userData.transpVisto as boolean | undefined;
+        if (visto !== undefined && visto !== m.transparent) m.needsUpdate = true;
+        m.userData.transpVisto = m.transparent;
+      }
+    });
+  });
+  return null;
+};
+
 /** Reflexo de ambiente (só no suave): um estúdio genérico do three.js, para metais, verniz e olhos brilharem. */
 const Ambiente: React.FC<{ forca: number }> = ({ forca }) => {
   const { gl, scene } = useThree();
@@ -223,6 +245,7 @@ export const Palco: React.FC<{
           const antes = atoresAntes.find((o) => o.id === a.id);
           return <Ator key={`${a.id}-${i}`} a={a} ctx={ctx} anterior={antes && continua ? { a: antes, segmentos: continua.segmentos, dur: continua.dur } : undefined} />;
         })}
+        <MateriaisEstaveis />
       </QualidadeCtx.Provider>
     </ThreeCanvas>
   );

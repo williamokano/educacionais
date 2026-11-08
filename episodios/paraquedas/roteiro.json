@@ -1,0 +1,3220 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 22,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Seu amigo apostou que desce do segundo andar com um *guarda-chuva*. [leve] Ele pulou, [leve] o guarda-chuva virou do avesso [leve] e a queda _para_ no meio do ar. [leve] Rebobine: vamos melhorar isso.",
+   "duracao": 9.167,
+   "cena": {
+    "cenario": "paraquedas",
+    "palco": "rua",
+    "amigoY": [
+     [
+      0,
+      3.3
+     ],
+     [
+      0.361,
+      3.3
+     ],
+     [
+      0.441,
+      2.5
+     ],
+     [
+      0.656,
+      1.65
+     ],
+     [
+      0.775,
+      1.65
+     ],
+     [
+      1.005,
+      3.3
+     ],
+     [
+      1,
+      3.3
+     ]
+    ],
+    "amigoZ": [
+     [
+      0,
+      0.75
+     ],
+     [
+      0.361,
+      0.75
+     ],
+     [
+      0.656,
+      2.0
+     ],
+     [
+      0.775,
+      2.0
+     ],
+     [
+      1.005,
+      0.75
+     ],
+     [
+      1,
+      0.75
+     ]
+    ],
+    "guardaVira": [
+     [
+      0,
+      0
+     ],
+     [
+      0.467,
+      0
+     ],
+     [
+      0.557,
+      1
+     ],
+     [
+      0.885,
+      1
+     ],
+     [
+      1.005,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "pausa": [
+     [
+      0,
+      0
+     ],
+     [
+      0.636,
+      0
+     ],
+     [
+      0.666,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "rebob": [
+     [
+      0,
+      0
+     ],
+     [
+      0.785,
+      0
+     ],
+     [
+      0.815,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "fita": [
+     [
+      0,
+      0
+     ],
+     [
+      0.785,
+      0
+     ],
+     [
+      0.825,
+      1
+     ],
+     [
+      1.045,
+      1
+     ],
+     [
+      1.085,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       64.6,
+       1.3,
+       9.8
+      ],
+      "alvo": [
+       60.0,
+       2.8,
+       0.8
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       63.4,
+       3.0,
+       9.4
+      ],
+      "alvo": [
+       60.0,
+       3.1,
+       0.8
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 2.3,
+      "z": 3.8,
+      "rot": -0.45,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": {
+       "cabeca.x": -0.55,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "carimbo",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Sozinha, a pessoa só ganha velocidade: [leve] de braços abertos, chega a uns *190* por hora, [leve] e não tem onde se segurar. [leve] Nem o seu guarda-chuva aguenta isso.",
+   "duracao": 8.033,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": {
+     "de": 45,
+     "para": 70,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "solo": {
+     "de": -34,
+     "para": -30,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "riscos": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       3.217,
+       5.758,
+       7.226
+      ],
+      "alvo": [
+       0.0,
+       1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.954,
+       3.324,
+       7.836
+      ],
+      "alvo": [
+       0.0,
+       1.9,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 1.2,
+       "ombroD.z": -1.2,
+       "cotoveloE.z": 0.2,
+       "cotoveloD.z": -0.2,
+       "maos": 1,
+       "pernaE.z": 0.28,
+       "pernaD.z": -0.28,
+       "tronco.x": 0.12,
+       "cabeca.x": -0.15
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "cabeca.x": -0.55,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2
+       },
+       "x": 2.3,
+       "z": 3.8,
+       "rot": -0.45,
+       "dur": 9.167,
+       "mover": false
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      4000
+     ],
+     [
+      1,
+      3600
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      0
+     ],
+     [
+      0.4,
+      188
+     ],
+     [
+      1,
+      192
+     ]
+    ],
+    "hud": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.08
+    },
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Mas prenda nela um *pano* largo: [leve] ele pega ar, [leve] o ar empurra pra cima [leve] e a queda fica mais _lenta_.",
+   "duracao": 5.267,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": [
+     [
+      0,
+      55
+     ],
+     [
+      0.19,
+      55
+     ],
+     [
+      0.886,
+      24
+     ],
+     [
+      1,
+      20
+     ]
+    ],
+    "solo": -34,
+    "riscos": [
+     [
+      0,
+      1
+     ],
+     [
+      0.886,
+      0.2
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "pano": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.16,
+     "fim": 0.29
+    },
+    "forma": 0,
+    "tam": 1.7,
+    "ar": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.41,
+     "fim": 0.51
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       4.558,
+       4.061,
+       9.345
+      ],
+      "alvo": [
+       0.0,
+       2.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.98,
+       4.025,
+       8.189
+      ],
+      "alvo": [
+       0.0,
+       2.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 1.2,
+        "ombroD.z": -1.2,
+        "cotoveloE.z": 0.2,
+        "cotoveloD.z": -0.2,
+        "maos": 1,
+        "pernaE.z": 0.28,
+        "pernaD.z": -0.28,
+        "tronco.x": 0.12,
+        "cabeca.x": -0.15
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 8.033,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      3600
+     ],
+     [
+      1,
+      3200
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      192
+     ],
+     [
+      0.19,
+      192
+     ],
+     [
+      0.886,
+      104
+     ],
+     [
+      1,
+      98
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ainda é rápido. [leve] Aumente o pano: [leve] quanto maior, [leve] mais ar ele segura [leve] e mais devagar você desce. [leve] Mas o vento _rasga_ pano grande: [leve] troque por um tecido de *náilon*, [leve] com a trama *anti-rasgo*, [leve] que segura o rasgo. [leve] Esse pano se chama *velame*.",
+   "duracao": 13.077,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": {
+     "de": 22,
+     "para": 6,
+     "ini": 0.0,
+     "fim": 0.8
+    },
+    "solo": -34,
+    "pano": 1,
+    "forma": 0,
+    "ar": 1,
+    "tam": [
+     [
+      0,
+      1.5
+     ],
+     [
+      0.099,
+      1.5
+     ],
+     [
+      0.169,
+      2.3
+     ],
+     [
+      0.221,
+      2.3
+     ],
+     [
+      0.301,
+      3.1
+     ],
+     [
+      0.46,
+      3.1
+     ],
+     [
+      1,
+      3.1
+     ]
+    ],
+    "rasgo": [
+     [
+      0,
+      0
+     ],
+     [
+      0.51,
+      0
+     ],
+     [
+      0.63,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "seda": [
+     [
+      0,
+      1
+     ],
+     [
+      0.638,
+      1
+     ],
+     [
+      0.718,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "tecido": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.668,
+     "fim": 0.728
+    },
+    "lupaTrama": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.669,
+     "fim": 0.769
+    },
+    "trama": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.719,
+     "fim": 0.819
+    },
+    "etiq": [
+     "antirasgo@0.739-0.918",
+     "pano@0.948-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       6.706,
+       4.531,
+       8.584
+      ],
+      "alvo": [
+       0.0,
+       3.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.825,
+       5.024,
+       7.487
+      ],
+      "alvo": [
+       0.8,
+       3.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 5.267,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      3200
+     ],
+     [
+      1,
+      2950
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      98
+     ],
+     [
+      0.281,
+      80
+     ],
+     [
+      1,
+      60
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 4,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 5,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o velame grande fecha e _embola_. [leve] Prenda as *cordas de suspensão* em todas as bordas, [leve] até um arnês, [leve] como os fios de uma pipa: [leve] elas abrem o pano em domo [leve] e dividem o peso.",
+   "duracao": 9.189,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": 8,
+    "solo": -34,
+    "pano": 1,
+    "tam": 2.2,
+    "forma": [
+     [
+      0,
+      0.0
+     ],
+     [
+      0.353,
+      0.0
+     ],
+     [
+      0.868,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "embola": [
+     [
+      0,
+      0
+     ],
+     [
+      0.136,
+      0
+     ],
+     [
+      0.236,
+      1
+     ],
+     [
+      0.293,
+      1
+     ],
+     [
+      0.413,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "cordas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.293,
+     "fim": 0.393
+    },
+    "arnes": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.517,
+     "fim": 0.597
+    },
+    "etiq": [
+     "cordas@0.323-0.97",
+     "cordas2@0.323-0.97",
+     "arnes@0.557-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.211,
+       4.875,
+       10.404
+      ],
+      "alvo": [
+       0.0,
+       3.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       8.325,
+       5.245,
+       6.504
+      ],
+      "alvo": [
+       0.0,
+       3.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": [
+       [
+        0.293,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "pernaE.x": -0.1,
+         "pernaD.x": 0.1,
+         "ombroE.x": -0.2,
+         "ombroD.x": -0.2,
+         "ombroE.z": 0.15,
+         "ombroD.z": -0.15,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 13.077,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      2950
+     ],
+     [
+      1,
+      2800
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      60
+     ],
+     [
+      0.166,
+      62
+     ],
+     [
+      0.246,
+      88
+     ],
+     [
+      0.413,
+      46
+     ],
+     [
+      1,
+      34
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 4,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas só com velame e cordas, [leve] o ar não escapa por igual: [leve] o domo _chacoalha_ de um lado pro outro, [leve] cada vez mais forte. [leve] Faça um buraco no meio, a *chaminé*: [leve] parte do ar ainda fica barrada, [leve] mas o resto escapa e o domo fica *estável*.",
+   "duracao": 12.267,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": 7,
+    "solo": -34,
+    "pano": 1,
+    "forma": 1,
+    "tam": 2.2,
+    "cordas": 1,
+    "arnes": 1,
+    "ar": 1,
+    "furo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.594,
+     "fim": 0.674
+    },
+    "balanca": [
+     [
+      0,
+      0.1
+     ],
+     [
+      0.269,
+      0.15
+     ],
+     [
+      0.419,
+      0.95
+     ],
+     [
+      0.594,
+      1.0
+     ],
+     [
+      0.754,
+      0.04
+     ],
+     [
+      1,
+      0.02
+     ]
+    ],
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "preocupado",
+      "y": 0.0,
+      "pose": {
+       "pernaE.x": -0.1,
+       "pernaD.x": 0.1,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2,
+       "ombroE.z": 0.15,
+       "ombroD.z": -0.15,
+       "cotoveloE.x": -0.2,
+       "cotoveloD.x": -0.2
+      },
+      "enjoo": [
+       [
+        0,
+        0.2
+       ],
+       [
+        0.369,
+        1
+       ],
+       [
+        0.614,
+        1
+       ],
+       [
+        0.714,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "pernaE.x": -0.1,
+        "pernaD.x": 0.1,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "cotoveloE.x": -0.2,
+        "cotoveloD.x": -0.2
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 9.189,
+       "mover": true
+      }
+     }
+    ],
+    "etiq": [
+     "furo@0.644-0.97"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       4.606,
+       5.597,
+       10.346
+      ],
+      "alvo": [
+       0.0,
+       3.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.837,
+       9.753,
+       5.654
+      ],
+      "alvo": [
+       0.0,
+       4.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "hudAlt": [
+     [
+      0,
+      2800
+     ],
+     [
+      1,
+      2700
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      34
+     ],
+     [
+      0.269,
+      38
+     ],
+     [
+      0.594,
+      42
+     ],
+     [
+      0.754,
+      26
+     ],
+     [
+      1,
+      24
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o velame redondo vai pra onde o vento levar, [leve] até o telhado do vizinho. [leve] Troque por *dois panos*, um sobre o outro, [leve] ligados por divisórias: [leve] as *células*. [leve] O ar entra pela frente, enche as células [leve] e o velame vira uma *asa*.",
+   "duracao": 12.267,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": 7,
+    "solo": -34,
+    "cordas": 1,
+    "arnes": 1,
+    "furo": 1,
+    "forma": 1,
+    "tam": 2.2,
+    "pano": [
+     [
+      0,
+      1
+     ],
+     [
+      0.349,
+      1
+     ],
+     [
+      0.409,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "vento": [
+     [
+      0,
+      1
+     ],
+     [
+      0.359,
+      1
+     ],
+     [
+      0.409,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "gira": {
+     "de": 0,
+     "para": 0.6,
+     "ini": 0.0,
+     "fim": 0.359
+    },
+    "inclina": {
+     "de": 0,
+     "para": -0.12,
+     "ini": 0.0,
+     "fim": 0.217
+    },
+    "telhado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.167,
+     "fim": 0.317
+    },
+    "asa": [
+     [
+      0,
+      0
+     ],
+     [
+      0.369,
+      0
+     ],
+     [
+      0.419,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "infla": [
+     [
+      0,
+      0
+     ],
+     [
+      0.777,
+      0
+     ],
+     [
+      1.007,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "arAsa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.697,
+     "fim": 0.777
+    },
+    "perfil": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.349,
+     "fim": 0.439
+    },
+    "etiq": [
+     "panos@0.4-0.55",
+     "celulas@0.645-0.97"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       2.15,
+       5.423,
+       10.115
+      ],
+      "alvo": [
+       0.0,
+       3.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       7.407,
+       7.547,
+       2.407
+      ],
+      "alvo": [
+       0.0,
+       4.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "medo",
+      "y": 0.0,
+      "pose": [
+       [
+        0.317,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "pernaE.x": -0.1,
+         "pernaD.x": 0.1,
+         "ombroE.x": -0.2,
+         "ombroD.x": -0.2,
+         "ombroE.z": 0.15,
+         "ombroD.z": -0.15,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "pernaE.x": -0.1,
+        "pernaD.x": 0.1,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "cotoveloE.x": -0.2,
+        "cotoveloD.x": -0.2
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 12.267,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      2700
+     ],
+     [
+      1,
+      2580
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      24
+     ],
+     [
+      1,
+      22
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 4,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas como virar e frear? [leve] Prenda nas cordas dois *batoques*, [leve] punhos acima da cabeça. [leve] Puxe um e ele vira pra aquele lado. [leve] Puxe os dois e ele freia, [leve] pronto pro pouso suave.",
+   "duracao": 9.733,
+   "cena": {
+    "cenario": "paraquedas",
+    "asa": 1,
+    "infla": 1,
+    "cordas": 1,
+    "arnes": 1,
+    "batoques": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.254,
+     "fim": 0.334
+    },
+    "puxaE": [
+     [
+      0,
+      0
+     ],
+     [
+      0.505,
+      0
+     ],
+     [
+      0.585,
+      1
+     ],
+     [
+      0.669,
+      1
+     ],
+     [
+      0.699,
+      0.2
+     ],
+     [
+      0.779,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "puxaD": [
+     [
+      0,
+      0
+     ],
+     [
+      0.699,
+      0
+     ],
+     [
+      0.779,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "vel": [
+     [
+      0,
+      8
+     ],
+     [
+      0.699,
+      8
+     ],
+     [
+      0.819,
+      3
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "solo": [
+     [
+      0,
+      -26
+     ],
+     [
+      0.699,
+      -22
+     ],
+     [
+      0.909,
+      -4
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "cidade": 1,
+    "etiq": [
+     "batoques@0.304-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -5.083,
+       7.183,
+       11.416
+      ],
+      "alvo": [
+       0.0,
+       3.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -2.038,
+       5.695,
+       11.559
+      ],
+      "alvo": [
+       0.0,
+       3.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -3.0,
+       "ombroD.x": -3.0,
+       "cotoveloE.x": -0.1,
+       "cotoveloD.x": -0.1,
+       "ombroE.z": 0.1,
+       "ombroD.z": -0.1,
+       "maos": 0.3
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "pernaE.x": -0.1,
+        "pernaD.x": 0.1,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "cotoveloE.x": -0.2,
+        "cotoveloD.x": -0.2
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 12.267,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      2580
+     ],
+     [
+      1,
+      2500
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      22
+     ],
+     [
+      0.699,
+      20
+     ],
+     [
+      0.819,
+      11
+     ],
+     [
+      1,
+      9
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.45
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ninguém carrega um pano desse tamanho. [leve] Dobre ele numa *mochila* [leve] e ponha um pano pequeno, o *pilotinho*: [leve] o vento puxa o pilotinho primeiro [leve] e ele tira o grande de dentro, [leve] em ordem, sem sair tudo bagunçado.",
+   "duracao": 10.933,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": 8,
+    "solo": -34,
+    "giraMundo": [
+     [
+      0,
+      0
+     ],
+     [
+      0.294,
+      3.14159
+     ],
+     [
+      1,
+      3.14159
+     ]
+    ],
+    "asa": [
+     [
+      0,
+      1
+     ],
+     [
+      0.217,
+      1
+     ],
+     [
+      0.277,
+      0
+     ],
+     [
+      0.727,
+      0
+     ],
+     [
+      0.787,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "infla": [
+     [
+      0,
+      1
+     ],
+     [
+      0.217,
+      1
+     ],
+     [
+      0.727,
+      0
+     ],
+     [
+      0.927,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "cordas": [
+     [
+      0,
+      1
+     ],
+     [
+      0.267,
+      0
+     ],
+     [
+      0.827,
+      0
+     ],
+     [
+      0.927,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "arnes": 1,
+    "batoques": [
+     [
+      0,
+      1
+     ],
+     [
+      0.267,
+      0
+     ],
+     [
+      0.907,
+      0
+     ],
+     [
+      0.957,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "abreM": [
+     [
+      0,
+      0
+     ],
+     [
+      0.334,
+      0
+     ],
+     [
+      0.394,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "bola": [
+     [
+      0,
+      0
+     ],
+     [
+      0.374,
+      0
+     ],
+     [
+      0.434,
+      1
+     ],
+     [
+      0.425,
+      1
+     ],
+     [
+      0.475,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "piloto": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.445,
+     "fim": 0.565
+    },
+    "sai": [
+     [
+      0,
+      0
+     ],
+     [
+      0.707,
+      0
+     ],
+     [
+      0.907,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "etiq": [
+     "mochila@0.324-0.415",
+     "piloto@0.485-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       3.069,
+       8.318
+      ],
+      "alvo": [
+       0.0,
+       1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.0,
+       3.52,
+       7.485
+      ],
+      "alvo": [
+       0.0,
+       2.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "pernaE.x": -0.1,
+       "pernaD.x": 0.1,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2,
+       "ombroE.z": 0.15,
+       "ombroD.z": -0.15,
+       "cotoveloE.x": -0.2,
+       "cotoveloD.x": -0.2
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -3.0,
+        "ombroD.x": -3.0,
+        "cotoveloE.x": -0.1,
+        "cotoveloD.x": -0.1,
+        "ombroE.z": 0.1,
+        "ombroD.z": -0.1,
+        "maos": 0.3
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 9.733,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      2500
+     ],
+     [
+      1,
+      1500
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      9
+     ],
+     [
+      0.217,
+      10
+     ],
+     [
+      0.467,
+      150
+     ],
+     [
+      0.324,
+      190
+     ],
+     [
+      1,
+      192
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas abrir de uma vez dá um _tranco_. [leve] Ponha um *freio de abertura*: [leve] um quadrado que desliza pelas cordas [leve] e deixa o pano abrir em uns três ou quatro segundos, [leve] sem sacudir nem o chapéu.",
+   "duracao": 9.278,
+   "cena": {
+    "cenario": "paraquedas",
+    "giraMundo": [
+     [
+      0,
+      3.14159
+     ],
+     [
+      0.2,
+      6.28318
+     ],
+     [
+      1,
+      6.28318
+     ]
+    ],
+    "vel": [
+     [
+      0,
+      30
+     ],
+     [
+      0.233,
+      30
+     ],
+     [
+      0.352,
+      10
+     ],
+     [
+      1,
+      8
+     ]
+    ],
+    "solo": -34,
+    "asa": 1,
+    "infla": [
+     [
+      0,
+      0
+     ],
+     [
+      0.093,
+      0
+     ],
+     [
+      0.163,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "arAsa": 0.0,
+    "cordas": 1,
+    "arnes": 1,
+    "freioVis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.232,
+     "fim": 0.302
+    },
+    "freio": [
+     [
+      0,
+      0
+     ],
+     [
+      0.302,
+      0
+     ],
+     [
+      0.9,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "etiq": [
+     "freio@0.292-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       4.018,
+       4.336,
+       8.616
+      ],
+      "alvo": [
+       0.0,
+       3.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.303,
+       3.446,
+       6.328
+      ],
+      "alvo": [
+       0.0,
+       2.5,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": {
+       "pernaE.x": -0.1,
+       "pernaD.x": 0.1,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2,
+       "ombroE.z": 0.15,
+       "ombroD.z": -0.15,
+       "cotoveloE.x": -0.2,
+       "cotoveloD.x": -0.2
+      },
+      "tranco": [
+       [
+        0,
+        0
+       ],
+       [
+        0.113,
+        0
+       ],
+       [
+        0.173,
+        1
+       ],
+       [
+        0.313,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "pernaE.x": -0.1,
+        "pernaD.x": 0.1,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "cotoveloE.x": -0.2,
+        "cotoveloD.x": -0.2
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 10.933,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      1500
+     ],
+     [
+      1,
+      1400
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      192
+     ],
+     [
+      0.123,
+      192
+     ],
+     [
+      0.173,
+      62
+     ],
+     [
+      0.253,
+      50
+     ],
+     [
+      0.352,
+      30
+     ],
+     [
+      1,
+      20
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "impacto_seco",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e se o velame falhar? [leve] Solte ele numa alça [leve] e abra outro, a *reserva*, [leve] o pano de emergência, [leve] que vai junto na mochila. [leve] Se você travar de susto, [leve] um aparelho mede altura e velocidade [leve] e abre a reserva _sozinho_.",
+   "duracao": 11.256,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": 9,
+    "solo": -34,
+    "freioVis": [
+     [
+      0,
+      1
+     ],
+     [
+      0.185,
+      1
+     ],
+     [
+      0.205,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "freio": 1,
+    "asa": [
+     [
+      0,
+      1
+     ],
+     [
+      0.335,
+      1
+     ],
+     [
+      0.345,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "infla": 1,
+    "murcho2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.044,
+     "fim": 0.164
+    },
+    "soltaAsa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.185,
+     "fim": 0.385
+    },
+    "cordas": [
+     [
+      0,
+      1
+     ],
+     [
+      0.185,
+      1
+     ],
+     [
+      0.195,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "arnes": 1,
+    "peito": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.095,
+     "fim": 0.165
+    },
+    "alca": [
+     [
+      0,
+      0
+     ],
+     [
+      0.135,
+      0
+     ],
+     [
+      0.185,
+      1
+     ],
+     [
+      0.369,
+      1
+     ],
+     [
+      0.399,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "reserva": [
+     [
+      0,
+      0
+     ],
+     [
+      0.309,
+      0
+     ],
+     [
+      0.419,
+      1
+     ],
+     [
+      0.569,
+      1
+     ],
+     [
+      0.609,
+      0
+     ],
+     [
+      0.909,
+      0
+     ],
+     [
+      1.009,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "aad": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.684,
+     "fim": 0.784
+    },
+    "etiq": [
+     "reserva@0.349-0.589",
+     "auto@0.734-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       3.895,
+       4.061,
+       9.641
+      ],
+      "alvo": [
+       0.0,
+       2.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.873,
+       3.03,
+       7.11
+      ],
+      "alvo": [
+       0.1,
+       2.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "preocupado",
+      "y": 0.0,
+      "pose": [
+       [
+        0.135,
+        {
+         "pernaE.x": -0.1,
+         "pernaD.x": 0.1,
+         "ombroE.x": -0.2,
+         "ombroD.x": -0.2,
+         "ombroE.z": 0.15,
+         "ombroD.z": -0.15,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2
+        }
+       ],
+       [
+        0.195,
+        {
+         "ombroE.x": -3.0,
+         "ombroD.x": -3.0,
+         "cotoveloE.x": -0.1,
+         "cotoveloD.x": -0.1,
+         "ombroE.z": 0.1,
+         "ombroD.z": -0.1,
+         "maos": 0.3
+        }
+       ],
+       [
+        0.589,
+        {
+         "pernaE.x": -0.1,
+         "pernaD.x": 0.1,
+         "ombroE.x": -0.2,
+         "ombroD.x": -0.2,
+         "ombroE.z": 0.15,
+         "ombroD.z": -0.15,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "pernaE.x": -0.1,
+        "pernaD.x": 0.1,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "cotoveloE.x": -0.2,
+        "cotoveloD.x": -0.2
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 9.278,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      1400
+     ],
+     [
+      1,
+      800
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      20
+     ],
+     [
+      0.044,
+      20
+     ],
+     [
+      0.164,
+      96
+     ],
+     [
+      0.235,
+      100
+     ],
+     [
+      0.439,
+      24
+     ],
+     [
+      0.569,
+      24
+     ],
+     [
+      0.609,
+      72
+     ],
+     [
+      0.909,
+      74
+     ],
+     [
+      1.029,
+      22
+     ],
+     [
+      1,
+      21
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "pisca",
+      "trecho": 5,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 6,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Agora o pano segura você, [leve] vira pra onde você quer [leve] e abre até se você esquecer. [leve] Lá embaixo, o amigo da aposta ainda está na janela, [leve] pensando se não era melhor pagar logo.",
+   "duracao": 9.0,
+   "cena": {
+    "cenario": "paraquedas",
+    "asa": 1,
+    "infla": 1,
+    "cordas": 1,
+    "arnes": 1,
+    "batoques": 1,
+    "freioVis": 1,
+    "freio": 1,
+    "peito": 1,
+    "vel": 3.0,
+    "solo": {
+     "de": -14,
+     "para": -7,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "cidade": 1,
+    "amigoSolo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "passaros": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       4.5,
+       5.2,
+       10.0
+      ],
+      "alvo": [
+       1.3,
+       -1.0,
+       -3.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.2,
+       2.6,
+       9.6
+      ],
+      "alvo": [
+       1.3,
+       -2.6,
+       -3.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -3.0,
+       "ombroD.x": -3.0,
+       "cotoveloE.x": -0.1,
+       "cotoveloD.x": -0.1,
+       "ombroE.z": 0.1,
+       "ombroD.z": -0.1,
+       "maos": 0.3
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 11.256,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      800
+     ],
+     [
+      1,
+      40
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      21
+     ],
+     [
+      1,
+      15
+     ]
+    ],
+    "hud": 1,
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "jingle",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Pronto: você acabou de inventar o *paraquedas*.",
+   "duracao": 2.666,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": {
+     "de": 10,
+     "para": 5,
+     "ini": 0,
+     "fim": 1
+    },
+    "solo": -34,
+    "asa": 1,
+    "infla": 1,
+    "cordas": 1,
+    "arnes": 1,
+    "batoques": 1,
+    "freioVis": 1,
+    "freio": 1,
+    "peito": 1,
+    "aad": 1,
+    "etiq": [
+     "velameAsa@0.12-0.4",
+     "batoques@0.3-0.6",
+     "arnes@0.45-0.75",
+     "auto@0.6-0.9"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.85,
+    "camera": {
+     "de": {
+      "pos": [
+       2.999,
+       4.164,
+       9.23
+      ],
+      "alvo": [
+       0.0,
+       2.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       9.073,
+       10.156,
+       13.452
+      ],
+      "alvo": [
+       0.0,
+       3.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -3.0,
+       "ombroD.x": -3.0,
+       "cotoveloE.x": -0.1,
+       "cotoveloD.x": -0.1,
+       "ombroE.z": 0.1,
+       "ombroD.z": -0.1,
+       "maos": 0.3
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -3.0,
+        "ombroD.x": -3.0,
+        "cotoveloE.x": -0.1,
+        "cotoveloD.x": -0.1,
+        "ombroE.z": 0.1,
+        "ombroD.z": -0.1,
+        "maos": 0.3
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 9.0,
+       "mover": true
+      }
+     }
+    ],
+    "hudAlt": [
+     [
+      0,
+      40
+     ],
+     [
+      1,
+      6
+     ]
+    ],
+    "hudVel": [
+     [
+      0,
+      15
+     ],
+     [
+      1,
+      10
+     ]
+    ],
+    "hud": [
+     [
+      0,
+      1
+     ],
+     [
+      0.05,
+      1
+     ],
+     [
+      0.14,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "etiqYmax": 0.34,
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PARAQUEDAS",
+      "trecho": 0,
+      "y": 120,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Leonardo da Vinci já desenhou um por volta de *1485*: [leve] uma pirâmide de pano. [leve] A palavra é francesa: [leve] \"para\", de _contra_, [leve] e \"chute\", de _queda_.",
+   "duracao": 9.434,
+   "cena": {
+    "cenario": "paraquedas",
+    "solo": 0,
+    "papel": [
+     [
+      0,
+      0
+     ],
+     [
+      0.04,
+      1
+     ],
+     [
+      0.584,
+      1
+     ],
+     [
+      0.624,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "leonardo": [
+     [
+      0,
+      0
+     ],
+     [
+      0.04,
+      1
+     ],
+     [
+      0.584,
+      1
+     ],
+     [
+      0.624,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "letras": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.644,
+     "fim": 0.854
+    },
+    "passaros": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       3.015,
+       3.75,
+       10.516
+      ],
+      "alvo": [
+       0.0,
+       2.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.439,
+       3.887,
+       10.242
+      ],
+      "alvo": [
+       0.0,
+       2.8,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 2.2,
+      "z": 2.0,
+      "rot": -0.4,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": 0,
+      "esc": 1.0,
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -3.0,
+        "ombroD.x": -3.0,
+        "cotoveloE.x": -0.1,
+        "cotoveloD.x": -0.1,
+        "ombroE.z": 0.1,
+        "ombroD.z": -0.1,
+        "maos": 0.3
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 2.666,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1485",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 96
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "PARA + CHUTE",
+      "trecho": 3,
+      "y": 150,
+      "tamanho": 80
+     }
+    ],
+    "sfx": [
+     {
+      "som": "papel",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A chaminé do topo é de *1804* [leve] e o náilon trocou a seda em *1942*.",
+   "duracao": 5.789,
+   "cena": {
+    "cenario": "paraquedas",
+    "vel": 6,
+    "solo": -34,
+    "pano": 1,
+    "forma": 1,
+    "tam": 2.2,
+    "cordas": 1,
+    "arnes": 1,
+    "furo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.04,
+     "fim": 0.12
+    },
+    "etiq": [
+     "furo@0.07-0.6"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.8,
+    "etiqYmax": 0.3,
+    "seda": [
+     [
+      0,
+      1
+     ],
+     [
+      0.436,
+      1
+     ],
+     [
+      0.526,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       3.65,
+       6.061,
+       10.03
+      ],
+      "alvo": [
+       0.0,
+       3.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.889,
+       7.271,
+       8.888
+      ],
+      "alvo": [
+       0.0,
+       3.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "pernaE.x": -0.1,
+       "pernaD.x": 0.1,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2,
+       "ombroE.z": 0.15,
+       "ombroD.z": -0.15,
+       "cotoveloE.x": -0.2,
+       "cotoveloD.x": -0.2
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 2.2,
+       "y": 0,
+       "z": 2.0,
+       "rot": -0.4,
+       "dur": 9.434,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.04
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1804",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 96
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "1942",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "papel",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Manda pra quem tem medo de altura. [leve] E como uma ponte aguenta um caminhão? [leve] Siga pra descobrir.",
+   "duracao": 5.844,
+   "cena": {
+    "cenario": "paraquedas",
+    "solo": 0,
+    "ponte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.25,
+     "fim": 0.55
+    },
+    "passaros": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       3.0,
+       6.9
+      ],
+      "alvo": [
+       0.0,
+       2.7,
+       0.0
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       0.0,
+       2.95,
+       6.5
+      ],
+      "alvo": [
+       0.0,
+       2.7,
+       0.0
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "acenando",
+      "exp": "sorriso",
+      "y": 0,
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "pernaE.x": -0.1,
+        "pernaD.x": 0.1,
+        "ombroE.x": -0.2,
+        "ombroD.x": -0.2,
+        "ombroE.z": 0.15,
+        "ombroD.z": -0.15,
+        "cotoveloE.x": -0.2,
+        "cotoveloD.x": -0.2
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.0,
+       "dur": 5.789,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 0,
+      "sub": "PONTE"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 1
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 2,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.55
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -125,8 +125,8 @@ const VARIANTES = {
 } as Record<string, { corpo: [number, number][]; cab: [number, number][] }>;
 
 const VIDRO = "#6fd3f0";
-type AutoProps = { cor: string; variante?: string; op?: number; rodas?: boolean; freio?: number; pisca?: number; vidroOp?: number };
-export const Auto: React.FC<AutoProps> = ({ cor, variante = "sedan", op, rodas = true, freio = 0, pisca = 0, vidroOp }) => {
+type AutoProps = { cor: string; variante?: string; op?: number; rodas?: boolean; freio?: number; pisca?: number; vidroOp?: number; giro?: number };
+export const Auto: React.FC<AutoProps> = ({ cor, variante = "sedan", op, rodas = true, freio = 0, pisca = 0, vidroOp, giro = 0 }) => {
   const v = VARIANTES[variante];
   const cab = v.cab;
   const frente = v.corpo[0][0];
@@ -161,18 +161,21 @@ export const Auto: React.FC<AutoProps> = ({ cor, variante = "sedan", op, rodas =
       <Caixa p={[0, 0.4, tras + 0.04]} t={[1.9, 0.17, 0.16]} cor="#8d949c" raio={0.03} op={op} />
       {/* cavas das rodas e rodas (a do corte é desenhada à parte) */}
       {[frente + 0.75, tras - 0.8].flatMap((z) => sx.map((x) => (
-        <mesh key={`${x}${z}`} position={[x * 1.157, 0.33, z]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.41, 0.41, 0.04, 18]} /><meshStandardMaterial color="#1b1d20" transparent={op !== undefined} opacity={op ?? 1} /></mesh>
+        <mesh key={`${x}${z}`} position={[x * (rodas ? 0.985 : 1.157), 0.33, z]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.41, 0.41, 0.03, 18]} /><meshStandardMaterial color="#1b1d20" transparent={op !== undefined} opacity={op ?? 1} polygonOffset polygonOffsetFactor={-1} /></mesh>
       )))}
-      {rodas && [frente + 0.75, tras - 0.8].flatMap((z) => sx.map((x) => <RodaParada key={`${x}${z}`} p={[x * 1.15, 0.33, z]} />))}
+      {rodas && [frente + 0.75, tras - 0.8].flatMap((z) => sx.map((x) => <RodaParada key={`${x}${z}`} p={[x * 1.15, 0.33, z]} giro={giro} />))}
     </group>
   );
 };
 
-const RodaParada: React.FC<{ p: V }> = ({ p }) => (
+const RodaParada: React.FC<{ p: V; giro?: number }> = ({ p, giro = 0 }) => (
   <group position={p} rotation={[0, 0, Math.PI / 2]}>
     <mesh><cylinderGeometry args={[0.33, 0.33, 0.22, 16]} /><Mat cor="#1b1d20" rug={0.9} /></mesh>
-    <mesh position={[0, -Math.sign(p[0]) * 0.115, 0]}><cylinderGeometry args={[0.2, 0.2, 0.02, 12]} /><Mat cor="#9aa0a8" met={0.6} /></mesh>
-    {[0, 1, 2, 3, 4].map((i) => <mesh key={i} position={[0, -Math.sign(p[0]) * 0.125, 0]} rotation={[0, (i / 5) * Math.PI, 0]}><boxGeometry args={[0.36, 0.012, 0.05]} /><Mat cor="#3a3f46" /></mesh>)}
+    {/* aro, calota e raios giram em torno do eixo (giro em rad = distância / raio) */}
+    <group rotation={[0, giro, 0]}>
+      <mesh position={[0, -Math.sign(p[0]) * 0.115, 0]}><cylinderGeometry args={[0.2, 0.2, 0.02, 12]} /><Mat cor="#9aa0a8" met={0.6} /></mesh>
+      {[0, 1, 2, 3, 4].map((i) => <mesh key={i} position={[0, -Math.sign(p[0]) * 0.125, 0]} rotation={[0, (i / 5) * Math.PI, 0]}><boxGeometry args={[0.36, 0.012, 0.05]} /><Mat cor="#3a3f46" /></mesh>)}
+    </group>
   </group>
 );
 

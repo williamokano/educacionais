@@ -1,0 +1,2318 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 19,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Você perdeu a aposta: [leve] tem que pegar o chinelo lá no fundo do lago! [leve] O lago é fundo e escuro. [leve] Segure o fôlego e mergulhe. [leve] [curious] Mas o fôlego acaba _antes_ de chegar.",
+   "duracao": 9.704,
+   "cena": {
+    "cenario": "submarino",
+    "entardecer": 1,
+    "raiox": 0,
+    "subVis": 0,
+    "chinelo": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.6,
+       0.35,
+       6.2
+      ],
+      "alvo": [
+       -0.8,
+       1.0,
+       -3.0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       -1.1,
+       10.4
+      ],
+      "alvo": [
+       -0.3,
+       -1.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.3,
+      "z": [
+       [
+        0,
+        -3.0
+       ],
+       [
+        0.691,
+        -3.0
+       ],
+       [
+        0.791,
+        -0.2
+       ],
+       [
+        1,
+        -0.2
+       ]
+      ],
+      "rot": [
+       [
+        0,
+        0.0
+       ],
+       [
+        0.691,
+        0.0
+       ],
+       [
+        0.791,
+        0.4
+       ],
+       [
+        1,
+        0.4
+       ]
+      ],
+      "acao": [
+       [
+        0.691,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.78,
+        "em-pe",
+        "surpreso"
+       ],
+       [
+        1,
+        "em-pe",
+        "cansado"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": [
+       [
+        0,
+        0
+       ],
+       [
+        0.691,
+        0
+       ],
+       [
+        0.741,
+        0.7
+       ],
+       [
+        0.791,
+        -0.3
+       ],
+       [
+        0.78,
+        -1.7
+       ],
+       [
+        0.9,
+        -1.7
+       ],
+       [
+        0.97,
+        -0.15
+       ],
+       [
+        1,
+        -0.15
+       ]
+      ],
+      "esc": 1.3,
+      "suor": {
+       "de": 0,
+       "para": 1,
+       "ini": 0.78,
+       "fim": 1.0
+      },
+      "pose": [
+       [
+        0.691,
+        {}
+       ],
+       [
+        0.78,
+        {
+         "ombroE.x": -1.6,
+         "ombroD.x": -1.6,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2,
+         "tronco.x": 0.7,
+         "pernaE.x": 0.3,
+         "pernaD.x": -0.3,
+         "maos": 0.4
+        }
+       ],
+       [
+        1,
+        {
+         "tronco.x": 0.3,
+         "ombroE.x": -0.6,
+         "ombroD.x": -0.6,
+         "cotoveloE.x": -0.8,
+         "cotoveloD.x": -0.8
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.08
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "agua",
+      "trecho": 3,
+      "volume": 0.5
+     },
+     {
+      "som": "tosse",
+      "trecho": 4,
+      "volume": 0.4
+     }
+    ]
+   },
+   "falante": "abertura"
+  },
+  {
+   "texto": "Então desça num *barco de aço*. [leve] Mas ele é oco, tem ar dentro [leve] e _boia_, por mais que você empurre pra baixo. [leve] O pato do lago só observa.",
+   "duracao": 7.11,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.5
+    },
+    "ar": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.3,
+     "fim": 0.6
+    },
+    "sy": [
+     [
+      0,
+      0.15
+     ],
+     [
+      0.356,
+      0.15
+     ],
+     [
+      0.506,
+      -0.1
+     ],
+     [
+      0.656,
+      0.15
+     ],
+     [
+      1,
+      0.15
+     ]
+    ],
+    "subVis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.12
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.75,
+       -0.2,
+       9.8
+      ],
+      "alvo": [
+       -0.75,
+       -0.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.75,
+       -0.2,
+       9.2
+      ],
+      "alvo": [
+       -0.75,
+       -0.5,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.2,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": -0.4,
+      "esc": 1.1,
+      "pose": [
+       [
+        0.306,
+        {}
+       ],
+       [
+        0.406,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.1,
+         "cotoveloD.x": -0.1,
+         "ombroE.z": 0.1,
+         "ombroD.z": -0.1,
+         "tronco.x": 0.3,
+         "maos": 0.5
+        }
+       ],
+       [
+        0.706,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.1,
+         "cotoveloD.x": -0.1,
+         "ombroE.z": 0.1,
+         "ombroD.z": -0.1,
+         "tronco.x": 0.3,
+         "maos": 0.5
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -1.4,
+         "cotoveloD.x": -1.4,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "tronco.x": 0.3,
+        "ombroE.x": -0.6,
+        "ombroD.x": -0.6,
+        "cotoveloE.x": -0.8,
+        "cotoveloD.x": -0.8
+       },
+       "x": -1.3,
+       "y": -0.15,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 9.704,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então deixe a água entrar. [leve] Ele afunda! [leve] [curious] Mas agora está cheio de água [leve] e _nunca mais volta_: o chinelo ganha companhia.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "ar": 1,
+    "cheio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.5
+    },
+    "sy": {
+     "de": 0.15,
+     "para": -2.75,
+     "ini": 0.2,
+     "fim": 0.6
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.2,
+       -0.5,
+       10.4
+      ],
+      "alvo": [
+       -0.2,
+       -0.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       -2.0,
+       10.0
+      ],
+      "alvo": [
+       -0.2,
+       -2.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.2,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": [
+       [
+        0.473,
+        "comemorando",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "cansado"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": -0.4,
+      "esc": 1.1,
+      "pose": [
+       [
+        0.473,
+        {
+         "ombroE.z": 1.0,
+         "ombroD.z": -1.0,
+         "cotoveloE.x": -0.3,
+         "cotoveloD.x": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "tronco.x": 0.25,
+         "cabeca.x": 0.3
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -1.4,
+        "cotoveloD.x": -1.4,
+        "maos": 1
+       },
+       "x": -2.2,
+       "y": -0.4,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 7.11,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então feche o casco, [leve] e deixe só alguns *tanques* na barriga, com tampa em cima e embaixo. [leve] Abra as tampas: a água entra por baixo, o ar sai por cima [leve] e ele *afunda*, [leve] enquanto o resto do casco continua cheio de _ar_.",
+   "duracao": 11.011,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "cheio": 0,
+    "tanque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.162,
+     "fim": 0.282
+    },
+    "nivT": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.509,
+     "fim": 0.713
+    },
+    "tampaC": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.409,
+     "fim": 0.509
+    },
+    "tampaB": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.409,
+     "fim": 0.509
+    },
+    "bolhas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.598,
+     "fim": 0.718
+    },
+    "sy": [
+     [
+      0,
+      0.15
+     ],
+     [
+      0.703,
+      0.15
+     ],
+     [
+      0.97,
+      -2.4
+     ]
+    ],
+    "etiq": [
+     "tanque@0.182-0.62"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       0.0,
+       8.0
+      ],
+      "alvo": [
+       -0.1,
+       -0.1,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       -1.2,
+       9.6
+      ],
+      "alvo": [
+       -0.2,
+       -1.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": -0.4,
+      "esc": 1.1,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "tronco.x": 0.25,
+        "cabeca.x": 0.3
+       },
+       "x": -2.2,
+       "y": -0.4,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 6.2,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e pra voltar? [leve] Solte *ar comprimido* dentro dos tanques: [leve] o ar empurra a água pra fora [leve] e o barco *sobe*. [leve] Agora você desce e volta quando quiser.",
+   "duracao": 7.867,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "tanque": 1,
+    "cil": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.174,
+     "fim": 0.314
+    },
+    "tampaC": 0,
+    "tampaB": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.244,
+     "fim": 0.344
+    },
+    "sopra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.294,
+     "fim": 0.394
+    },
+    "nivT": [
+     [
+      0,
+      1
+     ],
+     [
+      0.344,
+      1
+     ],
+     [
+      0.631,
+      0.05
+     ],
+     [
+      1,
+      0.05
+     ]
+    ],
+    "sy": [
+     [
+      0,
+      -2.4
+     ],
+     [
+      0.621,
+      -2.4
+     ],
+     [
+      0.95,
+      0.15
+     ],
+     [
+      1,
+      0.15
+     ]
+    ],
+    "etiq": [
+     "ar@0.194-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.8,
+       -2.6,
+       9.0
+      ],
+      "alvo": [
+       -0.1,
+       -2.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.0,
+       0.5,
+       9.4
+      ],
+      "alvo": [
+       -0.1,
+       -0.1,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": [
+       [
+        0.651,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "comemorando",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": -0.4,
+      "esc": 1.1,
+      "pose": [
+       [
+        0.651,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 1.0,
+         "ombroD.z": -1.0,
+         "cotoveloE.x": -0.3,
+         "cotoveloD.x": -0.3,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -2.0,
+       "y": -0.4,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 11.011,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas quanto mais fundo, mais o mar *aperta*: [leve] a cada 10 metros, mais uma atmosfera. [leve] O mar aperta o barco inteiro, [leve] e lá embaixo, o casco amassa como uma _lata_.",
+   "duracao": 8.9,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 0,
+    "tanque": 0,
+    "sy": -2.6,
+    "aperta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.201,
+     "fim": 0.351
+    },
+    "amassa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.808,
+     "fim": 1.028
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.75,
+       -1.7,
+       8.0
+      ],
+      "alvo": [
+       -0.75,
+       -2.0,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.75,
+       -1.7,
+       7.5
+      ],
+      "alvo": [
+       -0.75,
+       -2.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": -0.3,
+      "esc": 1.1,
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.z": 1.0,
+        "ombroD.z": -1.0,
+        "cotoveloE.x": -0.3,
+        "cotoveloD.x": -0.3,
+        "maos": 1
+       },
+       "x": -2.0,
+       "y": -0.4,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 7.867,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "+1 ATM / 10 m",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 70
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto",
+      "trecho": 2,
+      "volume": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então faça o casco *grosso* e _redondo_, [leve] como um charuto de pontas arredondadas, [leve] que espalha o aperto por igual. [leve] E o aço é grosso pra não ceder.",
+   "duracao": 6.841,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 0.6,
+    "sy": -2.4,
+    "grosso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.075,
+     "fim": 0.275
+    },
+    "aperta": [
+     [
+      0,
+      1
+     ],
+     [
+      0.5,
+      1
+     ],
+     [
+      0.75,
+      0.1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "etiq": [
+     "casco@0.205-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -4.2,
+       -1.2,
+       8.2
+      ],
+      "alvo": [
+       0,
+       -2.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.0,
+       -1.2,
+       8.4
+      ],
+      "alvo": [
+       0,
+       -2.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": -0.3,
+      "esc": 1.1,
+      "pose": {
+       "ombroE.z": 1.0,
+       "ombroD.z": -1.0,
+       "cotoveloE.x": -0.3,
+       "cotoveloD.x": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 8.9,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o ar lá dentro _acaba_, [leve] e quem respira solta gás carbônico. [leve] Então ponha um aparelho que faz *oxigênio* da água [leve] e um filtro que tira o *gás carbônico*.",
+   "duracao": 7.525,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "grosso": 1,
+    "sy": -1.6,
+    "arCinza": [
+     [
+      0,
+      0
+     ],
+     [
+      0.133,
+      0
+     ],
+     [
+      0.233,
+      1
+     ],
+     [
+      0.933,
+      1
+     ],
+     [
+      0.95,
+      0.0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "oxi": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.591,
+     "fim": 0.711
+    },
+    "filtro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.773,
+     "fim": 0.893
+    },
+    "etiq": [
+     "oxi@0.651-0.813",
+     "filtro@0.843-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.65,
+       -1.1,
+       7.4
+      ],
+      "alvo": [
+       -0.65,
+       -1.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.65,
+       -1.1,
+       6.9
+      ],
+      "alvo": [
+       -0.65,
+       -1.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "em-pe",
+      "exp": "cansado",
+      "y": -0.3,
+      "esc": 1.1,
+      "pose": [
+       [
+        0.863,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -1.4,
+         "cotoveloD.x": -1.4,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.z": 1.0,
+        "ombroD.z": -1.0,
+        "cotoveloE.x": -0.3,
+        "cotoveloD.x": -0.3,
+        "maos": 1
+       },
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 6.841,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "respiracao",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas lá embaixo é escuro e você não vê nada. [leve] Suba um *periscópio* pra olhar a superfície, [leve] mas só perto dela, [leve] e use o *sonar*: [leve] ele manda um som e escuta o _eco_.",
+   "duracao": 8.334,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 0.7,
+    "grosso": 1,
+    "oxi": 1,
+    "filtro": 1,
+    "escuro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.12
+    },
+    "sy": -2.2,
+    "torre": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.315,
+     "fim": 0.395
+    },
+    "peri": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.315,
+     "fim": 0.485
+    },
+    "periVis": [
+     [
+      0,
+      0
+     ],
+     [
+      0.435,
+      0
+     ],
+     [
+      0.495,
+      1
+     ],
+     [
+      0.635,
+      1
+     ],
+     [
+      0.695,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "sonar": [
+     [
+      0,
+      0
+     ],
+     [
+      0.735,
+      0
+     ],
+     [
+      0.99,
+      1
+     ]
+    ],
+    "etiq": [
+     "peri@0.365-0.665",
+     "sonar@0.745-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.2,
+       -1.2,
+       10.4
+      ],
+      "alvo": [
+       -0.2,
+       -1.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.6,
+       -1.2,
+       9.4
+      ],
+      "alvo": [
+       0.6,
+       -1.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": -0.3,
+      "esc": 1.1,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 7.525,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "bips",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "bips",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas motor a diesel queima ar, e lá embaixo não tem sobrando. [leve] Então use *bateria* e *motor elétrico*: [leve] silenciosos como gato de apartamento, [leve] sem gastar um pingo de ar.",
+   "duracao": 8.733,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "grosso": 1,
+    "sy": -1.8,
+    "torre": 1,
+    "peri": 0.0,
+    "diesel": [
+     [
+      0,
+      0
+     ],
+     [
+      0.05,
+      1
+     ],
+     [
+      0.424,
+      1
+     ],
+     [
+      0.494,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "bat": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.424,
+     "fim": 0.544
+    },
+    "motorE": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.474,
+     "fim": 0.564
+    },
+    "sx": {
+     "de": -0.4,
+     "para": 1.4,
+     "ini": 0.594,
+     "fim": 0.97
+    },
+    "etiq": [
+     "bateria@0.474-0.644",
+     "motorE@0.564-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.35,
+       -0.9,
+       8.4
+      ],
+      "alvo": [
+       -0.35,
+       -1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       -0.9,
+       8.0
+      ],
+      "alvo": [
+       -0.05,
+       -1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": [
+       [
+        0.444,
+        "pensando",
+        "surpreso"
+       ],
+       [
+        1,
+        "em-pe",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": -0.3,
+      "esc": 1.1,
+      "pose": [
+       [
+        0.444,
+        {
+         "ombroD.x": -0.95,
+         "ombroD.z": 0.4,
+         "cotoveloD.x": -2.35,
+         "cotoveloD.z": 0.15,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "maos": 0.4
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 8.334,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "motor",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas pra mudar de fundo andando, ele precisa de *asinhas*: [leve] inclinadas pra baixo, [leve] a água empurra o barco pra baixo; [leve] pra cima, ele sobe, [leve] como as asas de um avião, só que na água.",
+   "duracao": 8.933,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "grosso": 1,
+    "torre": 1,
+    "bat": 1,
+    "motorE": 1,
+    "asaVis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.02,
+     "fim": 0.15
+    },
+    "fluxo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.25
+    },
+    "sx": 0.3,
+    "asaAng": [
+     [
+      0,
+      0
+     ],
+     [
+      0.302,
+      0
+     ],
+     [
+      0.402,
+      -0.5
+     ],
+     [
+      0.613,
+      -0.5
+     ],
+     [
+      0.663,
+      0.5
+     ],
+     [
+      1,
+      0.5
+     ]
+    ],
+    "sy": [
+     [
+      0,
+      -1.6
+     ],
+     [
+      0.402,
+      -1.6
+     ],
+     [
+      0.603,
+      -2.6
+     ],
+     [
+      0.703,
+      -2.6
+     ],
+     [
+      0.97,
+      -0.9
+     ]
+    ],
+    "pitch": [
+     [
+      0,
+      0
+     ],
+     [
+      0.402,
+      0
+     ],
+     [
+      0.482,
+      -0.15
+     ],
+     [
+      0.603,
+      -0.15
+     ],
+     [
+      0.763,
+      0.15
+     ],
+     [
+      1,
+      0.15
+     ]
+    ],
+    "etiq": [
+     "asas@0.04-0.4"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.35,
+       -1.2,
+       9.4
+      ],
+      "alvo": [
+       -0.35,
+       -1.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.35,
+       -1.2,
+       8.9
+      ],
+      "alvo": [
+       -0.35,
+       -1.5,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": -0.3,
+      "esc": 1.1,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 8.733,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a bateria acaba. [leve] Então ponha um *reator nuclear*: [leve] ele dá energia por meses, [leve] não precisa de ar [leve] e não para pra recarregar.",
+   "duracao": 6.675,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "grosso": 1,
+    "torre": 1,
+    "motorE": 1,
+    "bat": 1,
+    "batNiv": [
+     [
+      0,
+      1
+     ],
+     [
+      0.058,
+      1
+     ],
+     [
+      0.108,
+      0.0
+     ],
+     [
+      1,
+      0.0
+     ]
+    ],
+    "reator": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.283,
+     "fim": 0.413
+    },
+    "sy": -1.6,
+    "sx": {
+     "de": 0.3,
+     "para": 1.6,
+     "ini": 0.413,
+     "fim": 1.0
+    },
+    "etiq": [
+     "reator@0.353-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.15,
+       -0.9,
+       8.8
+      ],
+      "alvo": [
+       -0.15,
+       -1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.05,
+       -0.9,
+       8.3
+      ],
+      "alvo": [
+       0.05,
+       -1.2,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.4,
+      "acao": [
+       [
+        0.108,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.313,
+        "em-pe",
+        "preocupado"
+       ],
+       [
+        1,
+        "comemorando",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": -0.3,
+      "esc": 1.1,
+      "pose": [
+       [
+        0.313,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 1.0,
+         "ombroD.z": -1.0,
+         "cotoveloE.x": -0.3,
+         "cotoveloD.x": -0.3,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 8.933,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "queda_energia",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas se algo der errado lá embaixo? [leve] Faça uma *câmara de saída*: [leve] a pessoa entra, a câmara enche de água até igualar o aperto, [leve] e ela sai flutuando pra cima, com um capuz de ar.",
+   "duracao": 8.924,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 1,
+    "grosso": 1,
+    "torre": 1,
+    "motorE": 1,
+    "bat": 1,
+    "batNiv": 1,
+    "reator": 1,
+    "sy": -2.4,
+    "sx": 0.4,
+    "camara": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.236,
+     "fim": 0.336
+    },
+    "camAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.501,
+     "fim": 0.671
+    },
+    "etiq": [
+     "camara@0.286-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.95,
+       -1.6,
+       8.2
+      ],
+      "alvo": [
+       -0.95,
+       -1.9,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.05,
+       -1.3,
+       7.6
+      ],
+      "alvo": [
+       -1.05,
+       -1.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": -0.2,
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": [
+       [
+        0,
+        -2.4
+       ],
+       [
+        0.719,
+        -2.4
+       ],
+       [
+        0.97,
+        -0.5
+       ],
+       [
+        1,
+        -0.5
+       ]
+      ],
+      "esc": 1.0,
+      "pose": {
+       "ombroE.z": 1.0,
+       "ombroD.z": -1.0,
+       "cotoveloE.x": -0.3,
+       "cotoveloD.x": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.z": 1.0,
+        "ombroD.z": -1.0,
+        "cotoveloE.x": -0.3,
+        "cotoveloD.x": -0.3,
+        "maos": 1
+       },
+       "x": -2.0,
+       "y": -0.3,
+       "z": -0.2,
+       "rot": 0.4,
+       "dur": 6.675,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "zumbido",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! Você acabou de inventar o *submarino*. [leve] Pegou o chinelo, [leve] voltou à tona [leve] e ainda voltou _seco_.",
+   "duracao": 6.101,
+   "cena": {
+    "cenario": "submarino",
+    "entardecer": 1,
+    "raiox": 0.6,
+    "grosso": 1,
+    "torre": 1,
+    "peri": 0.0,
+    "motorE": 1,
+    "bat": 1,
+    "reator": 1,
+    "oxi": 1,
+    "filtro": 1,
+    "sy": -2.6,
+    "chinelo": 0,
+    "etiq": [
+     "sub@0.346-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.2,
+       -3.0,
+       8.8
+      ],
+      "alvo": [
+       -0.2,
+       -2.5,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.6,
+       1.6,
+       10.6
+      ],
+      "alvo": [
+       -0.8,
+       1.3,
+       -3.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": -1.3,
+      "z": -3.0,
+      "rot": 0.0,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "esc": 1.5,
+      "obj": "chinelo",
+      "pose": {
+       "ombroD.x": -1.2,
+       "cotoveloD.x": -1.0,
+       "ombroD.z": -0.2,
+       "maos": 0.3,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 1.0,
+        "ombroD.z": -1.0,
+        "cotoveloE.x": -0.3,
+        "cotoveloD.x": -0.3,
+        "maos": 1
+       },
+       "x": -2.0,
+       "y": -0.5,
+       "z": -0.2,
+       "rot": 0.5,
+       "dur": 8.924,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "dia",
+     "volume": 0.06
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "SUBMARINO",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Os de hoje ficam *semanas ou meses* debaixo d'água sem subir, [leve] e até o oxigênio vem da própria água do mar.",
+   "duracao": 5.59,
+   "cena": {
+    "cenario": "submarino",
+    "raiox": 0,
+    "grosso": 1,
+    "torre": 1,
+    "sy": -1.6,
+    "sx": {
+     "de": -1.8,
+     "para": 1.8,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "dias": {
+     "de": 0.0,
+     "para": 1.0,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "chinelo": 0,
+    "entardecer": 0.4,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.0,
+       -0.6,
+       9.4
+      ],
+      "alvo": [
+       0,
+       -1.6,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.0,
+       -0.4,
+       9.0
+      ],
+      "alvo": [
+       0.2,
+       -1.6,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.2,
+      "z": -3.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "esc": 1.5,
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroD.x": -1.2,
+        "cotoveloD.x": -1.0,
+        "ombroD.z": -0.2,
+        "maos": 0.3,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18
+       },
+       "x": -1.3,
+       "z": -3.0,
+       "rot": 0.0,
+       "dur": 6.101,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "zumbido",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Manda pra quem perde aposta boba. [leve] E como uma chave abre um _cadeado_? [leve] *Siga* pra descobrir.",
+   "duracao": 4.666,
+   "cena": {
+    "cenario": "submarino",
+    "entardecer": 1,
+    "raiox": 0,
+    "torre": 1,
+    "grosso": 1,
+    "sy": 0.15,
+    "chinelo": 0,
+    "cadeado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.572,
+     "fim": 0.722
+    },
+    "lampada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.779,
+     "fim": 0.899
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.2,
+       1.4,
+       11.0
+      ],
+      "alvo": [
+       -0.2,
+       1.8,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       1.7,
+       10.2
+      ],
+      "alvo": [
+       -0.2,
+       2.0,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.3,
+      "z": -3.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "esc": 1.5,
+      "pose": {
+       "ombroD.x": -1.2,
+       "cotoveloD.x": -1.0,
+       "ombroD.z": -0.2,
+       "maos": 0.3,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -2.2,
+       "z": -3.0,
+       "rot": 0.0,
+       "dur": 5.59,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* CHINELO. [leve] *Compartilhe* [leve] e *siga* pra ver como as coisas *funcionam*.",
+   "duracao": 4.5,
+   "cena": {
+    "cenario": "submarino",
+    "entardecer": 1,
+    "raiox": 0,
+    "torre": 1,
+    "grosso": 1,
+    "sy": 0.15,
+    "chinelo": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.2,
+       1.2,
+       9.4
+      ],
+      "alvo": [
+       -0.2,
+       1.4,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.2,
+       1.3,
+       9.0
+      ],
+      "alvo": [
+       -0.2,
+       1.4,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.0,
+      "z": -3.0,
+      "rot": 0.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "esc": 1.5,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -1.2,
+        "cotoveloD.x": -1.0,
+        "ombroD.z": -0.2,
+        "maos": 0.3,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18
+       },
+       "x": -1.3,
+       "z": -3.0,
+       "rot": 0.0,
+       "dur": 4.666,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "CHINELO"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ],
+ "vozes": {
+  "abertura": {
+   "estabilidade": 0.5
+  }
+ }
+}

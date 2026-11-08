@@ -12,68 +12,132 @@
  "cartaoFinal": null,
  "batidas": [
   {
-   "texto": "[excited] Uma tempestade chega e um *raio* cai na sua casa. [leve] O telhado _pega fogo_ [leve] e as tomadas estouram.",
-   "duracao": 6.2,
+   "texto": "[excited] Seu vizinho jura que raio _nunca_ cai duas vezes no mesmo lugar. [leve] Aí o raio cai na casa dele. [leve] E, dois minutos depois, _de novo_. [leve] O telhado já está fumegando. [leve] Ele diz que é _coincidência_.",
+   "duracao": 10.333,
    "cena": {
     "cenario": "pararaios",
     "raio": {
      "de": 0,
      "para": 1,
-     "ini": 0.303,
-     "fim": 0.533
+     "ini": 0.373,
+     "fim": 0.583
     },
-    "fogo": {
+    "raio2": {
      "de": 0,
      "para": 1,
-     "ini": 0.611,
-     "fim": 0.828
+     "ini": 0.612,
+     "fim": 0.812
+    },
+    "fumaca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.503,
+     "fim": 1.0
     },
     "pisca": {
      "de": 0,
      "para": 1,
-     "ini": 0.393,
-     "fim": 1.0
-    },
-    "estoura": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.889,
-     "fim": 1.0
+     "ini": 0.453,
+     "fim": 0.8
     },
     "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       -4.5,
-       4.32,
-       13.5
+       -1.452,
+       1.112,
+       10.33
       ],
       "alvo": [
-       0,
-       2.97,
-       0.0
+       0.0,
+       1.6,
+       3.5
       ],
-      "fov": 50
+      "fov": 55
      },
      "para": {
       "pos": [
-       -3.4,
-       4.14,
-       12.0
+       -9.777,
+       8.98,
+       13.514
       ],
       "alvo": [
-       0,
-       2.94,
-       0.0
+       0.0,
+       3.2,
+       1.0
       ],
-      "fov": 50
+      "fov": 52
      }
     },
     "gente": [
      {
-      "x": -1.6,
+      "x": 1.2,
       "z": 3.5,
-      "rot": 0.35,
+      "rot": -0.25,
+      "acao": [
+       [
+        0.463,
+        "bracos-cruzados",
+        "sorriso"
+       ],
+       [
+        1,
+        "surpreso",
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "quem": "vizinho",
+      "esc": 1.0,
+      "cabeloPe": [
+       [
+        0,
+        0
+       ],
+       [
+        0.423,
+        0
+       ],
+       [
+        0.463,
+        0.4
+       ],
+       [
+        0.672,
+        0.4
+       ],
+       [
+        0.732,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "estrelas": [
+       [
+        0,
+        0
+       ],
+       [
+        0.692,
+        0
+       ],
+       [
+        0.752,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ]
+     },
+     {
+      "x": -1.3,
+      "z": 3.6,
+      "rot": 0.4,
       "acao": "em-pe",
       "exp": "surpreso",
       "pose": {
@@ -89,184 +153,256 @@
     },
     "sfx": [
      {
-      "som": "trovao",
+      "som": "raio",
       "trecho": 0,
-      "volume": 0.6
+      "volume": 0.55,
+      "em": 4.322
      },
      {
-      "som": "queda_energia",
-      "trecho": 1,
-      "volume": 0.4
+      "som": "raio",
+      "trecho": 0,
+      "volume": 0.55,
+      "em": 6.75
+     },
+     {
+      "som": "trovao",
+      "trecho": 0,
+      "volume": 0.6,
+      "em": 5.222
      },
      {
       "som": "estalo",
-      "trecho": 2,
-      "volume": 0.5
+      "trecho": 3,
+      "volume": 0.4
      }
     ]
    }
   },
   {
-   "texto": "O raio cai no que é *alto*, [leve] *pontudo* [leve] e está sozinho. [leve] E o seu telhado é o ponto mais alto do terreno.",
-   "duracao": 7.6,
+   "texto": "Então calce um *sapato de borracha* e reze. [leve] [curious] Mas um raio tem uns *300 milhões de volts*: [leve] pra ele, a borracha é só um _enfeite_ no seu pé.",
+   "duracao": 7.134,
    "cena": {
     "cenario": "pararaios",
-    "ramos": [
+    "raio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.487,
+     "fim": 0.667
+    },
+    "alvo": "chao",
+    "choque": [
      [
       0,
       0
      ],
      [
-      0.28,
-      0.0
-     ],
-     [
-      0.55,
-      1
-     ],
-     [
-      0.7,
-      1
-     ],
-     [
-      0.74,
+      0.527,
       0
+     ],
+     [
+      0.557,
+      1
+     ],
+     [
+      0.747,
+      0.15
      ],
      [
       1,
       0
      ]
     ],
-    "raio": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.7,
-     "fim": 0.92
-    },
+    "choqueCor": "azul",
+    "choqueX": 0.5,
+    "choqueZ": 3.6,
+    "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       -3,
-       3.961,
-       18.0
+       3.653,
+       1.453,
+       7.635
       ],
       "alvo": [
-       0,
-       2.161,
-       0.0
+       0.5,
+       0.55,
+       3.6
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       -6,
-       16.68,
-       34.0
+       2.732,
+       1.268,
+       7.797
       ],
       "alvo": [
-       0,
-       2.4,
-       0.0
+       0.5,
+       0.6,
+       3.6
       ],
       "fov": 50
      }
     },
     "gente": [
      {
-      "x": -1.6,
-      "z": 3.5,
-      "rot": 0.35,
-      "acao": "em-pe",
-      "exp": "surpreso",
-      "pose": {
-       "cabeca.x": -0.55,
-       "ombroE.x": -0.2,
-       "ombroD.x": -0.2
-      }
+      "x": 0.5,
+      "z": 3.6,
+      "rot": 0.4,
+      "acao": [
+       [
+        0.537,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "galochas": true,
+      "pulo": [
+       [
+        0,
+        0
+       ],
+       [
+        0.537,
+        0
+       ],
+       [
+        0.557,
+        1
+       ],
+       [
+        0.767,
+        0.7
+       ],
+       [
+        0.867,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ]
      }
     ],
     "ambiencia": {
      "som": "chuva",
      "volume": 0.12
     },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "300 MILHÕES DE VOLTS",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 70
+     }
+    ],
     "sfx": [
      {
-      "som": "vento",
+      "som": "pop",
       "trecho": 0,
       "volume": 0.4
      },
      {
       "som": "raio",
-      "trecho": 2,
-      "volume": 0.5
+      "trecho": 0,
+      "volume": 0.55,
+      "em": 3.588
      },
      {
       "som": "trovao",
-      "trecho": 3,
-      "volume": 0.5
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 4.338
      }
     ]
    }
   },
   {
-   "texto": "Então prenda uma *haste de metal*, bem pontuda, [leve] no ponto mais alto do telhado.",
-   "duracao": 4.8,
+   "texto": "Então deixe o raio cair em outro lugar. [leve] Ele escolhe o que é *alto*, *pontudo* e sozinho: [leve] seu telhado, pelo jeito. [leve] Prenda uma *haste de metal* no ponto mais alto, [leve] e o raio cai _nela_.",
+   "duracao": 8.933,
    "cena": {
     "cenario": "pararaios",
     "haste": {
      "de": 0,
      "para": 1,
-     "ini": 0.214,
-     "fim": 0.571
+     "ini": 0.694,
+     "fim": 0.824
     },
     "escada": 1,
+    "raio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.922,
+     "fim": 1.132
+    },
+    "alvo": "haste",
+    "luz": 1,
     "etiq": [
-     "haste@0.214"
+     "haste@0.774"
     ],
     "etiqS": 0.9,
     "camera": {
      "de": {
       "pos": [
-       -1.2,
-       4.923,
-       6.8
+       5.676,
+       6.438,
+       12.363
       ],
       "alvo": [
-       -0.1,
-       4.583,
-       0.0
+       -1.0,
+       3.6,
+       0.8
       ],
-      "fov": 50
+      "fov": 52
      },
      "para": {
       "pos": [
-       -0.5,
-       5.017,
-       5.0
+       3.817,
+       6.83,
+       11.171
       ],
       "alvo": [
-       0,
-       4.767,
-       0.0
+       -0.8,
+       4.0,
+       0.8
       ],
-      "fov": 50
+      "fov": 52
      }
     },
     "gente": [
      {
-      "x": -0.95,
-      "z": 0.15,
-      "rot": 0.25,
-      "acao": "em-pe",
+      "x": -2.4,
+      "z": 3.0,
+      "rot": 0.3,
+      "acao": [
+       [
+        0.912,
+        "apontando"
+       ],
+       [
+        1,
+        "comemorando"
+       ]
+      ],
       "exp": "sorriso",
-      "y": 4.35,
-      "pose": {
-       "ombroE.z": 0.6,
-       "cotoveloE.x": -0.2,
-       "ombroE.x": -0.5,
-       "maos": 0.2
-      },
-      "esc": 0.95
+      "y": 2.55,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 0.5,
+       "z": 3.6,
+       "rot": 0.4,
+       "dur": 7.134,
+       "mover": false
+      }
      }
     ],
     "ambiencia": {
@@ -283,74 +419,24 @@
       "som": "metal",
       "trecho": 1,
       "volume": 0.5
-     }
-    ]
-   }
-  },
-  {
-   "texto": "[amazed] Agora o raio cai na *haste*, [leve] e não no telhado.",
-   "duracao": 3.4,
-   "cena": {
-    "cenario": "pararaios",
-    "haste": 1,
-    "raio": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.18,
-     "fim": 0.55
-    },
-    "alvo": "haste",
-    "luz": 1,
-    "camera": {
-     "de": {
-      "pos": [
-       -2.2,
-       4.334,
-       10.0
-      ],
-      "alvo": [
-       0,
-       3.734,
-       0.0
-      ],
-      "fov": 50
      },
-     "para": {
-      "pos": [
-       -1.4,
-       4.515,
-       8.6
-      ],
-      "alvo": [
-       0,
-       3.999,
-       0.0
-      ],
-      "fov": 50
-     }
-    },
-    "gente": [],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.12
-    },
-    "sfx": [
      {
       "som": "raio",
       "trecho": 0,
-      "volume": 0.55
+      "volume": 0.55,
+      "em": 8.587
      },
      {
       "som": "ding",
-      "trecho": 0,
+      "trecho": 3,
       "volume": 0.4
      }
     ]
    }
   },
   {
-   "texto": "[curious] Mas a corrente do raio entra na haste e não tem pra onde ir. [leve] Ela procura outro caminho: as paredes e a _fiação_.",
-   "duracao": 7.9,
+   "texto": "[curious] Mas aí a corrente entra na haste e não tem pra onde ir, [leve] então escapa pela casa: [leve] paredes, canos, _fiação_. [leve] Todas as lâmpadas piscam de susto.",
+   "duracao": 7.8,
    "cena": {
     "cenario": "pararaios",
     "haste": 1,
@@ -358,51 +444,52 @@
      "de": 0,
      "para": 1,
      "ini": 0.0,
-     "fim": 0.3
+     "fim": 0.2
     },
     "alvo": "haste",
     "espalha": {
      "de": 0,
      "para": 1,
-     "ini": 0.609,
-     "fim": 0.95
+     "ini": 0.347,
+     "fim": 0.667
     },
     "fiacao": {
      "de": 0,
      "para": 1,
-     "ini": 0.783,
-     "fim": 1.0
+     "ini": 0.521,
+     "fim": 0.787
     },
     "pisca": {
      "de": 0,
      "para": 1,
-     "ini": 0.62,
-     "fim": 0.95
+     "ini": 0.812,
+     "fim": 0.97
     },
+    "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       -2.4,
-       3.967,
-       11.0
+       -6.865,
+       6.408,
+       13.912
       ],
       "alvo": [
-       -0.2,
-       3.087,
-       0.0
+       0.0,
+       3.3,
+       1.0
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       -1.4,
-       3.514,
-       9.4
+       -4.349,
+       6.003,
+       12.949
       ],
       "alvo": [
-       0,
-       2.762,
-       0.0
+       0.0,
+       3.3,
+       1.0
       ],
       "fov": 50
      }
@@ -411,9 +498,26 @@
      {
       "x": -4.3,
       "z": 3.4,
-      "rot": 0.3,
+      "rot": 0.45,
       "acao": "em-pe",
-      "exp": "surpreso"
+      "exp": "surpreso",
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -1.2,
+       "cotoveloD.x": -1.2,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {},
+       "x": -2.4,
+       "y": 2.55,
+       "z": 3.0,
+       "rot": 0.3,
+       "dur": 8.933,
+       "mover": true
+      }
      }
     ],
     "ambiencia": {
@@ -422,70 +526,203 @@
     },
     "sfx": [
      {
-      "som": "zumbido",
+      "som": "raio",
       "trecho": 0,
+      "volume": 0.55,
+      "em": 0.224
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
       "volume": 0.4
      },
      {
       "som": "pisca",
-      "trecho": 1,
+      "trecho": 2,
       "volume": 0.5
      }
     ]
    }
   },
   {
-   "texto": "Então ligue na haste um *cabo grosso de metal*, [leve] descendo por fora da casa, até o chão.",
-   "duracao": 5.9,
+   "texto": "Então ligue um *fio fininho* da haste até o chão. [leve] [curious] Mas passa tanta corrente [leve] que o fio _esquenta_, [leve] fica vermelho [leve] e _derrete_ como vela.",
+   "duracao": 6.733,
    "cena": {
     "cenario": "pararaios",
     "haste": 1,
-    "cabo": {
+    "fio": {
      "de": 0,
      "para": 1,
-     "ini": 0.294,
+     "ini": 0.094,
+     "fim": 0.337
+    },
+    "calor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.406,
+     "fim": 0.822
+    },
+    "derrete": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.797,
      "fim": 1.0
     },
-    "etiq": [
-     "cabo@0.294"
-    ],
-    "etiqS": 0.9,
-    "escada": 0,
+    "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       -1.2,
-       3.75,
-       10.5
+       9.359,
+       4.957,
+       13.014
       ],
       "alvo": [
-       1.3,
-       2.91,
-       0.0
+       2.2,
+       2.7,
+       2.4
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       0.2,
-       1.544,
-       8.4
+       6.047,
+       3.141,
+       8.197
       ],
       "alvo": [
+       2.7,
        2.2,
-       1.208,
-       0.0
+       2.4
       ],
       "fov": 50
      }
     },
     "gente": [
      {
-      "x": 4.3,
+      "x": 4.6,
       "z": 3.4,
-      "rot": -0.4,
+      "rot": -0.35,
       "acao": "explicando",
-      "exp": "sorriso"
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -1.2,
+        "cotoveloD.x": -1.2,
+        "maos": 1
+       },
+       "x": -4.3,
+       "z": 3.4,
+       "rot": 0.45,
+       "dur": 7.8,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então use um *cabo grosso* de metal, [leve] descendo por fora da casa até o chão. [leve] [curious] Mas ele só *encosta* na terra: [leve] a corrente fica _presa_ na ponta, sem ter onde ir.",
+   "duracao": 7.633,
+   "cena": {
+    "cenario": "pararaios",
+    "haste": 1,
+    "cabo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.07,
+     "fim": 0.478
+    },
+    "onda": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.67
+    },
+    "acumula": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.61,
+     "fim": 0.9
+    },
+    "pisca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.75,
+     "fim": 0.95
+    },
+    "luz": 1,
+    "etiq": [
+     "cabo@0.13"
+    ],
+    "etiqS": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       9.889,
+       3.619,
+       12.394
+      ],
+      "alvo": [
+       2.7,
+       1.9,
+       2.5
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       6.774,
+       0.593,
+       12.048
+      ],
+      "alvo": [
+       2.8,
+       -0.2,
+       3.9
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 5.0,
+      "z": 3.5,
+      "rot": -1.1707963267948966,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 4.6,
+       "z": 3.4,
+       "rot": -0.35,
+       "dur": 6.733,
+       "mover": true
+      }
      }
     ],
     "ambiencia": {
@@ -501,272 +738,153 @@
      {
       "som": "metal",
       "trecho": 1,
-      "volume": 0.5
+      "volume": 0.45
+     },
+     {
+      "som": "estatica",
+      "trecho": 2,
+      "volume": 0.4
      }
     ]
    }
   },
   {
-   "texto": "Agora o raio entra pela haste, [leve] desce pelo cabo [leve] e passa longe da fiação.",
-   "duracao": 4.8,
+   "texto": "Então *enterre* uma haste e ligue no cabo. [leve] [curious] Mas a terra seca conduz mal, [leve] a corrente se acumula em volta [leve] e _quem pisa perto_ leva choque nos pés.",
+   "duracao": 7.334,
    "cena": {
     "cenario": "pararaios",
     "haste": 1,
     "cabo": 1,
-    "raio": {
+    "unica": true,
+    "terra": {
      "de": 0,
      "para": 1,
-     "ini": 0.02,
-     "fim": 0.3
+     "ini": 0.032,
+     "fim": 0.172
     },
-    "alvo": "haste",
     "onda": {
      "de": 0,
      "para": 1,
-     "ini": 0.24,
-     "fim": 0.68
+     "ini": 0.314,
+     "fim": 0.514
     },
-    "fiacao": 1,
-    "raiox": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.4,
-     "fim": 0.7
-    },
-    "camera": {
-     "de": {
-      "pos": [
-       -2,
-       3.384,
-       11.5
-      ],
-      "alvo": [
-       1.0,
-       2.464,
-       0.0
-      ],
-      "fov": 50
-     },
-     "para": {
-      "pos": [
-       -0.4,
-       2.231,
-       9.2
-      ],
-      "alvo": [
-       1.6,
-       1.771,
-       0.0
-      ],
-      "fov": 50
-     }
-    },
-    "gente": [
-     {
-      "x": 4.3,
-      "z": 3.4,
-      "rot": -0.4,
-      "acao": "comemorando",
-      "exp": "sorriso"
-     }
+    "choque": [
+     [
+      0,
+      0
+     ],
+     [
+      0.575,
+      0
+     ],
+     [
+      0.695,
+      1
+     ],
+     [
+      1,
+      1
+     ]
     ],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.12
-    },
-    "sfx": [
-     {
-      "som": "raio",
-      "trecho": 0,
-      "volume": 0.55
-     },
-     {
-      "som": "whoosh",
-      "trecho": 1,
-      "volume": 0.4
-     },
-     {
-      "som": "ding",
-      "trecho": 2,
-      "volume": 0.45
-     }
-    ]
-   }
-  },
-  {
-   "texto": "[curious] Mas se o cabo só encosta no chão, a corrente fica _presa_ ali, [leve] sem ter onde se espalhar.",
-   "duracao": 6.2,
-   "cena": {
-    "cenario": "pararaios",
-    "haste": 1,
-    "cabo": 1,
-    "acumula": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.08,
-     "fim": 0.55
-    },
-    "pisca": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.4,
-     "fim": 0.9
-    },
+    "choqueX": 2.9,
+    "choqueZ": 3.7,
     "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       2.2,
-       -0.224,
-       7.2
+       8.781,
+       3.079,
+       12.472
       ],
       "alvo": [
-       2.7,
-       -0.368,
-       0.0
+       3.3,
+       0.5,
+       3.7
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       2.6,
-       -0.121,
-       6.2
+       6.607,
+       2.224,
+       10.276
       ],
       "alvo": [
-       2.7,
-       -0.245,
-       0.0
+       3.4,
+       0.4,
+       3.7
       ],
       "fov": 50
      }
     },
     "gente": [
      {
-      "x": 5.0,
-      "z": 3.4,
-      "rot": -1.5707963267948966,
-      "acao": "em-pe",
-      "exp": "surpreso"
-     }
-    ],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.12
-    },
-    "sfx": [
-     {
-      "som": "estatica",
-      "trecho": 0,
-      "volume": 0.4
-     },
-     {
-      "som": "estalo",
-      "trecho": 1,
-      "volume": 0.5
-     }
-    ]
-   }
-  },
-  {
-   "texto": "Então enterre *hastes de metal* no chão, [leve] ligadas ao cabo.",
-   "duracao": 3.4,
-   "cena": {
-    "cenario": "pararaios",
-    "haste": 1,
-    "cabo": 1,
-    "terra": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.1,
-     "fim": 0.8
-    },
-    "etiq": [
-     "aterra@0.2"
-    ],
-    "etiqS": 0.9,
-    "camera": {
-     "de": {
-      "pos": [
-       1.9,
-       -0.532,
-       9.6
-      ],
-      "alvo": [
-       3.4,
-       -0.724,
-       0.0
-      ],
-      "fov": 50
-     },
-     "para": {
-      "pos": [
-       2.3,
-       -0.629,
-       8.8
-      ],
-      "alvo": [
-       3.4,
-       -0.805,
-       0.0
-      ],
-      "fov": 50
-     }
-    },
-    "gente": [
-     {
-      "x": 4.6,
-      "z": 3.4,
-      "rot": -1.5707963267948966,
-      "acao": "em-pe",
-      "exp": "sorriso",
-      "pose": [
+      "x": {
+       "de": 5.6,
+       "para": 3.7,
+       "ini": 0.0,
+       "fim": 0.748
+      },
+      "z": 3.6,
+      "rot": 0.3,
+      "acao": [
        [
-        0.15,
-        {}
-       ],
-       [
-        0.3,
-        {
-         "ombroE.x": -1.3,
-         "ombroD.x": -1.3,
-         "cotoveloE.x": -0.2,
-         "cotoveloD.x": -0.2,
-         "tronco.x": 0.3,
-         "maos": 0.2
-        }
-       ],
-       [
-        0.45,
-        {}
-       ],
-       [
-        0.6,
-        {
-         "ombroE.x": -1.3,
-         "ombroD.x": -1.3,
-         "cotoveloE.x": -0.2,
-         "cotoveloD.x": -0.2,
-         "tronco.x": 0.3,
-         "maos": 0.2
-        }
-       ],
-       [
-        0.75,
-        {}
+        0.748,
+        "andando",
+        "sorriso"
        ],
        [
         1,
-        {
-         "ombroE.x": -1.3,
-         "ombroD.x": -1.3,
-         "cotoveloE.x": -0.2,
-         "cotoveloD.x": -0.2,
-         "tronco.x": 0.3,
-         "maos": 0.2
-        }
+        "em-pe",
+        "surpreso"
        ]
-      ]
+      ],
+      "exp": "sorriso",
+      "pulo": [
+       [
+        0,
+        0
+       ],
+       [
+        0.788,
+        0
+       ],
+       [
+        0.818,
+        1
+       ],
+       [
+        1,
+        0.9
+       ]
+      ],
+      "estrelas": [
+       [
+        0,
+        0
+       ],
+       [
+        0.798,
+        0
+       ],
+       [
+        0.848,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 5.0,
+       "z": 3.5,
+       "rot": -1.1707963267948966,
+       "dur": 7.633,
+       "mover": true
+      }
      }
     ],
     "ambiencia": {
@@ -783,65 +901,137 @@
       "som": "impacto_seco",
       "trecho": 1,
       "volume": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 3,
+      "volume": 0.5
      }
     ]
    }
   },
   {
-   "texto": "A corrente se *espalha* pela terra [leve] e vai embora.",
-   "duracao": 3.1,
+   "texto": "Então enterre *várias hastes* em volta da casa, [leve] ligadas por um cabo. [leve] A corrente se espalha por muita terra, [leve] porque quanto mais terra, mais fácil ela entra, [leve] e o choque nos pés _diminui_.",
+   "duracao": 8.777,
    "cena": {
     "cenario": "pararaios",
     "haste": 1,
     "cabo": 1,
-    "terra": 1,
+    "terra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.042,
+     "fim": 0.375
+    },
     "onda": {
      "de": 0,
      "para": 1,
-     "ini": 0.0,
-     "fim": 0.4
+     "ini": 0.412,
+     "fim": 0.572
     },
     "leque": {
      "de": 0,
      "para": 1,
-     "ini": 0.3,
-     "fim": 0.98
+     "ini": 0.452,
+     "fim": 0.97
     },
+    "choque": {
+     "de": 0.9,
+     "para": 0.1,
+     "ini": 0.452,
+     "fim": 0.95
+    },
+    "choqueX": 2.9,
+    "choqueZ": 3.7,
+    "luz": 1,
+    "etiq": [
+     "aterra@0.168"
+    ],
+    "etiqS": 0.9,
     "camera": {
      "de": {
       "pos": [
-       1.6,
-       -1.129,
-       8.8
+       -0.6,
+       0.3,
+       12.0
       ],
       "alvo": [
-       3.0,
-       -1.305,
-       0.0
+       1.8,
+       -0.8,
+       4.0
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       2.0,
-       -1.227,
-       8.0
+       6.4,
+       0.3,
+       11.2
       ],
       "alvo": [
-       3.0,
-       -1.387,
-       0.0
+       3.8,
+       -0.8,
+       4.0
       ],
       "fov": 50
      }
     },
     "gente": [
      {
-      "x": 4.6,
-      "z": 3.4,
-      "rot": -1.5707963267948966,
+      "x": 5.2,
+      "z": 3.5,
+      "rot": -1.0707963267948966,
       "acao": "em-pe",
-      "exp": "sorriso"
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.16,
+        {}
+       ],
+       [
+        0.26,
+        {
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2,
+         "tronco.x": 0.3,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.34,
+        {}
+       ],
+       [
+        0.44,
+        {
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3,
+         "cotoveloE.x": -0.2,
+         "cotoveloD.x": -0.2,
+         "tronco.x": 0.3,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.52,
+        {}
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 3.7,
+       "z": 3.6,
+       "rot": 0.3,
+       "dur": 7.334,
+       "mover": true
+      }
      }
     ],
     "ambiencia": {
@@ -850,70 +1040,346 @@
     },
     "sfx": [
      {
-      "som": "whoosh",
+      "som": "pop",
       "trecho": 0,
       "volume": 0.4
      },
      {
-      "som": "chiado",
+      "som": "whoosh",
       "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "chiado",
+      "trecho": 3,
       "volume": 0.35
      }
     ]
    }
   },
   {
-   "texto": "Agora faça o teste: o raio cai na haste, [leve] desce pelo cabo, [leve] some na terra, [leve] e a casa nem pisca.",
-   "duracao": 6.9,
+   "texto": "[curious] Mas dentro de casa, a corrente faz canos e fios subirem a tensões _diferentes_, [leve] e a faísca *pula* de um pro outro, [leve] como irmãos disputando o controle remoto.",
+   "duracao": 7.456,
    "cena": {
     "cenario": "pararaios",
     "haste": 1,
     "cabo": 1,
     "terra": 1,
-    "raio": {
+    "raiox": {
      "de": 0,
      "para": 1,
-     "ini": 0.02,
-     "fim": 0.24
+     "ini": 0.0,
+     "fim": 0.12
     },
-    "alvo": "haste",
-    "onda": {
+    "cano": {
      "de": 0,
      "para": 1,
-     "ini": 0.22,
-     "fim": 0.5
+     "ini": 0.0,
+     "fim": 0.12
     },
-    "leque": {
+    "faisca": {
      "de": 0,
      "para": 1,
-     "ini": 0.46,
-     "fim": 0.96
+     "ini": 0.523,
+     "fim": 0.583
     },
     "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       -3.2,
-       4.15,
-       15.5
+       -3.978,
+       3.341,
+       9.458
       ],
       "alvo": [
-       1.0,
-       2.6,
-       0.0
+       0.5,
+       1.4,
+       -0.6
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       -0.6,
-       1.1,
-       12.5
+       -2.507,
+       3.116,
+       8.654
       ],
       "alvo": [
-       2.6,
-       0.6,
-       0.0
+       0.5,
+       1.4,
+       -0.6
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.5,
+      "z": -0.2,
+      "rot": 0.3,
+      "acao": [
+       [
+        0.533,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "surpreso",
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "pulo": [
+       [
+        0,
+        0
+       ],
+       [
+        0.553,
+        0
+       ],
+       [
+        0.583,
+        0.5
+       ],
+       [
+        0.733,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 5.2,
+       "z": 3.5,
+       "rot": -1.0707963267948966,
+       "dur": 8.777,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "estatica",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ligue *tudo* no mesmo aterramento: [leve] canos, estruturas e o quadro de luz. [leve] Se todo mundo sobe junto, [leve] a faísca não tem _por quê_ pular.",
+   "duracao": 7.019,
+   "cena": {
+    "cenario": "pararaios",
+    "haste": 1,
+    "cabo": 1,
+    "terra": 1,
+    "raiox": 1,
+    "cano": 1,
+    "ligaTudo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.028,
+     "fim": 0.582
+    },
+    "faisca": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.522,
+     "fim": 0.622
+    },
+    "sobem": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.607,
+     "fim": 0.727
+    },
+    "luz": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.597,
+       3.424,
+       9.839
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       -0.3
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.514,
+       3.176,
+       7.778
+      ],
+      "alvo": [
+       0.5,
+       1.1,
+       -0.3
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.6,
+      "z": -0.2,
+      "rot": 0.3,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "surpreso",
+       "pose": {},
+       "x": -1.5,
+       "z": -0.2,
+       "rot": 0.3,
+       "dur": 7.456,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.12
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o raio também chega pelos *fios da rua*, [leve] direto nas tomadas. [leve] Então ponha um *protetor de surto* na entrada: [leve] ele desvia o pico de energia pro aterramento [leve] e as tomadas _respiram_.",
+   "duracao": 8.524,
+   "cena": {
+    "cenario": "pararaios",
+    "haste": 1,
+    "cabo": 1,
+    "terra": 1,
+    "rede": 1,
+    "protetor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.431,
+     "fim": 0.521
+    },
+    "raio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.12,
+     "fim": 0.3
+    },
+    "alvo": "poste",
+    "pico": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.2,
+     "fim": 0.339
+    },
+    "estoura": [
+     [
+      0,
+      0
+     ],
+     [
+      0.279,
+      0
+     ],
+     [
+      0.319,
+      1
+     ],
+     [
+      0.411,
+      1
+     ],
+     [
+      0.471,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "raio2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.547,
+     "fim": 0.747
+    },
+    "alvo2": "poste",
+    "pico2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.627,
+     "fim": 0.817
+    },
+    "luz": 1,
+    "etiq": [
+     "protetor@0.501"
+    ],
+    "etiqS": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       0.587,
+       6.371,
+       14.923
+      ],
+      "alvo": [
+       -5.2,
+       4.2,
+       0.6
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.809,
+       4.432,
+       11.174
+      ],
+      "alvo": [
+       -2.6,
+       2.4,
+       1.0
       ],
       "fov": 50
      }
@@ -921,10 +1387,19 @@
     "gente": [
      {
       "x": -4.4,
-      "z": 3.4,
-      "rot": 0.45,
+      "z": 3.5,
+      "rot": 0.5,
       "acao": "em-pe",
-      "exp": "surpreso"
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -1.6,
+       "z": -0.2,
+       "rot": 0.3,
+       "dur": 7.019,
+       "mover": false
+      }
      }
     ],
     "ambiencia": {
@@ -935,84 +1410,103 @@
      {
       "som": "raio",
       "trecho": 0,
-      "volume": 0.55
+      "volume": 0.55,
+      "em": 1.237
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.45
+     },
+     {
+      "som": "raio",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 4.945
      },
      {
       "som": "whoosh",
-      "trecho": 1,
-      "volume": 0.4
-     },
-     {
-      "som": "chiado",
-      "trecho": 2,
-      "volume": 0.35
-     },
-     {
-      "som": "ding",
       "trecho": 3,
-      "volume": 0.5
+      "volume": 0.4
      }
     ]
    }
   },
   {
-   "texto": "[amazed] Parabéns! Você acabou de montar um *para-raios*.",
-   "duracao": 2.4,
+   "texto": "[amazed] Parabéns! Você acabou de montar um *para-raios*: [leve] haste, cabo, terra e protetor, [leve] todo mundo no mesmo time.",
+   "duracao": 6.557,
    "cena": {
     "cenario": "pararaios",
     "haste": 1,
     "cabo": 1,
     "terra": 1,
+    "rede": 1,
+    "protetor": 1,
     "destaque": {
      "de": 0,
      "para": 1,
-     "ini": 0.12,
-     "fim": 0.9
+     "ini": 0.14,
+     "fim": 0.92
     },
-    "raiox": 0,
     "etiq": [
-     "haste@0.3-0.95",
-     "cabo@0.3-0.95",
-     "aterra@0.3-0.95"
+     "haste@0.3-0.52",
+     "cabo@0.42-0.7",
+     "aterra@0.54-0.85",
+     "protetor@0.66-0.97"
     ],
     "etiqS": 1.0,
     "etiqK": 0.8,
-    "etiqYmax": 0.4,
+    "etiqYmax": 0.45,
+    "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       -1.5,
-       2.197,
-       17.0
+       -12.79,
+       4.11,
+       19.721
       ],
       "alvo": [
-       1.0,
-       0.837,
-       0.0
+       -0.5,
+       1.8,
+       1.5
       ],
       "fov": 52
      },
      "para": {
       "pos": [
-       -0.6,
-       2.135,
-       15.5
+       7.38,
+       17.082,
+       21.003
       ],
       "alvo": [
-       1.2,
-       0.895,
-       0.0
+       -0.5,
+       1.8,
+       1.5
       ],
       "fov": 52
      }
     },
     "gente": [
      {
-      "x": -4.2,
+      "x": -1.6,
       "z": 3.4,
-      "rot": 0.4,
+      "rot": 0.2,
       "acao": "comemorando",
-      "exp": "sorriso"
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -4.4,
+       "z": 3.5,
+       "rot": 0.5,
+       "dur": 8.524,
+       "mover": false
+      }
      }
     ],
     "ambiencia": "nenhuma",
@@ -1035,8 +1529,157 @@
    }
   },
   {
-   "texto": "Foi o *Benjamin Franklin* que bolou isso, [leve] no século dezoito.",
-   "duracao": 3.4,
+   "texto": "Repare: ele nem impede o raio de cair. [leve] Ele só dá o *caminho* certo [leve] até a terra, [leve] longe da sua família: [leve] o raio cai do mesmo jeito, mas sem estrago.",
+   "duracao": 7.923,
+   "cena": {
+    "cenario": "pararaios",
+    "haste": 1,
+    "cabo": 1,
+    "terra": 1,
+    "rede": 1,
+    "protetor": 1,
+    "raio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.119,
+     "fim": 0.339
+    },
+    "raio2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.74,
+     "fim": 0.97
+    },
+    "alvo": "haste",
+    "alvo2": "haste",
+    "onda": [
+     [
+      0,
+      0
+     ],
+     [
+      0.33,
+      0
+     ],
+     [
+      0.53,
+      1
+     ],
+     [
+      0.54,
+      0
+     ],
+     [
+      0.75,
+      0
+     ],
+     [
+      0.95,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "leque": [
+     [
+      0,
+      0
+     ],
+     [
+      0.87,
+      0
+     ],
+     [
+      0.98,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "luz": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -6.604,
+       6.384,
+       17.201
+      ],
+      "alvo": [
+       1.2,
+       2.6,
+       1.2
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -2.974,
+       3.971,
+       16.092
+      ],
+      "alvo": [
+       1.8,
+       1.8,
+       1.4
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -4.4,
+      "z": 3.4,
+      "rot": 0.45,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "comemorando",
+       "pose": {},
+       "x": -1.6,
+       "z": 3.4,
+       "rot": 0.2,
+       "dur": 6.557,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "raio",
+      "trecho": 0,
+      "volume": 0.55,
+      "em": 1.24
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "raio",
+      "trecho": 0,
+      "volume": 0.5,
+      "em": 6.192
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A haste é invenção de *Benjamin Franklin*, [leve] do século dezoito: [leve] mais de _250 anos_ e continua valendo.",
+   "duracao": 6.066,
    "cena": {
     "cenario": "pararaios",
     "palco": "franklin",
@@ -1075,6 +1718,15 @@
      }
     },
     "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1752",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
     "sfx": [
      {
       "som": "papel",
@@ -1090,99 +1742,23 @@
    }
   },
   {
-   "texto": "E repare: o para-raios não impede o raio de cair. [leve] Ele só dá o _caminho_ certo pra corrente.",
-   "duracao": 6.2,
-   "cena": {
-    "cenario": "pararaios",
-    "haste": 1,
-    "cabo": 1,
-    "terra": 1,
-    "raio": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.06,
-     "fim": 0.3
-    },
-    "alvo": "haste",
-    "onda": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.556,
-     "fim": 0.97
-    },
-    "camera": {
-     "de": {
-      "pos": [
-       -2,
-       3.34,
-       15.0
-      ],
-      "alvo": [
-       1.4,
-       1.84,
-       0.0
-      ],
-      "fov": 50
-     },
-     "para": {
-      "pos": [
-       0.2,
-       1.495,
-       13.0
-      ],
-      "alvo": [
-       2.2,
-       0.715,
-       0.0
-      ],
-      "fov": 50
-     }
-    },
-    "gente": [
-     {
-      "x": -4.4,
-      "z": 3.4,
-      "rot": 0.45,
-      "acao": "explicando",
-      "exp": "sorriso"
-     }
-    ],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.1
-    },
-    "sfx": [
-     {
-      "som": "raio",
-      "trecho": 0,
-      "volume": 0.5
-     },
-     {
-      "som": "ding",
-      "trecho": 1,
-      "volume": 0.45
-     }
-    ]
-   }
-  },
-  {
-   "texto": "No Brasil isso faz diferença: somos *campeões do mundo* em raios, [leve] dezenas de milhões por ano.",
-   "duracao": 5.5,
+   "texto": "E no Brasil isso faz diferença: [leve] somos *campeões do mundo* em raios, [leve] dezenas de milhões _por ano_. [leve] Com tanto raio, vale proteger a casa.",
+   "duracao": 7.544,
    "cena": {
     "cenario": "pararaios",
     "palco": "mapa",
     "flashes": {
      "de": 0.35,
      "para": 1,
-     "ini": 0,
+     "ini": 0.0,
      "fim": 0.5
     },
     "camera": {
      "de": {
       "pos": [
-       180,
-       13.5,
-       13.5
+       176.0,
+       12.5,
+       12.0
       ],
       "alvo": [
        180,
@@ -1193,9 +1769,9 @@
      },
      "para": {
       "pos": [
-       180,
-       12.0,
-       12.0
+       184.0,
+       11.0,
+       11.0
       ],
       "alvo": [
        180,
@@ -1206,6 +1782,15 @@
      }
     },
     "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "BRASIL",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
     "sfx": [
      {
       "som": "trovao",
@@ -1221,187 +1806,76 @@
    }
   },
   {
-   "texto": "[curious] Mas e se o raio pegar você na rua, sem para-raios nenhum? [leve] Dentro de um carro fechado, você fica protegido. [leve] Por quê?",
-   "duracao": 7.6,
+   "texto": "Manda pro vizinho que jura que raio não cai duas vezes. [leve] E quando o raio pega um _avião_ no ar? [leve] *Siga* pra descobrir.",
+   "duracao": 5.8,
    "cena": {
     "cenario": "pararaios",
-    "palco": "estrada",
-    "carro": true,
-    "carroRot": 2.5,
-    "porta": [
-     [
-      0,
-      0
-     ],
-     [
-      0.42,
-      0
-     ],
-     [
-      0.58,
-      1
-     ],
-     [
-      1,
-      1
-     ]
-    ],
-    "zecaDentro": {
+    "fumaca": 1,
+    "luz": 1,
+    "aviao": {
      "de": 0,
      "para": 1,
-     "ini": 0.5,
-     "fim": 0.501
+     "ini": 0.599,
+     "fim": 0.97
+    },
+    "lampada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.669,
+     "fim": 0.749
     },
     "camera": {
      "de": {
       "pos": [
-       59.0,
-       1.77,
-       9.5
+       -5.254,
+       6.309,
+       16.936
       ],
       "alvo": [
-       60.9,
-       1.2,
-       0.0
+       0.0,
+       3.6,
+       2.5
       ],
       "fov": 50
      },
      "para": {
       "pos": [
-       59.4,
-       1.68,
-       8.0
+       -3.384,
+       7.373,
+       16.072
       ],
       "alvo": [
-       60.6,
-       1.2,
-       0.0
+       0.0,
+       4.4,
+       2.5
       ],
       "fov": 50
      }
     },
     "gente": [
      {
-      "x": {
-       "de": 2.6,
-       "para": 1.5,
-       "ini": 0.08,
-       "fim": 0.5
-      },
-      "z": {
-       "de": 2.5,
-       "para": 1.7,
-       "ini": 0.08,
-       "fim": 0.5
-      },
-      "rot": -2.2,
-      "acao": [
-       [
-        0.5,
-        "andando",
-        "sorriso"
-       ],
-       [
-        1,
-        "em-pe",
-        "sorriso"
-       ]
-      ],
+      "x": 1.5,
+      "z": 3.5,
+      "rot": -0.3,
+      "acao": "bracos-cruzados",
       "exp": "sorriso",
-      "ate": 0.5
+      "quem": "vizinho",
+      "esc": 1.0,
+      "cabeloPe": 1
+     },
+     {
+      "x": -1.5,
+      "z": 3.6,
+      "rot": 0.4,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": {
+       "cabeca.x": -0.55,
+       "ombroE.x": -0.2,
+       "ombroD.x": -0.2
+      }
      }
     ],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.1
-    },
-    "sfx": [
-     {
-      "som": "trovao",
-      "trecho": 0,
-      "volume": 0.4
-     },
-     {
-      "som": "porta",
-      "trecho": 1,
-      "volume": 0.55
-     },
-     {
-      "som": "pop",
-      "trecho": 2,
-      "volume": 0.4
-     }
-    ]
-   }
-  },
-  {
-   "texto": "Porque o carro fechado é uma *gaiola de metal*. [leve] O raio cai no teto, [leve] a corrente corre _por fora_ da lataria [leve] e vai pro chão.",
-   "duracao": 8.6,
-   "cena": {
-    "cenario": "pararaios",
-    "palco": "estrada",
-    "carro": true,
-    "carroRot": 2.5,
-    "porta": 1,
-    "zecaDentro": 1,
-    "segura": {
-     "de": 0,
-     "para": 0.5,
-     "ini": 0.1,
-     "fim": 0.5
-    },
-    "gaiola": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.02,
-     "fim": 0.22
-    },
-    "raio": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.42,
-     "fim": 0.64
-    },
-    "alvo": "carro",
-    "corrCarro": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.58,
-     "fim": 0.97
-    },
-    "etiq": [
-     "gaiola@0.04-0.4"
-    ],
-    "etiqS": 1.0,
-    "etiqK": 1.0,
-    "camera": {
-     "de": {
-      "pos": [
-       58.4,
-       2.7,
-       11.0
-      ],
-      "alvo": [
-       60.2,
-       1.6,
-       0.0
-      ],
-      "fov": 50
-     },
-     "para": {
-      "pos": [
-       58.9,
-       2.5,
-       10.0
-      ],
-      "alvo": [
-       60.1,
-       1.5,
-       0.0
-      ],
-      "fov": 50
-     }
-    },
     "ambiencia": {
      "som": "chuva",
      "volume": 0.1
@@ -1411,271 +1885,59 @@
       "som": "pop",
       "trecho": 0,
       "volume": 0.4
-     },
-     {
-      "som": "raio",
-      "trecho": 1,
-      "volume": 0.6
      },
      {
       "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
       "trecho": 2,
-      "volume": 0.4
-     },
-     {
-      "som": "ding",
-      "trecho": 3,
-      "volume": 0.4
-     }
-    ]
-   }
-  },
-  {
-   "texto": "Por dentro, quem está lá não sente nada.",
-   "duracao": 2.8,
-   "cena": {
-    "cenario": "pararaios",
-    "palco": "estrada",
-    "carro": true,
-    "carroRot": 2.5,
-    "porta": 1,
-    "zecaDentro": 1,
-    "gaiola": 1,
-    "segura": {
-     "de": 0.3,
-     "para": 1,
-     "ini": 0,
-     "fim": 0.4
-    },
-    "raio": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.0,
-     "fim": 0.3
-    },
-    "alvo": "carro",
-    "corrCarro": {
-     "de": 0,
-     "para": 1,
-     "ini": 0.2,
-     "fim": 0.85
-    },
-    "camera": {
-     "de": {
-      "pos": [
-       58.8,
-       2.02,
-       7.2
-      ],
-      "alvo": [
-       60.0,
-       1.3,
-       0.0
-      ],
-      "fov": 50
-     },
-     "para": {
-      "pos": [
-       59.2,
-       1.82,
-       6.2
-      ],
-      "alvo": [
-       60.0,
-       1.2,
-       0.0
-      ],
-      "fov": 50
-     }
-    },
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.1
-    },
-    "sfx": [
-     {
-      "som": "ding",
-      "trecho": 0,
       "volume": 0.45
      }
     ]
    }
   },
   {
-   "texto": "Agora você sabe como uma casa aguenta uma tempestade.",
-   "duracao": 3.1,
+   "texto": "*Curta.* [leve] *Comente* RAIO. [leve] *Compartilhe* [leve] e *siga* pra ver como as coisas *funcionam*.",
+   "duracao": 4.1,
    "cena": {
     "cenario": "pararaios",
-    "palco": "estrada",
-    "carro": true,
-    "carroRot": 2.5,
-    "porta": 0,
-    "zecaDentro": 0,
-    "casaFundo": true,
+    "luz": 1,
     "camera": {
      "de": {
       "pos": [
-       65.2,
-       2.3,
-       9.0
+       0.0,
+       3.0,
+       10.1
       ],
       "alvo": [
-       58.6,
-       3.3,
-       -14
+       0.0,
+       2.7,
+       3.4
       ],
-      "fov": 52
+      "fov": 46
      },
      "para": {
       "pos": [
-       64.6,
-       2.3,
-       8.2
+       0.0,
+       2.95,
+       9.6
       ],
       "alvo": [
-       58.2,
-       3.3,
-       -14
+       0.0,
+       2.7,
+       3.4
       ],
-      "fov": 52
+      "fov": 46
      }
     },
     "gente": [
      {
-      "x": 2.6000000000000014,
-      "z": -1.5,
-      "rot": -0.5,
-      "acao": "comemorando",
-      "exp": "sorriso"
-     }
-    ],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.1
-    },
-    "sfx": [
-     {
-      "som": "jingle",
-      "trecho": 0,
-      "volume": 0.45
-     }
-    ]
-   }
-  },
-  {
-   "texto": "Comente *RAIO* se você já viu um cair perto.",
-   "duracao": 3.1,
-   "cena": {
-    "cenario": "pararaios",
-    "palco": "estrada",
-    "carro": true,
-    "carroRot": 2.5,
-    "porta": 0,
-    "zecaDentro": 0,
-    "casaFundo": true,
-    "camera": {
-     "de": {
-      "pos": [
-       64.6,
-       2.3,
-       8.2
-      ],
-      "alvo": [
-       58.2,
-       3.3,
-       -14
-      ],
-      "fov": 52
-     },
-     "para": {
-      "pos": [
-       64.2,
-       2.2,
-       7.6
-      ],
-      "alvo": [
-       58.0,
-       3.3,
-       -14
-      ],
-      "fov": 52
-     }
-    },
-    "gente": [
-     {
-      "x": 2.6000000000000014,
-      "z": -1.5,
-      "rot": -0.5,
-      "acao": "em-pe",
-      "exp": "sorriso"
-     }
-    ],
-    "ambiencia": {
-     "som": "chuva",
-     "volume": 0.1
-    },
-    "cartoes": [
-     {
-      "tipo": "chamada",
-      "icone": "comentar",
-      "texto": "COMENTE RAIO",
-      "trecho": 0,
-      "sub": "O Brasil leva dezenas de milhões de raios por ano"
-     }
-    ],
-    "sfx": [
-     {
-      "som": "pop",
-      "trecho": 0,
-      "volume": 0.5
-     }
-    ]
-   }
-  },
-  {
-   "texto": "Manda pra quem tem medo de tempestade, [leve] e *siga* pra descobrir como as coisas *funcionam*.",
-   "duracao": 5.2,
-   "cena": {
-    "cenario": "pararaios",
-    "palco": "estrada",
-    "carro": true,
-    "carroRot": 2.5,
-    "porta": 0,
-    "zecaDentro": 0,
-    "casaFundo": true,
-    "camera": {
-     "de": {
-      "pos": [
-       64.2,
-       2.2,
-       7.6
-      ],
-      "alvo": [
-       58.0,
-       3.3,
-       -14
-      ],
-      "fov": 52
-     },
-     "para": {
-      "pos": [
-       63.8,
-       2.2,
-       7.2
-      ],
-      "alvo": [
-       57.8,
-       3.3,
-       -14
-      ],
-      "fov": 52
-     }
-    },
-    "gente": [
-     {
-      "x": 2.6000000000000014,
-      "z": -1.5,
-      "rot": -0.5,
+      "x": 0.0,
+      "z": 3.4,
+      "rot": 0.0,
       "acao": "acenando",
       "exp": "sorriso"
      }
@@ -1687,16 +1949,28 @@
     "cartoes": [
      {
       "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "RAIO"
+     },
+     {
+      "tipo": "chamada",
       "icone": "compartilhar",
       "texto": "COMPARTILHE",
-      "trecho": 0,
-      "sub": "com quem tem medo de tempestade"
+      "trecho": 2
      },
      {
       "tipo": "chamada",
       "icone": "seguir",
       "texto": "SIGA",
-      "trecho": 1,
+      "trecho": 3,
       "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
      }
     ],
@@ -1707,8 +1981,18 @@
       "volume": 0.5
      },
      {
-      "som": "ding",
+      "som": "pop",
       "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
       "volume": 0.55
      }
     ]

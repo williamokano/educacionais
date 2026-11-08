@@ -93,7 +93,7 @@ só `narrar.py` com o cache (ou editar o `endcard` do `episode.json`) e um novo 
 | `cenario` | genéricos: `escuro`, `cor-solida` (`cor`) · o resto vem do pacote da série | fundo e objetos |
 | `clima` | `neutro` `manha` `entardecer` `noite` `tensao` `perigo` `lembranca` `recap` | tinta por cima; tensão/perigo com vinheta; lembrança (flashback) em sépia; recap do episódio anterior em cinza, escuro, com vinheta e grão |
 | `hud` | `false` | esconde o HUD (cold open) |
-| `transicao` | `fade` (padrão) · `corte` · `whip` | entrada da batida |
+| `transicao` | `fusao` (padrão: fusão cruzada, a cena que sai fica embaixo congelada no último quadro e a nova sobe de 0 a 1 em ~0,25 s, sem passar pelo preto) · `corte` (seco) · `fade` (legado, sobe a partir do escuro) · `whip` | entrada da batida; a primeira batida sempre abre em corte. `transicaoDur` (s) muda a duração da fusão. No topo do roteiro: `transicao`, `transicaoDur` e `transicaoFinal` (`fusao`/`corte`, entrada do cartão final) valem como padrão das batidas que não dizem a sua |
 | `camera.plano` | `geral` `medio` (padrão) `close` `detalhe` | tamanho dos personagens e linha do chão |
 | `camera.movimento` | push lento (padrão) · `zoom-lento` `zoom-saindo` `pan-direita` `pan-esquerda` `tilt-subindo` `parado` | nenhuma cena fica parada |
 | `camera.tremor` | `true` | tremor |

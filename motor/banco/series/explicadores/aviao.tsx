@@ -2,11 +2,12 @@ import React, { useMemo } from "react";
 import * as THREE from "three";
 import { useThree } from "@react-three/fiber";
 import { FONT } from "../../../src/theme";
-import { clamp01, lerp, suave, valor } from "../../../src/v3d/anima";
+import { clamp01, lerp, mistura, suave, valor } from "../../../src/v3d/anima";
 import { poseDe3D } from "../../../src/v3d/acoes";
+import { Anterior, poseGente, posicaoGente } from "../../../src/v3d/gente";
 import { Boneco3D, piscar } from "../../../src/v3d/personagem";
 import { Caixa, Mat, rnd } from "../../../src/v3d/qualidade";
-import { Cenario3D, Cenario3DProps, Expressao3D, Pose3D, V3, Valor } from "../../../src/v3d/tipos";
+import { Cenario3D, Cenario3DProps, Expressao3D, PontoCamera, Pose3D, V3, Valor } from "../../../src/v3d/tipos";
 import { Etiqueta, Fluxo, Halo, Seta, Texto3D, V } from "./cozinha-base";
 import { Auto } from "./pista";
 import { zeca } from "./zeca";
@@ -35,7 +36,20 @@ import { zeca } from "./zeca";
 //              chaves: placa, ar, pressao, asa, forca0, curva
 
 const n0 = (v: unknown) => v as Valor;
-const chaves = (a: [number, number][], p: number) => {
+/** Início de cada trecho da fala da batida (em fração 0..1) para as chaves "tK" / "tK+0.1": o corte segue a voz, não a contagem de palavras. */
+let TRS: number[] = [];
+let DUR = 5;
+const pos = (x: number | string): number => {
+  if (typeof x === "number") return x;
+  const e = /^e([+-][\d.]+)$/.exec(x); // "e-2.5" = 2,5 s antes do fim da batida
+  if (e) return 1 + parseFloat(e[1]) / Math.max(DUR, 0.1);
+  const m = /^t(\d+)([+-][\d.]+)?$/.exec(x);
+  if (!m) return parseFloat(x) || 0;
+  const k = +m[1];
+  return (k >= TRS.length ? 1 : TRS[k] / Math.max(DUR, 0.1)) + (m[2] ? parseFloat(m[2]) : 0);
+};
+const chaves = (a0: [number | string, number][], p: number) => {
+  const a = a0.map(([x, v]) => [pos(x), v] as [number, number]);
   if (p <= a[0][0]) return a[0][1];
   for (let i = 1; i < a.length; i++) {
     if (p <= a[i][0]) return lerp(a[i - 1][1], a[i][1], suave(clamp01((p - a[i - 1][0]) / Math.max(a[i][0] - a[i - 1][0], 1e-6))));
@@ -44,7 +58,19 @@ const chaves = (a: [number, number][], p: number) => {
 };
 const nv = (v: unknown, p: number, pad = 0) => (Array.isArray(v) ? chaves(v as [number, number][], p) : valor(n0(v), p, pad));
 
-const PALCO_X: Record<string, number> = { campo: 0, tunel: 60, carro: 120, pista: 180, ceu: 240 };
+/** Estado do avião grande a partir dos campos da cena. Sem `semCauda`, a cauda existe; com ela, entra pelos campos estH/estV. */
+const aviaoProps = (cena: Record<string, unknown>, n: (k: string, pad?: number) => number) => {
+  const dc = cena.semCauda === true ? 0 : 1;
+  return {
+    fus: n("fus", 1), turb: n("turb", 1), raiox: n("raiox"), ar: n("ar"),
+    ctl: {
+      estH: n("estH", dc), estV: n("estV", dc), prof: n("profundor"), profV: n("profV"), ail: n("aileron"), ailV: n("ailV"),
+      leme: n("leme"), lemeV: n("lemeV"), flap: n("flap"), flapV: n("flapV"), inchar: n("inchar"), motorCorte: n("motorCorte"), duto: n("duto"),
+    } as Ctl,
+  };
+};
+
+const PALCO_X: Record<string, number> = { campo: 0, tunel: 60, carro: 120, pista: 180, ceu: 240, janela: 300 };
 const BRANCO = "#f4f6f8";
 const AZUL_LIV = "#1f5fa8";
 const LARANJA = "#ff8a2a";
@@ -55,7 +81,7 @@ const PELE = "#c98f63";
 
 /* ---------- céu, chão, nuvens ---------- */
 
-const Dome: React.FC<{ topo: string; meio: string; base: string; r?: number }> = ({ topo, meio, base, r = 68 }) => {
+const Dome: React.FC<{ topo: string; meio: string; base: string; r?: number; ox?: number }> = ({ topo, meio, base, r = 68, ox = 0 }) => {
   const { camera } = useThree();
   const geo = useMemo(() => {
     const g = new THREE.SphereGeometry(1, 24, 18);
@@ -73,11 +99,13 @@ const Dome: React.FC<{ topo: string; meio: string; base: string; r?: number }> =
     return g;
   }, [topo, meio, base]);
   return (
-    <mesh geometry={geo} scale={r} position={[camera.position.x, camera.position.y, camera.position.z]} renderOrder={-10}>
+    <mesh geometry={geo} scale={r} position={[camera.position.x - ox, camera.position.y, camera.position.z]} renderOrder={-10}>
       <meshBasicMaterial vertexColors side={THREE.BackSide} fog={false} depthWrite={false} />
     </mesh>
   );
 };
+
+const mixCor = (a: string, b: string, k: number) => "#" + new THREE.Color(a).lerp(new THREE.Color(b), k).getHexString();
 
 const Chao: React.FC<{ cor: string; cor2?: string; listras?: boolean }> = ({ cor, cor2, listras }) => (
   <group>
@@ -96,9 +124,39 @@ const Nuvem: React.FC<{ p: V; s: number }> = ({ p, s }) => (
   </group>
 );
 
-const Nuvens: React.FC<{ t: number; lista?: [number, number, number, number][]; vel?: number }> = ({ t, lista, vel = 0.5 }) => {
+const Nuvens: React.FC<{ t: number; lista?: [number, number, number, number][]; vel?: number; dy?: number }> = ({ t, lista, vel = 0.5, dy = 0 }) => {
   const L = lista ?? [[-45, 40, -55, 5], [22, 52, -58, 6], [58, 34, -50, 4], [-20, 30, -45, 3.5], [0, 62, -60, 6], [-60, 52, -45, 5]];
-  return <group>{L.map(([x, y, z, s], i) => <Nuvem key={i} p={[((x + 80 + t * vel * (0.6 + rnd(i) * 0.8)) % 160) - 80, y, z]} s={s} />)}</group>;
+  return <group>{L.map(([x, y, z, s], i) => <Nuvem key={i} p={[((x + 80 + t * vel * (0.6 + rnd(i) * 0.8)) % 160) - 80, dy ? ((((y - dy + 20) % 140) + 140) % 140) - 20 : y, z]} s={s} />)}</group>;
+};
+
+/** Nuvens do céu em três camadas de profundidade (paralaxe): as de perto passam rápido, as de longe devagar; `dy` as faz descer quando o avião sobe. */
+const CAMADAS: [number, number, number, number][] = [[-18, 1.7, 7, 5], [-24, 2.4, 4.2, 5], [-30, 3.2, 2.4, 4]];
+const NuvensCeu: React.FC<{ t: number; ay: number; dy: number; vel: number }> = ({ t, ay, dy, vel }) => (
+  <group>
+    {CAMADAS.flatMap(([z, s, v, nn], c) => Array.from({ length: nn }).map((_, i) => {
+      const x0 = -45 + (i + rnd(c * 11 + i) * 0.8) * (90 / nn);
+      const x = ((((x0 + 45 + t * v * vel) % 90) + 90) % 90) - 45;
+      const yo0 = (rnd(c * 7 + i + 3) - 0.5) * 52;
+      const yo = ((((yo0 - dy + 30) % 60) + 60) % 60) - 30;
+      return <Nuvem key={`${c}-${i}`} p={[x, ay + yo, z - rnd(i + c) * 3]} s={s * (0.8 + rnd(i * 3 + c) * 0.5)} />;
+    }))}
+  </group>
+);
+
+/** Estrelas presas à câmera (o céu escuro lá em cima). */
+const Estrelas: React.FC<{ t: number; ox?: number }> = ({ t, ox = 0 }) => {
+  const { camera } = useThree();
+  return (
+    <group position={[camera.position.x - ox, camera.position.y, camera.position.z]}>
+      {Array.from({ length: 70 }).map((_, i) => {
+        const a = rnd(i) * Math.PI * 2;
+        const b = 0.05 + rnd(i + 90) * 1.35;
+        const r = 52;
+        const br = 0.6 + 0.4 * Math.sin(t * (1.5 + rnd(i + 5) * 2) + i);
+        return <mesh key={i} position={[Math.cos(a) * Math.cos(b) * r, Math.sin(b) * r - 4, Math.sin(a) * Math.cos(b) * r]} scale={0.16 + 0.12 * rnd(i + 40)}><octahedronGeometry args={[1, 0]} /><meshBasicMaterial color="#ffffff" transparent opacity={br} fog={false} /></mesh>;
+      })}
+    </group>
+  );
 };
 
 const Arvore: React.FC<{ x: number; z: number; s: number; cor?: string }> = ({ x, z, s, cor = "#3f8a3c" }) => (
@@ -168,26 +226,125 @@ const Pena: React.FC<{ p: V; rot: [number, number, number]; c: number; l: number
   <mesh position={p} rotation={rot} scale={[c / 2, 0.05 + l * 0.004, l / 2]}><sphereGeometry args={[1, 8, 6]} /><meshStandardMaterial color={cor} roughness={0.9} flatShading /></mesh>
 );
 
-/** Asa de pena do tamanho da asa do avião (planta como a da asa; penas de ponta a ponta). */
-const AsaPenaGrande: React.FC<{ sinal: 1 | -1 }> = ({ sinal }) => (
-  <group position={[0, -0.5, 0]}>
-    {Array.from({ length: 18 }).map((_, i) => {
-      const z = 1.6 + i * 0.88;
-      const xa = xBordaAtaque(z);
-      const xf = xBordaFuga(z);
-      const c = xf - xa + 0.9;
-      const cor = ["#f3efe6", "#e6dccb", "#cdb89a", "#a98b66"][(i % 3) + (i > 12 ? 1 : 0)];
-      return (
-        <group key={i}>
-          <mesh position={[(xa + xf) / 2, 0, z * sinal]} scale={[c / 2, 0.11, 0.66]}><sphereGeometry args={[1, 10, 6]} /><meshStandardMaterial color={cor} roughness={0.95} flatShading /></mesh>
-          <mesh position={[(xa + xf) / 2, 0.1, z * sinal]} scale={[c / 2, 0.04, 0.05]}><boxGeometry args={[2, 1, 1]} /><meshStandardMaterial color="#8a7556" roughness={1} /></mesh>
+/** Asa de pena de pássaro/anjo presa a um "braço" (eixo local -y = ao longo do braço, para fora; +x*lado = para cima; -z = para trás).
+ *  Borda de ataque lisa (o braço), penas saindo do braço e abrindo em leque para cima e para trás: primárias (longas) na ponta, secundárias no meio, cobertoras curtas no ombro. */
+const PenasAsa: React.FC<{ lado: 1 | -1; L?: number; fl?: number; w?: number; th?: number; n?: number; t?: number; flex?: number; re?: number }> = ({ lado, L = 0.62, fl = 1.35, w = 0.068, th = 0.012, n = 13, t = 0, flex = 0.16, re = 0.05 }) => {
+  const penas = Array.from({ length: n }).map((_, i) => {
+    const u = (i + 0.5) / n;
+    const phi = -0.25 + 0.95 * Math.pow(u, 1.1) + flex * u * Math.sin(t * 15 - 2.2 * u);
+    const th2 = 0.3 + 0.12 * u;
+    const dir = new THREE.Vector3(lado * Math.cos(phi) * Math.cos(th2), -Math.sin(phi) * Math.cos(th2), -Math.sin(th2)).normalize();
+    const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), dir);
+    const Lf = fl * (0.17 + 0.6 * Math.pow(u, 1.15));
+    return { u, q, Lf, base: [lado * 0.01, -u * L, -0.01 + 0.0006 * i * fl] as V };
+  });
+  return (
+    <group>
+      {penas.map((p, i) => (
+        <group key={i} position={p.base} quaternion={p.q}>
+          <mesh position={[0, p.Lf / 2, 0]} scale={[w, p.Lf / 2, th]}><sphereGeometry args={[1, 8, 6]} /><meshStandardMaterial color={i % 2 ? "#f1ece0" : "#e4dac6"} roughness={0.95} flatShading /></mesh>
+          {p.u > 0.55 && <mesh position={[0, p.Lf * 0.88, th * 0.2]} scale={[w * 0.95, p.Lf * 0.14, th * 1.15]}><sphereGeometry args={[1, 8, 6]} /><meshStandardMaterial color={p.u > 0.8 ? "#8f7f66" : "#b9a78a"} roughness={0.95} flatShading /></mesh>}
+          <mesh position={[0, p.Lf * 0.22, th * 1.2]} scale={[w * 0.9, p.Lf * 0.22, th * 0.9]}><sphereGeometry args={[1, 8, 6]} /><meshStandardMaterial color="#fbf8f0" roughness={0.9} flatShading /></mesh>
         </group>
-      );
+      ))}
+      {/* borda de ataque: o braço coberto, liso e arredondado */}
+      <mesh position={[0, -L / 2, 0.005]} scale={[1, 1, 1]}><cylinderGeometry args={[re * 0.9, re * 1.15, L, 10]} /><meshStandardMaterial color="#faf6ec" roughness={0.9} /></mesh>
+      <mesh position={[lado * re * 0.9, -L * 0.45, 0.002]} scale={[re * 1.3, L * 0.5, th * 2]}><sphereGeometry args={[1, 10, 6]} /><meshStandardMaterial color="#f7f2e6" roughness={0.9} flatShading /></mesh>
+    </group>
+  );
+};
+
+/** Asa de pena do tamanho da asa do avião: a MESMA forma da asa do braço (borda de ataque na linha da asa, penas para cima e para trás), parada. */
+const AsaPenaGrande: React.FC<{ sinal: 1 | -1 }> = ({ sinal }) => {
+  const o = new THREE.Vector3(8.5, 0, 15.7 * sinal);
+  const L = o.length();
+  o.normalize();
+  const back = new THREE.Vector3(1, 0, 0).addScaledVector(o, -o.x).normalize();
+  const x = new THREE.Vector3().crossVectors(o, back);
+  const lado: 1 | -1 = x.y >= 0 ? 1 : -1;
+  const m = new THREE.Matrix4().makeBasis(x, o.clone().negate(), back.clone().negate());
+  const eu = new THREE.Euler().setFromRotationMatrix(m);
+  return (
+    <group position={[-3.2, -0.5, 1.5 * sinal]} rotation={eu}>
+      <PenasAsa lado={lado} L={L} fl={7.5} w={1.25} th={0.16} n={15} flex={0} re={0.9} />
+    </group>
+  );
+};
+
+/** Ar da cabine (coordenadas locais): duto laranja do motor ao trocador, ar frio azul pelo teto, saída traseira. */
+const Duto: React.FC<{ k: number; t: number }> = ({ k, t }) => {
+  const quente: V[] = [[0.3, -0.9, 5.7], [0.4, -0.5, 4.6], [0.9, -0.1, 3.2], [1.2, 0.5, 2.0]];
+  const frio: V[] = [[1.2, 0.9, 1.4], [1.0, 1.35, 0.4], [-3, 1.5, 0], [-9, 1.5, 0]];
+  const cai = [-8, -5.5, -3, -0.5].map((x) => [[x, 1.5, 0.2], [x - 0.1, 0.5, 0.25]] as V[]);
+  const saida: V[] = [[7.5, -1.3, 0], [9.4, -1.9, 0], [11.5, -2.4, 0]];
+  const kq = clamp01(k / 0.4);
+  const kf = clamp01((k - 0.4) / 0.35);
+  const ks = clamp01((k - 0.75) / 0.25);
+  return (
+    <group>
+      <Tubo pts={quente} cor="#ff8a2a" r={0.13} op={0.95 * kq} />
+      <Fluxo rotas={[quente]} t={t} n={3} vel={3} cor="#fff0a0" w={0.14} op={kq} tam={0.9} />
+      <Caixa p={[1.2, 0.7, 1.7]} t={[0.7, 0.6, 0.7]} cor="#4db4ff" raio={0.08} sombra={false} />
+      <Tubo pts={frio} cor="#9fd8ff" r={0.11} op={0.95 * kf} />
+      <Fluxo rotas={[frio]} t={t} n={3} vel={3} cor="#ffffff" w={0.12} op={kf} tam={0.9} />
+      <Fluxo rotas={cai} t={t} n={2} vel={1.2} cor="#d8f2ff" w={0.08} op={kf} tam={0.5} />
+      <Caixa p={[7.4, -1.25, 0]} t={[0.5, 0.2, 0.5]} cor="#c88bff" raio={0.04} sombra={false} />
+      <Fluxo rotas={[saida]} t={t} n={3} vel={4} cor="#d8f2ff" w={0.1} op={ks} tam={1.0} />
+    </group>
+  );
+};
+
+const COR_PAX = ["#ff8a2a", "#4db4ff", "#ff5a8a", "#6bd36b", "#c88bff", "#ffd23f"];
+const COR_CAIXA = ["#b9824a", "#c99a5e", "#8f6a3f", "#d9a45a", "#4a7fb5"];
+const ZECA_ASSENTO = 9; // índice da poltrona (fileira da frente do corte) onde o Zeca senta
+
+/** Raio-X da fuselagem: piso, poltronas com gente, caixas no porão. Coordenadas locais do avião (metros). */
+const Interior: React.FC<{ k: number }> = ({ k }) => (
+  <group scale={[1, Math.max(suave(k), 0.001), Math.max(suave(k), 0.001)]} visible={k > 0.02}>
+    <Caixa p={[-1.2, -0.62, 0]} t={[26, 0.08, 2.9]} cor="#cfd6dd" raio={0.02} sombra={false} />
+    {Array.from({ length: 19 }).map((_, i) => {
+      const x = -10.6 + i * 0.98;
+      return [-0.75, 0.75].map((z, j) => (
+        <group key={`${i}${j}`} position={[x, 0, z]}>
+          <Caixa p={[0, -0.4, 0]} t={[0.5, 0.14, 0.55]} cor="#2f5f9a" raio={0.04} sombra={false} />
+          <Caixa p={[0.22, -0.02, 0]} t={[0.1, 0.72, 0.55]} cor="#2f5f9a" raio={0.04} sombra={false} />
+          {(i * 3 + j * 2) % 5 !== 0 && !(i === ZECA_ASSENTO && j === 1) && (
+            <group>
+              <Caixa p={[-0.02, -0.08, 0]} t={[0.3, 0.5, 0.34]} cor={COR_PAX[(i + j * 2) % COR_PAX.length]} raio={0.1} sombra={false} />
+              <mesh position={[-0.02, 0.34, 0]}><sphereGeometry args={[0.17, 10, 8]} /><meshStandardMaterial color={i % 2 ? PELE : "#e8b890"} roughness={0.8} /></mesh>
+            </group>
+          )}
+        </group>
+      ));
     })}
+    {Array.from({ length: 9 }).map((_, i) => <Caixa key={i} p={[-11.5 + i * 2.9, -1.3, 0]} t={[2.1, 0.85, 1.9]} cor={COR_CAIXA[i % COR_CAIXA.length]} raio={0.08} sombra={false} />)}
   </group>
 );
 
-const Aviao: React.FC<{ penas?: boolean; t: number }> = ({ penas, t }) => {
+/** Raio do corpo da fuselagem na posição axial `a` (para os aros do raio-X). */
+const raioFus = (a: number) => {
+  for (let i = 1; i < PERFIL_FUS.length; i++) {
+    if (a <= PERFIL_FUS[i][1]) {
+      const [r0, a0] = PERFIL_FUS[i - 1];
+      const [r1, a1] = PERFIL_FUS[i];
+      return lerp(r0, r1, (a - a0) / Math.max(a1 - a0, 1e-6));
+    }
+  }
+  return 0.1;
+};
+
+/** Comandos e estado do avião grande. Visibilidades 0..1 (entram com um pop); ângulos em rad. */
+type Ctl = { estH?: number; estV?: number; prof?: number; profV?: number; ail?: number; ailV?: number; leme?: number; lemeV?: number; flap?: number; flapV?: number; inchar?: number; motorCorte?: number; duto?: number };
+type AviaoP = { penas?: boolean; t: number; fus?: number; turb?: number; raiox?: number; ar?: number; ctl?: Ctl };
+
+const Aviao: React.FC<AviaoP> = ({ penas, t, fus: fusK = 1, turb = 1, raiox = 0, ar = 0, ctl = {} }) => {
+  const fx = Math.max(suave(clamp01(fusK)), 0.001);
+  const tk = Math.max(suave(clamp01(turb)), 0.001);
+  const eH = ctl.estH ?? 1;
+  const eV = ctl.estV ?? 1;
+  const inchar = ctl.inchar ?? 0;
+  const mc = ctl.motorCorte ?? 0;
+  const pop = (k: number) => Math.max(suave(clamp01(k)), 0.001);
   const fus = useMemo(() => {
     const g = new THREE.LatheGeometry(PERFIL_FUS.map(([r, a]) => new THREE.Vector2(r, a)), 32);
     g.rotateZ(Math.PI / 2);
@@ -207,29 +364,46 @@ const Aviao: React.FC<{ penas?: boolean; t: number }> = ({ penas, t }) => {
   }, []);
   return (
     <group>
-      <mesh geometry={fus}><meshStandardMaterial color={BRANCO} roughness={0.35} metalness={0.15} /></mesh>
-      {/* faixa azul, janelas e cabine */}
-      {[-1, 1].map((s) => (
-        <group key={s}>
-          <mesh position={[-3.5, -0.35, s * 1.92]}><boxGeometry args={[16.5, 0.22, 0.05]} /><meshStandardMaterial color={AZUL_LIV} roughness={0.4} /></mesh>
-          {Array.from({ length: 19 }).map((_, i) => <mesh key={i} position={[-10.6 + i * 0.98, 0.5, s * 1.88]}><boxGeometry args={[0.3, 0.38, 0.06]} /><meshStandardMaterial color="#1d2f48" roughness={0.2} metalness={0.4} /></mesh>)}
-          <mesh position={[-16.9, 0.95, s * 0.72]} rotation={[0, s * 0.62, 0]}><boxGeometry args={[0.7, 0.38, 0.06]} /><meshStandardMaterial color="#1d2f48" roughness={0.2} metalness={0.4} /></mesh>
-          <mesh position={[-17.6, 0.9, s * 0.35]} rotation={[0, s * 0.3, 0]}><boxGeometry args={[0.5, 0.36, 0.06]} /><meshStandardMaterial color="#1d2f48" roughness={0.2} metalness={0.4} /></mesh>
-        </group>
-      ))}
-      <mesh position={[-19.2, 0.1, 0]}><sphereGeometry args={[0.3, 8, 6]} /><meshStandardMaterial color="#2b2f36" /></mesh>
+      <group scale={[fx, 1 + 0.07 * inchar, 1 + 0.07 * inchar]} visible={fusK > 0.01}>
+        <mesh geometry={fus}><meshStandardMaterial color={BRANCO} roughness={0.35} metalness={0.15} transparent opacity={1 - 0.82 * raiox} depthWrite={raiox < 0.4} /></mesh>
+        {raiox > 0.01 && [-15, -11, -7, -3, 1, 5, 9, 13, 16].map((a) => <mesh key={a} position={[a, 0, 0]} rotation={[0, Math.PI / 2, 0]}><torusGeometry args={[raioFus(a), 0.03, 6, 36]} /><meshBasicMaterial color="#ffffff" transparent opacity={0.8 * raiox} depthWrite={false} /></mesh>)}
+        {raiox > 0.01 && <Interior k={raiox} />}
+        {/* faixa azul, janelas e cabine */}
+        {raiox < 0.5 && [-1, 1].map((s) => (
+          <group key={s}>
+            <mesh position={[-3.5, -0.35, s * 1.92]}><boxGeometry args={[16.5, 0.22, 0.05]} /><meshStandardMaterial color={AZUL_LIV} roughness={0.4} /></mesh>
+            {Array.from({ length: 19 }).map((_, i) => <mesh key={i} position={[-10.6 + i * 0.98, 0.5, s * 1.88]}><boxGeometry args={[0.3, 0.38, 0.06]} /><meshStandardMaterial color="#1d2f48" roughness={0.2} metalness={0.4} /></mesh>)}
+            <mesh position={[-16.9, 0.95, s * 0.72]} rotation={[0, s * 0.62, 0]}><boxGeometry args={[0.7, 0.38, 0.06]} /><meshStandardMaterial color="#1d2f48" roughness={0.2} metalness={0.4} /></mesh>
+            <mesh position={[-17.6, 0.9, s * 0.35]} rotation={[0, s * 0.3, 0]}><boxGeometry args={[0.5, 0.36, 0.06]} /><meshStandardMaterial color="#1d2f48" roughness={0.2} metalness={0.4} /></mesh>
+          </group>
+        ))}
+        <mesh position={[-19.2, 0.1, 0]}><sphereGeometry args={[0.3, 8, 6]} /><meshStandardMaterial color="#2b2f36" /></mesh>
+      </group>
       {/* asas (ou penas) e turbinas */}
       {penas ? (
         <group><AsaPenaGrande sinal={1} /><AsaPenaGrande sinal={-1} /></group>
       ) : (
         <group>
-          <mesh geometry={asaD} position={[0, -0.4, 0]}><Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla /></mesh>
-          <mesh geometry={asaE} position={[0, -0.4, 0]}><Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla /></mesh>
+          <mesh geometry={asaD} position={[0, -0.4, 0]}>{raiox > 0.01 ? <meshStandardMaterial color="#e4e9ee" transparent opacity={1 - 0.8 * raiox} depthWrite={false} side={THREE.DoubleSide} /> : <Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla />}</mesh>
+          <mesh geometry={asaE} position={[0, -0.4, 0]}>{raiox > 0.01 ? <meshStandardMaterial color="#e4e9ee" transparent opacity={1 - 0.8 * raiox} depthWrite={false} side={THREE.DoubleSide} /> : <Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla />}</mesh>
           {[-1, 1].map((s) => (
             <group key={s}>
               <Caixa p={[7.7, 0.5, s * 17.2]} t={[1.5, 1.5, 0.12]} cor={AZUL_LIV} raio={0.04} r={[0, 0, 0.0]} />
-              <group position={[-1.9, -1.55, s * 5.7]}>
-                <mesh rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[1.0, 1.1, 3.6, 18]} /><meshStandardMaterial color="#dfe4ea" roughness={0.3} metalness={0.35} /></mesh>
+              <group position={[-1.9, -1.55, s * 5.7]} scale={tk} visible={turb > 0.01}>
+                {/* pás do ventilador na frente da turbina */}
+                <group position={[-1.7, 0, 0]} rotation={[t * 14, 0, 0]}>
+                  {Array.from({ length: 14 }).map((_, i) => <group key={i} rotation={[(i * 2 * Math.PI) / 14, 0, 0]}><Caixa p={[0, 0.46, 0]} t={[0.05, 0.8, 0.2]} cor="#e3e8ee" raio={0.01} sombra={false} /></group>)}
+                </group>
+                {/* ar jogado para trás */}
+                {ar > 0.02 && (
+                  <Fluxo rotas={Array.from({ length: 7 }).map((_, i) => { const a = (i * 2 * Math.PI) / 7; return [[2.5, Math.sin(a) * 0.35, Math.cos(a) * 0.35], [9, Math.sin(a) * 0.7, Math.cos(a) * 0.7], [16, Math.sin(a) * 1.1, Math.cos(a) * 1.1]] as V[]; })} t={t} n={3} vel={9} cor="#d8f2ff" w={0.2} op={ar} tam={3.2} />
+                )}
+                <mesh rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[1.0, 1.1, 3.6, 18]} /><meshStandardMaterial color="#dfe4ea" roughness={0.3} metalness={0.35} transparent opacity={1 - 0.8 * Math.max(mc, raiox)} depthWrite={Math.max(mc, raiox) < 0.4} /></mesh>
+                {mc > 0.01 && [-0.7, 0.1, 0.9].map((x, i) => (
+                  <group key={i} position={[x, 0, 0]} rotation={[t * (10 + i * 4), 0, 0]} scale={mc}>
+                    {Array.from({ length: 12 }).map((_, j) => <group key={j} rotation={[(j * 2 * Math.PI) / 12, 0, 0]}><Caixa p={[0, 0.42 - i * 0.07, 0]} t={[0.1, 0.62 - i * 0.12, 0.2]} cor={i === 2 ? "#ff8a2a" : "#ffd23f"} raio={0.01} sombra={false} /></group>)}
+                  </group>
+                ))}
                 <mesh position={[-1.85, 0, 0]} rotation={[0, 0, Math.PI / 2]}><torusGeometry args={[1.02, 0.12, 8, 20]} /><meshStandardMaterial color={AZUL_LIV} roughness={0.4} /></mesh>
                 <mesh position={[-1.75, 0, 0]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.88, 0.88, 0.05, 18]} /><meshStandardMaterial color="#14181f" roughness={0.6} /></mesh>
                 <mesh position={[-1.9, 0, 0]} rotation={[0, 0, Math.PI / 2]}><coneGeometry args={[0.28, 0.6, 12]} /><meshStandardMaterial color="#c9d1d9" metalness={0.5} roughness={0.3} /></mesh>
@@ -240,11 +414,34 @@ const Aviao: React.FC<{ penas?: boolean; t: number }> = ({ penas, t }) => {
           ))}
         </group>
       )}
-      {/* cauda */}
-      <mesh geometry={leme}><meshStandardMaterial color={AZUL_LIV} roughness={0.4} side={THREE.DoubleSide} /></mesh>
-      <mesh position={[16.6, 5.4, 0]} rotation={[0, 0, 0.78]}><boxGeometry args={[5.2, 0.5, 0.34]} /><meshStandardMaterial color={LARANJA} roughness={0.5} /></mesh>
-      <mesh geometry={estD} position={[0, 0.7, 0]}><Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla /></mesh>
-      <mesh geometry={estE} position={[0, 0.7, 0]}><Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla /></mesh>
+      {/* cauda: aba deitada (estH), aba em pé (estV) e as bordas móveis, cada uma com cor própria */}
+      <group position={[17, 0.7, 0]} scale={pop(eH)} visible={eH > 0.01}>
+        <group position={[-17, -0.7, 0]}>
+          <mesh geometry={estD} position={[0, 0.7, 0]}><Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla /></mesh>
+          <mesh geometry={estE} position={[0, 0.7, 0]}><Mat cor="#e4e9ee" rug={0.45} met={0.2} dupla /></mesh>
+        </group>
+      </group>
+      <group position={[17, 4, 0]} scale={pop(eV)} visible={eV > 0.01}>
+        <group position={[-17, -4, 0]}>
+          <mesh geometry={leme}><meshStandardMaterial color={AZUL_LIV} roughness={0.4} side={THREE.DoubleSide} /></mesh>
+          <mesh position={[16.6, 5.4, 0]} rotation={[0, 0, 0.78]}><boxGeometry args={[5.2, 0.5, 0.34]} /><meshStandardMaterial color={LARANJA} roughness={0.5} /></mesh>
+        </group>
+      </group>
+      {(ctl.profV ?? 0) > 0.01 && [-1, 1].map((sd) => (
+        <group key={`p${sd}`} position={[17.7, 0.64, 0]} rotation={[0, 0, ctl.prof ?? 0]} scale={pop(ctl.profV ?? 0)}><Caixa p={[0.6, 0, sd * 3.7]} t={[1.2, 0.14, 5.4]} cor="#ff4a2a" raio={0.03} sombra={false} /></group>
+      ))}
+      {(ctl.ailV ?? 0) > 0.01 && [-1, 1].map((sd) => (
+        <group key={`a${sd}`} position={[6.4, -0.55, sd * 13.8]} rotation={[0, 0, sd * (ctl.ail ?? 0)]} scale={pop(ctl.ailV ?? 0)}><Caixa p={[0.5, 0, 0]} t={[1.1, 0.14, 4.6]} cor="#ffd23f" raio={0.03} sombra={false} /></group>
+      ))}
+      {(ctl.lemeV ?? 0) > 0.01 && (
+        <group position={[18.2, 4.8, 0]} rotation={[0, ctl.leme ?? 0, 0]} scale={pop(ctl.lemeV ?? 0)}><Caixa p={[0.65, 0, 0]} t={[1.3, 6.4, 0.38]} cor="#b06bff" raio={0.03} sombra={false} /></group>
+      )}
+      {(ctl.flapV ?? 0) > 0.01 && [-1, 1].map((sd) => (
+        <group key={`f${sd}`} position={[4.93 + 1.1 * (ctl.flap ?? 0), -0.55 - 0.2 * (ctl.flap ?? 0), sd * 6.5]} rotation={[0, 0, -0.62 * (ctl.flap ?? 0)]} scale={pop(ctl.flapV ?? 0)}><Caixa p={[0.65, 0, 0]} t={[1.3, 0.14, 5]} cor="#17a845" raio={0.03} sombra={false} /></group>
+      ))}
+      {/* ar da cabine: do motor, esquentado, passa pelo trocador, esfria e entra; sai por uma saída atrás */}
+      {(ctl.duto ?? 0) > 0.02 && <Duto k={ctl.duto ?? 0} t={t} />}
+      {inchar > 0.02 && Array.from({ length: 7 }).map((_, i) => [-1, 1].map((sd) => <Seta key={`${i}${sd}`} a={[-12 + i * 3.6, sd * 1.7, 0.2]} b={[-12 + i * 3.6, sd * (1.7 + 1.1 * inchar), 0.2]} cor={VERMELHO} w={0.16} op={inchar} />))}
       {penas === undefined && <mesh visible={false}><boxGeometry args={[t, 0, 0]} /></mesh>}
     </group>
   );
@@ -516,53 +713,87 @@ const ModeloPlaca: React.FC<{ k: number; helice: number; t: number; alca?: boole
 
 /* ---------- pessoas ---------- */
 
-type GenteE = { x?: unknown; y?: unknown; z?: unknown; rot?: unknown; acao?: string | [number, string, string?][]; exp?: Expressao3D; pose?: Pose3D | [number, Pose3D][]; incl?: unknown; esc?: number; penas?: boolean; suor?: number; ate?: number; de?: number; bate?: [number, number] };
+type GenteE = { x?: unknown; y?: unknown; z?: unknown; rot?: unknown; acao?: string | [number | string, string, string?][]; exp?: Expressao3D; ant?: Anterior; entradaDur?: number; pose?: Pose3D | [number | string, Pose3D][]; incl?: unknown; esc?: number; penas?: boolean; penaEsc?: unknown; mala?: boolean; copo?: number; tontura?: number; tosse?: number; suor?: unknown; ate?: number | string; de?: number | string; bate?: [number | string, number | string] };
 
-const AsaBraco: React.FC<{ lado: 1 | -1 }> = ({ lado }) => (
-  <group>
-    {Array.from({ length: 9 }).map((_, i) => {
-      const a = (i - 4) * 0.075 * lado;
-      const l = 0.78 - Math.abs(i - 4) * 0.045;
-      return (
-        <mesh key={i} position={[Math.sin(a) * l * 0.5 + lado * 0.1, -Math.cos(a) * l * 0.5 - 0.08, 0.05 - i * 0.004]} rotation={[0, 0, -a]} scale={[0.065, l / 2, 0.015]}>
-          <sphereGeometry args={[1, 8, 6]} /><meshStandardMaterial color={i % 2 ? "#f3efe6" : "#d9c7a6"} roughness={0.95} flatShading />
-        </mesh>
-      );
-    })}
-  </group>
+const AsaBraco: React.FC<{ lado: 1 | -1; t: number; esc: number }> = ({ lado, t, esc }) => (
+  <group scale={esc}><PenasAsa lado={lado} t={t} flex={esc > 1.05 ? 0 : 0.16} re={0.05 * (esc > 1.05 ? 0.55 : 1)} /></group>
 );
 
 const Pessoa: React.FC<{ g: GenteE; p: number; t: number; tAbs: number }> = ({ g, p, t, tAbs }) => {
-  if (g.ate !== undefined && p > g.ate) return null;
-  if (g.de !== undefined && p < g.de) return null;
-  let acao = "em-pe";
-  let exp: Expressao3D = g.exp ?? "sorriso";
-  if (typeof g.acao === "string") acao = g.acao;
-  else if (Array.isArray(g.acao)) {
-    const e = g.acao.find((x) => p <= x[0]) ?? g.acao[g.acao.length - 1];
-    acao = e[1];
-    if (e[2]) exp = e[2] as Expressao3D;
-  }
-  const extra: Pose3D = Array.isArray(g.pose) ? (g.pose.find((x) => p <= x[0]) ?? g.pose[g.pose.length - 1])[1] : (g.pose ?? {});
-  const pose: Pose3D = { ...poseDe3D(acao, t), ...extra };
-  pose["tronco.x"] = (pose["tronco.x"] ?? 0) + nv(g.incl, p, 0);
-  if (g.bate && p >= g.bate[0] && p <= g.bate[1]) {
+  if (g.ate !== undefined && p > pos(g.ate)) return null;
+  if (g.de !== undefined && p < pos(g.de)) return null;
+  const { acao, exp, pose } = poseGente(g, { p, t: t, tAbs, incl: nv(g.incl, p, 0), chv: pos });
+  if (g.bate && p >= pos(g.bate[0]) && p <= pos(g.bate[1])) {
     const b = 1.2 + 0.8 * Math.sin(t * 15);
     Object.assign(pose, { "ombroE.z": b, "ombroD.z": -b, "cotoveloE.x": 0, "cotoveloD.x": 0, "cotoveloE.z": 0, "cotoveloD.z": 0, "ombroE.x": 0, "ombroD.x": 0, maos: 1 });
   }
-  const x = nv(g.x, p, 0);
-  const z = nv(g.z, p, 0);
+  const { x, y, z, rot } = posicaoGente(g, t, { x: nv(g.x, p, 0), y: nv(g.y, p, 0), z: nv(g.z, p, 0), rot: nv(g.rot, p, 0) });
+  const copoK = nv(g.copo, p, 0);
   const s = g.esc ?? 1.06;
   const ang = pose["ombroE.z"] ?? 0.12;
   return (
-    <group position={[x, nv(g.y, p, 0), z]} rotation={[0, nv(g.rot, p, 0), 0]} scale={s}>
-      <Boneco3D p={zeca} pose={pose} expressao={exp} pisca={piscar(tAbs + x * 3 + z)} boca={0} olhar={[0, 0]} suor={g.suor ?? 0} t={tAbs} />
-      {g.penas && (
-        <group position={[0, 1.09, 0]}>
-          <group position={[0.205, 0, 0]} rotation={[0, 0, pose["ombroE.z"] ?? ang]}><AsaBraco lado={1} /></group>
-          <group position={[-0.205, 0, 0]} rotation={[0, 0, pose["ombroD.z"] ?? -ang]}><AsaBraco lado={-1} /></group>
+    <group position={[x, y, z]} rotation={[0, rot, 0]} scale={s}>
+      <Boneco3D p={zeca} pose={pose} expressao={exp} pisca={piscar(tAbs + x * 3 + z)} boca={0} olhar={[0, 0]} suor={nv(g.suor, p, 0)} t={tAbs} />
+      {g.mala && (
+        <group position={[0.3, 0.3, 0.02]} rotation={[0, 0, 0.04 * Math.sin(tAbs * 2)]}>
+          <Caixa p={[0, 0, 0]} t={[0.1, 0.3, 0.4]} cor="#c0572b" raio={0.03} />
+          <Caixa p={[0, 0.17, 0]} t={[0.05, 0.05, 0.16]} cor="#3a2a22" raio={0.01} />
+          <Caixa p={[0.055, 0, 0]} t={[0.01, 0.06, 0.34]} cor="#e0b24a" raio={0.005} sombra={false} />
         </group>
       )}
+      {nv(g.copo, p, 0) > 0 && (
+        <group scale={1.7} position={[-0.22 + 0.03 * Math.sin(tAbs * 19) * copoK, 1.0 + 0.015 * Math.sin(tAbs * 23) * copoK, 0.46]} rotation={[0.18 * Math.sin(tAbs * 17) * copoK, 0, 0.2 * Math.sin(tAbs * 13) * copoK]}>
+          <mesh><cylinderGeometry args={[0.09, 0.075, 0.15, 14]} /><meshStandardMaterial color="#f4f6f8" roughness={0.4} /></mesh>
+          <mesh position={[0, 0.07, 0]} rotation={[0.2 * Math.sin(tAbs * 21) * copoK, 0, 0.25 * Math.cos(tAbs * 15) * copoK]}><cylinderGeometry args={[0.078, 0.078, 0.012, 14]} /><meshStandardMaterial color="#5b3417" roughness={0.5} /></mesh>
+          <mesh position={[0.11, 0, 0]} rotation={[0, 0, Math.PI / 2]}><torusGeometry args={[0.045, 0.012, 6, 12, Math.PI]} /><meshStandardMaterial color="#f4f6f8" roughness={0.4} /></mesh>
+        </group>
+      )}
+      {(g.tontura ?? 0) > 0.01 && Array.from({ length: 4 }).map((_, i) => {
+        const a = tAbs * 3.2 + (i * Math.PI) / 2;
+        return (
+          <group key={i} position={[Math.cos(a) * 0.3, 1.62 + 0.04 * Math.sin(a * 2), Math.sin(a) * 0.3]} rotation={[tAbs * 2, tAbs * 3 + i, 0]} scale={0.07 * (g.tontura ?? 0)}>
+            <mesh><octahedronGeometry args={[1, 0]} /><meshBasicMaterial color="#ffe14a" /></mesh>
+            <mesh rotation={[0, 0, Math.PI / 4]} scale={[0.5, 1.9, 0.5]}><octahedronGeometry args={[1, 0]} /><meshBasicMaterial color="#fff6a0" /></mesh>
+          </group>
+        );
+      })}
+      {(g.tosse ?? 0) > 0.01 && [0, 1, 2].map((i) => {
+        const u = (tAbs * 1.6 + i / 3) % 1;
+        return <mesh key={i} position={[0.0 + 0.04 * Math.sin(i * 4), 1.36 + 0.22 * u, 0.2 + 0.45 * u]} scale={(0.035 + 0.08 * u) * (g.tosse ?? 0)}><icosahedronGeometry args={[1, 1]} /><meshBasicMaterial color="#ffffff" transparent opacity={0.85 * (1 - u)} depthWrite={false} /></mesh>;
+      })}
+      {g.penas && (
+        <group position={[0, 1.09, 0]}>
+          <group position={[0.205, 0, 0]} rotation={[0, 0, pose["ombroE.z"] ?? ang]}><AsaBraco lado={1} t={tAbs} esc={nv(g.penaEsc, p, 1)} /></group>
+          <group position={[-0.205, 0, 0]} rotation={[0, 0, pose["ombroD.z"] ?? -ang]}><AsaBraco lado={-1} t={tAbs} esc={nv(g.penaEsc, p, 1)} /></group>
+        </group>
+      )}
+    </group>
+  );
+};
+
+/** O Zeca "de reação": preso à câmera (sempre inteiro, à esquerda, sobre uma nuvenzinha), para ele aparecer mesmo nos planos abertos do céu. `sx`/`sy` em ndc (-1..1), `h` = altura em ndc. */
+type ZT = GenteE & { sx: number; sy: number; h: number; nuvem?: boolean; rotY?: number };
+const ZecaTela: React.FC<{ z: ZT; p: number; t: number; tAbs: number }> = ({ z, p, t, tAbs }) => {
+  const { camera } = useThree();
+  const cam = camera as THREE.PerspectiveCamera;
+  if (z.ate !== undefined && p > pos(z.ate)) return null;
+  if (z.de !== undefined && p < pos(z.de)) return null;
+  cam.updateMatrixWorld();
+  const d = 7;
+  const meiaH = d * Math.tan(THREE.MathUtils.degToRad(cam.fov / 2));
+  const dir = new THREE.Vector3();
+  cam.getWorldDirection(dir);
+  const right = new THREE.Vector3(1, 0, 0).applyQuaternion(cam.quaternion);
+  const up = new THREE.Vector3(0, 1, 0).applyQuaternion(cam.quaternion);
+  const P = cam.position.clone().addScaledVector(dir, d).addScaledVector(right, z.sx * meiaH * cam.aspect).addScaledVector(up, z.sy * meiaH);
+  const K = (z.h * meiaH) / 1.7;
+  const entra = 0.9 + 0.1 * suave(clamp01(p * 12));
+  return (
+    <group position={[P.x, P.y, P.z]} quaternion={cam.quaternion.clone()}>
+      <group scale={K * entra} rotation={[0, z.rotY ?? 0.35, 0]}>
+        {z.nuvem !== false && <Nuvem p={[0, -0.28, -0.1]} s={0.5} />}
+        <Pessoa g={{ ...z, x: 0, y: 0, z: 0, rot: 0 }} p={p} t={t} tAbs={tAbs} />
+      </group>
     </group>
   );
 };
@@ -581,7 +812,7 @@ const BarraPeso: React.FC<{ k: number; t: number }> = ({ k, t }) => {
       <group position={[-1.5, hC + 0.1, 0]} scale={0.1}><Caminhao /></group>
       {/* avião (barra alta) */}
       <Caixa p={[1.3, hA / 2 + 0.1, 0]} t={[1.4, hA, 0.9]} cor="#e0642a" raio={0.05} emissivo="#e0642a" brilho={0.15} />
-      <Texto3D texto="80 t" p={[1.3, hA + 0.9, 0.3]} h={0.85} cor="#ffd23f" escala={suave(clamp01((k - 0.55) / 0.35))} />
+      <Texto3D texto="80 t" p={[1.3, hA + 1.2, 0.3]} h={1.7} cor="#ffd23f" escala={suave(clamp01((k - 0.55) / 0.35))} />
       {t >= 0 && <group />}
     </group>
   );
@@ -594,12 +825,12 @@ const CampoPalco: React.FC<{ C: Ctx }> = ({ C }) => {
   const k = cena.curva !== undefined ? n("curva") : modelo === "curva" ? 1 : 0;
   return (
     <group>
-      <hemisphereLight args={["#cfe8ff", "#6f9a55", 1.05]} />
-      <directionalLight position={[40, 70, 50]} intensity={1.7} color="#fff3dc" />
-      <fog attach="fog" args={["#d9ebf7", 34, 78]} />
-      <Dome topo="#3d8fe0" meio="#9fd0f5" base="#e4f1fa" />
+      <hemisphereLight args={[n("poente") > 0.5 ? "#ffd9b8" : "#cfe8ff", "#6f9a55", 1.05]} />
+      <directionalLight position={[40, 70, 50]} intensity={1.7} color={n("poente") > 0.5 ? "#ffb877" : "#fff3dc"} />
+      <fog attach="fog" args={[n("poente") > 0.5 ? "#f6cfa6" : "#d9ebf7", 34, 78]} />
+      {n("poente") > 0.5 ? <Dome topo="#4a5fb0" meio="#f4a36a" base="#ffd9a8" /> : <Dome topo="#3d8fe0" meio="#9fd0f5" base="#e4f1fa" />}
       <Chao cor="#6aae4f" cor2="#62a448" listras />
-      <Nuvens t={tEp} />
+      <Nuvens t={tEp} vel={3.2} />
       {/* fundo: pista, terminal, torre, árvores */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.0, -38]}><planeGeometry args={[600, 20]} /><meshStandardMaterial color="#51565d" roughness={0.95} /></mesh>
       {Array.from({ length: 30 }).map((_, i) => <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[-140 + i * 10, 0.02, -38]}><planeGeometry args={[4, 0.35]} /><meshBasicMaterial color="#f1f1ea" /></mesh>)}
@@ -610,13 +841,13 @@ const CampoPalco: React.FC<{ C: Ctx }> = ({ C }) => {
       {Array.from({ length: 40 }).map((_, i) => <mesh key={i} position={[-120 + i * 6, 0.5, -26]}><boxGeometry args={[0.1, 1, 0.1]} /><meshStandardMaterial color="#8a8f95" /></mesh>)}
       <mesh position={[0, 0.85, -26]}><boxGeometry args={[240, 0.05, 0.05]} /><meshStandardMaterial color="#8a8f95" /></mesh>
       {/* avião grande */}
-      {aviao && (
+      {aviao && (cena.aviaoDe === undefined || p >= pos(cena.aviaoDe as number | string)) && (
         <group position={[n("aviaoX"), n("aviaoY", 24), n("aviaoZ", -55)]} rotation={[n("aviaoRoll"), n("aviaoYaw"), n("aviaoPitch")]}>
-          <Aviao penas={cena.aviaoPenas === true} t={tEp} />
+          <Aviao penas={cena.aviaoPenas === true} t={tEp} {...aviaoProps(cena, n)} />
         </group>
       )}
-      {cena.caminhao === true && <group position={[-3.2, 0, -3.2]} rotation={[0, 0.6, 0]}><Caminhao /></group>}
-      {cena.barra !== undefined && <group position={[3.4, 0, 0.2]} rotation={[0, -0.25, 0]}><BarraPeso k={n("barra")} t={t} /></group>}
+      {cena.caminhao === true && <group position={[-11, 0, -14]} rotation={[0, 0.6, 0]}><Caminhao /></group>}
+      {cena.barra !== undefined && <group position={[1.8, 0, -6]} rotation={[0, -0.25, 0]}><BarraPeso k={n("barra")} t={t} /></group>}
       {modelo && (
         <group position={[n("modeloX"), n("modeloY"), 0]}>
           <ModeloPlaca k={k} helice={n("helice", 0.3)} t={tEp} alca={cena.empurra === true} />
@@ -682,6 +913,7 @@ const TunelPalco: React.FC<{ C: Ctx }> = ({ C }) => {
           <Texto3D texto="0" p={[0.1, yf + 0.55, 0.7]} h={0.5} cor="#cfd6dd" />
         </group>
       )}
+      {n("carimboE") > 0.01 && <Carimbo texto="ESTOL" p={[-0.2, yf + 1.55, 1]} h={0.95} k={n("carimboE")} />}
       {n("mito") > 0.01 && <Carimbo texto="MITO" p={[-0.2, yf + 1.55, 1]} h={0.95} k={n("mito")} />}
       {gente.map((gd, i) => <Pessoa key={i} g={gd} p={p} t={t} tAbs={tEp} />)}
     </group>
@@ -712,7 +944,7 @@ const CarroPalco: React.FC<{ C: Ctx }> = ({ C }) => {
       <hemisphereLight args={["#cfe8ff", "#6f9a55", 1.1]} />
       <directionalLight position={[-12, 14, 6]} intensity={1.6} color="#fff3dc" />
       <fog attach="fog" args={["#d9ebf7", 30, 78]} />
-      <Dome topo="#3d8fe0" meio="#9fd0f5" base="#e4f1fa" />
+      <Dome ox={120} topo="#3d8fe0" meio="#9fd0f5" base="#e4f1fa" />
       <Chao cor="#6aae4f" />
       <Nuvens t={tEp} vel={0.2} lista={[[-40, 36, -40, 5], [30, 44, 30, 6], [0, 50, -60, 6], [50, 40, -30, 5]]} />
       {/* estrada reta que passa para trás (o carro anda para -z) */}
@@ -730,7 +962,7 @@ const CarroPalco: React.FC<{ C: Ctx }> = ({ C }) => {
         return <mesh key={i} position={[-6.4, 3.2, z]}><cylinderGeometry args={[0.07, 0.1, 6.4, 6]} /><meshStandardMaterial color="#8a8f95" /></mesh>;
       })}
       <group>
-        <Auto cor="#d8392e" variante="sedan" vidroOp={0.1} />
+        <Auto cor="#d8392e" variante="sedan" vidroOp={0.1} giro={tEp * 8} />
         <group position={[gx, gy, gz]} rotation={[0, Math.PI, 0]} scale={s}>
           <Boneco3D p={zeca} pose={pose} expressao={sobeK > 0.4 ? "comemorando" as Expressao3D : "sorriso"} pisca={piscar(tEp)} boca={sobeK > 0.4 ? 0.5 : 0} olhar={[0, 0]} t={tEp} />
         </group>
@@ -779,7 +1011,7 @@ const PistaPalco: React.FC<{ C: Ctx }> = ({ C }) => {
       <hemisphereLight args={["#ffd9b0", "#5a6a4a", 0.95]} />
       <directionalLight position={[-40, 25, 30]} intensity={2.0} color="#ffb877" />
       <fog attach="fog" args={["#f6cfa6", 34, 78]} />
-      <Dome topo="#4d7fc9" meio="#f4b58a" base="#ffd9a8" />
+      <Dome ox={180} topo="#4d7fc9" meio="#f4b58a" base="#ffd9a8" />
       <Chao cor="#6e9a4e" />
       <Nuvens t={tEp} lista={[[-50, 30, -52, 5], [30, 40, -58, 6], [60, 26, -40, 4], [-20, 48, -60, 6], [0, 24, -60, 4]]} />
       {/* o mundo anda para trás junto com o avião de teste: pista, faixas, luzes, árvores */}
@@ -799,7 +1031,7 @@ const PistaPalco: React.FC<{ C: Ctx }> = ({ C }) => {
         <Biruta x={14} z={-30} t={tEp} />
       </group>
       {cena.aviao === true && (
-        <group position={[n("aviaoX"), n("aviaoY", 24), n("aviaoZ", -50)]} rotation={[n("aviaoRoll"), n("aviaoYaw"), n("aviaoPitch")]}><Aviao t={tEp} /></group>
+        <group position={[n("aviaoX"), n("aviaoY", 24), n("aviaoZ", -50)]} rotation={[n("aviaoRoll"), n("aviaoYaw"), n("aviaoPitch")]}><Aviao t={tEp} {...aviaoProps(cena, n)} /></group>
       )}
       {/* o modelo; o nariz sobe girando em torno da roda de trás */}
       <group position={[0, my, 0]}>
@@ -811,7 +1043,7 @@ const PistaPalco: React.FC<{ C: Ctx }> = ({ C }) => {
             {n("x4") > 0.02 && <Texto3D texto="×4" p={[0.4, 1.5 + forca + 0.5, 0.75]} h={0.8} cor="#ffd23f" escala={n("x4")} />}
           </group>
         </group>
-        {cena.velocimetro !== undefined && <group position={[-1.5, 2.2, 1.5]} rotation={[0, -0.6, 0]} scale={1.05}><Velocimetro v={n("velocimetro")} /></group>}
+        {cena.velocimetro !== undefined && <group position={[-1.9, 1.7, 1.3]} rotation={[0, -0.6, 0]} scale={0.6}><Velocimetro v={n("velocimetro")} /></group>}
       </group>
     </group>
   );
@@ -820,40 +1052,253 @@ const PistaPalco: React.FC<{ C: Ctx }> = ({ C }) => {
 /* ---------- céu: o avião grande em voo ---------- */
 
 const CeuPalco: React.FC<{ C: Ctx }> = ({ C }) => {
-  const { cena, n, tEp } = C;
+  const { cena, n, tEp, gente, p, t } = C;
   const s4 = n("setas4");
   const corte = n("corteAsa");
   const ax = n("aviaoX");
   const ay = n("aviaoY", 30);
   const az = n("aviaoZ", 0);
+  const esc = n("aviaoEsc", 0.78);
+  const lift = n("liftK", 1);
+  const pend = n("pendurado");
+  const setaAsa = n("setaAsa");
+  const emp = n("setaEmp");
+  const escuro = n("escuro") > 0.5;
+  const ek = Math.round(clamp01(n("escuro")) * 20) / 20;
+  const tb = n("turbul");
+  const bob = tb * (0.45 * Math.sin(tEp * 2.3) + 0.2 * Math.sin(tEp * 5.1));
   const F: Foil = { alpha: 0.05, k: 1.9, yf: 0, sep: 0, t: tEp, esp: 0.05 };
   const E = 2.8;
   return (
     <group>
-      <hemisphereLight args={["#cfe8ff", "#7fa0c8", 1.1]} />
-      <directionalLight position={[40, 80, 60]} intensity={1.7} color="#fff3dc" />
-      <fog attach="fog" args={["#d9ebf7", 60, 79]} />
-      <Dome topo="#2f7fd8" meio="#8cc8f5" base="#e0f0fb" />
-      <Nuvens t={tEp} lista={[[-34, -8, -22, 6], [32, -14, -24, 7], [-14, 44, -26, 6], [38, 40, -20, 5], [-44, 30, -28, 5], [10, -26, -12, 6], [-26, -22, 4, 4], [0, 48, 10, 4]]} vel={0.3} />
-      {n("interroga") > 0.01 && <Interroga k={n("interroga")} pos={[-24, ay - 8, 30]} esc={6} />}
-      <group position={[ax, ay, az]} rotation={[n("aviaoRoll"), n("aviaoYaw"), n("aviaoPitch")]}>
-        <group scale={0.78}><Aviao t={tEp} /></group>
+      <hemisphereLight args={["#cfe8ff", "#7fa0c8", escuro ? 0.7 : 1.1]} />
+      <directionalLight position={[40, 80, 60]} intensity={escuro ? 1.2 : 1.7} color="#fff3dc" />
+      <fog attach="fog" args={[escuro ? "#1b2c4a" : "#d9ebf7", 66, 79]} />
+      <Dome ox={PALCO_X.ceu} topo={mixCor("#2f7fd8", "#0b1530", ek)} meio={mixCor("#8cc8f5", "#1f3a6b", ek)} base={mixCor("#e0f0fb", "#3d5f94", ek)} />
+      {cena.nuvens !== "nenhuma" && !escuro && <NuvensCeu t={tEp} ay={ay} dy={n("nuvY")} vel={n("nuvVel", 1)} />}
+      {escuro && <Estrelas t={tEp} ox={PALCO_X.ceu} />}
+      {n("interroga") > 0.01 && <Interroga k={n("interroga")} pos={[-8, ay - 6, 20]} esc={4} />}
+      {tb > 0.02 && [-6, -2, 2, 6].map((x, i) => (
+        <Seta key={i} a={[x * esc * 1.3, (i % 2 ? 4.5 : -4.5) * esc + ay, -3]} b={[x * esc * 1.3, (i % 2 ? 2.2 : -2.2) * esc + ay, -3]} cor={AZUL_AR} w={0.1 * esc} op={0.8 * tb} />
+      ))}
+      <group position={[ax, ay + bob, az]} rotation={[n("aviaoRoll"), n("aviaoYaw"), n("aviaoPitch")]}>
+        <group scale={esc}><Aviao t={tEp} {...aviaoProps(cena, n)} /></group>
         {s4 > 0.02 && (
           <group>
-            <Seta a={[0, 0, 6]} b={[0, 11 * s4, 6]} cor={LARANJA} w={0.55} />
+            <Seta a={[0, 0, 6]} b={[0, 11 * s4 * lift, 6]} cor={LARANJA} w={0.55} />
             <Seta a={[0, 0, 6]} b={[0, -11 * s4, 6]} cor="#9aa3ad" w={0.55} />
-            <Seta a={[-8, 0, 6]} b={[-8 - 6 * s4, 0, 6]} cor="#6bd36b" w={0.4} />
-            <Seta a={[8, 0, 6]} b={[8 + 6 * s4, 0, 6]} cor="#c88bff" w={0.4} />
-            <Texto3D texto="SUSTENTAÇÃO" p={[0, 13.6 * s4, 6]} h={2.6} cor={LARANJA} escala={s4} />
+            {cena.soVert !== true && <Seta a={[-8, 0, 6]} b={[-8 - 6 * s4, 0, 6]} cor="#6bd36b" w={0.4} />}
+            {cena.soVert !== true && <Seta a={[8, 0, 6]} b={[8 + 6 * s4, 0, 6]} cor="#c88bff" w={0.4} />}
+            <Texto3D texto="SUSTENTAÇÃO" p={[0, (11 * lift + 2.6) * s4, 6]} h={2.6} cor={LARANJA} escala={s4} />
             <Texto3D texto="PESO" p={[0, -13.6 * s4, 6]} h={2.6} cor="#cfd6dd" escala={s4} />
+            {cena.soVert !== true && <Texto3D texto="EMPUXO" p={[-11, 2.4, 6]} h={2.2} cor="#6bd36b" escala={s4} />}
+            {cena.soVert !== true && <Texto3D texto="ARRASTO" p={[11.5, 2.4, 6]} h={2.2} cor="#c88bff" escala={s4} />}
           </group>
         )}
+        {pend > 0.02 && (
+          <group>
+            <Seta a={[0, -2.6 * esc, 3]} b={[0, -2.6 * esc - 9 * pend, 3]} cor="#9aa3ad" w={0.8} />
+            <Texto3D texto="80 t" p={[0, -2.6 * esc - 9 * pend - 2.6, 3]} h={4} cor="#ffd23f" escala={pend} />
+            {[-1, 1].map((sd) => <Seta key={sd} a={[1.5 * esc, 0.2 * esc, sd * 9 * esc]} b={[1.5 * esc, 0.2 * esc + 10 * pend, sd * 9 * esc]} cor={LARANJA} w={0.7} />)}
+          </group>
+        )}
+        {setaAsa > 0.02 && [-1, 1].map((sd) => <Seta key={sd} a={[1.5 * esc, 0, sd * 9 * esc]} b={[1.5 * esc, 4 * setaAsa, sd * 9 * esc]} cor={LARANJA} w={0.3} />)}
+        {n("forcaCauda") > 0.02 && (
+          <group>
+            <Seta a={[23 * esc, -4 * esc, 3]} b={[19 * esc, -0.6 * esc, 3]} cor={AZUL_AR} w={0.3} op={n("forcaCauda")} />
+            <Seta a={[16.5 * esc, -3.5 * esc, 3]} b={[16.5 * esc, 0.2 * esc + 3 * n("forcaCauda") * esc, 3]} cor={LARANJA} w={0.4} op={n("forcaCauda")} />
+          </group>
+        )}
+        {emp > 0.02 && <Seta a={[-17 * esc, 1.5 * esc, 3]} b={[-17 * esc - 7 * emp, 1.5 * esc, 3]} cor="#6bd36b" w={0.5} />}
         {corte > 0.02 && (
-          <group position={[3.4, -0.54, 8.2]} scale={E}>
+          <group position={[3.4 * esc, -0.54 * esc, 8.2 * esc]} scale={E * esc}>
             <FoilFlow F={F} t={tEp} linhas={corte} corpo={false} zLinha={0.0} larg={0.04} escalaSeta={1.2} setasAr={corte} />
           </group>
         )}
       </group>
+      <group position={[0, bob, 0]}>{gente.map((gd, i) => <Pessoa key={i} g={gd} p={p} t={t} tAbs={tEp} />)}</group>
+      {n("homenagem") > 0.01 && <Homenagem k={n("homenagem")} ox={PALCO_X.ceu} />}
+    </group>
+  );
+};
+
+/* ---------- cartão de homenagem (preso à câmera, dentro da coluna segura) ---------- */
+
+const Homenagem: React.FC<{ k: number; ox?: number }> = ({ k, ox = 0 }) => {
+  const { camera } = useThree();
+  const { tex, razao } = useMemo(() => {
+    const W = 1000;
+    const H = 640;
+    const c = document.createElement("canvas");
+    c.width = W;
+    c.height = H;
+    const g = c.getContext("2d")!;
+    g.fillStyle = "rgba(10,18,34,0.92)";
+    g.beginPath();
+    g.roundRect(8, 8, W - 16, H - 16, 40);
+    g.fill();
+    g.lineWidth = 6;
+    g.strokeStyle = "#e8c66a";
+    g.stroke();
+    g.textAlign = "center";
+    g.textBaseline = "middle";
+    const ajusta = (txt: string, px: number, max: number) => {
+      let f = px;
+      g.font = `700 ${f}px ${FONT}, sans-serif`;
+      while (g.measureText(txt).width > max && f > 20) { f -= 2; g.font = `700 ${f}px ${FONT}, sans-serif`; }
+    };
+    g.fillStyle = "#e8c66a";
+    ajusta("EM HOMENAGEM", 44, W - 140);
+    g.fillText("EM HOMENAGEM", W / 2, 70);
+    g.fillStyle = "#ffffff";
+    ajusta("TURBULÊNCIA NÃO", 118, W - 120);
+    g.fillText("TURBULÊNCIA NÃO", W / 2, 200);
+    ajusta("DERRUBA AVIÃO", 118, W - 120);
+    g.fillText("DERRUBA AVIÃO", W / 2, 330);
+    g.strokeStyle = "rgba(232,198,106,0.7)";
+    g.lineWidth = 3;
+    g.beginPath();
+    g.moveTo(W / 2 - 170, 410);
+    g.lineTo(W / 2 + 170, 410);
+    g.stroke();
+    g.fillStyle = "#e8c66a";
+    ajusta("— Lito, Aviões e Músicas", 64, W - 120);
+    g.fillText("— Lito, Aviões e Músicas", W / 2, 490);
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    return { tex: t, razao: W / H };
+  }, []);
+  if (k <= 0.02) return null;
+  const cam = camera as THREE.PerspectiveCamera;
+  cam.updateMatrixWorld();
+  const dir = new THREE.Vector3();
+  cam.getWorldDirection(dir);
+  const d = 6;
+  const alt = 2 * d * Math.tan(THREE.MathUtils.degToRad(cam.fov / 2));
+  const larg = alt * cam.aspect;
+  const w = larg * 0.62;
+  const up = cam.up.clone().applyQuaternion(cam.quaternion);
+  const p = cam.position.clone().addScaledVector(dir, d).addScaledVector(up, alt * 0.215);
+  p.x -= ox;
+  const e = 0.94 + 0.06 * suave(clamp01(k * 2));
+  return (
+    <sprite position={p} scale={[w * e, (w / razao) * e, 1]} renderOrder={30}>
+      <spriteMaterial map={tex} transparent depthTest={false} opacity={clamp01(k * 2.5)} />
+    </sprite>
+  );
+};
+
+/* ---------- janela em close: mapa de tensão ---------- */
+
+const desenhaJanela = (forma: number, rach: number) => {
+  const W = 440;
+  const H = 780;
+  const c = document.createElement("canvas");
+  c.width = W;
+  c.height = H;
+  const g = c.getContext("2d")!;
+  g.fillStyle = "#d9dee4";
+  g.fillRect(0, 0, W, H);
+  g.strokeStyle = "rgba(90,100,112,0.35)";
+  g.lineWidth = 3;
+  for (let y = 40; y < H; y += 90) { g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }
+  const cx = W / 2;
+  const cy = H / 2;
+  const w = lerp(260, 190, forma);
+  const h = lerp(200, 190, forma);
+  const r = lerp(6, 95, forma);
+  const caminho = (m: number) => {
+    g.beginPath();
+    g.roundRect(cx - w / 2 - m, cy - h / 2 - m, w + 2 * m, h + 2 * m, r + m);
+  };
+  // mapa de tensão: cantos vermelhos (quadrada) ou anel suave (redonda)
+  const cantos: [number, number][] = [[-1, -1], [1, -1], [-1, 1], [1, 1]];
+  const forte = 1 - forma;
+  cantos.forEach(([sx, sy]) => {
+    const px = cx + (sx * (w / 2 - r * 0.3));
+    const py = cy + (sy * (h / 2 - r * 0.3));
+    const gr = g.createRadialGradient(px, py, 4, px, py, 170);
+    gr.addColorStop(0, `rgba(255,30,20,${0.95 * forte})`);
+    gr.addColorStop(0.35, `rgba(255,140,30,${0.6 * forte})`);
+    gr.addColorStop(1, "rgba(255,200,40,0)");
+    g.fillStyle = gr;
+    g.fillRect(px - 170, py - 170, 340, 340);
+  });
+  g.save();
+  caminho(0);
+  g.clip();
+  g.restore();
+  for (let m = 70; m > 0; m -= 7) {
+    caminho(m);
+    g.strokeStyle = `rgba(255,${Math.round(210 - m * 1.2)},60,${0.1 * forma * (1 - m / 80)})`;
+    g.lineWidth = 8;
+    g.stroke();
+  }
+  // linhas de força que contornam a janela
+  g.strokeStyle = "rgba(40,70,120,0.55)";
+  g.lineWidth = 4;
+  for (let i = -5; i <= 5; i++) {
+    const y0 = cy + i * 62;
+    g.beginPath();
+    for (let x = 0; x <= W; x += 10) {
+      const dx = (x - cx) / (w / 2 + 40);
+      const sob = Math.exp(-dx * dx * 1.4);
+      const dy0 = Math.abs(y0 - cy) < h / 2 + 55 ? Math.sign(y0 - cy || 1) * (h / 2 + 55 - Math.abs(y0 - cy)) * sob * 0.9 : 0;
+      const y = y0 + dy0;
+      if (x === 0) g.moveTo(x, y); else g.lineTo(x, y);
+    }
+    g.stroke();
+  }
+  // janela
+  caminho(10);
+  g.fillStyle = "#eef1f4";
+  g.fill();
+  caminho(0);
+  g.fillStyle = "#1d3b63";
+  g.fill();
+  g.fillStyle = "rgba(160,210,255,0.35)";
+  g.beginPath();
+  g.roundRect(cx - w / 2 + 14, cy - h / 2 + 14, w * 0.4, h - 28, Math.max(r - 10, 4));
+  g.fill();
+  // rachadura que cresce do canto de cima à direita
+  if (rach > 0.01) {
+    const pts: [number, number][] = [[0, 0], [30, -26], [52, -14], [84, -52], [112, -40], [150, -92], [176, -80], [214, -134]];
+    const ox = cx + w / 2 - 6;
+    const oy = cy - h / 2 + 6;
+    const L = pts.length - 1;
+    g.strokeStyle = "#0b0d10";
+    g.lineWidth = 7;
+    g.lineJoin = "round";
+    g.beginPath();
+    g.moveTo(ox, oy);
+    for (let i = 1; i <= L; i++) {
+      const u = clamp01(rach * L - (i - 1));
+      if (u <= 0) break;
+      const [px, py] = pts[i - 1];
+      const [qx, qy] = pts[i];
+      g.lineTo(ox + px + (qx - px) * u, oy + py + (qy - py) * u);
+    }
+    g.stroke();
+  }
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return tex;
+};
+
+const JanelaPalco: React.FC<{ C: Ctx }> = ({ C }) => {
+  const { n } = C;
+  const forma = Math.round(clamp01(n("forma")) * 20) / 20;
+  const rach = Math.round(clamp01(n("rachadura")) * 25) / 25;
+  const tex = useMemo(() => desenhaJanela(forma, rach), [forma, rach]);
+  return (
+    <group>
+      <hemisphereLight args={["#ffffff", "#8fa3b8", 1.2]} />
+      <mesh position={[0, 0, -0.05]}><planeGeometry args={[40, 40]} /><meshBasicMaterial color="#0f1722" /></mesh>
+      <group scale={1 + 0.05 * n("inchar")}>
+        <mesh position={[0, 0.3, 0]}><planeGeometry args={[4.4, 7.8]} /><meshBasicMaterial map={tex} /></mesh>
+      </group>
+      {n("inchar") > 0.02 && [[-2.9, 3.4], [2.9, 3.4], [-2.9, -2.8], [2.9, -2.8], [0, 4.6], [0, -4.0]].map(([x, y], i) => <Seta key={i} a={[x * 0.75, y * 0.75, 0.3]} b={[x * (0.75 + 0.3 * n("inchar")), y * (0.75 + 0.3 * n("inchar")), 0.3]} cor={VERMELHO} w={0.14} op={n("inchar")} />)}
+      {n("carimbo") > 0.01 && <Carimbo texto="COMET · ANOS 1950" p={[0, -2.9, 0.4]} h={0.62} k={n("carimbo")} />}
     </group>
   );
 };
@@ -862,11 +1307,31 @@ const CeuPalco: React.FC<{ C: Ctx }> = ({ C }) => {
 
 type Ctx = { cena: Record<string, unknown>; p: number; t: number; tEp: number; n: (k: string, pad?: number) => number; gente: GenteE[] };
 
-type EtiqDef = { texto: string; para: V; off: [number, number]; cor?: string };
+type EtiqDef = { texto: string; para: V; off: [number, number]; cor?: string; av?: V };
 
-const AviaoCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisodio }) => {
+const AviaoCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisodio, trechos }) => {
+  TRS = trechos ?? [];
+  DUR = p > 0.002 ? t / p : 5;
   const n = (k: string, pad = 0) => nv(cena[k], p, pad);
-  const palco = (cena.palco as string | undefined) ?? "campo";
+  const { camera: camR } = useThree();
+  // Tomadas: cortes dentro da batida (palco e câmera próprios por trecho da fala). A câmera da batida é substituída pela da tomada.
+  const tomadas = cena.tomadas as { ate: number | string; palco: string; camera: { de: PontoCamera; para?: PontoCamera } }[] | undefined;
+  let palco = (cena.palco as string | undefined) ?? "campo";
+  if (tomadas && tomadas.length) {
+    let idx = tomadas.length - 1;
+    for (let i = 0; i < tomadas.length; i++) if (p <= pos(tomadas[i].ate)) { idx = i; break; }
+    const ini = idx > 0 ? pos(tomadas[idx - 1].ate) : 0;
+    const fim = pos(tomadas[idx].ate);
+    const tm = tomadas[idx];
+    palco = tm.palco;
+    const kc = suave(clamp01((p - ini) / Math.max(fim - ini, 1e-3)));
+    const cc = mistura(tm.camera.de, tm.camera.para ?? tm.camera.de, kc);
+    const cam = camR as THREE.PerspectiveCamera;
+    cam.position.set(...cc.pos);
+    cam.fov = cc.fov ?? 50;
+    cam.updateProjectionMatrix();
+    cam.lookAt(new THREE.Vector3(...cc.alvo));
+  }
   const X0 = PALCO_X[palco] ?? 0;
   const gente = (cena.gente as GenteE[] | undefined) ?? [];
   const C: Ctx = { cena, p, t, tEp: tEpisodio, n, gente };
@@ -876,16 +1341,30 @@ const AviaoCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisodio 
     pressao: { texto: "PRESSÃO MENOR", para: [0.1, 2.7, 0.4], off: [0.0, 1.0], cor: "#7fc4ff" },
     asa: { texto: "ASA", para: [-0.1, 1.5, 0.0], off: [0.0, 1.1], cor: "#ffd23f" },
     placaM: { texto: "PLACA", para: [-0.1, 1.55, 0.0], off: [0.0, 1.0], cor: "#ffd23f" },
+    // peças do avião grande (av = ponto no avião, coordenadas locais; ignora a rotação do avião)
+    fuselagem: { texto: "FUSELAGEM", para: [0, 0, 0], av: [-6, 1.6, 1.9], off: [0.0, 1.7], cor: "#ffd23f" },
+    turbina: { texto: "TURBINA", para: [0, 0, 0], av: [-1.9, -2.2, 6.7], off: [0.0, -1.9], cor: "#ffd23f" },
+    cauda: { texto: "CAUDA", para: [0, 0, 0], av: [17.5, 4.6, 0.5], off: [-1.0, 2.6], cor: "#ffd23f" },
+    profundor: { texto: "PROFUNDOR", para: [0, 0, 0], av: [18.4, 0.65, 3.7], off: [-1.0, 2.4], cor: "#ff6a4a" },
+    aileron: { texto: "AILERON", para: [0, 0, 0], av: [7.0, -0.55, 13.8], off: [-1.5, 2.2], cor: "#ffd23f" },
+    leme: { texto: "LEME", para: [0, 0, 0], av: [18.9, 5.6, 0.3], off: [0.5, 2.4], cor: "#c28bff" },
+    flap: { texto: "FLAP", para: [0, 0, 0], av: [5.7, -0.6, 6.5], off: [0.0, 2.2], cor: "#5fe07b" },
+    compressor: { texto: "COMPRESSOR", para: [0, 0, 0], av: [0.1, -1.55, 5.7], off: [-0.5, -2.1], cor: "#ffd23f" },
+    quente: { texto: "AR QUENTE", para: [0, 0, 0], av: [0.7, -0.3, 3.8], off: [-0.5, 1.9], cor: "#ff9a4a" },
+    frio: { texto: "AR FRIO", para: [0, 0, 0], av: [-3.5, 1.5, 0], off: [0.0, 2.0], cor: "#9fd8ff" },
+    saida: { texto: "SAÍDA", para: [0, 0, 0], av: [7.4, -1.4, 0], off: [0.0, -1.8], cor: "#c88bff" },
+    jq: { texto: "JANELA QUADRADA", para: [0, 2.6, 0.3], off: [0.0, 0.6], cor: "#ff7a6a" },
+    jr: { texto: "JANELA REDONDA", para: [0, 2.6, 0.3], off: [0.0, 0.6], cor: "#9fe3ff" },
   };
   const S = n("etiqS", 1);
   const Kt = n("etiqK", 1);
   const etiqs = ((cena.etiq as string[] | undefined) ?? []).map((e) => {
     const [c, d] = e.split("@");
-    const [ini, fimE] = (d ?? "0").split("-").map(parseFloat);
-    return { c, ini, ok: !!et[c] && p >= ini && (fimE === undefined || p <= fimE) };
+    const [ini, fimE] = (d ?? "0").split("-").map((x) => pos(x));
+    return { c, ini, ok: !!et[c] && p >= ini && (fimE === undefined || Number.isNaN(fimE) || p <= fimE) };
   }).filter((x) => x.ok);
-  const bx = palco === "pista" || palco === "campo" ? n("modeloX") : 0;
-  const by = palco === "tunel" ? n("sobe") : 0;
+  const bx = palco === "campo" ? n("modeloX") : 0;
+  const by = palco === "tunel" ? n("sobe") : palco === "pista" ? n("modeloY") : 0;
   return (
     <group>
       <group position={[X0, 0, 0]}>
@@ -894,10 +1373,14 @@ const AviaoCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisodio 
         {palco === "carro" && <CarroPalco C={C} />}
         {palco === "pista" && <PistaPalco C={C} />}
         {palco === "ceu" && <CeuPalco C={C} />}
+        {palco === "janela" && <JanelaPalco C={C} />}
       </group>
+      {((cena.zecaTela as ZT[] | undefined) ?? []).map((z, i) => <ZecaTela key={i} z={z} p={p} t={t} tAbs={tEpisodio} />)}
       {etiqs.map(({ c, ini }) => {
         const d = et[c];
-        const base: V = [d.para[0] + bx + X0, d.para[1] + by, d.para[2]];
+        const esc = n("aviaoEsc", 0.78);
+        const pp: V = d.av ? [n("aviaoX") + esc * d.av[0], n("aviaoY", 30) + esc * d.av[1], n("aviaoZ") + esc * d.av[2]] : d.para;
+        const base: V = [pp[0] + bx + X0, pp[1] + by, pp[2]];
         const off: V = [base[0] + d.off[0] * S, base[1] + d.off[1] * S, base[2] + 0.2];
         return <Etiqueta key={c} texto={d.texto} de={off} para={base} k={Kt} cor={d.cor} ymax={n("etiqYmax", 0.64)} pop={p > 0 ? clamp01((t * (p - ini)) / (p * 0.25)) : 1} />;
       })}
@@ -912,7 +1395,7 @@ export const aviao: Cenario3D = {
   padrao: "geral",
   fundo: (cena) => {
     const pa = cena.palco as string | undefined;
-    return pa === "tunel" ? "#e2eaf1" : pa === "pista" ? "#f4b58a" : "#8cc8f5";
+    return cena.escuro === 1 ? "#14234a" : pa === "janela" ? "#0f1722" : pa === "tunel" ? "#e2eaf1" : pa === "pista" ? "#f4b58a" : "#8cc8f5";
   },
   luzPropria: true,
   cameras: { geral: c([-4, 3, 14], [0, 3, 0], 50) },

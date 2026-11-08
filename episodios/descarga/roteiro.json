@@ -1,0 +1,2788 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 17,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Dor de *barriga* no meio da trilha, [leve] e o único banheiro é o _mato_! [leve] Você escolhe a moita com cuidado, [leve] mas o mosquito também. [leve] Só ele aprovou.",
+   "duracao": 8.067,
+   "cena": {
+    "cenario": "banheiro",
+    "mata": true,
+    "aplauso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.864,
+     "fim": 0.914
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       9.0,
+       9.5
+      ],
+      "alvo": [
+       0.0,
+       1.2,
+       0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -1.4,
+       1.9,
+       4.8
+      ],
+      "alvo": [
+       0.1,
+       1.15,
+       0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.4,
+      "rot": 0.25,
+      "acao": "em-pe",
+      "exp": "medo",
+      "pose": {
+       "ombroE.x": -0.55,
+       "ombroD.x": -0.55,
+       "cotoveloE.x": -1.7,
+       "cotoveloD.x": -1.7,
+       "ombroE.z": -0.1,
+       "ombroD.z": 0.1,
+       "tronco.x": 0.32,
+       "maos": 0.3,
+       "joelhoE.x": 0.2,
+       "joelhoD.x": 0.2
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.06
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "zumbido",
+      "trecho": 3,
+      "volume": 0.3,
+      "em": 0.269
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então cave um *buraco* atrás da casa, [leve] com uma casinha de tábuas em volta. [leve] [curious] Mas é _longe_: [leve] de noite e na chuva, [leve] você vai correndo, [leve] rezando pra não escorregar.",
+   "duracao": 7.933,
+   "cena": {
+    "cenario": "banheiro",
+    "quintal": true,
+    "luz": 0.5,
+    "chuva": 1,
+    "flash": [
+     [
+      0,
+      0
+     ],
+     [
+      0.644,
+      0
+     ],
+     [
+      0.674,
+      1
+     ],
+     [
+      0.724,
+      0
+     ],
+     [
+      0.878,
+      0
+     ],
+     [
+      0.908,
+      1
+     ],
+     [
+      0.958,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       -3.4,
+       2.1,
+       7.4
+      ],
+      "alvo": [
+       -1.6,
+       1.0,
+       0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       2.2,
+       2.1,
+       7.2
+      ],
+      "alvo": [
+       1.0,
+       1.0,
+       0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        -2.6
+       ],
+       [
+        0.9,
+        2.3
+       ],
+       [
+        1,
+        2.3
+       ]
+      ],
+      "z": 1.3,
+      "rot": 1.2,
+      "acao": [
+       [
+        0.9,
+        "andando",
+        "surpreso"
+       ],
+       [
+        1,
+        "em-pe",
+        "medo"
+       ]
+      ],
+      "exp": "sorriso",
+      "vel": 2.4,
+      "pose": [
+       [
+        0.9,
+        {
+         "ombroE.x": 0.0,
+         "cotoveloE.x": -1.2,
+         "tronco.x": 0.15
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.55,
+        "ombroD.x": -0.55,
+        "cotoveloE.x": -1.7,
+        "cotoveloD.x": -1.7,
+        "ombroE.z": -0.1,
+        "ombroD.z": 0.1,
+        "tronco.x": 0.32,
+        "maos": 0.3,
+        "joelhoE.x": 0.2,
+        "joelhoD.x": 0.2
+       },
+       "x": 0.0,
+       "z": 0.4,
+       "rot": 0.25,
+       "dur": 8.067,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "trovao",
+      "trecho": 3,
+      "volume": 0.5,
+      "em": 0.702
+     },
+     {
+      "som": "passos_rapidos",
+      "trecho": 4,
+      "volume": 0.35,
+      "em": 0.429
+     },
+     {
+      "som": "estalo",
+      "trecho": 5,
+      "volume": 0.4,
+      "em": 0.603
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então traga o buraco pra dentro, [leve] num *balde*. [leve] [curious] Mas alguém tem que _carregar_ o balde pra fora, [leve] e ninguém quer ser esse alguém. [leve] Na hora de levar, [leve] cada um jura que está ocupado.",
+   "duracao": 8.667,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 0,
+    "buraco": 0,
+    "baldeTampa": 1,
+    "baldeX": [
+     [
+      0,
+      -1.82
+     ],
+     [
+      0.3,
+      -0.17
+     ],
+     [
+      1,
+      -0.17
+     ]
+    ],
+    "baldeY": 0.8,
+    "baldeZ": 0.18,
+    "baldeAgua": 0.5,
+    "baldeVazio": false,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.6,
+       0.9,
+       5.4
+      ],
+      "alvo": [
+       0.2,
+       0.9,
+       0.0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -0.3,
+       0.9,
+       5.0
+      ],
+      "alvo": [
+       0.2,
+       0.9,
+       0.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        -2.2
+       ],
+       [
+        0.3,
+        -0.55
+       ],
+       [
+        1,
+        -0.55
+       ]
+      ],
+      "z": 0.2,
+      "rot": 1.2,
+      "acao": [
+       [
+        0.3,
+        "andando",
+        "sorriso"
+       ],
+       [
+        0.361,
+        "em-pe",
+        "neutro"
+       ],
+       [
+        1,
+        "em-pe",
+        "cansado"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.3,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.28,
+         "ombroD.z": 0.28,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.28,
+         "ombroD.z": 0.28,
+         "maos": 0.2
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 2.3,
+       "z": 1.3,
+       "rot": 1.2,
+       "dur": 7.933,
+       "mover": false
+      }
+     },
+     {
+      "x": 0.9,
+      "z": 0.2,
+      "rot": -1.0,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "id": "mae",
+      "pose": {
+       "cabeca.y": 0.9,
+       "ombroE.x": -0.6,
+       "ombroD.x": -0.6,
+       "cotoveloE.x": -1.6,
+       "cotoveloD.x": -1.6,
+       "ombroE.z": -0.2,
+       "ombroD.z": 0.2
+      }
+     },
+     {
+      "x": 1.6,
+      "z": 0.25,
+      "rot": -0.9,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "id": "pai",
+      "pose": {
+       "cabeca.y": 0.9,
+       "ombroE.x": -0.6,
+       "ombroD.x": -0.6,
+       "cotoveloE.x": -1.6,
+       "cotoveloD.x": -1.6,
+       "ombroE.z": -0.2,
+       "ombroD.z": 0.2
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "tosse",
+      "trecho": 5,
+      "volume": 0.3,
+      "em": 1.003
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.3,
+      "em": 0.729
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então abra um *buraco no piso* [leve] com um *cano* até o *esgoto*, [leve] bem fundo, [leve] bem longe: [leve] despeje um balde de água [leve] e tudo desce de uma vez.",
+   "duracao": 7.273,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.052,
+     "fim": 0.232
+    },
+    "curva": 0,
+    "buraco": 1,
+    "cheiro": 0,
+    "baldeX": [
+     [
+      0,
+      -0.23
+     ],
+     [
+      1,
+      -0.23
+     ]
+    ],
+    "baldeY": 0.82,
+    "baldeZ": 0.18,
+    "baldeInc": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.628,
+     "fim": 0.728
+    },
+    "baldeAgua": {
+     "de": 1,
+     "para": 0.1,
+     "ini": 0.628,
+     "fim": 0.828
+    },
+    "jato": [
+     [
+      0,
+      0
+     ],
+     [
+      0.628,
+      0
+     ],
+     [
+      0.688,
+      1
+     ],
+     [
+      0.808,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "escoa": [
+     [
+      0,
+      0
+     ],
+     [
+      0.688,
+      0
+     ],
+     [
+      0.748,
+      1
+     ],
+     [
+      0.97,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "escoaVel": 1.3,
+    "etiq": [
+     "cano@0.263-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.15,
+       0.25,
+       5.4
+      ],
+      "alvo": [
+       -0.05,
+       0.25,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       0.25,
+       5.15
+      ],
+      "alvo": [
+       -0.05,
+       0.25,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.62,
+      "z": 0.0,
+      "rot": 1.2,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.628,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.28,
+         "ombroD.z": 0.28,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.828,
+        {
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "ombroE.z": -0.25,
+         "ombroD.z": 0.25,
+         "tronco.x": 0.18,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.28,
+         "ombroD.z": 0.28,
+         "maos": 0.2
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.95,
+        "ombroD.x": -0.95,
+        "cotoveloE.x": -0.65,
+        "cotoveloD.x": -0.65,
+        "ombroE.z": -0.28,
+        "ombroD.z": 0.28,
+        "maos": 0.2
+       },
+       "x": -0.55,
+       "z": 0.2,
+       "rot": 1.2,
+       "dur": 8.667,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 4,
+      "volume": 0.5,
+      "em": 0.22
+     },
+     {
+      "som": "agua",
+      "trecho": 5,
+      "volume": 0.4,
+      "em": 0.464
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o ar do esgoto _sobe_ pelo cano, [leve] sem nada no caminho, [leve] e o seu banheiro vira o esgoto, [leve] com visita e tudo.",
+   "duracao": 5.993,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "curva": 0,
+    "buraco": 1,
+    "cheiro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.227,
+     "fim": 0.577
+    },
+    "arCano": 1,
+    "arBarra": 0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.15,
+       0.3,
+       5.4
+      ],
+      "alvo": [
+       -0.05,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       0.3,
+       5.15
+      ],
+      "alvo": [
+       -0.05,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        -0.5
+       ],
+       [
+        0.4,
+        -0.5
+       ],
+       [
+        0.7,
+        -1.1
+       ],
+       [
+        1,
+        -1.2
+       ]
+      ],
+      "z": 0.0,
+      "rot": 0.9,
+      "acao": [
+       [
+        0.4,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "medo"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.4,
+        {}
+       ],
+       [
+        0.55,
+        {
+         "ombroD.x": -1.6,
+         "cotoveloD.x": -2.5,
+         "ombroD.z": -0.15,
+         "cotoveloD.z": 0.3,
+         "maos": 0.3,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "cabeca.x": 0.08
+        }
+       ],
+       [
+        1,
+        {
+         "ombroD.x": -1.6,
+         "cotoveloD.x": -2.5,
+         "ombroD.z": -0.15,
+         "cotoveloD.z": 0.3,
+         "maos": 0.3,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "cabeca.x": 0.08
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.95,
+        "ombroD.x": -0.95,
+        "cotoveloE.x": -0.65,
+        "cotoveloD.x": -0.65,
+        "ombroE.z": -0.28,
+        "ombroD.z": 0.28,
+        "maos": 0.2
+       },
+       "x": -0.62,
+       "z": 0.0,
+       "rot": 1.2,
+       "dur": 7.273,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 0,
+      "volume": 0.35,
+      "em": 1.061
+     },
+     {
+      "som": "respiracao",
+      "trecho": 2,
+      "volume": 0.4,
+      "em": 0.37
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha uma *bacia* de louça com uma *curva em S* escondida dentro: [leve] a água que sobra fica _presa_ na curva [leve] e vira uma *tampa*. [leve] O cheiro fica lá embaixo.",
+   "duracao": 8.011,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.087,
+     "fim": 0.187
+    },
+    "tampaAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.583,
+     "fim": 0.683
+    },
+    "cheiro": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.583,
+     "fim": 0.741
+    },
+    "arCano": 1,
+    "arBarra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.741,
+     "fim": 0.791
+    },
+    "etiq": [
+     "curva@0.265-0.583",
+     "agua@0.633-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.1,
+       0.3,
+       5.4
+      ],
+      "alvo": [
+       -0.05,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.9,
+       0.79,
+       2.9
+      ],
+      "alvo": [
+       0.3,
+       -0.08,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.7,
+      "z": 0.0,
+      "rot": 0.9,
+      "acao": [
+       [
+        0.741,
+        "em-pe",
+        "medo"
+       ],
+       [
+        1,
+        "em-pe",
+        "eureka"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.741,
+        {
+         "ombroD.x": -1.6,
+         "cotoveloD.x": -2.5,
+         "ombroD.z": -0.15,
+         "cotoveloD.z": 0.3,
+         "maos": 0.3,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "cabeca.x": 0.08
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -1.6,
+        "cotoveloD.x": -2.5,
+        "ombroD.z": -0.15,
+        "cotoveloD.z": 0.3,
+        "maos": 0.3,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18,
+        "cabeca.x": 0.08
+       },
+       "x": -1.2,
+       "z": 0.0,
+       "rot": 0.9,
+       "dur": 5.993,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4,
+      "em": 0.697
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 1.07
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45,
+      "em": 0.469
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o balde _cansa_ [leve] e a água só escorre. [leve] Ponha uma *caixa de água* lá em cima, [leve] com uma tampa de borracha no fundo: [leve] puxe a *alavanca* [leve] e a água _despenca_.",
+   "duracao": 8.2,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": [
+     [
+      0,
+      1
+     ],
+     [
+      0.983,
+      1
+     ],
+     [
+      0.941,
+      1.12
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "caixa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.365,
+     "fim": 0.485
+    },
+    "descida": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.365,
+     "fim": 0.565
+    },
+    "nivelCaixa": [
+     [
+      0,
+      1
+     ],
+     [
+      0.883,
+      1
+     ],
+     [
+      0.941,
+      0.12
+     ]
+    ],
+    "baldeX": [
+     [
+      0,
+      -0.23
+     ],
+     [
+      0.365,
+      -0.23
+     ],
+     [
+      0.465,
+      -0.8
+     ],
+     [
+      1,
+      -0.8
+     ]
+    ],
+    "baldeY": 0.5,
+    "baldeZ": 0.18,
+    "baldeInc": {
+     "de": 0.3,
+     "para": 0.3
+    },
+    "baldeAgua": 0.2,
+    "jato": [
+     [
+      0,
+      0.22
+     ],
+     [
+      0.315,
+      0.2
+     ],
+     [
+      0.365,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "alvoX": 0.3,
+    "alvoY": 0.32,
+    "escoa": [
+     [
+      0,
+      0.25
+     ],
+     [
+      0.365,
+      0.25
+     ],
+     [
+      0.415,
+      0
+     ],
+     [
+      0.883,
+      0
+     ],
+     [
+      0.983,
+      0.8
+     ],
+     [
+      0.97,
+      0.8
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "escoaVel": 1.2,
+    "alavanca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.783,
+     "fim": 0.863
+    },
+    "tampaBorracha": [
+     [
+      0,
+      0
+     ],
+     [
+      0.783,
+      0
+     ],
+     [
+      0.863,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "descidaAgua": [
+     [
+      0,
+      0
+     ],
+     [
+      0.863,
+      0
+     ],
+     [
+      0.923,
+      1
+     ],
+     [
+      0.95,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "aro": [
+     [
+      0,
+      0
+     ],
+     [
+      0.903,
+      0
+     ],
+     [
+      0.983,
+      1
+     ],
+     [
+      0.95,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "etiq": [
+     "caixa@0.395-0.568",
+     "tampa@0.578-0.783"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.15,
+       0.6,
+       4.9
+      ],
+      "alvo": [
+       -0.05,
+       0.6,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       0.6,
+       4.65
+      ],
+      "alvo": [
+       -0.05,
+       0.6,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.9,
+      "z": 0.0,
+      "rot": 1.2,
+      "acao": [
+       [
+        0.365,
+        "em-pe",
+        "cansado"
+       ],
+       [
+        0.783,
+        "em-pe",
+        "eureka"
+       ],
+       [
+        1,
+        "em-pe",
+        "eureka"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.365,
+        {
+         "tronco.x": 0.28,
+         "cabeca.x": 0.2,
+         "ombroE.x": -0.6,
+         "ombroD.x": -0.6,
+         "cotoveloE.x": -0.3,
+         "cotoveloD.x": -0.3,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.743,
+        {}
+       ],
+       [
+        0.883,
+        {
+         "ombroD.x": -1.5,
+         "cotoveloD.x": -0.25,
+         "ombroD.z": 0.1,
+         "maos": 0.4,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "tronco.x": 0.05
+        }
+       ],
+       [
+        0.901,
+        {
+         "ombroD.x": -1.5,
+         "cotoveloD.x": -0.25,
+         "ombroD.z": 0.1,
+         "maos": 0.4,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "tronco.x": 0.05
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.7,
+       "z": 0.0,
+       "rot": 0.9,
+       "dur": 8.011,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "rangido",
+      "trecho": 2,
+      "volume": 0.3,
+      "em": 0.337
+     },
+     {
+      "som": "clique",
+      "trecho": 4,
+      "volume": 0.45,
+      "em": 0.265
+     },
+     {
+      "som": "agua",
+      "trecho": 5,
+      "volume": 0.55,
+      "em": 0.252
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a caixa fica _vazia_, [leve] e a torneira aberta _transborda_, [leve] até pelo teto! [leve] Prenda uma *boia*: [leve] a água sobe, [leve] a boia sobe [leve] e fecha a torneira *sozinha*.",
+   "duracao": 8.456,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": 1,
+    "caixa": 1,
+    "descida": 1,
+    "tampaBorracha": 0,
+    "nivelCaixa": [
+     [
+      0,
+      0.1
+     ],
+     [
+      0.196,
+      0.1
+     ],
+     [
+      0.315,
+      1.0
+     ],
+     [
+      0.546,
+      1.0
+     ],
+     [
+      0.666,
+      0.88
+     ],
+     [
+      1,
+      0.88
+     ]
+    ],
+    "torneira": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.196,
+     "fim": 0.296
+    },
+    "transborda": [
+     [
+      0,
+      0
+     ],
+     [
+      0.275,
+      0
+     ],
+     [
+      0.355,
+      1
+     ],
+     [
+      0.546,
+      1
+     ],
+     [
+      0.646,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "boia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.566,
+     "fim": 0.666
+    },
+    "etiq": [
+     "boia@0.586-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.15,
+       0.65,
+       4.9
+      ],
+      "alvo": [
+       -0.05,
+       0.65,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       0.65,
+       4.65
+      ],
+      "alvo": [
+       -0.05,
+       0.65,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        -0.9
+       ],
+       [
+        0.55,
+        -0.9
+       ],
+       [
+        0.68,
+        -0.55
+       ],
+       [
+        0.546,
+        -0.55
+       ],
+       [
+        0.666,
+        -0.85
+       ],
+       [
+        1,
+        -0.85
+       ]
+      ],
+      "z": 0.15,
+      "rot": 1.0,
+      "acao": [
+       [
+        0.275,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.566,
+        "andando",
+        "medo"
+       ],
+       [
+        1,
+        "comemorando",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "vel": 1.6,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.9,
+       "z": 0.0,
+       "rot": 1.2,
+       "dur": 8.2,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.5,
+      "em": 0.168
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 0.836
+     },
+     {
+      "som": "clique",
+      "trecho": 4,
+      "volume": 0.4,
+      "em": 0.174
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas e se a boia _falhar_ [leve] e a água não parar de subir? [leve] Ponha um *ladrão*: [leve] um tubo que joga o excesso [leve] dentro da bacia, [leve] não no chão da sala.",
+   "duracao": 7.344,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": 1,
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "falha": 1,
+    "ladrao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.436,
+     "fim": 0.536
+    },
+    "nivelCaixa": [
+     [
+      0,
+      0.6
+     ],
+     [
+      0.018,
+      0.66
+     ],
+     [
+      0.486,
+      0.93
+     ],
+     [
+      1,
+      0.95
+     ]
+    ],
+    "descidaAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.556,
+     "fim": 0.636
+    },
+    "etiq": [
+     "ladrao@0.456-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.15,
+       0.65,
+       4.8
+      ],
+      "alvo": [
+       -0.05,
+       0.65,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       0.65,
+       4.55
+      ],
+      "alvo": [
+       -0.05,
+       0.65,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.8,
+      "z": 0.15,
+      "rot": 0.9,
+      "acao": [
+       [
+        0.436,
+        "em-pe",
+        "medo"
+       ],
+       [
+        1,
+        "em-pe",
+        "alivio"
+       ]
+      ],
+      "exp": "sorriso",
+      "ant": {
+       "acao": "comemorando",
+       "pose": {},
+       "x": -0.85,
+       "z": 0.15,
+       "rot": 1.0,
+       "dur": 8.456,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4,
+      "em": 0.867
+     },
+     {
+      "som": "agua",
+      "trecho": 3,
+      "volume": 0.4,
+      "em": 0.069
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a água só _escorre_. [leve] Olhe por dentro da bacia: [leve] a água da caixa entra pela borda, [leve] corre _rápido_ [leve] e enche a curva até passar do topo.",
+   "duracao": 8.175,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": [
+     [
+      0,
+      1
+     ],
+     [
+      0.653,
+      1.03
+     ],
+     [
+      0.623,
+      1.1
+     ],
+     [
+      0.825,
+      1.24
+     ],
+     [
+      1,
+      1.32
+     ]
+    ],
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "nivelCaixa": [
+     [
+      0,
+      0.9
+     ],
+     [
+      0.1,
+      0.9
+     ],
+     [
+      0.95,
+      0.2
+     ]
+    ],
+    "tampaBorracha": [
+     [
+      0,
+      0
+     ],
+     [
+      0.08,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "descidaAgua": [
+     [
+      0,
+      0
+     ],
+     [
+      0.08,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "aro": [
+     [
+      0,
+      0
+     ],
+     [
+      0.533,
+      0
+     ],
+     [
+      0.603,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "remoinho": {
+     "de": 0,
+     "para": 0.4,
+     "ini": 0.623,
+     "fim": 1
+    },
+    "furo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.573,
+     "fim": 0.653
+    },
+    "empurra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.623,
+     "fim": 0.703
+    },
+    "etiq": [
+     "jato@0.673-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.5,
+       0.57,
+       2.7
+      ],
+      "alvo": [
+       0.3,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.8,
+       0.56,
+       1.7
+      ],
+      "alvo": [
+       0.3,
+       0.22,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.15,
+      "z": 0.0,
+      "rot": 0.8,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": {
+       "ombroD.x": -1.5,
+       "cotoveloD.x": -0.25,
+       "ombroD.z": 0.1,
+       "maos": 0.4,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18,
+       "tronco.x": 0.05
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.8,
+       "z": 0.15,
+       "rot": 0.9,
+       "dur": 7.344,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 2,
+      "volume": 0.5,
+      "em": 1.332
+     },
+     {
+      "som": "whoosh",
+      "trecho": 3,
+      "volume": 0.4,
+      "em": 0.004
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Passou do topo: [leve] o tubo enche e a água que cai *puxa* a de trás! [leve] Em poucos segundos some _tudo_, [leve] o ar entra [leve] e faz *glub*!",
+   "duracao": 7.692,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": [
+     [
+      0,
+      1.32
+     ],
+     [
+      0.375,
+      1.32
+     ],
+     [
+      0.769,
+      0.45
+     ],
+     [
+      0.912,
+      0.2
+     ],
+     [
+      1,
+      0.18
+     ]
+    ],
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "nivelCaixa": [
+     [
+      0,
+      0.2
+     ],
+     [
+      1,
+      0.1
+     ]
+    ],
+    "tampaBorracha": [
+     [
+      0,
+      1
+     ],
+     [
+      0.55,
+      1
+     ],
+     [
+      0.62,
+      0
+     ]
+    ],
+    "descidaAgua": [
+     [
+      0,
+      1
+     ],
+     [
+      0.55,
+      1
+     ],
+     [
+      0.62,
+      0
+     ]
+    ],
+    "aro": [
+     [
+      0,
+      1
+     ],
+     [
+      0.5,
+      1
+     ],
+     [
+      0.62,
+      0
+     ]
+    ],
+    "furo": [
+     [
+      0,
+      1
+     ],
+     [
+      0.5,
+      1
+     ],
+     [
+      0.62,
+      0
+     ]
+    ],
+    "empurra": [
+     [
+      0,
+      1
+     ],
+     [
+      0.475,
+      1
+     ],
+     [
+      0.669,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "sifao": [
+     [
+      0,
+      0
+     ],
+     [
+      0.325,
+      0
+     ],
+     [
+      0.475,
+      0.35
+     ],
+     [
+      0.892,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "cauda": [
+     [
+      0,
+      0
+     ],
+     [
+      0.892,
+      0
+     ],
+     [
+      1.092,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "puxa": [
+     [
+      0,
+      0
+     ],
+     [
+      0.355,
+      0
+     ],
+     [
+      0.455,
+      1
+     ],
+     [
+      0.912,
+      1
+     ],
+     [
+      1.012,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "setas": [
+     [
+      0,
+      0
+     ],
+     [
+      0.375,
+      0
+     ],
+     [
+      0.435,
+      1
+     ],
+     [
+      0.872,
+      1
+     ],
+     [
+      0.952,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "remoinho": [
+     [
+      0,
+      1
+     ],
+     [
+      0.869,
+      1
+     ],
+     [
+      0.912,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "glub": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.872,
+     "fim": 0.992
+    },
+    "etiq": [
+     "sifao@0.395-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.8,
+       0.56,
+       1.7
+      ],
+      "alvo": [
+       0.3,
+       0.22,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.5,
+       0.87,
+       2.3
+      ],
+      "alvo": [
+       0.2,
+       -0.05,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.15,
+      "z": 0.0,
+      "rot": 0.8,
+      "acao": "em-pe",
+      "exp": "eureka",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -1.5,
+        "cotoveloD.x": -0.25,
+        "ombroD.z": 0.1,
+        "maos": 0.4,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18,
+        "tronco.x": 0.05
+       },
+       "x": -1.15,
+       "z": 0.0,
+       "rot": 0.8,
+       "dur": 8.175,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 1.704
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.5,
+      "em": 1.934
+     },
+     {
+      "som": "pop",
+      "trecho": 4,
+      "volume": 0.55,
+      "em": 0.401
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a bacia ficou _quase seca_, [leve] e o cheiro pode voltar. [leve] Ligue um *tubinho* da torneira da caixa à boca do ladrão: [leve] ele desce a água pela bacia [leve] e a tampa se refaz.",
+   "duracao": 8.733,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": [
+     [
+      0,
+      0.2
+     ],
+     [
+      0.712,
+      0.2
+     ],
+     [
+      0.935,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "nivelCaixa": {
+     "de": 0.1,
+     "para": 0.9,
+     "ini": 0.712,
+     "fim": 0.97
+    },
+    "arCano": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.2
+    },
+    "arBarra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.762,
+     "fim": 0.812
+    },
+    "cheiro": [
+     [
+      0,
+      0
+     ],
+     [
+      0.208,
+      0
+     ],
+     [
+      0.328,
+      1
+     ],
+     [
+      0.712,
+      1
+     ],
+     [
+      0.935,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "tubinho": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.396,
+     "fim": 0.516
+    },
+    "tubinhoAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.712,
+     "fim": 0.752
+    },
+    "descidaAgua": {
+     "de": 0,
+     "para": 0.45,
+     "ini": 0.712,
+     "fim": 0.762
+    },
+    "aro": {
+     "de": 0,
+     "para": 0.5,
+     "ini": 0.712,
+     "fim": 0.762
+    },
+    "etiq": [
+     "tubinho@0.416-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.5,
+       0.956,
+       4.2
+      ],
+      "alvo": [
+       0.05,
+       0.62,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.1,
+       0.89,
+       2.9
+      ],
+      "alvo": [
+       0.1,
+       0.6,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.0,
+      "z": 0.1,
+      "rot": 0.9,
+      "acao": [
+       [
+        0.228,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.712,
+        "em-pe",
+        "medo"
+       ],
+       [
+        1,
+        "em-pe",
+        "eureka"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.228,
+        {}
+       ],
+       [
+        0.712,
+        {
+         "ombroD.x": -1.6,
+         "cotoveloD.x": -2.5,
+         "ombroD.z": -0.15,
+         "cotoveloD.z": 0.3,
+         "maos": 0.3,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "cabeca.x": 0.08
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -1.15,
+       "z": 0.0,
+       "rot": 0.8,
+       "dur": 7.692,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "sopro",
+      "trecho": 1,
+      "volume": 0.35,
+      "em": 0.235
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4,
+      "em": 0.302
+     },
+     {
+      "som": "agua",
+      "trecho": 3,
+      "volume": 0.35,
+      "em": 0.296
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.45,
+      "em": 0.535
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas essa água descendo [leve] puxa a tampa de qualquer curva do cano. [leve] Então suba um *respiro*: [leve] um cano que sai pelo _telhado_ [leve] e deixa o *ar* entrar, [leve] pra ninguém puxar a água da tampa.",
+   "duracao": 9.323,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 1,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": 1,
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "tubinho": 1,
+    "nivelCaixa": 0.9,
+    "telhado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.02,
+     "fim": 0.25
+    },
+    "respiro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.442,
+     "fim": 0.702
+    },
+    "arResp": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.722,
+     "fim": 0.8
+    },
+    "escoa": {
+     "de": 0.7,
+     "para": 0.7
+    },
+    "escoaVel": 1.1,
+    "arCano": 0,
+    "etiq": [
+     "respiro@0.482-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.3,
+       0.9,
+       7.4
+      ],
+      "alvo": [
+       0.9,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.9,
+       2.0,
+       4.2
+      ],
+      "alvo": [
+       1.1,
+       2.0,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.9,
+      "z": 0.1,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "alivio",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -1.0,
+       "z": 0.1,
+       "rot": 0.9,
+       "dur": 8.733,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4,
+      "em": 0.698
+     },
+     {
+      "som": "sopro",
+      "trecho": 4,
+      "volume": 0.4,
+      "em": 0.536
+     },
+     {
+      "som": "ding",
+      "trecho": 5,
+      "volume": 0.4,
+      "em": 1.454
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você inventou o *vaso sanitário* com *caixa acoplada*, [leve] com tampa de água, boia, ladrão e sifão. [leve] A primeira é de _1596_, [leve] e o mosquito ficou sem emprego.",
+   "duracao": 10.6,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.02,
+     "fim": 0.4
+    },
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": 1,
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "tubinho": 1,
+    "nivelCaixa": 0.9,
+    "flor": true,
+    "vaso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.04,
+     "fim": 0.48
+    },
+    "destaque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.195,
+     "fim": 0.365
+    },
+    "etiq": [
+     "vasoCaixa@0.45-0.99",
+     "vasoBoia@0.58-0.99",
+     "vasoSifao@0.68-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       1.9,
+       1.5,
+       4.3
+      ],
+      "alvo": [
+       0.05,
+       0.55,
+       -0.15
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.9,
+       1.3,
+       4.6
+      ],
+      "alvo": [
+       0.05,
+       0.55,
+       -0.15
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.9,
+      "z": -0.1,
+      "rot": 0.8,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.9,
+       "z": 0.1,
+       "rot": 0.9,
+       "dur": 9.323,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "VASO SANITÁRIO",
+      "trecho": 1,
+      "y": 18,
+      "tamanho": 72
+     }
+    ],
+    "sfx": [
+     {
+      "som": "sino",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 0.736
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 1.732
+     },
+     {
+      "som": "jingle",
+      "trecho": 4,
+      "volume": 0.4,
+      "em": 0.198
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Manda pra quem já usou o *mato*! [leve] E a água que cai na caixa: [leve] dá pra acender uma *cidade* com uma queda d'água? [leve] *Siga* pra descobrir.",
+   "duracao": 6.333,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 0,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": 1,
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "tubinho": 1,
+    "vaso": 1,
+    "flor": true,
+    "nivelCaixa": 0.9,
+    "cachoeira": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.274,
+     "fim": 0.374
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.468,
+     "fim": 0.668
+    },
+    "lampada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.832,
+     "fim": 0.952
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -0.1,
+       1.034,
+       4.6
+      ],
+      "alvo": [
+       0.0,
+       0.85,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       1.018,
+       4.2
+      ],
+      "alvo": [
+       0.0,
+       0.85,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.6,
+      "z": -0.2,
+      "rot": 0.7,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroD.x": -1.25,
+       "cotoveloD.x": -1.5,
+       "ombroD.z": -0.12,
+       "maos": 0.05,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {},
+       "x": -0.9,
+       "z": -0.1,
+       "rot": 0.8,
+       "dur": 10.6,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.4,
+      "em": 0.169
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.45,
+      "em": 0.003
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* _glub_. [leve] *Compartilhe* [leve] e *siga* pra saber [leve] como as coisas *funcionam*.",
+   "duracao": 5.2,
+   "cena": {
+    "cenario": "banheiro",
+    "piso": 0,
+    "buraco": 1,
+    "bacia": 1,
+    "tampaAgua": 1,
+    "caixa": 1,
+    "descida": 1,
+    "torneira": 1,
+    "boia": 1,
+    "ladrao": 1,
+    "tubinho": 1,
+    "vaso": 1,
+    "flor": true,
+    "nivelCaixa": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.1,
+       1.002,
+       3.8
+      ],
+      "alvo": [
+       0.0,
+       0.85,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -0.05,
+       0.994,
+       3.6
+      ],
+      "alvo": [
+       0.0,
+       0.85,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.62,
+      "z": -0.2,
+      "rot": -0.7,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroD.x": -1.25,
+       "cotoveloD.x": -1.5,
+       "ombroD.z": -0.12,
+       "maos": 0.05,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -1.25,
+        "cotoveloD.x": -1.5,
+        "ombroD.z": -0.12,
+        "maos": 0.05,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18
+       },
+       "x": -0.6,
+       "z": -0.2,
+       "rot": 0.7,
+       "dur": 6.333,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "glub"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.6
+     }
+    ]
+   }
+  }
+ ]
+}

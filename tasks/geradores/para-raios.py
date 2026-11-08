@@ -1,195 +1,179 @@
-import json,re,sys,os,math
-# Gera episodios/para-raios/roteiro.json (episódio 15, "como proteger uma casa de um raio, peça por peça") a partir da tabela de cenas de tasks/roteiro-para-raios.md.
-# As falas vêm sempre do .md; cenas, cartões e efeitos ficam aqui. Uso (da raiz): python3 tasks/geradores/para-raios.py episodios/para-raios/roteiro.json
-# Depois: cd motor && python3 pipeline/narrar.py ../episodios/para-raios/roteiro.json --mudo
-# Cenário: motor/banco/series/explicadores/pararaios.tsx (veja a lista de campos no topo). Palcos: casa x = 0 · estrada x = 60 · franklin x = 120 · mapa x = 180.
+import sys, os, math
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _base import *
+# Gera episodios/para-raios/roteiro.json (episódio 15, "como uma casa aguenta um raio de 300 milhões de volts?") a partir da tabela de cenas de tasks/roteiro-para-raios.md (v2, 17 batidas).
+# Uso (da raiz): python3 tasks/geradores/para-raios.py episodios/para-raios/roteiro.json ; depois: cd motor && python3 pipeline/narrar.py ../episodios/para-raios/roteiro.json --mudo
+# Cenário: motor/banco/series/explicadores/pararaios.tsx (campos no topo). Palcos: casa x = 0 · franklin x = 120 · mapa x = 180.
 # REGRA: o nome "para-raios" só aparece a partir da batida 12 (fala, rótulo, cartão).
-AQUI=os.path.dirname(os.path.abspath(__file__))
-md=open(os.path.join(AQUI,'..','roteiro-para-raios.md'),encoding='utf-8').read()
-tab=md.split('## Tabela de cenas')[1].split('## Fontes')[0]
-falas=[re.match(r'\| \d+ \| (.+?) \| ',l).group(1).strip() for l in tab.splitlines() if re.match(r'\| \d+ \| ',l)]
-assert len(falas)==21,len(falas)
-NLEVE=[f.count('[leve]') for f in falas]
+B = Base('roteiro-para-raios.md', 'pararaios', 15, 17)
+W = B.W
+# Com a voz gravada, W, Wn e dur usam o tempo real de cada palavra/batida (episode.json de ep15) em vez da estimativa por posição.
+_EPJ = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'motor', 'public', 'demo-3d', 'ep15', 'episode.json')
+_bt = []
+if os.path.exists(_EPJ):
+    _bt = json.load(open(_EPJ, encoding='utf-8')).get('beats', [])
+    if not (len(_bt) == 17 and _bt[0].get('words') and _bt[0]['words'][0]['end'] - _bt[0]['words'][0]['start'] > 0): _bt = []
 
-def palavras_de(i):
-    t=re.sub(r'\[[a-z]+\]','',falas[i-1]).replace('*','').replace('_','')
-    return t.split()
-def W(i,pat,fim=False):
-    """progresso (0..1 da batida) em que a palavra que casa com `pat` começa (ou termina, com fim=True)"""
-    ps=palavras_de(i)
-    for k,w in enumerate(ps):
-        if re.search(pat,w,re.I): return round((k+(1 if fim else 0))/len(ps),3)
-    raise AssertionError((i,pat))
+def Wn(i, pat, n=1, fim=False):
+    """progresso em que começa (ou termina) a n-ésima palavra que casa com `pat` (tempo real das palavras quando há voz)"""
+    ps = B.palavras_de(i); c = 0
+    ws = _bt[i - 1]['words'] if _bt and len(_bt[i - 1]['words']) == len(ps) else None
+    for k, w in enumerate(ps):
+        if re.search(pat, w, re.I):
+            c += 1
+            if c == n:
+                if ws:
+                    b0, b1 = _bt[i - 1]['start'], _bt[i - 1]['end']
+                    return round(((ws[k]['end'] if fim else ws[k]['start']) - b0) / (b1 - b0), 3)
+                return round((k + (1 if fim else 0)) / len(ps), 3)
+    raise AssertionError((i, pat, n))
+def W(i, pat, fim=False): return Wn(i, pat, 1, fim)
+def dur(i):
+    if _bt: return round(_bt[i - 1]['end'] - _bt[i - 1]['start'], 3)
+    return round(max(2.4, len(B.palavras_de(i)) / 2.9), 1)
 
-M=lambda *ds,**k: {**{kk:v for d in ds for kk,v in d.items()},**k}
-V=lambda de,para,ini=None,fim=None: dict(de=de,para=para,**({"ini":ini} if ini is not None else {}),**({"fim":fim} if fim is not None else {}))
-KF=lambda *pares: [list(p) for p in pares]
-TAN=math.tan(math.radians(25))
-def T(cx,ty,D,fov=50,el=0.08,x0=None,up=0.2,z0=0.0):
-    """câmera olhando para (cx, ., z0) a D metros; o assunto (cx, ty) cai no terço de cima do quadro (`up` = fração da meia-altura)"""
-    h=D*math.tan(math.radians(fov/2))
-    ay=ty-up*h
-    return dict(pos=[round(x0 if x0 is not None else cx,3),round(ay+el*D,3),round(z0+D,3)],alvo=[cx,round(ay,3),z0],fov=fov)
-cam=lambda de=None,para=None,**k: {**{kk:v for kk,v in (("de",de),("para",para)) if v},**k}
-rot=lambda txt,tr=0,y=40,tam=96: dict(tipo="rotulo",texto=txt,trecho=tr,y=y,tamanho=tam)
-chamada=lambda icone,txt,sub=None,tr=0: dict(tipo="chamada",icone=icone,texto=txt,trecho=tr,**({"sub":sub} if sub else {}))
-def G(x=0.0,z=3.4,rot=0.0,acao="em-pe",exp="sorriso",**k): return dict(x=x,z=z,rot=rot,acao=acao,exp=exp,**k)
+def orb(alvo, az, d, el=10, fov=50, up=0.0, dx=0.0, kd=1.3):
+    d = d * kd
+    """câmera a `d` m do alvo, azimute `az` (graus, + = lado direito) e elevação `el`; `up` baixa o alvo (o assunto sobe no quadro)"""
+    a, e = math.radians(az), math.radians(el)
+    al = [alvo[0] + dx, alvo[1] - up, alvo[2]]
+    return pt([al[0] + d * math.sin(a) * math.cos(e), al[1] + d * math.sin(e), al[2] + d * math.cos(a) * math.cos(e)], al, fov)
 
-OLHA_CEU={"cabeca.x":-0.55,"ombroE.x":-0.2,"ombroD.x":-0.2}
-TOCA={"ombroE.z":0.6,"cotoveloE.x":-0.2,"ombroE.x":-0.5,"maos":0.2}
-GOLPE={"ombroE.x":-1.3,"ombroD.x":-1.3,"cotoveloE.x":-0.2,"cotoveloD.x":-0.2,"tronco.x":0.3,"maos":0.2}
-APONTA={"ombroD.z":-1.2,"ombroD.x":-0.4,"cotoveloD.x":-0.1,"maos":0.1}
-VIRA_E=-math.pi/2
+CRUZADOS = {}
+OLHA_CEU = {"cabeca.x": -0.55, "ombroE.x": -0.2, "ombroD.x": -0.2}
+GOLPE = {"ombroE.x": -1.3, "ombroD.x": -1.3, "cotoveloE.x": -0.2, "cotoveloD.x": -0.2, "tronco.x": 0.3, "maos": 0.2}
+VIRA_E = -math.pi / 2
+HA = dict(haste=1)
+CA = M(HA, cabo=1)
+CO = M(CA, terra=1)
+KIT = M(CO, rede=1, protetor=1)   # o conjunto completo
 
-# camadas de estado (acumulam: cada peça só entra quando a fala a introduz)
-SEMNADA=dict()
-COM_HASTE=dict(haste=1)
-COM_CABO=M(COM_HASTE,cabo=1)
-COMPLETO=M(COM_CABO,terra=1)
+def Vz(x=0.0, z=3.4, rot=0.3, acao="em-pe", exp="sorriso", **k): return G(x=x, z=z, rot=rot, acao=acao, exp=exp, **k)
+def Viz(x=1.2, z=3.5, rot=-0.2, acao="bracos-cruzados", exp="sorriso", **k): return G(x=x, z=z, rot=rot, acao=acao, exp=exp, quem="vizinho", esc=1.0, **k)
 
-cenas={}
-# 1: tempestade, o raio estoura no telhado; o Zeca na porta, de frente
-a=W(1,'^cai',False)
-cenas[1]=M(SEMNADA,raio=V(0,1,round(a-0.03,3),round(a+0.2,3)),fogo=V(0,1,W(1,'^telhado'),round(W(1,'^fogo',True)+0.05,3)),pisca=V(0,1,round(a+0.06,3),1.0),estoura=V(0,1,W(1,'^tomadas'),1.0),luz=1,
-  camera=cam(T(0,3.6,13.5,50,0.1,x0=-4.5,up=0.1),T(0,3.5,12.0,50,0.1,x0=-3.4,up=0.1)),
-  gente=[G(-1.6,3.5,0.35,"em-pe","surpreso",pose=OLHA_CEU)],c=[])
-# 2: a câmera sobe: terreno aberto, a casa sozinha no ponto mais alto; ramos escolhem o telhado
-cenas[2]=M(SEMNADA,ramos=KF((0,0),(0.28,0.0),(0.55,1),(0.7,1),(0.74,0),(1,0)),raio=V(0,1,0.7,0.92),
-  camera=cam(T(0,3.0,18,50,0.1,x0=-3,up=0.1),T(0,2.4,34,50,0.42,x0=-6,up=0.0)),
-  gente=[G(-1.6,3.5,0.35,"em-pe","surpreso",pose=OLHA_CEU)],c=[])
-# 3: a haste sobe na cumeeira; o Zeca no telhado passa a mão nela
-cenas[3]=M(SEMNADA,haste=V(0,1,W(3,'^haste'),W(3,'^pontuda',True)),escada=1,etiq=["haste@%s"%W(3,'^haste')],etiqS=0.9,
-  camera=cam(T(-0.1,4.9,6.8,50,0.05,x0=-1.2,up=0.1),T(0,5.0,5.0,50,0.05,x0=-0.5,up=0.1)),
-  gente=[G(-0.95,0.15,0.25,"em-pe","sorriso",y=4.35,pose=TOCA,esc=0.95)],c=[])
-# 4: o raio cai na haste, o telhado fica intacto e as luzes acesas
-cenas[4]=M(COM_HASTE,raio=V(0,1,0.18,0.55),alvo="haste",luz=1,
-  camera=cam(T(0,4.2,10,50,0.06,x0=-2.2,up=0.1),T(0,4.4,8.6,50,0.06,x0=-1.4,up=0.1)),
-  gente=[],c=[])
-# 5: a corrente entra na haste e procura as paredes e a fiação
-cenas[5]=M(COM_HASTE,raio=V(0,1,0.0,0.3),alvo="haste",espalha=V(0,1,W(5,'^Ela'),0.95),fiacao=V(0,1,W(5,'^as$'),W(5,'^fiação',True)),pisca=V(0,1,0.62,0.95),
-  camera=cam(T(-0.2,3.6,11,50,0.08,x0=-2.4,up=0.1),T(0,3.2,9.4,50,0.08,x0=-1.4,up=0.1)),
-  gente=[G(-4.3,3.4,0.3,"em-pe","surpreso")],c=[])
-# 6: o cabo desce da haste pela parede até o chão
-cenas[6]=M(COM_HASTE,cabo=V(0,1,W(6,'^cabo'),W(6,'^chão',True)),etiq=["cabo@%s"%W(6,'^cabo')],etiqS=0.9,escada=0,
-  camera=cam(T(1.3,3.4,10.5,50,0.08,x0=-1.2,up=0.1),T(2.2,1.6,8.4,50,0.04,x0=0.2,up=0.1)),
-  gente=[G(4.3,3.4,-0.4,"explicando","sorriso")],c=[])
-# 7: o raio entra pela haste, desce pelo cabo, e a casa por dentro fica intacta
-cenas[7]=M(COM_CABO,raio=V(0,1,0.02,0.3),alvo="haste",onda=V(0,1,0.24,0.68),fiacao=1,raiox=V(0,1,0.4,0.7),
-  camera=cam(T(1.0,3.0,11.5,50,0.08,x0=-2,up=0.1),T(1.6,2.2,9.2,50,0.05,x0=-0.4,up=0.1)),
-  gente=[G(4.3,3.4,-0.4,"comemorando","sorriso")],c=[])
-# 8: corte do solo: o cabo só encosta no chão e a corrente fica presa
-cenas[8]=M(COM_CABO,acumula=V(0,1,0.08,0.55),pisca=V(0,1,0.4,0.9),luz=1,
-  camera=cam(T(2.7,-0.2,7.2,50,0.02,x0=2.2,up=0.05),T(2.7,-0.1,6.2,50,0.02,x0=2.6,up=0.05)),
-  gente=[G(5.0,3.4,VIRA_E,"em-pe","surpreso")],c=[])
-# 9: o Zeca finca as hastes em volta da casa; o cabo se liga a elas
-cenas[9]=M(COM_CABO,terra=V(0,1,W(9,'^enterre'),W(9,'^ligadas',True)),etiq=["aterra@%s"%W(9,'^hastes')],etiqS=0.9,
-  camera=cam(T(3.4,-0.5,9.6,50,0.02,x0=1.9,up=0.05),T(3.4,-0.6,8.8,50,0.02,x0=2.3,up=0.05)),
-  gente=[G(4.6,3.4,VIRA_E,"em-pe","sorriso",pose=[(0.15,{}),(0.3,GOLPE),(0.45,{}),(0.6,GOLPE),(0.75,{}),(1,GOLPE)])],c=[])
-# 10: a corrente abre em leque pela terra e some
-cenas[10]=M(COMPLETO,onda=V(0,1,0.0,0.4),leque=V(0,1,0.3,0.98),
-  camera=cam(T(3.0,-1.1,8.8,50,0.02,x0=1.6,up=0.05),T(3.0,-1.2,8.0,50,0.02,x0=2.0,up=0.05)),
-  gente=[G(4.6,3.4,VIRA_E,"em-pe","sorriso")],c=[])
-# 11: o teste: o raio, a descida, o leque na terra; a casa de pé e acesa
-cenas[11]=M(COMPLETO,raio=V(0,1,0.02,0.24),alvo="haste",onda=V(0,1,0.22,0.5),leque=V(0,1,0.46,0.96),luz=1,
-  camera=cam(T(1.0,2.6,15.5,50,0.1,x0=-3.2,up=0.0),T(2.6,0.6,12.5,50,0.04,x0=-0.6,up=0.0)),
-  gente=[G(-4.4,3.4,0.45,"em-pe","surpreso")],c=[])
-# 12: plano aberto: as três peças acesas juntas; aparece o nome
-cenas[12]=M(COMPLETO,destaque=V(0,1,0.12,0.9),raiox=0,
-  etiq=["haste@0.3-0.95","cabo@0.3-0.95","aterra@0.3-0.95"],etiqS=1.0,etiqK=0.8,etiqYmax=0.4,
-  camera=cam(T(1.0,1.5,17,52,0.08,x0=-1.5,up=0.08),T(1.2,1.5,15.5,52,0.08,x0=-0.6,up=0.08)),
-  gente=[G(-4.2,3.4,0.4,"comemorando","sorriso")],c=[rot("PARA-RAIOS",0,40,100)])
-# 13: gravura de Franklin
-cenas[13]=M(palco="franklin",raio=V(0,1,0.45,0.85),
-  camera=cam(dict(pos=[121.0,2.4,15.0],alvo=[121.0,2.2,0],fov=44),dict(pos=[121.0,2.4,13.2],alvo=[121.0,2.2,0],fov=44)),c=[])
-# 14: o para-raios não impede o raio de cair, só dá o caminho
-cenas[14]=M(COMPLETO,raio=V(0,1,0.06,0.3),alvo="haste",onda=V(0,1,W(14,'^Ele'),0.97),
-  camera=cam(T(1.4,2.4,15,50,0.1,x0=-2,up=0.08),T(2.2,1.2,13,50,0.06,x0=0.2,up=0.08)),
-  gente=[G(-4.4,3.4,0.45,"explicando","sorriso")],c=[])
+cenas = {}
+# 1: tempestade; o vizinho de braços cruzados; o raio acerta o telhado dele duas vezes; fumaça e cabelo em pé
+r1 = Wn(1, '^cai$', 2); r2 = W(1, '^novo'); fu = W(1, '^fumegando')
+cenas[1] = M(raio=V(0, 1, round(r1 - 0.03, 3), round(r1 + 0.18, 3)), raio2=V(0, 1, round(r2 - 0.04, 3), round(r2 + 0.16, 3)), fumaca=V(0, 1, round(r1 + 0.1, 3), 1.0), pisca=V(0, 1, round(r1 + 0.05, 3), 0.8), luz=1,
+  camera=cam(orb([0, 1.6, 3.5], -12, 7.0, -4, 55, kd=1), orb([0, 3.2, 1.0], -38, 13.0, 20, 52)),
+  gente=[Viz(1.2, 3.5, -0.25, cabeloPe=KF((0, 0), (round(r1 + 0.02, 3), 0), (round(r1 + 0.06, 3), 0.4), (round(r2 + 0.02, 3), 0.4), (round(r2 + 0.08, 3), 1), (1, 1)), estrelas=KF((0, 0), (round(r2 + 0.04, 3), 0), (round(r2 + 0.1, 3), 1), (1, 1)),
+             acao=[(round(r1 + 0.06, 3), "bracos-cruzados", "sorriso"), (1, "surpreso", "surpreso")]),
+         Vz(-1.3, 3.6, 0.4, "em-pe", "surpreso", pose=OLHA_CEU)], c=[])
+# 2: galochas; o relâmpago acende o chão e elas dão um pulinho; rótulo 300 MILHÕES DE VOLTS
+g2 = W(2, '^300')
+cenas[2] = M(raio=V(0, 1, round(g2 + 0.02, 3), round(g2 + 0.2, 3)), alvo="chao", choque=KF((0, 0), (round(g2 + 0.06, 3), 0), (round(g2 + 0.09, 3), 1), (round(g2 + 0.28, 3), 0.15), (1, 0)), choqueCor="azul", choqueX=0.5, choqueZ=3.6, luz=1,
+  camera=cam(orb([0.5, 0.55, 3.6], 38, 5.2, 10, 50, kd=1), orb([0.5, 0.6, 3.6], 28, 4.8, 8, 50, kd=1)),
+  gente=[Vz(0.5, 3.6, 0.4, galochas=True, pulo=KF((0, 0), (round(g2 + 0.07, 3), 0), (round(g2 + 0.09, 3), 1), (round(g2 + 0.3, 3), 0.7), (round(g2 + 0.4, 3), 0), (1, 0)),
+          acao=[(round(g2 + 0.07, 3), "em-pe", "sorriso"), (1, "em-pe", "surpreso")])],
+  c=[rot("300 MILHÕES DE VOLTS", 1, 40, 70)])
+# 3: a haste sobe na cumeeira; o raio cai nela e o telhado fica intacto
+h3 = W(3, '^haste'); n3 = W(3, '^nela')
+cenas[3] = M(haste=V(0, 1, h3, round(h3 + 0.13, 3)), escada=1, raio=V(0, 1, round(n3 - 0.03, 3), round(n3 + 0.18, 3)), alvo="haste", luz=1, etiq=["haste@%s" % round(h3 + 0.08, 3)], etiqS=0.9,
+  camera=cam(orb([-1.0, 3.6, 0.8], 30, 10.5, 12, 52), orb([-0.8, 4.0, 0.8], 24, 9.0, 14, 52)),
+  gente=[Vz(-2.4, 3.0, 0.3, [(round(n3 - 0.04, 3), "apontando"), (1, "comemorando")], "sorriso", y=2.55)], c=[])
+# 4: a corrente entra na haste e escapa pela casa; as lâmpadas piscam
+e4 = W(4, '^escapa')
+cenas[4] = M(HA, raio=V(0, 1, 0.0, 0.2), alvo="haste", espalha=V(0, 1, round(e4 - 0.02, 3), round(e4 + 0.3, 3)), fiacao=V(0, 1, W(4, '^paredes'), round(W(4, '^fiação') + 0.1, 3)), pisca=V(0, 1, W(4, '^lâmpadas'), 0.97), luz=1,
+  camera=cam(orb([0, 3.3, 1.0], -28, 11.5, 12, 50), orb([0, 3.3, 1.0], -20, 10.0, 12, 50)),
+  gente=[Vz(-4.3, 3.4, 0.45, "em-pe", "surpreso", pose={"ombroE.z": 0.5, "ombroD.z": -0.5, "cotoveloE.x": -1.2, "cotoveloD.x": -1.2, "maos": 1})], c=[])
+# 5: fio fino da haste ao chão; esquenta, fica vermelho e derrete como vela
+f5 = W(5, '^fio'); q5 = W(5, '^passa'); d5 = W(5, '^derrete')
+cenas[5] = M(HA, fio=V(0, 1, f5, round(W(5, '^chão') + 0.03, 3)), calor=V(0, 1, q5, round(W(5, '^vermelho', fim=True) + 0.02, 3)), derrete=V(0, 1, round(d5 - 0.03, 3), 1.0), luz=1,
+  camera=cam(orb([2.2, 2.7, 2.4], 34, 10.0, 10, 50), orb([2.7, 2.2, 2.4], 30, 5.2, 8, 50)),
+  gente=[Vz(4.6, 3.4, -0.35, "explicando", "sorriso")], c=[])
+# 6: cabo grosso por fora até o chão; só encosta na terra: a corrente fica presa na ponta
+c6 = W(6, '^cabo'); e6 = W(6, '^encosta')
+cenas[6] = M(HA, cabo=V(0, 1, c6, round(W(6, '^chão', fim=True) - 0.02, 3)), onda=V(0, 1, round(e6 - 0.1, 3), round(e6 + 0.12, 3)), acumula=V(0, 1, round(e6 + 0.06, 3), 0.9), pisca=V(0, 1, round(e6 + 0.2, 3), 0.95), luz=1,
+  etiq=["cabo@%s" % round(c6 + 0.06, 3)], etiqS=0.9,
+  camera=cam(orb([2.7, 1.9, 2.5], 36, 9.5, 8, 50), orb([2.8, -0.2, 3.9], 26, 7.0, 5, 50)),
+  gente=[Vz(5.0, 3.5, VIRA_E + 0.4, "explicando", "sorriso")], c=[])
+# 7: uma haste enterrada; a terra seca conduz mal; quem pisa perto leva choque nos pés
+t7 = W(7, '^enterre'); p7 = W(7, '^pisa'); a7 = W(7, '^acumula')
+cenas[7] = M(CA, unica=True, terra=V(0, 1, t7, round(t7 + 0.14, 3)), onda=V(0, 1, round(W(7, '^Mas') - 0.0, 3), round(W(7, '^Mas') + 0.2, 3)), choque=KF((0, 0), (round(a7 - 0.02, 3), 0), (round(a7 + 0.1, 3), 1), (1, 1)), choqueX=2.9, choqueZ=3.7, luz=1,
+  camera=cam(orb([3.3, 0.5, 3.7], 32, 8.2, 14, 50), orb([3.4, 0.4, 3.7], 26, 5.8, 14, 50)),
+  gente=[Vz(V(5.6, 3.7, 0.0, round(p7 - 0.02, 3)), 3.6, 0.3, [(round(p7 - 0.02, 3), "andando", "sorriso"), (1, "em-pe", "surpreso")], pulo=KF((0, 0), (round(p7 + 0.02, 3), 0), (round(p7 + 0.05, 3), 1), (1, 0.9)), estrelas=KF((0, 0), (round(p7 + 0.03, 3), 0), (round(p7 + 0.08, 3), 1), (1, 1)))],
+  c=[])
+# 8: várias hastes em volta; a corrente abre em leque; o choque nos pés diminui
+t8 = W(8, '^enterre'); l8 = W(8, '^espalha'); h8 = W(8, '^hastes')
+cenas[8] = M(CA, terra=V(0, 1, t8, round(W(8, '^cabo', fim=True) - 0.02, 3)), onda=V(0, 1, round(l8 - 0.04, 3), round(l8 + 0.12, 3)), leque=V(0, 1, round(l8 - 0.0, 3), 0.97), choque=V(0.9, 0.1, round(l8, 3), 0.95), choqueX=2.9, choqueZ=3.7, luz=1,
+  etiq=["aterra@%s" % round(h8 + 0.04, 3)], etiqS=0.9,
+  camera=cam(pt([-0.6, 0.3, 12.0], [1.8, -0.8, 4.0], 50), pt([6.4, 0.3, 11.2], [3.8, -0.8, 4.0], 50)),
+  gente=[Vz(5.2, 3.5, VIRA_E + 0.5, "em-pe", "sorriso", pose=[(0.16, {}), (0.26, GOLPE), (0.34, {}), (0.44, GOLPE), (0.52, {}), (1, {})])], c=[])
+# 9: raio-X da casa: faísca azul entre o cano e a caixa de fios; o Zeca na cozinha dá um pulinho
+s9 = W(9, '^faísca')
+cenas[9] = M(CO, raiox=V(0, 1, 0.0, 0.12), cano=V(0, 1, 0.0, 0.12), faisca=V(0, 1, round(s9 - 0.03, 3), round(s9 + 0.03, 3)), luz=1,
+  camera=cam(orb([0.5, 1.4, -0.6], -24, 8.6, 10, 50), orb([0.5, 1.4, -0.6], -18, 7.6, 10, 50)),
+  gente=[Vz(-1.5, -0.2, 0.3, pulo=KF((0, 0), (round(s9 + 0.0, 3), 0), (round(s9 + 0.03, 3), 0.5), (round(s9 + 0.18, 3), 0), (1, 0)),
+          acao=[(round(s9 - 0.02, 3), "em-pe", "sorriso"), (1, "surpreso", "surpreso")])], c=[])
+# 10: fios verdes ligam cano, coluna e quadro ao aterramento; as faíscas somem; setas "sobem juntas"
+l10 = W(10, '^ligue'); t10 = W(10, '^todo$'); q10 = W(10, '^luz')
+cenas[10] = M(CO, raiox=1, cano=1, ligaTudo=V(0, 1, l10, round(q10 + 0.06, 3)), faisca=V(1, 0, round(q10, 3), round(q10 + 0.1, 3)), sobem=V(0, 1, round(Wn(10, '^todo', 1) - 0.02, 3), round(Wn(10, '^todo', 1) + 0.1, 3)), luz=1,
+  camera=cam(orb([0.5, 1.1, -0.3], -22, 8.6, 12, 50), orb([0.5, 1.1, -0.3], -14, 6.6, 14, 50)),
+  gente=[Vz(-1.6, -0.2, 0.3, "explicando", "sorriso")], c=[])
+# 11: o raio cai na rede da rua; o pico corre pelo fio até as tomadas; o protetor desvia o pico para o aterramento
+t11 = W(11, '^tomadas'); p11 = W(11, '^protetor'); d11 = W(11, '^desvia')
+cenas[11] = M(CO, rede=1, protetor=V(0, 1, round(p11 - 0.02, 3), round(p11 + 0.07, 3)), raio=V(0, 1, 0.12, 0.3), alvo="poste", pico=V(0, 1, 0.2, round(t11 + 0.04, 3)), estoura=KF((0, 0), (round(t11 - 0.02, 3), 0), (round(t11 + 0.02, 3), 1), (round(p11 - 0.04, 3), 1), (round(p11 + 0.02, 3), 0), (1, 0)),
+  raio2=V(0, 1, round(d11 - 0.1, 3), round(d11 + 0.1, 3)), alvo2="poste", pico2=V(0, 1, round(d11 - 0.02, 3), round(d11 + 0.17, 3)), luz=1, etiq=["protetor@%s" % round(p11 + 0.05, 3)], etiqS=0.9,
+  camera=cam(orb([-5.2, 4.2, 0.6], 22, 12.0, 8, 50), orb([-2.6, 2.4, 1.0], 28, 9.0, 10, 50)),
+  gente=[Vz(-4.4, 3.5, 0.5, "em-pe", "sorriso")], c=[])
+# 12: revelação: plano aberto do conjunto; os rótulos acendem; entra o nome
+cenas[12] = M(KIT, destaque=V(0, 1, 0.14, 0.92), etiq=["haste@0.3-0.52", "cabo@0.42-0.7", "aterra@0.54-0.85", "protetor@0.66-0.97"], etiqS=1.0, etiqK=0.8, etiqYmax=0.45, luz=1,
+  camera=cam(orb([-0.5, 1.8, 1.5], -34, 17.0, 6, 52), orb([-0.5, 1.8, 1.5], 22, 20.0, 36, 52)),
+  gente=[Vz(-1.6, 3.4, 0.2, "comemorando", "sorriso")], c=[rot("PARA-RAIOS", 0, 40, 100)])
+# 13: o raio cai na haste de novo; o caminho brilha até a terra; a casa de pé e acesa
+i13 = W(13, '^impede'); k13 = W(13, '^caminho'); m13 = W(13, '^mesmo')
+cenas[13] = M(KIT, raio=V(0, 1, round(i13 - 0.02, 3), round(i13 + 0.2, 3)), raio2=V(0, 1, round(m13 - 0.03, 3), round(m13 + 0.2, 3)), alvo="haste", alvo2="haste",
+  onda=KF((0, 0), (round(k13 - 0.04, 3), 0), (round(k13 + 0.16, 3), 1), (round(k13 + 0.17, 3), 0), (round(m13 - 0.02, 3), 0), (round(m13 + 0.18, 3), 1), (1, 1)),
+  leque=KF((0, 0), (round(m13 + 0.1, 3), 0), (0.98, 1), (1, 1)), luz=1,
+  camera=cam(orb([1.2, 2.6, 1.2], -26, 14.0, 12, 50), orb([1.8, 1.8, 1.4], -18, 12.0, 8, 50)),
+  gente=[Vz(-4.4, 3.4, 0.45, "explicando", "sorriso")], c=[])
+# 14: gravura de Franklin; só o ano na tela
+cenas[14] = M(palco="franklin", raio=V(0, 1, 0.45, 0.85), camera=cam(pt([121.0, 2.4, 15.0], [121.0, 2.2, 0], 44), pt([121.0, 2.4, 13.2], [121.0, 2.2, 0], 44)), c=[rot("1752", 0, 40, 100)])
 # 15: o Brasil à noite, raios por todo lado
-cenas[15]=M(palco="mapa",flashes=V(0.35,1,0,0.5),
-  camera=cam(dict(pos=[180,13.5,13.5],alvo=[180,0,0.6],fov=50),dict(pos=[180,12.0,12.0],alvo=[180,0,0.6],fov=50)),c=[])
-# 16: o Zeca na estrada, noite de tempestade; entra no carro e fecha a porta
-e16=W(16,'^Dentro')
-cenas[16]=M(palco="estrada",carro=True,carroRot=2.5,porta=KF((0,0),(0.42,0),(0.58,1),(1,1)),zecaDentro=V(0,1,0.5,0.501),
-  camera=cam(T(60.9,1.2,9.5,50,0.06,x0=59.0,up=0.0),T(60.6,1.2,8.0,50,0.06,x0=59.4,up=0.0)),
-  gente=[G(V(2.6,1.5,0.08,0.5),V(2.5,1.7,0.08,0.5),-2.2,[(0.5,"andando","sorriso"),(1,"em-pe","sorriso")],"sorriso",ate=0.5)],c=[])
-# 17: o carro fechado é uma gaiola de metal; o raio cai no teto e a corrente corre por fora
-cenas[17]=M(palco="estrada",carro=True,carroRot=2.5,porta=1,zecaDentro=1,segura=V(0,0.5,0.1,0.5),gaiola=V(0,1,0.02,0.22),
-  raio=V(0,1,W(17,'^cai')-0.02,round(W(17,'^cai')+0.2,3)),alvo="carro",corrCarro=V(0,1,round(W(17,'^corrente')-0.02,3),0.97),
-  etiq=["gaiola@0.04-0.4"],etiqS=1.0,etiqK=1.0,
-  camera=cam(T(60.2,1.6,11,50,0.1,x0=58.4,up=0.0),T(60.1,1.5,10,50,0.1,x0=58.9,up=0.0)),c=[])
-# 18: por dentro, quem está lá não sente nada
-cenas[18]=M(palco="estrada",carro=True,carroRot=2.5,porta=1,zecaDentro=1,gaiola=1,segura=V(0.3,1,0,0.4),
-  raio=V(0,1,0.0,0.3),alvo="carro",corrCarro=V(0,1,0.2,0.85),
-  camera=cam(T(60.0,1.3,7.2,50,0.1,x0=58.8,up=0.0),T(60.0,1.2,6.2,50,0.1,x0=59.2,up=0.0)),c=[])
-# 19: o Zeca sai do carro sob a chuva; a casa protegida ao fundo, acesa
-cenas[19]=M(palco="estrada",carro=True,carroRot=2.5,porta=0,zecaDentro=0,casaFundo=True,
-  camera=cam(dict(pos=[65.2,2.3,9.0],alvo=[58.6,3.3,-14],fov=52),dict(pos=[64.6,2.3,8.2],alvo=[58.2,3.3,-14],fov=52)),
-  gente=[G(62.6-60,-1.5,-0.5,"comemorando","sorriso")],c=[])
-# 20: o close permanece; entra o cartão de comentar
-cenas[20]=M(palco="estrada",carro=True,carroRot=2.5,porta=0,zecaDentro=0,casaFundo=True,
-  camera=cam(dict(pos=[64.6,2.3,8.2],alvo=[58.2,3.3,-14],fov=52),dict(pos=[64.2,2.2,7.6],alvo=[58.0,3.3,-14],fov=52)),
-  gente=[G(62.6-60,-1.5,-0.5,"em-pe","sorriso")],
-  c=[chamada("comentar","COMENTE RAIO","O Brasil leva dezenas de milhões de raios por ano",0)])
-# 21: pedido de envio e de seguir
-cenas[21]=M(palco="estrada",carro=True,carroRot=2.5,porta=0,zecaDentro=0,casaFundo=True,
-  camera=cam(dict(pos=[64.2,2.2,7.6],alvo=[58.0,3.3,-14],fov=52),dict(pos=[63.8,2.2,7.2],alvo=[57.8,3.3,-14],fov=52)),
-  gente=[G(62.6-60,-1.5,-0.5,"acenando","sorriso")],
-  c=[chamada("compartilhar","COMPARTILHE","com quem tem medo de tempestade",0),chamada("seguir","SIGA","PRA SABER COMO AS COISAS FUNCIONAM",1)])
+cenas[15] = M(palco="mapa", flashes=V(0.35, 1, 0.0, 0.5), camera=cam(pt([176.0, 12.5, 12.0], [180, 0, 0.6], 50), pt([184.0, 11.0, 11.0], [180, 0, 0.6], 50)), c=[rot("BRASIL", 0, 40, 100)])
+# 16: o vizinho de braços cruzados com o telhado fumegando; o Zeca olha pro céu; um avião cruza; entra uma interrogação
+a16 = W(16, '^avião')
+cenas[16] = M(fumaca=1, luz=1, aviao=V(0, 1, round(a16 - 0.05, 3), 0.97), lampada=V(0, 1, round(a16 + 0.02, 3), round(a16 + 0.1, 3)),
+  camera=cam(orb([0, 3.6, 2.5], -20, 12.0, 10, 50, 0), orb([0, 4.4, 2.5], -14, 11.0, 12, 50)),
+  gente=[Viz(1.5, 3.5, -0.3, cabeloPe=1), Vz(-1.5, 3.6, 0.4, "em-pe", "surpreso", pose=OLHA_CEU)], c=[])
+# 17: o Zeca de frente; entram as quatro chamadas
+cenas[17] = M(luz=1, camera=cam(pt([0.0, 3.0, 10.1], [0.0, 2.7, 3.4], 46), pt([0.0, 2.95, 9.6], [0.0, 2.7, 3.4], 46)),
+  gente=[Vz(0.0, 3.4, 0.0, "acenando", "sorriso")],
+  c=[chamada("curtir", "CURTA", None, 0), chamada("comentar", "COMENTE", "RAIO", 1), chamada("compartilhar", "COMPARTILHE", None, 2), chamada("seguir", "SIGA", "PRA SABER COMO AS COISAS FUNCIONAM", 3)])
 
-SFX={
-1:[("trovao",0,0.6),("queda_energia",1,0.4),("estalo",2,0.5)],
-2:[("vento",0,0.4),("raio",2,0.5),("trovao",3,0.5)],
-3:[("pop",0,0.4),("metal",1,0.5)],
-4:[("raio",0,0.55),("ding",0,0.4)],
-5:[("zumbido",0,0.4),("pisca",1,0.5)],
-6:[("pop",0,0.4),("metal",1,0.5)],
-7:[("raio",0,0.55),("whoosh",1,0.4),("ding",2,0.45)],
-8:[("estatica",0,0.4),("estalo",1,0.5)],
-9:[("pop",0,0.4),("impacto_seco",1,0.5)],
-10:[("whoosh",0,0.4),("chiado",1,0.35)],
-11:[("raio",0,0.55),("whoosh",1,0.4),("chiado",2,0.35),("ding",3,0.5)],
-12:[("jingle",0,0.5)],
-13:[("papel",0,0.4),("carimbo",1,0.4)],
-14:[("raio",0,0.5),("ding",1,0.45)],
-15:[("trovao",0,0.5),("raio",1,0.4)],
-16:[("trovao",0,0.4),("porta",1,0.55),("pop",2,0.4)],
-17:[("pop",0,0.4),("raio",1,0.6),("whoosh",2,0.4),("ding",3,0.4)],
-18:[("ding",0,0.45)],
-19:[("jingle",0,0.45)],
-20:[("pop",0,0.5)],
-21:[("pop",0,0.5),("ding",1,0.55)],
+SFX = {
+1: [("trovao", 0, 0.6), ("raio", 1, 0.55), ("raio", 2, 0.55), ("estalo", 3, 0.4)],
+2: [("pop", 0, 0.4), ("raio", 1, 0.55), ("trovao", 1, 0.5)],
+3: [("pop", 0, 0.4), ("metal", 1, 0.5), ("raio", 3, 0.6), ("ding", 3, 0.4)],
+4: [("raio", 0, 0.55), ("zumbido", 1, 0.4), ("pisca", 2, 0.5)],
+5: [("pop", 0, 0.4), ("zumbido", 1, 0.4), ("chiado", 2, 0.4)],
+6: [("pop", 0, 0.4), ("metal", 1, 0.45), ("estatica", 2, 0.4)],
+7: [("pop", 0, 0.4), ("impacto_seco", 1, 0.5), ("estalo", 3, 0.5)],
+8: [("pop", 0, 0.4), ("whoosh", 1, 0.4), ("chiado", 3, 0.35)],
+9: [("estatica", 0, 0.4), ("estalo", 1, 0.5), ("pop", 2, 0.4)],
+10: [("pop", 0, 0.4), ("ding", 2, 0.45), ("whoosh", 3, 0.35)],
+11: [("raio", 1, 0.55), ("estalo", 1, 0.5), ("pop", 2, 0.45), ("whoosh", 3, 0.4)],
+12: [("jingle", 0, 0.5)],
+13: [("raio", 0, 0.55), ("whoosh", 1, 0.4), ("raio", 3, 0.5), ("ding", 4, 0.45)],
+14: [("papel", 0, 0.4), ("carimbo", 1, 0.4)],
+15: [("trovao", 0, 0.5), ("raio", 1, 0.4)],
+16: [("pop", 0, 0.4), ("whoosh", 1, 0.4), ("ding", 2, 0.45)],
+17: [("pop", 0, 0.5), ("pop", 1, 0.5), ("pop", 2, 0.5), ("ding", 3, 0.55)],
 }
-AMB={i:("chuva",0.12) for i in range(1,12)}
-AMB.update({i:("chuva",0.1) for i in range(14,22)})
-AMB[12]=("nenhuma",0); AMB[13]=("nenhuma",0); AMB[15]=("nenhuma",0)
-
-reg=open(os.path.join(AQUI,'..','..','motor','pipeline','sfx.py'),encoding='utf-8').read().split('REGISTRO = {')[1]
-validos=set(re.findall(r'^\s+"([a-z_0-9]+)":\s+\(',reg,re.M))
-for i,l in SFX.items():
-    for sf in l:
-        assert sf[0] in validos,(i,sf[0])
-        assert sf[1]<=NLEVE[i-1],(i,sf,NLEVE[i-1])
-for i,(sn,v) in AMB.items(): assert sn=="nenhuma" or sn in validos,(i,sn)
-for i,d in cenas.items():
-    for cartao in d['c']:
-        if 'trecho' in cartao: assert cartao['trecho']<=NLEVE[i-1],(i,cartao,NLEVE[i-1])
-assert set(cenas)==set(range(1,22)) and set(SFX)==set(range(1,22))
-
-bat=[]
-for i,f in enumerate(falas,1):
-    d=dict(cenas[i]); c=d.pop('c')
-    palavras=len(re.sub(r'\[[a-z]+\]','',f).split())
-    cena={"cenario":"pararaios",**d}
-    sn,v=AMB.get(i,("chuva",0.1))
-    cena["ambiencia"]="nenhuma" if sn=="nenhuma" else {"som":sn,"volume":v}
-    if c: cena["cartoes"]=c
-    cena["sfx"]=[{"som":sf[0],"trecho":sf[1],"volume":sf[2]} for sf in SFX[i]]
-    bat.append({"texto":f,"duracao":round(max(2.2,palavras/2.9),1),"cena":cena})
-for i,b in enumerate(bat,1):
-    txt=(b["texto"]+json.dumps({k:v for k,v in b["cena"].items() if k!="cenario"},ensure_ascii=False)).lower()
-    if i<12: assert 'para-raios' not in txt and 'pararaios' not in txt,(i)
-r={"slug":"demo-3d","serie":"DEMO 3D","episodio":15,"voz":{"tts":"elevenlabs","id":"RGymW84CSmfVugnA5tvA","modelo":"eleven_v4","idioma":"pt","velocidade":1.2},"cartaoFinal":None,"batidas":bat}
-os.makedirs(os.path.dirname(os.path.abspath(sys.argv[1])),exist_ok=True)
-json.dump(r,open(sys.argv[1],'w'),ensure_ascii=False,indent=1)
-print(len(bat),'batidas',round(sum(b['duracao'] for b in bat),1),'s',sum(len(v) for v in SFX.values()),'efeitos')
+# Raio e trovão sincronizados com o clarão: o clarão está em 40% da janela ini..fim do raio; o chiado do "raio" (0,5 s) termina com o estalo, então começa 0,4 s antes;
+# o trovão chega 0,35 s depois. `em` é relativo ao início da batida (trecho 0).
+def clarao(i, k='raio'):
+    v = cenas[i][k]; return (v['ini'] + 0.4 * (v['fim'] - v['ini'])) * dur(i)
+def RAIO(i, k='raio', vol=0.55): return ("raio", 0, vol, clarao(i, k) - 0.4)
+def TROVAO(i, k='raio', vol=0.5, atraso=0.35): return ("trovao", 0, vol, clarao(i, k) + atraso)
+SFX[1] = [RAIO(1), RAIO(1, 'raio2'), TROVAO(1, 'raio', 0.6, 0.5), ("estalo", 3, 0.4)]
+SFX[2] = [("pop", 0, 0.4), RAIO(2), TROVAO(2)]
+SFX[3] = [("pop", 0, 0.4), ("metal", 1, 0.5), RAIO(3), ("ding", 3, 0.4)]
+SFX[4] = [RAIO(4), ("zumbido", 1, 0.4), ("pisca", 2, 0.5)]
+SFX[11] = [RAIO(11), ("estalo", 1, 0.5), ("pop", 2, 0.45), RAIO(11, 'raio2', 0.5), ("whoosh", 3, 0.4)]
+SFX[13] = [RAIO(13), ("whoosh", 1, 0.4), RAIO(13, 'raio2', 0.5), ("ding", 4, 0.45)]
+AMB = {i: ("chuva", 0.12) for i in range(1, 12)}
+AMB.update({i: ("chuva", 0.1) for i in (13, 16, 17)})
+AMB.update({12: ("nenhuma", 0), 14: ("nenhuma", 0), 15: ("nenhuma", 0)})
+DUR = {i: dur(i) for i in range(1, 18)}
+B.salvar(cenas, SFX, AMB, DUR, proibido=('para-raios', 'pararaios'), ate=12)

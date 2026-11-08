@@ -69,10 +69,13 @@ const tabuas = () => {
   return t;
 };
 
-export const Ambiente: React.FC = () => {
+/** `vao` = [x0, x1]: abre um vão na fila de armários (bancada, tampo e rodapé) para um eletrodoméstico em pé no chão. */
+export const Ambiente: React.FC<{ vao?: [number, number] }> = ({ vao }) => {
   const az = useMemo(azulejos, []);
   const pi = useMemo(tabuas, []);
-  const portas = Array.from({ length: 11 }, (_, i) => -3.0 + i * 0.6).filter((x) => Math.abs(x - XS) > 0.45);
+  const portas = Array.from({ length: 11 }, (_, i) => -3.0 + i * 0.6).filter((x) => Math.abs(x - XS) > 0.45 && !(vao && x + 0.28 > vao[0] && x - 0.28 < vao[1]));
+  // trechos [a,b] de uma faixa x0..x1 sem o vão
+  const trechos = (x0: number, x1: number): [number, number][] => (vao ? ([[x0, Math.min(x1, vao[0])], [Math.max(x0, vao[1]), x1]] as [number, number][]).filter(([a, b]) => b - a > 0.01) : [[x0, x1]]);
   return (
     <group>
       {/* parede do fundo e faixa de azulejos atrás da bancada */}
@@ -83,15 +86,15 @@ export const Ambiente: React.FC = () => {
       {/* bancada: armários, tampo e rodapé */}
       {/* o corpo dos armários não passa pelo fogão (o nicho do forno fica aberto) */}
       <Caixa p={[(-7 + XS - 0.4) / 2, CY / 2 - 0.02, (Z_FRENTE + Z_PAREDE) / 2]} t={[7 + XS - 0.4, CY - 0.06, Z_FRENTE - Z_PAREDE - 0.02]} cor="#cf9650" raio={0.01} sombra={false} />
-      <Caixa p={[(7 + XS + 0.4) / 2, CY / 2 - 0.02, (Z_FRENTE + Z_PAREDE) / 2]} t={[7 - XS - 0.4, CY - 0.06, Z_FRENTE - Z_PAREDE - 0.02]} cor="#cf9650" raio={0.01} sombra={false} />
+      {trechos(XS + 0.4, 7).map(([a, b]) => <Caixa key={a} p={[(a + b) / 2, CY / 2 - 0.02, (Z_FRENTE + Z_PAREDE) / 2]} t={[b - a, CY - 0.06, Z_FRENTE - Z_PAREDE - 0.02]} cor="#cf9650" raio={0.01} sombra={false} />)}
       {portas.map((x) => (
         <group key={x}>
           <Caixa p={[x, 0.43, Z_FRENTE + 0.01]} t={[0.56, 0.7, 0.025]} cor="#e0ac66" raio={0.012} />
           <Caixa p={[x + 0.2, 0.7, Z_FRENTE + 0.03]} t={[0.02, 0.12, 0.02]} cor="#6a4726" raio={0.008} met={0.3} />
         </group>
       ))}
-      <Caixa p={[0, 0.03, Z_FRENTE]} t={[14, 0.06, 0.05]} cor="#8b5e34" raio={0.008} sombra={false} />
-      <Caixa p={[0, CY - 0.015, (Z_FRENTE + Z_PAREDE) / 2 + 0.03]} t={[14, 0.03, Z_FRENTE - Z_PAREDE + 0.06]} cor="#f1e5cd" raio={0.008} sombra />
+      {trechos(-7, 7).map(([a, b]) => <Caixa key={a} p={[(a + b) / 2, 0.03, Z_FRENTE]} t={[b - a, 0.06, 0.05]} cor="#8b5e34" raio={0.008} sombra={false} />)}
+      {trechos(-7, 7).map(([a, b]) => <Caixa key={a} p={[(a + b) / 2, CY - 0.015, (Z_FRENTE + Z_PAREDE) / 2 + 0.03]} t={[b - a, 0.03, Z_FRENTE - Z_PAREDE + 0.06]} cor="#f1e5cd" raio={0.008} sombra />)}
       {/* prateleira com potes, no alto */}
       <Caixa p={[-1.7, 1.75, Z_PAREDE + 0.12]} t={[1.3, 0.035, 0.22]} cor="#a8743f" raio={0.01} />
       {[[-2.2, "#e4573d"], [-1.95, "#4f9d69"], [-1.7, "#f2c230"], [-1.45, "#6aa6d8"]].map(([x, c], i) => (

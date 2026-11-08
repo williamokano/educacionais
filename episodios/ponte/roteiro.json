@@ -1,0 +1,2964 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 23,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] A pizza chegou, [leve] mas o entregador está do _outro lado_ do rio. [leve] Corte uma árvore e deite o tronco. [leve] Entre vocês, só um tronco que _rola_. [leve] E você está com _muita_ fome. [leve] O entregador só manda um _joinha_.",
+   "duracao": 10.833,
+   "cena": {
+    "cenario": "ponte",
+    "arvore": 1,
+    "queda": [
+     [
+      0,
+      0
+     ],
+     [
+      0.492,
+      0
+     ],
+     [
+      0.582,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "golpes": [
+     0.342,
+     0.402,
+     0.462
+    ],
+    "qIni": 0.492,
+    "qFim": 0.582,
+    "rola": [
+     [
+      0,
+      0
+     ],
+     [
+      0.582,
+      0
+     ],
+     [
+      0.608,
+      0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "moto": 1,
+    "ondas": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       7.253,
+       4.844,
+       17.188
+      ],
+      "alvo": [
+       -0.4,
+       2.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.441,
+       3.489,
+       14.788
+      ],
+      "alvo": [
+       -1.8,
+       1.6,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -5.05,
+      "z": 0.2,
+      "rot": 1.45,
+      "acao": [
+       [
+        0.771,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "cansado"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": [
+       [
+        0.314,
+        {
+         "ombroE.x": -2.6,
+         "ombroD.x": -2.6,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "ombroE.z": -0.34,
+         "ombroD.z": 0.34,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.351,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.35,
+         "cotoveloD.x": -0.35,
+         "ombroE.z": -0.34,
+         "ombroD.z": 0.34,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.374,
+        {
+         "ombroE.x": -2.6,
+         "ombroD.x": -2.6,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "ombroE.z": -0.34,
+         "ombroD.z": 0.34,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.411,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.35,
+         "cotoveloD.x": -0.35,
+         "ombroE.z": -0.34,
+         "ombroD.z": 0.34,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.434,
+        {
+         "ombroE.x": -2.6,
+         "ombroD.x": -2.6,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "ombroE.z": -0.34,
+         "ombroD.z": 0.34,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.476,
+        {
+         "ombroE.x": -1.1,
+         "ombroD.x": -1.1,
+         "cotoveloE.x": -0.35,
+         "cotoveloD.x": -0.35,
+         "ombroE.z": -0.34,
+         "ombroD.z": 0.34,
+         "maos": 0.2
+        }
+       ],
+       [
+        0.612,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ],
+       [
+        0.771,
+        {
+         "ombroE.x": -0.5,
+         "ombroD.x": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "ombroE.z": -0.3,
+         "ombroD.z": 0.3,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "item": "machado"
+     },
+     {
+      "x": 4.1,
+      "z": 1.2,
+      "rot": -0.8,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "quem": "entregador",
+      "pose": [
+       [
+        0.925,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroD.x": -1.5,
+         "cotoveloD.x": -0.4,
+         "maos": 0.2,
+         "ombroE.z": 0.12
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "agua",
+      "trecho": 3,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 4,
+      "volume": 0.35
+     },
+     {
+      "som": "estalo",
+      "trecho": 5,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Você sobe, [leve] o tronco rola, [leve] e _plof_: [leve] banho gelado, [leve] e a pizza esfriando lá do outro lado, [leve] enquanto o entregador _filma_ tudo.",
+   "duracao": 7.078,
+   "cena": {
+    "cenario": "ponte",
+    "tronco": 1,
+    "rola": [
+     [
+      0,
+      0
+     ],
+     [
+      0.102,
+      0
+     ],
+     [
+      0.268,
+      1.6
+     ],
+     [
+      1,
+      1.6
+     ]
+    ],
+    "moto": 1,
+    "splash": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.278,
+     "fim": 0.408
+    },
+    "splashX": -0.6,
+    "ondas": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       3.611,
+       -0.033,
+       10.674
+      ],
+      "alvo": [
+       -0.5,
+       -0.8,
+       0.5
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.113,
+       -0.202,
+       10.179
+      ],
+      "alvo": [
+       -0.3,
+       -0.9,
+       0.5
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        -3.9000000000000004
+       ],
+       [
+        0.052,
+        -3.9000000000000004
+       ],
+       [
+        0.152,
+        -0.6
+       ],
+       [
+        0.318,
+        -0.6
+       ],
+       [
+        0.57,
+        -2.3
+       ],
+       [
+        0.64,
+        -3.9000000000000004
+       ],
+       [
+        1,
+        -3.9000000000000004
+       ]
+      ],
+      "z": [
+       [
+        0,
+        1.4
+       ],
+       [
+        0.052,
+        1.4
+       ],
+       [
+        0.152,
+        0.1
+       ],
+       [
+        0.318,
+        0.1
+       ],
+       [
+        0.368,
+        1.4
+       ],
+       [
+        1,
+        1.4
+       ]
+      ],
+      "rot": [
+       [
+        0,
+        0.9
+       ],
+       [
+        0.318,
+        0.9
+       ],
+       [
+        0.368,
+        -0.9
+       ],
+       [
+        0.61,
+        -0.9
+       ],
+       [
+        0.67,
+        0.3
+       ],
+       [
+        1,
+        0.3
+       ]
+      ],
+      "acao": [
+       [
+        0.052,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.328,
+        "em-pe",
+        "surpreso"
+       ],
+       [
+        0.64,
+        "andando",
+        "medo"
+       ],
+       [
+        1,
+        "tremendo",
+        "medo"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": [
+       [
+        0,
+        0
+       ],
+       [
+        0.052,
+        0
+       ],
+       [
+        0.152,
+        0.62
+       ],
+       [
+        0.258,
+        0.62
+       ],
+       [
+        0.318,
+        -3.2
+       ],
+       [
+        0.57,
+        -3.2
+       ],
+       [
+        0.64,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "pose": [
+       [
+        0.052,
+        {}
+       ],
+       [
+        0.268,
+        {
+         "ombroE.z": 1.3,
+         "ombroD.z": -1.3,
+         "cotoveloE.z": 0.2,
+         "cotoveloD.z": -0.2,
+         "maos": 1
+        }
+       ],
+       [
+        0.55,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -5.05,
+       "y": 0.0,
+       "z": 0.2,
+       "rot": 1.45,
+       "dur": 10.833,
+       "mover": true
+      }
+     },
+     {
+      "x": 4.1,
+      "z": 1.0,
+      "rot": -0.9,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "quem": "entregador",
+      "pose": [
+       [
+        0.851,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -1.5,
+         "ombroD.x": -1.5,
+         "cotoveloE.x": -0.9,
+         "cotoveloD.x": -0.9,
+         "maos": 0.3
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -1.5,
+        "cotoveloD.x": -0.4,
+        "maos": 0.2,
+        "ombroE.z": 0.12
+       },
+       "x": 4.1,
+       "y": 0.0,
+       "z": 1.2,
+       "rot": -0.8,
+       "dur": 10.833,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 2,
+      "volume": 0.55
+     },
+     {
+      "som": "pop",
+      "trecho": 4,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então apoie uma *tábua* nas duas margens: [leve] agora dá pra passar, [leve] pegar a pizza e voltar. [leve] [curious] Mas aí chega o caminhão da pizzaria, [leve] e a tábua _entorta_ no meio.",
+   "duracao": 8.122,
+   "cena": {
+    "cenario": "ponte",
+    "tabua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.081,
+     "fim": 0.161
+    },
+    "furgao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.621,
+     "fim": 0.631
+    },
+    "cx": [
+     [
+      0,
+      8
+     ],
+     [
+      0.621,
+      7.5
+     ],
+     [
+      0.845,
+      0.0
+     ],
+     [
+      1,
+      0.0
+     ]
+    ],
+    "sag": [
+     [
+      0,
+      0.05
+     ],
+     [
+      0.651,
+      0.05
+     ],
+     [
+      0.905,
+      1.15
+     ],
+     [
+      1,
+      1.15
+     ]
+    ],
+    "moto": 1,
+    "etiq": [
+     "tabua@0.111-0.55"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       6.042,
+       1.788,
+       13.57
+      ],
+      "alvo": [
+       0.0,
+       -0.3,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.825,
+       1.04,
+       11.773
+      ],
+      "alvo": [
+       0.0,
+       -0.7,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0,
+        -3.9000000000000004
+       ],
+       [
+        0.141,
+        -3.9000000000000004
+       ],
+       [
+        0.369,
+        3.2
+       ],
+       [
+        0.489,
+        3.2
+       ],
+       [
+        0.621,
+        -3.9000000000000004
+       ],
+       [
+        1,
+        -3.9000000000000004
+       ]
+      ],
+      "z": [
+       [
+        0,
+        1.4
+       ],
+       [
+        1,
+        1.4
+       ]
+      ],
+      "rot": [
+       [
+        0,
+        0.9
+       ],
+       [
+        0.419,
+        0.9
+       ],
+       [
+        0.499,
+        -0.9
+       ],
+       [
+        1,
+        -0.9
+       ]
+      ],
+      "acao": [
+       [
+        0.141,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.369,
+        "andando",
+        "sorriso"
+       ],
+       [
+        0.419,
+        "em-pe",
+        "sorriso"
+       ],
+       [
+        0.855,
+        "andando",
+        "alivio"
+       ],
+       [
+        1,
+        "em-pe",
+        "surpreso"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "pose": [
+       [
+        0.369,
+        {}
+       ],
+       [
+        0.419,
+        {
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3,
+         "cotoveloE.x": -0.3,
+         "cotoveloD.x": -0.3,
+         "ombroE.z": -0.25,
+         "ombroD.z": 0.25,
+         "maos": 1
+        }
+       ],
+       [
+        0.845,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.2,
+         "ombroD.z": 0.2,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "item": "pizza",
+      "itemIni": 0.449,
+      "itemFim": 0.865,
+      "ant": {
+       "acao": "tremendo",
+       "pose": {},
+       "x": -3.9000000000000004,
+       "y": 0,
+       "z": 1.4,
+       "rot": 0.3,
+       "dur": 7.078,
+       "mover": true
+      }
+     },
+     {
+      "x": 4.1,
+      "z": 1.0,
+      "rot": -0.9,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "quem": "entregador",
+      "pose": {
+       "ombroD.x": -1.5,
+       "cotoveloD.x": -0.4,
+       "maos": 0.2,
+       "ombroE.z": 0.12
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -1.5,
+        "ombroD.x": -1.5,
+        "cotoveloE.x": -0.9,
+        "cotoveloD.x": -0.9,
+        "maos": 0.3
+       },
+       "x": 4.1,
+       "y": 0.0,
+       "z": 1.0,
+       "rot": -0.9,
+       "dur": 7.078,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha uma tábua bem mais *grossa*. [leve] Agora aguenta o caminhão. [leve] [curious] Mas ela fica _pesada_ e custa uma fortuna, [leve] e quanto mais longe as margens, [leve] mais _fraca_ ela fica.",
+   "duracao": 8.334,
+   "cena": {
+    "cenario": "ponte",
+    "tabua": 1,
+    "grossa": {
+     "de": 0.12,
+     "para": 0.85,
+     "ini": 0.172,
+     "fim": 0.272
+    },
+    "furgao": 1,
+    "cx": 0.0,
+    "sag": [
+     [
+      0,
+      0.2
+     ],
+     [
+      0.272,
+      0.15
+     ],
+     [
+      0.748,
+      0.2
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "meia": {
+     "de": 2.6,
+     "para": 4.4,
+     "ini": 0.728,
+     "fim": 0.948
+    },
+    "peso": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.468,
+     "fim": 0.518
+    },
+    "caro": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.536,
+     "fim": 0.596
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       4.735,
+       2.027,
+       14.691
+      ],
+      "alvo": [
+       -1.2,
+       -0.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.461,
+       2.175,
+       17.423
+      ],
+      "alvo": [
+       -1.2,
+       -0.4,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": -2.95,
+       "para": -4.75,
+       "ini": 0.728,
+       "fim": 0.948
+      },
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "preocupado",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -1.2,
+       "ombroD.x": -1.2,
+       "cotoveloE.x": -2.3,
+       "cotoveloD.x": -2.3,
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "maos": 0.6
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -3.9000000000000004,
+       "y": 0,
+       "z": 1.4,
+       "rot": -0.9,
+       "dur": 8.122,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então troque a tábua maciça por *barras* finas em *triângulos*: [leve] o triângulo não muda de forma, [leve] e cada barra só empurra _ou_ só puxa. [leve] Fica leve e forte.",
+   "duracao": 8.644,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 4.4,
+    "tabua": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.163,
+     "fim": 0.223
+    },
+    "trelica": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.193,
+     "fim": 0.373
+    },
+    "esforco": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.627,
+     "fim": 0.767
+    },
+    "mini": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.245,
+     "fim": 0.335
+    },
+    "furgao": 1,
+    "cx": [
+     [
+      0,
+      -7
+     ],
+     [
+      0.459,
+      -7
+     ],
+     [
+      1,
+      5
+     ]
+    ],
+    "sag": 0.0,
+    "etiq": [
+     "trian@0.253-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       6.453,
+       3.444,
+       17.188
+      ],
+      "alvo": [
+       -1.2,
+       0.8,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.39,
+       2.688,
+       14.127
+      ],
+      "alvo": [
+       -1.2,
+       0.6,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -4.75,
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -1.2,
+        "ombroD.x": -1.2,
+        "cotoveloE.x": -2.3,
+        "cotoveloD.x": -2.3,
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "maos": 0.6
+       },
+       "x": -4.75,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 8.334,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "metal",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o rio é _largo_ e o vão não para de crescer. [leve] Ponha um *pilar* no meio: [leve] dois vãos curtos, [leve] e todo mundo respira.",
+   "duracao": 6.067,
+   "cena": {
+    "cenario": "ponte",
+    "meia": {
+     "de": 4.4,
+     "para": 6.0,
+     "ini": 0.077,
+     "fim": 0.247
+    },
+    "trelica": 1,
+    "pilar": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.476,
+     "fim": 0.626
+    },
+    "furgao": 0,
+    "etiq": [
+     "pilar@0.526-0.75"
+    ],
+    "etiqS": 1.0,
+    "raiox": [
+     [
+      0,
+      0
+     ],
+     [
+      0.648,
+      0
+     ],
+     [
+      0.718,
+      0.95
+     ],
+     [
+      0.97,
+      0.95
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       5.19,
+       2.123,
+       19.281
+      ],
+      "alvo": [
+       -2.6,
+       -0.8,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.401,
+       -1.155,
+       9.645
+      ],
+      "alvo": [
+       0.0,
+       -2.2,
+       0.3
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": -4.75,
+       "para": -6.35,
+       "ini": 0.077,
+       "fim": 0.247
+      },
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "alivio",
+      "y": 0.0,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -4.75,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 8.644,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas aí o rio _enche_: [leve] a correnteza escava a terra em volta do pilar, [leve] ele perde o apoio [leve] e _tomba_. [leve] Ninguém avisou o pilar.",
+   "duracao": 6.822,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 6.0,
+    "trelica": 1,
+    "pilar": 1,
+    "cheia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.116,
+     "fim": 0.316
+    },
+    "tomba": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.675,
+     "fim": 0.805
+    },
+    "treme": [
+     [
+      0,
+      0
+     ],
+     [
+      0.685,
+      0
+     ],
+     [
+      0.745,
+      1
+     ],
+     [
+      0.825,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       2.633,
+       0.082,
+       16.106
+      ],
+      "alvo": [
+       -2.6,
+       -1.4,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.136,
+       -0.049,
+       14.982
+      ],
+      "alvo": [
+       -2.6,
+       -1.4,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -6.35,
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "medo",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -1.2,
+       "ombroD.x": -1.2,
+       "cotoveloE.x": -2.3,
+       "cotoveloD.x": -2.3,
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "maos": 0.6
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -6.35,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 6.067,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então cave *estacas* até a *rocha*: [leve] elas seguram a *fundação*. [leve] A correnteza leva a areia, [leve] e o pilar _não sai_ do lugar.",
+   "duracao": 6.333,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 6.0,
+    "cheia": 1,
+    "solo": 1,
+    "cava": [
+     [
+      0,
+      0.05
+     ],
+     [
+      0.35,
+      0.7
+     ],
+     [
+      0.9,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "raiox": [
+     [
+      0,
+      0
+     ],
+     [
+      0.07,
+      0
+     ],
+     [
+      0.15,
+      0.9
+     ],
+     [
+      1,
+      0.9
+     ]
+    ],
+    "estacas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.12,
+     "fim": 0.44
+    },
+    "bloco": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.7
+    },
+    "tomba2": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.783,
+     "fim": 0.963
+    },
+    "etiq": [
+     "areia@0.04-0.34",
+     "rocha@0.206-0.5",
+     "estacas@0.15-0.55",
+     "fund@0.421-0.8"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       3.137,
+       -4.093,
+       12.583
+      ],
+      "alvo": [
+       0.0,
+       -5.0,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.666,
+       -4.463,
+       11.854
+      ],
+      "alvo": [
+       0.0,
+       -5.3,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -6.35,
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "alivio",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -1.2,
+        "ombroD.x": -1.2,
+        "cotoveloE.x": -2.3,
+        "cotoveloD.x": -2.3,
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "maos": 0.6
+       },
+       "x": -6.35,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 6.822,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então tire o pilar do rio e faça um *arco* de pedra: [leve] cada pedra aperta a vizinha, [leve] e pedra _adora_ ser apertada. [leve] Os romanos faziam assim, [leve] e alguns arcos seguem de pé há mais de dois mil anos.",
+   "duracao": 10.8,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 4.4,
+    "arco": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.19,
+     "fim": 0.37
+    },
+    "compressao": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.33,
+     "fim": 0.41
+    },
+    "via": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.568,
+     "fim": 0.588
+    },
+    "transito": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.588,
+     "fim": 0.658
+    },
+    "etiq": [
+     "arco@0.21-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       0.867,
+       1.288,
+       14.709
+      ],
+      "alvo": [
+       -1.2,
+       -0.8,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       10.747,
+       2.423,
+       9.334
+      ],
+      "alvo": [
+       -1.2,
+       -0.8,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -5.55,
+      "z": [
+       [
+        0,
+        2.0
+       ],
+       [
+        0.568,
+        2.0
+       ],
+       [
+        0.588,
+        1.25
+       ],
+       [
+        1,
+        1.25
+       ]
+      ],
+      "rot": 0.9,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": [
+       [
+        0,
+        0
+       ],
+       [
+        0.568,
+        0
+       ],
+       [
+        0.588,
+        0.27
+       ],
+       [
+        1,
+        0.27
+       ]
+      ],
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -6.35,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 6.333,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o arco empurra pros _lados_ [leve] e, sem apoio firme, ele se _abre_. [leve] Encoste as pontas em *blocos* enormes: [leve] eles seguram o empurrão.",
+   "duracao": 7.045,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 4.4,
+    "arco": 1,
+    "empurra": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.08,
+     "fim": 0.14
+    },
+    "abre": [
+     [
+      0,
+      0
+     ],
+     [
+      0.428,
+      0
+     ],
+     [
+      0.548,
+      0.8
+     ],
+     [
+      0.661,
+      0.8
+     ],
+     [
+      0.781,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "blocos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.661,
+     "fim": 0.801
+    },
+    "etiq": [
+     "blocos@0.761-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       3.15,
+       1.157,
+       14.231
+      ],
+      "alvo": [
+       -2.6,
+       -1.0,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.494,
+       1.088,
+       14.279
+      ],
+      "alvo": [
+       -2.6,
+       -1.0,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -5.55,
+      "z": 2.15,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": [
+       [
+        0.681,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -5.55,
+       "y": 0.27,
+       "z": 1.25,
+       "rot": 0.9,
+       "dur": 10.8,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas pra cruzar _um quilômetro_ ou mais, pedra pesa demais. [leve] Pendure o caminho em *cabos* que só _puxam_, como um varal gigante, [leve] presos em duas *torres* [leve] e ancorados no chão.",
+   "duracao": 8.8,
+   "cena": {
+    "cenario": "ponte",
+    "meia": {
+     "de": 4.4,
+     "para": 8.0,
+     "ini": 0.0,
+     "fim": 0.428
+    },
+    "arco": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.08
+    },
+    "blocos": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.08
+    },
+    "via": 1,
+    "torres": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.752,
+     "fim": 0.912
+    },
+    "cabos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.467,
+     "fim": 0.687
+    },
+    "estrada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.487,
+     "fim": 0.637
+    },
+    "transito": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.607,
+     "fim": 0.687
+    },
+    "ancora": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.857,
+     "fim": 0.957
+    },
+    "puxa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.937,
+     "fim": 1.017
+    },
+    "etiq": [
+     "cabos@0.527-0.55",
+     "torres@0.882-0.97"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.85,
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       15.0,
+       19.0
+      ],
+      "alvo": [
+       -3.0,
+       0.5,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.0,
+       7.0,
+       21.0
+      ],
+      "alvo": [
+       -3.0,
+       1.0,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": -5.55,
+       "para": -12.5,
+       "ini": 0.0,
+       "fim": 0.428
+      },
+      "z": 1.25,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.27,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -5.55,
+       "y": 0.0,
+       "z": 2.15,
+       "rot": 0.9,
+       "dur": 7.045,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "metal",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ancorar é _caro_. [leve] Então ligue os cabos _direto_ da torre ao caminho, [leve] em leque: [leve] fica mais firme [leve] e dispensa as âncoras gigantes.",
+   "duracao": 6.998,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 8.0,
+    "torres": 1,
+    "cabos": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.311,
+     "fim": 0.411
+    },
+    "estrada": 1,
+    "via": 1,
+    "transito": 1,
+    "heroi": {
+     "de": -10.5,
+     "para": 10.5
+    },
+    "ancora": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.291,
+     "fim": 0.371
+    },
+    "leque": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.351,
+     "fim": 0.551
+    },
+    "etiq": [
+     "leque@0.451-0.6"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.85,
+    "camera": {
+     "de": {
+      "pos": [
+       -12.0,
+       3.8,
+       11.5
+      ],
+      "alvo": [
+       -10.5,
+       1.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       9.0,
+       3.8,
+       11.5
+      ],
+      "alvo": [
+       10.5,
+       1.2,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -12.5,
+      "z": 1.25,
+      "rot": 0.9,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": 0.27,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -12.5,
+       "y": 0.27,
+       "z": 1.25,
+       "rot": 0.9,
+       "dur": 8.8,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[excited] Mas o _vento_ não pede licença e faz tudo balançar: [leve] em 1940, um vento de 64 quilômetros por hora _derrubou_ uma dessas. [leve] Então deixe o caminho vazado [leve] e com uma forma que o vento _escorre_.",
+   "duracao": 10.757,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 8.0,
+    "torres": 1,
+    "cabos": 1,
+    "pista": 1,
+    "ventoV": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.03,
+     "fim": 0.09
+    },
+    "torce": [
+     [
+      0,
+      0
+     ],
+     [
+      0.05,
+      0
+     ],
+     [
+      0.23,
+      1
+     ],
+     [
+      0.585,
+      1
+     ],
+     [
+      0.625,
+      0.0
+     ],
+     [
+      1,
+      0.15
+     ]
+    ],
+    "desaba": [
+     [
+      0,
+      0
+     ],
+     [
+      0.565,
+      0
+     ],
+     [
+      0.705,
+      1
+     ],
+     [
+      0.759,
+      1
+     ],
+     [
+      0.769,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "vazado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.769,
+     "fim": 0.789
+    },
+    "treme": [
+     [
+      0,
+      0
+     ],
+     [
+      0.565,
+      0
+     ],
+     [
+      0.625,
+      1
+     ],
+     [
+      0.725,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       5.058,
+       4.123,
+       18.998
+      ],
+      "alvo": [
+       -3.4,
+       1.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.261,
+       3.775,
+       17.423
+      ],
+      "alvo": [
+       -3.4,
+       1.2,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -8.35,
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "medo",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -12.5,
+       "y": 0.27,
+       "z": 1.25,
+       "rot": 0.9,
+       "dur": 6.998,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.08
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "1940",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.55
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas gente andando no mesmo passo faz tudo _dançar_: [leve] em Londres, foi no dia da inauguração! [leve] Ninguém combinou: cada um só seguiu o vizinho. [leve] Ponha *amortecedores* pra gastar o balanço.",
+   "duracao": 9.578,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 5.0,
+    "povo": 1,
+    "balanco": [
+     [
+      0,
+      0.05
+     ],
+     [
+      0.15,
+      0.15
+     ],
+     [
+      0.75,
+      0.45
+     ],
+     [
+      0.9,
+      0.03
+     ],
+     [
+      1,
+      0.02
+     ]
+    ],
+    "amort": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.8,
+     "fim": 0.9
+    },
+    "etiq": [
+     "amort@0.85-0.97"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       8.07,
+       3.631,
+       13.977
+      ],
+      "alvo": [
+       0.0,
+       0.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       6.646,
+       3.423,
+       13.627
+      ],
+      "alvo": [
+       0.0,
+       0.2,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -6.3,
+      "z": 2.0,
+      "rot": 0.9,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 1.3,
+       "ombroD.z": -1.3,
+       "cotoveloE.z": 0.2,
+       "cotoveloD.z": -0.2,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -8.35,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 10.757,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o sol esquenta e o aço _estica_, [leve] à noite ele encolhe, [leve] e sem folga um pedaço empurra o outro. [leve] Deixe uma *junta de dilatação* de aço, com dentes, entre os pedaços: [leve] ela dá _folga_.",
+   "duracao": 10.198,
+   "cena": {
+    "cenario": "ponte",
+    "junta": 1,
+    "calor": [
+     [
+      0,
+      0.0
+     ],
+     [
+      0.055,
+      0.0
+     ],
+     [
+      0.175,
+      1.0
+     ],
+     [
+      0.221,
+      1.0
+     ],
+     [
+      0.341,
+      -1.0
+     ],
+     [
+      0.61,
+      -1.0
+     ],
+     [
+      0.71,
+      0.0
+     ],
+     [
+      1,
+      0.0
+     ]
+    ],
+    "noite": [
+     [
+      0,
+      0
+     ],
+     [
+      0.221,
+      0
+     ],
+     [
+      0.341,
+      1
+     ],
+     [
+      0.61,
+      1
+     ],
+     [
+      0.71,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "meia": 5.0,
+    "ondas": 0,
+    "etiq": [
+     "junta@0.65-0.97"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.8,
+    "camera": {
+     "de": {
+      "pos": [
+       2.779,
+       3.297,
+       6.877
+      ],
+      "alvo": [
+       0.0,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.368,
+       2.694,
+       6.434
+      ],
+      "alvo": [
+       0.0,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 2.8,
+      "z": 3.4,
+      "rot": -0.5,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "esc": 0.9,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 1.3,
+        "ombroD.z": -1.3,
+        "cotoveloE.z": 0.2,
+        "cotoveloD.z": -0.2,
+        "maos": 1
+       },
+       "x": -6.3,
+       "y": 0.0,
+       "z": 2.0,
+       "rot": 0.9,
+       "dur": 9.578,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "tique",
+      "trecho": 1,
+      "volume": 0.3
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar a *ponte*. [leve] A pizza chegou _fria_, [leve] mas você comeu mesmo assim.",
+   "duracao": 5.591,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 8.0,
+    "torres": 1,
+    "cabos": 1,
+    "estrada": 1,
+    "via": 1,
+    "transito": 1,
+    "ancora": 1,
+    "entardecer": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       3.85,
+       2.872,
+       15.44
+      ],
+      "alvo": [
+       0.0,
+       1.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       6.0,
+       13.0,
+       24.0
+      ],
+      "alvo": [
+       0.0,
+       1.5,
+       0.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": {
+       "de": 9.5,
+       "para": 0.0,
+       "ini": 0.05,
+       "fim": 0.563
+      },
+      "z": 1.25,
+      "rot": -1.5707,
+      "acao": [
+       [
+        0.563,
+        "andando",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": 0.27,
+      "quem": "entregador",
+      "pose": [
+       [
+        0.563,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.2,
+         "ombroD.z": 0.2,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "item": "pizza",
+      "itemFim": 0.573
+     },
+     {
+      "x": -1.2,
+      "z": 1.25,
+      "rot": 1.2,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": 0.27,
+      "pose": [
+       [
+        0.563,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        0.623,
+        {
+         "ombroE.x": -0.95,
+         "ombroD.x": -0.95,
+         "cotoveloE.x": -0.65,
+         "cotoveloD.x": -0.65,
+         "ombroE.z": -0.2,
+         "ombroD.z": 0.2,
+         "maos": 0.2
+        }
+       ],
+       [
+        1,
+        {
+         "ombroD.x": -1.0,
+         "ombroD.z": 0.35,
+         "cotoveloD.x": -2.3,
+         "maos": 0.4,
+         "ombroE.z": 0.12
+        }
+       ]
+      ],
+      "item": "pizza",
+      "itemIni": 0.573,
+      "itemFim": 0.703
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PONTE",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Manda pra quem tem _medo_ de atravessar. [leve] E como um *relógio* anda sem ninguém empurrar? [leve] *Siga* pra descobrir.",
+   "duracao": 5.5,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 8.0,
+    "torres": 1,
+    "cabos": 1,
+    "estrada": 1,
+    "via": 1,
+    "transito": 1,
+    "ancora": 1,
+    "entardecer": 1,
+    "relogio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.406,
+     "fim": 0.536
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.7,
+     "fim": 0.8
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       4.096,
+       4.505,
+       16.75
+      ],
+      "alvo": [
+       -2.0,
+       2.0,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.953,
+       4.496,
+       15.854
+      ],
+      "alvo": [
+       -2.0,
+       2.2,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.2,
+      "z": 1.25,
+      "rot": 0.7,
+      "acao": "em-pe",
+      "exp": "pensativo",
+      "y": 0.27,
+      "pose": {
+       "cabeca.x": -0.1
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "sino_longe",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* PIZZA. [leve] *Compartilhe* [leve] e *siga* pra ver como as coisas *funcionam*.",
+   "duracao": 5.633,
+   "cena": {
+    "cenario": "ponte",
+    "meia": 8.0,
+    "torres": 1,
+    "cabos": 1,
+    "estrada": 1,
+    "via": 1,
+    "transito": 1,
+    "ancora": 1,
+    "entardecer": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       3.0,
+       7.4
+      ],
+      "alvo": [
+       0.0,
+       2.7,
+       0.0
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       0.0,
+       2.95,
+       7.0
+      ],
+      "alvo": [
+       0.0,
+       2.7,
+       0.0
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 1.25,
+      "rot": 0.0,
+      "acao": "acenando",
+      "exp": "sorriso",
+      "y": 0.27,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "cabeca.x": -0.1
+       },
+       "x": -1.2,
+       "y": 0.27,
+       "z": 1.25,
+       "rot": 0.7,
+       "dur": 5.5,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.04
+    },
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "PIZZA"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.55
+     }
+    ]
+   }
+  }
+ ]
+}

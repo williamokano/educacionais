@@ -2,11 +2,13 @@ import React from "react";
 import * as THREE from "three";
 import { clamp01, lerp, suave, valor } from "../../../src/v3d/anima";
 import { poseDe3D } from "../../../src/v3d/acoes";
+import { Anterior, poseGente, posicaoGente } from "../../../src/v3d/gente";
 import { Boneco3D, piscar } from "../../../src/v3d/personagem";
 import { Caixa, rnd } from "../../../src/v3d/qualidade";
 import { Cenario3D, Cenario3DProps, Expressao3D, Pose3D, V3, Valor } from "../../../src/v3d/tipos";
-import { compr, Etiqueta, Fumaca, Halo, Liga, mistura, noCaminho, V } from "./cozinha-base";
+import { compr, Etiqueta, Fumaca, Halo, Liga, mistura, noCaminho, Seta, Texto3D, V } from "./cozinha-base";
 import { Auto } from "./pista";
+import { homemC } from "./fieis";
 import { zeca } from "./zeca";
 
 // Para-raios (episódio 15, "como proteger uma casa de um raio, peça por peça"). Quatro palcos no mesmo mundo, em x diferentes:
@@ -28,7 +30,12 @@ import { zeca } from "./zeca";
 //              corrCarro 0..1 (a corrente corre por fora da lataria) · segura 0..1 (aura verde em volta de quem está dentro)
 //   franklin   (nada: a gravura toca sozinha; `raio` faz o raio da gravura)
 //   mapa       flashes 0..1 (quantos raios)
-//   gente      lista de { x, y, z, rot, acao, exp, pose, incl, esc } (sempre o `zeca`) · etiq: "chave@ini-fim" · etiqS · etiqK · etiqYmax
+//   v2         fumaca 0..1 (fumaça no telhado, sem chama) · fio 0..1 (fio fino, desce até o chão) · calor 0..1 (o fio esquenta) · derrete 0..1 (o fio pinga e se parte)
+//              unica: true (só uma haste enterrada) · choque 0..1 (brilho no chão) · choqueX/choqueZ · choqueCor "vermelho" | "azul"
+//              cano 0..1 (cano, caixa de fios e coluna por dentro; precisa de raiox) · faisca 0..1 (faíscas azuis cano↔caixa) · ligaTudo 0..1 (fios verdes ao aterramento) · sobem 0..1 (setas azuis)
+//              rede 0..1 (poste e fio da rua) · pico 0..1 (pico vermelho do poste até a tomada) · pico2 0..1 (pico desviado pelo protetor até o aterramento) · protetor 0..1 (caixa na entrada)
+//              aviao 0..1 (avião cruza o céu) · lampada 0..1 (interrogação em lâmpada) · alvo: "poste"
+//   gente      lista de { x, y, z, rot, acao, exp, pose, incl, esc, quem: "zeca" | "vizinho", cabeloPe 0..1, estrelas 0..1, pulo 0..1, galochas }  · etiq: "chave@ini-fim" · etiqS · etiqK · etiqYmax
 //              chaves: haste, cabo, aterra, gaiola
 
 const n0 = (v: unknown) => v as Valor;
@@ -54,6 +61,23 @@ const ROD_X = [1.6, 2.7, 3.8];
 const BUS_Y = -0.55;
 const ROD_FUNDO = -2.6;
 const HASTE_TOPO = CUME + 1.0;
+const POSTE_X = -6.6;
+const POSTE_Z = 0.6;
+const VERDE = "#4dff8a";
+const REDE_FIO: V[] = [[POSTE_X, 6.55, POSTE_Z], [-3.6, 4.0, POSTE_Z], [-3.05, 2.55, POSTE_Z]];
+const PROT_P: V = [-3.05, 2.0, POSTE_Z];
+const TERRA_FIO: V[] = [[-3.05, 1.8, POSTE_Z], [-3.05, 0.12, POSTE_Z], [-3.05, 0.12, ZFR + 0.45], [2.7, 0.12, ZFR + 0.45], [2.7, 0.05, ZFR + 0.14]];
+const PICO_CAM: V[] = [...REDE_FIO, [-3.05, 2.2, POSTE_Z]];
+const PICO2_CAM: V[] = [...REDE_FIO, [-3.05, 2.2, POSTE_Z], ...TERRA_FIO];
+// por dentro da casa (raio-X): cano da pia, caixa de fios, coluna de aço; fios verdes até o aterramento
+const CANO_V: V[] = [[-0.9, 0.12, -2.3], [-0.9, 1.0, -2.3], [0.35, 1.0, -2.3]];
+const QUADRO_P: V = [1.2, 1.5, -2.38];
+const FAISCA_DE: V = [0.35, 1.0, -2.3];
+const FAISCA_PARA: V = [0.95, 1.25, -2.3];
+const COLUNA_X = -2.6;
+const LIGA_A: V[] = [[-0.9, 0.2, -2.2], [-0.9, 0.2, 1.8], [2.7, 0.2, 1.8], [2.7, 0.1, ZFR + 0.14]];
+const LIGA_B: V[] = [[1.2, 1.1, -2.3], [1.2, 0.26, -2.3], [1.2, 0.26, 1.85], [2.7, 0.26, 1.85], [2.7, 0.1, ZFR + 0.14]];
+const LIGA_C: V[] = [[COLUNA_X, 0.3, -2.3], [COLUNA_X, 0.3, 1.9], [2.7, 0.3, 1.9], [2.7, 0.1, ZFR + 0.14]];
 
 /* ---------- caminhos ---------- */
 
@@ -192,7 +216,7 @@ const Raio: React.FC<{ k: number; de: V; para: V; seed: number; t: number; esc?:
   );
 };
 
-const alvoDe = (nome: string): V => (nome === "haste" ? [0, HASTE_TOPO + 0.02, ZC] : nome === "carro" ? [0, 1.55, 0.25] : [-0.5, roofY(0.9) + 0.05, 0.9]);
+const alvoDe = (nome: string): V => (nome === "poste" ? [POSTE_X, 6.95, POSTE_Z] : nome === "chao" ? [0.5, 0.05, 3.6] : nome === "haste" ? [0, HASTE_TOPO + 0.02, ZC] : nome === "carro" ? [0, 1.55, 0.25] : [-0.5, roofY(0.9) + 0.05, 0.9]);
 
 /* ---------- clima ---------- */
 
@@ -284,7 +308,7 @@ const Varal: React.FC<{ x: number; z: number; t: number; vento: number }> = ({ x
 
 /* ---------- casa ---------- */
 
-type CasaP = { haste: number; cabo: number; terra: number; luz: number; pisca: number; raiox: number; fogo: number; estoura: number; escada: number; espalha: number; fiacao: number; onda: number; acumula: number; leque: number; destaque: number; t: number };
+type CasaP = { fumaca?: number; haste: number; cabo: number; terra: number; luz: number; pisca: number; raiox: number; fogo: number; estoura: number; escada: number; espalha: number; fiacao: number; onda: number; acumula: number; leque: number; destaque: number; t: number };
 
 const Casa: React.FC<CasaP> = (c) => {
   const { t } = c;
@@ -306,13 +330,14 @@ const Casa: React.FC<CasaP> = (c) => {
   const ang = Math.atan(0.6);
   const Lr = Math.hypot(2.9, 1.74);
   const haste = suave(c.haste);
-  const dg = (i: number) => { const k = c.destaque * 3 - i; return k > 0 && k < 1 ? Math.sin(k * Math.PI) : 0; };
+  const dg = (i: number) => { const k = c.destaque * 4 - i; return k > 0 && k < 1 ? Math.sin(k * Math.PI) : 0; };
   return (
     <group>
       {/* paredes */}
       <Caixa p={[0, 1.5, -2.5]} t={[6, 3, 0.2]} cor={parede} raio={0.02} />
       {[-1, 1].map((s) => <Caixa key={s} p={[s * 2.9, 1.5, -0.1]} t={[0.2, 3, 5]} cor={parede} raio={0.02} />)}
-      <Caixa p={[0, 0.05, -0.1]} t={[6, 0.1, 5]} cor="#7a6a55" raio={0.01} />
+      {/* piso por dentro das paredes: antes tinha o mesmo contorno externo (x ±3, z -2,6) e brigava com elas (z-fighting no "rodapé") */}
+      <Caixa p={[0, 0.05, -0.1]} t={[5.7, 0.1, 4.7]} cor="#7a6a55" raio={0.01} />
       <mesh position={[0, 3.0, 0]} geometry={geoTri}><meshStandardMaterial color={parede} roughness={1} /></mesh>
       {/* frente (vira vidro no raio-X) */}
       <group>
@@ -328,14 +353,14 @@ const Casa: React.FC<CasaP> = (c) => {
         {/* janelas acesas */}
         {[0.0, 1.8].map((x) => (
           <group key={x} position={[x, 1.6, ZFR]}>
-            <mesh><boxGeometry args={[1.4, 1.1, 0.06]} /><meshBasicMaterial color={mistura("#1c2230", "#ffd98a", luzK)} /></mesh>
-            <Caixa p={[0, 0, 0.04]} t={[0.05, 1.1, 0.04]} cor="#5b4a38" raio={0.005} sombra={false} />
-            <Caixa p={[0, 0, 0.04]} t={[1.4, 0.05, 0.04]} cor="#5b4a38" raio={0.005} sombra={false} />
-            {luzK > 0.05 && <Halo p={[0, 0, 0.5]} r={1.6} cor="#ffd98a" op={0.35 * luzK} />}
+            <mesh><boxGeometry args={[1.4, 1.1, 0.06]} /><meshBasicMaterial color={mistura("#1c2230", "#ffd98a", luzK)} transparent opacity={1 - 0.92 * c.raiox} depthWrite={false} /></mesh>
+            <Caixa p={[0, 0, 0.04]} t={[0.05, 1.1, 0.04]} cor="#5b4a38" op={opF < 1 ? opF : undefined} raio={0.005} sombra={false} />
+            <Caixa p={[0, 0, 0.04]} t={[1.4, 0.05, 0.04]} cor="#5b4a38" op={opF < 1 ? opF : undefined} raio={0.005} sombra={false} />
+            {luzK > 0.05 && <Halo p={[0, 0, 0.5]} r={1.6} cor="#ffd98a" op={0.35 * luzK * (1 - 0.8 * c.raiox)} />}
           </group>
         ))}
         {/* porta */}
-        <Caixa p={[-1.6, 1.05, ZFR]} t={[1.0, 2.1, 0.08]} cor="#7a4a2a" raio={0.01} sombra={false} />
+        <Caixa p={[-1.6, 1.05, ZFR]} t={[1.0, 2.1, 0.08]} cor="#7a4a2a" op={opF < 1 ? opF : undefined} raio={0.01} sombra={false} />
         <mesh position={[-1.25, 1.0, ZFR + 0.07]}><sphereGeometry args={[0.05, 8, 6]} /><meshStandardMaterial color="#e6c15a" metalness={0.6} roughness={0.4} /></mesh>
         <Caixa p={[-1.6, -0.0, ZFR + 0.5]} t={[1.4, 0.1, 0.9]} cor="#8d8478" raio={0.02} />
         {/* tomada e estouro */}
@@ -399,6 +424,7 @@ const Casa: React.FC<CasaP> = (c) => {
           </group>
         );
       })()}
+      {(c.fumaca ?? 0) > 0.02 && <group><Fumaca p={[-0.4, 4.2, 0.8]} t={t} k={c.fumaca!} cor="#8a8680" alt={3.2} larg={2.4} op={0.8} n={16} /><Fumaca p={[1.2, 4.0, 1.4]} t={t + 0.4} k={c.fumaca!} cor="#7a766f" alt={2.6} larg={1.4} op={0.7} n={10} /></group>}
       {/* fogo no telhado */}
       {c.fogo > 0.02 && (
         <group>
@@ -442,15 +468,16 @@ const Terreno: React.FC<{ cx?: number }> = () => {
   );
 };
 
-const Hastes: React.FC<{ terra: number; cabo: number; leque: number; acumula: number; onda: number; t: number; destaque: number }> = ({ terra, cabo, leque, acumula, onda, t, destaque }) => {
+const Hastes: React.FC<{ unica?: boolean; terra: number; cabo: number; leque: number; acumula: number; onda: number; t: number; destaque: number }> = ({ unica, terra, cabo, leque, acumula, onda, t, destaque }) => {
   const z = ZPLATO + 0.03;
+  const RODS = unica ? [ROD_X[1]] : ROD_X;
   const k = suave(terra);
-  const dg = (() => { const q = destaque * 3 - 2; return q > 0 && q < 1 ? Math.sin(q * Math.PI) : 0; })();
+  const dg = (() => { const q = destaque * 4 - 2; return q > 0 && q < 1 ? Math.sin(q * Math.PI) : 0; })();
   return (
     <group>
       {k > 0.01 && (
         <group>
-          {ROD_X.map((x, i) => {
+          {RODS.map((x, i) => {
             const ki = suave(clamp01(k * 1.4 - i * 0.2));
             const topo = lerp(1.1, BUS_Y, ki);
             return (
@@ -461,7 +488,7 @@ const Hastes: React.FC<{ terra: number; cabo: number; leque: number; acumula: nu
               </group>
             );
           })}
-          <Liga a={[ROD_X[0], BUS_Y, z]} b={[ROD_X[2], BUS_Y, z]} w={0.1} cil cor={COBRE} op={k} />
+          {!unica && <Liga a={[ROD_X[0], BUS_Y, z]} b={[ROD_X[2], BUS_Y, z]} w={0.1} cil cor={COBRE} op={k} />}
           <Liga a={caminhoBus[0]} b={caminhoBus[1]} w={0.1} cil cor={COBRE} op={k} />
           {dg > 0.01 && <Halo p={[2.7, -1.5, z + 0.4]} r={1.8} cor="#7dffa8" op={0.9 * dg} />}
         </group>
@@ -488,13 +515,13 @@ const Hastes: React.FC<{ terra: number; cabo: number; leque: number; acumula: nu
         const some = 1 - suave(clamp01((leque - 0.7) / 0.3));
         return (
           <group>
-            {ROD_X.flatMap((x, i) => [-150, -120, -90, -60, -30, -175, -5].map((deg, j) => {
+            {RODS.flatMap((x, i) => [-150, -120, -90, -60, -30, -175, -5].map((deg, j) => {
               const a = (deg * Math.PI) / 180;
               const len = (0.9 + 0.8 * rnd(i * 7 + j)) * 1.5 * abre;
               const de: V = [x, ROD_FUNDO + 0.3 + (j > 4 ? 1.2 : 0), z];
               return <CaminhoLuz key={`${i}-${j}`} pts={[de, [x + Math.cos(a) * len, de[1] + Math.sin(a) * len * 0.8, z]]} k={1} cor={QUENTE} w={0.045} op={some * 0.85} halo={0.001} />;
             }))}
-            {ROD_X.map((x) => <Halo key={x} p={[x, ROD_FUNDO + 0.6, z + 0.1]} r={0.9 + 2.0 * abre} cor="#ff9a2e" op={0.5 * some} />)}
+            {RODS.map((x) => <Halo key={x} p={[x, ROD_FUNDO + 0.6, z + 0.1]} r={0.9 + 2.0 * abre} cor="#ff9a2e" op={0.5 * some} />)}
           </group>
         );
       })()}
@@ -664,26 +691,165 @@ const Mapa: React.FC<{ t: number; k: number }> = ({ t, k }) => {
 
 /* ---------- pessoas ---------- */
 
-type GenteE = { x?: Valor; y?: Valor; z?: Valor; rot?: Valor; acao?: string | [number, string, string?][]; exp?: Expressao3D; pose?: Pose3D | [number, Pose3D][]; incl?: Valor; esc?: number; ate?: number };
+type GenteE = { x?: Valor; y?: Valor; z?: Valor; rot?: Valor; acao?: string | [number, string, string?][]; exp?: Expressao3D; ant?: Anterior; entradaDur?: number; pose?: Pose3D | [number, Pose3D][]; incl?: Valor; esc?: number; ate?: number; quem?: string; cabeloPe?: Valor | [number, number][]; estrelas?: Valor | [number, number][]; pulo?: Valor | [number, number][]; galochas?: boolean };
 
 const Pessoa: React.FC<{ g: GenteE; p: number; t: number; tAbs: number }> = ({ g, p, t, tAbs }) => {
   if (g.ate !== undefined && p > g.ate) return null;
-  let acao = "em-pe";
-  let exp: Expressao3D = g.exp ?? "sorriso";
-  if (typeof g.acao === "string") acao = g.acao;
-  else if (Array.isArray(g.acao)) {
-    const e = g.acao.find((x) => p <= x[0]) ?? g.acao[g.acao.length - 1];
-    acao = e[1];
-    if (e[2]) exp = e[2] as Expressao3D;
+  const { acao, exp, pose } = poseGente(g, { p, t: t, tAbs, incl: valor(g.incl, p, 0) });
+  const { x, y, z, rot } = posicaoGente(g, t, { x: valor(g.x, p, 0), y: valor(g.y, p, 0), z: valor(g.z, p, 0), rot: valor(g.rot, p, 0) });
+  const pers = g.quem === "vizinho" ? homemC : zeca;
+  const vk = (v: unknown) => (Array.isArray(v) && Array.isArray(v[0]) ? chaves(v as [number, number][], p) : valor(v as Valor, p, 0));
+  const pulo = vk(g.pulo);
+  const salto = pulo > 0.02 ? Math.abs(Math.sin(tAbs * 13)) * 0.16 * pulo : 0;
+  if (pulo > 0.02) {
+    pose["pernaE.x"] = -0.45 * Math.sin(tAbs * 13) * pulo;
+    pose["pernaD.x"] = 0.45 * Math.sin(tAbs * 13) * pulo;
+    pose["joelhoE.x"] = 0.4 * pulo;
+    pose["joelhoD.x"] = 0.4 * pulo;
   }
-  const extra: Pose3D = Array.isArray(g.pose) ? (g.pose.find((x) => p <= x[0]) ?? g.pose[g.pose.length - 1])[1] : (g.pose ?? {});
-  const pose: Pose3D = { ...poseDe3D(acao, t), ...extra };
-  pose["tronco.x"] = (pose["tronco.x"] ?? 0) + valor(g.incl, p, 0);
-  const x = valor(g.x, p, 0);
-  const z = valor(g.z, p, 0);
+  const eP = (pers.altura ?? 1.6) / 1.6;
+  const topo = 1.56 * eP;
+  const cp = vk(g.cabeloPe);
+  const es = vk(g.estrelas);
   return (
-    <group position={[x, valor(g.y, p, 0), z]} rotation={[0, valor(g.rot, p, 0), 0]} scale={g.esc ?? 1.06}>
-      <Boneco3D p={zeca} pose={pose} expressao={exp} pisca={piscar(tAbs + x * 3 + z)} boca={0} olhar={[0, 0]} t={tAbs} />
+    <group position={[x, y + salto * (g.esc ?? 1.06), z]} rotation={[0, rot, 0]} scale={g.esc ?? 1.06}>
+      <Boneco3D p={pers} pose={pose} expressao={exp} pisca={piscar(tAbs + x * 3 + z)} boca={0} olhar={[0, 0]} t={tAbs} />
+      {g.galochas && [-0.1, 0.1].map((dx, i) => (
+        <group key={i} position={[dx, 0, 0.03 + (pose["pernaE.x"] ?? 0) * 0.0]}>
+          <Caixa p={[0, 0.2, 0]} t={[0.17, 0.4, 0.3]} cor="#f2c230" raio={0.04} />
+          <Caixa p={[0, 0.02, 0.02]} t={[0.18, 0.05, 0.32]} cor="#2a2a30" raio={0.01} sombra={false} />
+          <Caixa p={[0, 0.41, -0.02]} t={[0.19, 0.05, 0.24]} cor="#d9a520" raio={0.01} sombra={false} />
+        </group>
+      ))}
+      {cp > 0.02 && Array.from({ length: 9 }).map((_, i) => {
+        const a = (i / 9) * Math.PI * 2;
+        const r = 0.09 + 0.02 * (i % 2);
+        const h = (0.13 + 0.17 * rnd(i + 3)) * cp + 0.02 * Math.sin(tAbs * 30 + i);
+        return (
+          <mesh key={i} position={[Math.cos(a) * r, topo + h / 2 - 0.03, Math.sin(a) * r]} rotation={[Math.sin(a) * 0.5, 0, -Math.cos(a) * 0.5]}>
+            <coneGeometry args={[0.035, h, 5]} />
+            <meshStandardMaterial color={pers.cabelo ?? "#333"} roughness={1} flatShading />
+          </mesh>
+        );
+      })}
+      {es > 0.02 && Array.from({ length: 5 }).map((_, i) => {
+        const a = tAbs * 4 + (i / 5) * Math.PI * 2;
+        return <mesh key={i} position={[Math.cos(a) * 0.3, topo + 0.22 + 0.05 * Math.sin(tAbs * 9 + i), Math.sin(a) * 0.3]} scale={0.055 * es} rotation={[tAbs * 3, tAbs * 5, 0]}><octahedronGeometry args={[1, 0]} /><meshBasicMaterial color="#ffe14a" /></mesh>;
+      })}
+      {es > 0.02 && <Halo p={[0, topo + 0.2, 0]} r={0.55} cor="#ffe14a" op={0.35 * es} />}
+    </group>
+  );
+};
+
+/* ---------- peças novas da versão 2 ---------- */
+
+/** Fio fino da haste ao chão: esquenta (cinza → laranja → vermelho) e pinga em gotas, partindo-se como vela. */
+const FioFino: React.FC<{ k: number; calor: number; derrete: number; t: number }> = ({ k, calor, derrete, t }) => {
+  if (k <= 0.01) return null;
+  const L = compr(caminhoCabo);
+  const N = 28;
+  const cor = mistura(mistura("#9aa3ad", "#ff9a2e", clamp01(calor * 2)), "#ff2a14", clamp01(calor * 2 - 1));
+  const lim = suave(k) * L;
+  const segs = Array.from({ length: N }).map((_, i) => {
+    const s0 = (i / N) * L;
+    const s1 = ((i + 1) / N) * L;
+    if (s0 > lim) return null;
+    const a = noCaminho(caminhoCabo, s0).p;
+    const b = noCaminho(caminhoCabo, Math.min(s1, lim)).p;
+    const th = 0.12 + 0.8 * rnd(i * 3 + 1);
+    const vivo = derrete < th;
+    const tau = Math.max(0, (derrete - th) * 3.2);
+    const gota: V = [(a[0] + b[0]) / 2 + 0.03 * Math.sin(i), Math.max(0.05, (a[1] + b[1]) / 2 - 4.9 * tau * tau), (a[2] + b[2]) / 2 + 0.05];
+    return (
+      <group key={i}>
+        {vivo && <Liga a={a} b={b} w={0.03 + 0.012 * calor} cil cor={cor} basico />}
+        {!vivo && gota[1] > 0.06 && <mesh position={gota} scale={0.05}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color={mistura("#ff7a1a", "#ffe27a", rnd(i))} /></mesh>}
+      </group>
+    );
+  });
+  return (
+    <group>
+      {segs}
+      {calor > 0.25 && derrete < 0.9 && [0.25, 0.5, 0.75].map((u, i) => <Halo key={i} p={noCaminho(caminhoCabo, u * L).p} r={0.5 + 0.5 * calor} cor="#ff6a2a" op={0.55 * calor * (0.75 + 0.25 * Math.sin(t * 18 + i))} />)}
+    </group>
+  );
+};
+
+/** Brilho no chão (o círculo em volta de onde a corrente entra). */
+const ChaoBrilho: React.FC<{ k: number; x: number; z: number; cor: string; t: number }> = ({ k, x, z, cor, t }) => {
+  if (k <= 0.02) return null;
+  const c = cor === "azul" ? "#bfe0ff" : "#ff3a2a";
+  const pulso = 0.8 + 0.2 * Math.sin(t * 16);
+  return (
+    <group position={[x, 0.04, z]}>
+      <mesh rotation={[-Math.PI / 2, 0, 0]}><circleGeometry args={[1.35 * (0.8 + 0.3 * k), 28]} /><meshBasicMaterial color={c} transparent opacity={0.42 * k * pulso} depthWrite={false} /></mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.005, 0]}><circleGeometry args={[0.7 * (0.8 + 0.3 * k), 24]} /><meshBasicMaterial color={cor === "azul" ? "#ffffff" : "#ff8a5a"} transparent opacity={0.45 * k * pulso} depthWrite={false} /></mesh>
+      <Halo p={[0, 0.3, 0]} r={1.6 * k} cor={c} op={0.35 * k * pulso} />
+    </group>
+  );
+};
+
+/** Por dentro da casa: cano, caixa de fios e coluna; faíscas entre cano e caixa; fios verdes ao aterramento; setas "sobem juntas". */
+const Interior: React.FC<{ cano: number; faisca: number; liga: number; sobem: number; t: number }> = ({ cano, faisca, liga, sobem, t }) => {
+  if (cano <= 0.02) return null;
+  const on = faisca > 0.02 && Math.sin(t * 31) + Math.sin(t * 47 + 2) > -0.4;
+  const pts = on ? zigue(Math.floor(t * 20) % 7 + 5, FAISCA_DE, FAISCA_PARA, 6, 0.16) : [];
+  const l = (i: number) => clamp01(liga * 3 - i);
+  return (
+    <group>
+      {CANO_V.slice(1).map((q, i) => <Liga key={i} a={CANO_V[i]} b={q} w={0.14} cil cor="#7fa6c0" />)}
+      <mesh position={[-0.9, 0.12, -2.3]}><sphereGeometry args={[0.1, 8, 6]} /><meshStandardMaterial color="#7fa6c0" /></mesh>
+      <mesh position={[0.4, 1.0, -2.3]}><sphereGeometry args={[0.09, 8, 6]} /><meshStandardMaterial color="#5f8aa6" /></mesh>
+      <Caixa p={QUADRO_P} t={[0.6, 0.8, 0.14]} cor="#9aa3ad" raio={0.03} />
+      <Caixa p={[QUADRO_P[0], QUADRO_P[1], QUADRO_P[2] + 0.08]} t={[0.44, 0.6, 0.03]} cor="#3a414c" raio={0.01} sombra={false} />
+      {[0, 1, 2].map((i) => <mesh key={i} position={[QUADRO_P[0] - 0.12 + i * 0.12, QUADRO_P[1] + 0.12, QUADRO_P[2] + 0.1]}><boxGeometry args={[0.07, 0.14, 0.03]} /><meshBasicMaterial color={["#58ff8a", "#ffd23f", "#ff6a4a"][i]} /></mesh>)}
+      <Caixa p={[COLUNA_X, 1.5, -2.3]} t={[0.18, 3.0, 0.18]} cor="#6f7680" raio={0.02} />
+      {on && <group>{pts.slice(1).map((q, i) => <group key={i}><Liga a={pts[i]} b={q} w={0.06} cil cor="#7fc4ff" op={0.6} basico /><Liga a={pts[i]} b={q} w={0.025} cil cor="#ffffff" basico /></group>)}<Halo p={[0.65, 1.12, -2.2]} r={0.9} cor="#7fc4ff" op={0.9 * faisca} /></group>}
+      {[LIGA_A, LIGA_B, LIGA_C].map((pts2, i) => <CaminhoLuz key={i} pts={pts2} k={l(i)} cor={VERDE} w={0.06} halo={0.35} />)}
+      {sobem > 0.02 && [[-0.4, 1.3], [QUADRO_P[0], 2.0], [COLUNA_X + 0.45, 1.9]].map(([x, y], i) => {
+        const b = 0.1 * Math.sin(t * 5 + i);
+        return <Seta key={i} a={[x, y + b, -1.9]} b={[x, y + 0.7 + b, -1.9]} cor={AZUL} w={0.07} op={sobem} />;
+      })}
+    </group>
+  );
+};
+
+/** Rede da rua: poste, fio até a casa, protetor de surto na entrada e o pico (vermelho) que o protetor desvia ao aterramento. */
+const Rede: React.FC<{ k: number; pico: number; pico2: number; protetor: number; t: number }> = ({ k, pico, pico2, protetor, t }) => {
+  if (k <= 0.02) return null;
+  const pop = suave(protetor);
+  return (
+    <group>
+      <Poste x={POSTE_X} z={POSTE_Z} />
+      {REDE_FIO.slice(1).map((q, i) => <Liga key={i} a={REDE_FIO[i]} b={q} w={0.035} cil cor="#16181d" />)}
+      <Liga a={[-3.05, 2.55, POSTE_Z]} b={[-3.05, 2.2, POSTE_Z]} w={0.035} cil cor="#16181d" />
+      {pop > 0.02 && (
+        <group position={PROT_P} scale={pop}>
+          <Caixa p={[0, 0, 0]} t={[0.36, 0.5, 0.3]} cor="#2f6fb5" raio={0.04} />
+          <Caixa p={[0, 0.05, 0.16]} t={[0.24, 0.3, 0.02]} cor="#dfe8f2" raio={0.01} sombra={false} />
+          <mesh position={[0, -0.14, 0.18]}><sphereGeometry args={[0.035, 8, 6]} /><meshBasicMaterial color={pico2 > 0.02 && pico2 < 0.9 ? "#ffd23f" : VERDE} /></mesh>
+          <Halo p={[0, 0, 0.3]} r={0.9} cor="#7dc4ff" op={0.35 + 0.25 * Math.sin(t * 6)} />
+        </group>
+      )}
+      {protetor > 0.4 && TERRA_FIO.slice(1).map((q, i) => <Liga key={i} a={TERRA_FIO[i]} b={q} w={0.06} cil cor={VERDE} op={clamp01((protetor - 0.4) * 3)} />)}
+      <CaminhoLuz pts={PICO_CAM} k={pico} cor="#ff3b2e" w={0.1} cauda={2.4} halo={1.0} op={pico2 > 0.01 ? 0 : 1} />
+      <CaminhoLuz pts={PICO2_CAM} k={pico2} cor="#ff5a3a" w={0.1} cauda={2.8} halo={1.0} />
+    </group>
+  );
+};
+
+const Aviao: React.FC<{ k: number }> = ({ k }) => {
+  if (k <= 0.01 || k >= 0.99) return null;
+  const x = lerp(-22, 22, k);
+  return (
+    <group position={[x, 10.5 + 0.8 * Math.sin(k * 5), -6]} rotation={[0, 0, 0.04]} scale={1.3}>
+      <mesh rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.38, 0.32, 4.2, 10]} /><meshStandardMaterial color="#e8edf3" roughness={0.6} /></mesh>
+      <mesh position={[2.3, 0, 0]} rotation={[0, 0, -Math.PI / 2]}><coneGeometry args={[0.38, 0.9, 10]} /><meshStandardMaterial color="#e8edf3" roughness={0.6} /></mesh>
+      <Caixa p={[0.2, -0.05, 0]} t={[1.2, 0.08, 4.2]} cor="#c9d1d9" raio={0.02} sombra={false} />
+      <Caixa p={[-1.9, 0.5, 0]} t={[0.9, 0.08, 1.7]} cor="#c9d1d9" raio={0.02} sombra={false} />
+      <Caixa p={[-1.9, 0.75, 0]} t={[0.8, 0.9, 0.08]} cor="#d6392e" raio={0.02} sombra={false} />
+      <Halo p={[-0.3, 0, 2.1]} r={0.5} cor="#ff4a3a" op={0.7} />
+      <Halo p={[-0.3, 0, -2.1]} r={0.5} cor="#4aff7a" op={0.7} />
     </group>
   );
 };
@@ -713,12 +879,13 @@ const PararaiosCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpiso
   const luz = n("luz", 1) * (1 - n("casaEscura"));
   const casa: CasaP = {
     haste: n("haste"), cabo: n("cabo"), terra: n("terra"), luz, pisca: n("pisca"), raiox: n("raiox"), fogo: n("fogo"), estoura: n("estoura"), escada: n("escada"),
-    espalha: n("espalha"), fiacao: n("fiacao"), onda: n("onda"), acumula: n("acumula"), leque: n("leque"), destaque: n("destaque"), t: tEpisodio,
+    fumaca: n("fumaca"), espalha: n("espalha"), fiacao: n("fiacao"), onda: n("onda"), acumula: n("acumula"), leque: n("leque"), destaque: n("destaque"), t: tEpisodio,
   };
   const et: Record<string, EtiqDef> = {
     haste: { texto: "HASTE", para: [0, HASTE_TOPO - 0.1, ZC], off: [1.3, 0.8], cor: "#9fdcff" },
     cabo: { texto: "CABO DE DESCIDA", para: [2.7, 1.5, ZFR + 0.15], off: [-1.6, 0.8], cor: "#ffb26b" },
     aterra: { texto: "ATERRAMENTO", para: [2.7, -1.7, ZPLATO + 0.05], off: [-1.7, 0.2], cor: "#7dffa8" },
+    protetor: { texto: "PROTETOR DE SURTO", para: [-3.05, 2.0, POSTE_Z + 0.2], off: [-1.0, 1.4], cor: "#7dc4ff" },
     gaiola: { texto: "GAIOLA DE FARADAY", para: [0.9, 1.0, 0.3], off: [1.4, 1.1], cor: "#8fd8ff" },
   };
   const S = n("etiqS", 1);
@@ -773,8 +940,14 @@ const PararaiosCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpiso
               </group>
               {[-1.6, -1.0, -0.4].map((dz, i) => <Caixa key={i} p={[-1.4 + i * 0.1, 0.03, 3.3 + dz * 0.0 + i * 0.3 - 0.3]} t={[0.5, 0.05, 0.28]} cor="#8d8478" raio={0.02} sombra={false} />)}
               <Casa {...casa} />
-              <Hastes terra={casa.terra} cabo={casa.cabo} leque={casa.leque} acumula={casa.acumula} onda={casa.onda} t={tEpisodio} destaque={casa.destaque} />
+              <Hastes unica={cena.unica === true} terra={casa.terra} cabo={casa.cabo} leque={casa.leque} acumula={casa.acumula} onda={casa.onda} t={tEpisodio} destaque={casa.destaque} />
               {/* a corrente quente escolhe a parede e a fiação (sem cabo) */}
+              <FioFino k={n("fio")} calor={n("calor")} derrete={n("derrete")} t={tEpisodio} />
+              <ChaoBrilho k={n("choque")} x={n("choqueX", 2.9)} z={n("choqueZ", 3.7)} cor={(cena.choqueCor as string | undefined) ?? "vermelho"} t={tEpisodio} />
+              <Interior cano={n("cano")} faisca={n("faisca")} liga={n("ligaTudo")} sobem={n("sobem")} t={tEpisodio} />
+              <Rede k={n("rede")} pico={n("pico")} pico2={n("pico2")} protetor={n("protetor")} t={tEpisodio} />
+              <Aviao k={n("aviao")} />
+              {n("lampada") > 0.02 && <group><Halo p={[-2.0, 7.2, 3.4]} r={1.7 * suave(n("lampada"))} cor="#ffe27a" op={0.8} /><Texto3D texto="?" p={[-2.0, 7.2 + 0.4 * suave(n("lampada")), 3.4]} h={1.5} escala={suave(n("lampada"))} /></group>}
               {casa.espalha > 0.001 && FIOS.map((pts, i) => <CaminhoLuz key={i} pts={pts} k={clamp01(casa.espalha * 1.15 - i * 0.05)} cor={QUENTE} w={0.07} halo={0.7} />)}
               {n("ramos") > 0.01 && [[-11, 4.0, -5], [10.5, 3.5, -9], [-9, 6.9, -2]].map(([x, y, z], i) => {
                 const k = n("ramos") * [0.62, 0.5, 0.7][i];

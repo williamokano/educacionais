@@ -61,6 +61,8 @@ npx remotion render src/index.ts episodio ../episodios/<tema>/rascunho-mudo.mp4 
 - Objeto preso a uma pessoa escala com `altura / 1,6` do personagem; varas/ombros: iguale a altura dos carregadores e ponha cada um AO LADO da vara.
 - Expressão padrão `sorriso` ou `surpreso`; `neutro` e `preocupado` leem como tristeza. Só use triste quando a fala pede.
 - Multidão/fila/torcida = dezenas de pessoas (30+), em fileiras; 8 parece teatro.
+- **Câmera** (lessons, 04/11/2026): padrão na diagonal (três quartos); movimento nem sempre, mas de vez em quando um ângulo/movimento cinematográfico (viradas, revelações, aberturas); cenário com vida.
+- **NUNCA gore** (lessons, 04/11/2026): visual infantil. Machucado só leve e simbólico, estilo Looney Tunes (a parte atingida incha, pulsa vermelho, raios/estrelinhas; braço vermelho como na airfryer; nada arranca); morte só se o tema exigir (fala + olhos em X); perigo principalmente no objeto/ambiente.
 - Abertura: em movimento, câmera na FRENTE do personagem (diagonal, não "chapada"), cenário ao fundo; nunca de costas.
 - Escala real dos objetos ao lado do Zeca; aproxime a câmera da peça que a fala explica (≥ 45% da largura).
 - Peça só aparece quando a fala a introduz; o nome do objeto só na batida de revelação (rótulos incluídos).

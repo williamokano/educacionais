@@ -174,7 +174,7 @@ Texto aprovado em 02/11/2026 (`tasks/roteiro-abs.md` v1, 26 batidas, só a parte
 
 Ranking em `tasks/ranking-temas.md`. Só texto (`tasks/roteiro-<tema>.md`, v1 rascunho): sem assets, voz, render nem gerador. A pessoa ajusta um a um ao lançar.
 
-- [x] 1 Panela de pressão (`tasks/roteiro-panela-de-pressao.md`, 21 batidas, ~1:45–1:55, revelação na batida 15)
+- [x] 1 Panela de pressão (`tasks/roteiro-panela-de-pressao.md`, **v2** em 04/11/2026: 27 batidas, ~370 palavras, corrente de 14 degraus, revelação na batida 20)
 - [x] 2 Elevador (`tasks/roteiro-elevador.md`, 22 batidas, ~1:55–2:10, revelação na batida 17)
 - [x] 3 Para-raios (`tasks/roteiro-para-raios.md`, 21 batidas, ~2:00–2:10, revelação na batida 12)
 - [x] 4 Avião (`tasks/roteiro-aviao.md`, 20 batidas, ~1:55–2:10, revelação na batida 16)
@@ -184,8 +184,8 @@ Ranking em `tasks/ranking-temas.md`. Só texto (`tasks/roteiro-<tema>.md`, v1 ra
 
 # Plano: episódio 13, panela de pressão, rascunho mudo (pedido de 04/11/2026)
 
-- [x] Cenário `panela` (`panela.tsx`, registrado em `index.tsx`), gerador `tasks/geradores/panela-de-pressao.py`, `episodios/panela-de-pressao/roteiro.json` (21 batidas, `"episodio": 13`)
-- [x] Render mudo `episodios/panela-de-pressao/rascunho-mudo.mp4` e rodadas de conferência por quadros
+- [x] Cenário `panela` (`panela.tsx`, registrado em `index.tsx`), gerador `tasks/geradores/panela-de-pressao.py`, `episodios/panela-de-pressao/roteiro.json` (**v2**: 27 batidas, `"episodio": 13`)
+- [x] Render mudo v2 `episodios/panela-de-pressao/rascunho-mudo.mp4` e 3 rodadas de conferência por quadros do vídeo
 - [ ] Pessoa aprova o texto; depois voz, som, mix, capa, textos e publicação (não feitos de propósito)
 
 # Plano: episódio 14, elevador, rascunho mudo (pedido de 04/11/2026)
@@ -197,3 +197,71 @@ Ranking em `tasks/ranking-temas.md`. Só texto (`tasks/roteiro-<tema>.md`, v1 ra
 # Plano: episódio 15, para-raios, rascunho mudo (pedido de 04/11/2026)
 - [x] Cenário `pararaios` (`pararaios.tsx`, registrado em `index.tsx`; `Auto` exportado de `pista.tsx` com `vidroOp`), gerador `tasks/geradores/para-raios.py`, `episodios/para-raios/roteiro.json` (21 batidas, `"episodio": 15`)
 - [x] Render mudo `episodios/para-raios/rascunho-mudo.mp4` e conferência por quadros
+
+# Plano: episódio 16, avião (asa + fuselagem + turbina + cauda + comandos + flap + cabine + janela), UM vídeo, rascunho mudo v3 (rodada 2, 04/11/2026)
+- [x] Roteiro v2 (`tasks/roteiro-aviao.md`: 25 batidas, ~478 palavras, seção "Votação" atualizada: estol, mito e penas de volta, turbulência com homenagem ao Lito, comandos em seção mega curta); parte 2 (`roteiro-aviao-2.md`) marcada como absorvida
+- [x] Cenário `aviao` (`aviao.tsx`, registrado em `index.tsx`), gerador `tasks/geradores/aviao.py`, `episodios/aviao/roteiro.json` (25 batidas, `"episodio": 16`)
+- [x] Render mudo `episodios/aviao/rascunho-mudo.mp4` (~2:44) e conferência por quadros
+- [ ] Pessoa aprova o texto; depois voz, som, mix, capa, textos e publicação (não feitos de propósito)
+
+# Plano: episódio 17, descarga do vaso sanitário, rascunho mudo (pedido de 04/11/2026)
+- [x] Cenário `banheiro` (`banheiro.tsx`, registrado em `index.tsx`), gerador `tasks/geradores/descarga.py`, `episodios/descarga/roteiro.json` (20 batidas, `"episodio": 17`)
+- [x] Render mudo `episodios/descarga/rascunho-mudo.mp4` e conferência por quadros do vídeo (rótulos e cartões em tamanho real)
+- [ ] Pessoa aprova o texto; depois voz, som, mix, capa, textos e publicação (não feitos de propósito)
+
+## Panela de pressão (ep 13): AGENDADO (05/11/2026)
+
+- [x] Final aprovado (1:47,9), pasta `12-panela-de-pressao/` no NAS com `publicacao/` (capa, story-horario, story-ja-saiu, textos.md)
+- [x] Publisher (série `educativos`, número 12): vídeo `9658abe16004ac754cada1be3edc0d0e` sex 06/11 18:00Z (15:00 BRT; slots diários); story horário `065669bac8b64600b92ca85f2850f68d` 16:30Z (arte "Hoje às 15h"); story já saiu `1515ce9dba39f68b613bf13784437c27` 18:01Z. **Status: agendado 06/11 18:00Z.**
+
+## Elevador (ep 14): final e agendamento (05/11/2026)
+- [x] Voz ElevenLabs (cache reaproveitado na segunda passada), som, render, mix e master: 2:18,4, -14,0 LUFS, -2,9 dBTP, `episodios/elevador/final.mp4`
+- [x] Gerador `tasks/geradores/elevador.py` passou a usar o tempo real das palavras/batidas (câmeras por tempo das batidas 2 e 15, curva da batida 8)
+- [x] Pacote `episodios/elevador/publicacao/` e cópia no NAS `13-elevador/` (cmp ok)
+- [x] Agendado 07/11 13:00Z (sáb 10:00 SP; remanejado, slots diários): vídeo `8b912604280ef3f7f7756c44e66ff290`, story horário 07/11 10:00Z (arte "Hoje às 10h") `c7c862326b288e69d05f6b7d799a4293`, já saiu 13:01Z `e9820ebbb817ee367df8faaed46c9e5d` (os 3 'pending')
+- [ ] A pessoa ouvir a voz (pronúncia de "décimo quarto" e "catorze") e aprovar `#curiosidades #engenharia`
+
+## Avião (ep 16): finalizado e agendado (05/11/2026)
+- [x] Voz ElevenLabs, som, render, master (2:07,4; −14,1 LUFS; −2,9 dBTP), NAS 15-aviao, pacote de publicação
+- [x] Agendado 08/11 23:00Z (dom 20:00 SP; remanejado) (vídeo `445cc98d1208bbc7caabaed9f0014377`, release `e20e8009cb30b01b7de79bb45e4e0f28`); story horário 08/11 20:00Z (17:00 SP, arte "Hoje às 20h") release `0200d92e278d9170e3ad6ae66afb5a17`; story já saiu 23:01Z release `0d02f5dd71383f1e91fe770b6f31efb9` (3 releases pending)
+- [ ] Pessoa ouve a pronúncia de "estol" (STT ouviu "stall") e aprova hashtags `#aviacao`
+
+## Submarino (ep 19, pasta 18-submarino): finalizado e agendado (05/11/2026)
+- [x] Voz ElevenLabs (1 pedido, 988 créditos), som, render, master: `episodios/submarino/final.mp4` (2:08,0; −14,1 LUFS; pico −2,9 dBTP); NAS `18-submarino/` (final.mp4, roteiro.md, publicacao/; rascunho-mudo mantido; cmp ok)
+- [x] Gerador `tasks/geradores/submarino.py` agora lê os tempos reais de `ep19/episode.json` (palavras e durações)
+- [x] Pacote `episodios/submarino/publicacao/` (capa quadro 215, story-horario, story-ja-saiu, textos.md); título "Como pegar o chinelo no fundo do lago sem molhar o cabelo?"; hashtags `#curiosidades #oceano` (novas, precisam de aprovação)
+- [x] Agendado 09/11 22:40Z (seg 19:40 SP; remanejado): vídeo `95baa1d5d8a0eabbbacd794675393135` (release `f7d000f750d81edd962b5bc8a6f6aab2`); story horário 09/11 19:40Z (arte "Hoje às 19h40") `35b98fe6b7b74c996bc768fe38abd666` (release `96d85d488fe8ae99af0e1b594d6db566`); story já saiu 22:41Z `5f733105e302064d6de05f7638818d27` (release `9d42623e7aa60b6ea629615482b7433e`); os 3 'pending'
+- [ ] A hidrelétrica (outro agente) deve ficar em sex 13/11; conferir que o gancho dela puxa o submarino
+- [ ] Pessoa ouve o vídeo e aprova `#oceano`
+
+- [x] Hidrelétrica (ep 18) produzida e AGENDADO 09/11 15:20Z (seg 12:20 SP; remanejado): vídeo `0114e1a75aeda97d60995a93e9934b3d` (release `02e739d6e799ea7be1c62c936dd37b1f`), story horário `9f27ba5bda3fa12c0811b446a52ade7b` (09/11 12:20Z, arte "Hoje às 12h20", release `b0a10ec9bd56d241a4ed8904334a3681`), story já saiu `c99f49e3b6ee2911feac50a9422db259` (15:01Z, release `887475180d866da8355b2b6813fbd630`); os 3 pending. Final 2:10,8, −14,06 LUFS, −2,86 dBTP; NAS `17-hidreletrica/`. Descarga sem slot reservado (aguarda aprovação).
+
+- [x] `para-raios` finalizado e AGENDADO 10/11 22:25Z (ter 19:25 SP; remanejado) (06/11/2026): vídeo `daf03310ae89f01b71b18a7631eb52e2`, story horário `594a5c777a81b6f8aa78bd3fa3a2440e` (10/11 19:25Z, 16:25 SP, arte "Hoje às 19h25"), story já saiu `1410249ffa0601015adc99421924eedf` (21:01Z); 3 releases pending; pacote em `episodios/para-raios/publicacao/`, NAS `14-para-raios/`.
+
+## Cadeado (ep 20): AGENDADO (06/11/2026)
+- [x] Pacote `episodios/cadeado/publicacao/` (capa, story-horario "Hoje às 6h55", story-ja-saiu, textos.md) e NAS `19-cadeado/publicacao/` (cmp ok); simulação do iPhone rodada
+- [x] Publisher (série `educativos`, número 18): vídeo `9989eb2c5ec57eff212b0b1b59f0941a` ter 10/11 09:55Z (06:55 SP); story horário `ee1fe7eb83fa84ba99c26046f7230d83` 06:55Z; story já saiu `6243b9623fa3ce77f4fdfd78e255f1e8` 09:56Z. **Status: agendado 10/11 09:55Z (ter 06:55 SP; teaser 06:55Z "Hoje às 6h55"; remanejado)** (plano: vídeo on_plan, preenchido; 3 releases pending)
+- [ ] A pessoa aprovar `#curiosidades #seguranca`; decidir sobre o gancho do zíper e a ordem (submarino promete o cadeado)
+
+## Zíper (ep 21): finalizado e agendado (08/11/2026)
+
+- [x] Voz ElevenLabs em 1 pedido (2527 caracteres), falas sem mudança; STT ouve "Você está atrasado" inteiro; gerador `tasks/geradores/ziper.py` agora lê os tempos reais de `ep21/episode.json` (com fallback para a estimativa)
+- [x] Som (63 efeitos, sem ambiência), render, mix e master: `episodios/ziper/final.mp4` (2:16,8, −14,0 LUFS, pico −2,75 dBTP); sem piscadas na varredura quadro a quadro
+- [x] Pacote `episodios/ziper/publicacao/` (capa quadro 132, story-horario "Hoje às 12h05", story-ja-saiu, textos.md); NAS `20-ziper/` (cmp ok)
+- [x] **agendado 10/11 15:05Z** (ter 12:05 SP; teaser 12:05Z "Hoje às 12h05"; remanejado), número 19, série `educativos`: vídeo `e5fcce86ac597cfd2d6185d2bb99ea89` (release `8bd0a13d6e3facf0e8c7e3b9fb8aa8c5`, capa por set_content_cover, vídeo on_plan), story horário `a40ecf9425e136c8d50d3bea68230017` (release `0563d2e7cb753e3ca271ecdc858d4dae`, 12:05Z), story já saiu `8a967689efc84df0e1829de31d4d74c0` (release `34841b31a8ee68631c9fc1345dc7c035`, 15:06Z); 3 releases pending
+- [ ] Pendências: hashtag nova `#invencoes`; o gancho final promete o paraquedas (não agendado ainda); "Sundbäck" soa como "Sandbeck"
+
+## Agendado 08/11/2026 (descarga e farol)
+- descarga: seg 09/11 10:10Z (remanejado; teaser 07:10Z "Hoje às 7h10"; vídeo `2c188c35b598793c91691e94d010a442`, número 20), já saiu 10:11Z; ids antigos: `00cfcd87448a1b546387c4ea6f981efd`, já saiu 12:01Z `7d2081653f9f330359ca1b6f80836362`.
+- farol: qui 12/11 10:05Z (remanejado; teaser 07:05Z "Hoje às 7h05"; vídeo `7b6be793063fa4dce239f97ab0c6bf00`, número 21), ids: `f12a2d4448e2a5f8cecdba1e804c1d7f`, já saiu 15:01Z `47a08f816e737ea73b90ba44aeab13a7`.
+
+## Relógio (ep 24, pasta 23-relogio): finalizado e agendado (08/11/2026)
+- [x] Voz ElevenLabs: 1º pedido deixou o "Você" cortado ("Vê chegou"); regerada com `falante: abertura` (batida 1 à parte + b02-17, 938 créditos informados no b02-17). Falas sem mudança. STT ouve tudo certo (âncora, espiral, regulador, rubis, coroa)
+- [x] Gerador `tasks/geradores/relogio.py` lê os tempos reais de `ep24/episode.json` (só com `narration.wav`; reserva = estimativa); tique-taque 0,05 em loop com fade só nas batidas 8-14, cliques baixos nas engrenagens
+- [x] Final `episodios/relogio/final.mp4`: 2:14,0, −14,1 LUFS, pico −2,85 dBTP; sem piscadas na varredura quadro a quadro; NAS `23-relogio/` (cmp ok) com `publicacao/` (capa quadro 150, story-horario "Hoje às 19h50", story-ja-saiu, textos.md)
+- [x] **agendado 11/11 22:50Z (qua 19:50 SP), número 24**: vídeo `04e71788b65334bb852e3d171ab3d70c` (release `a1828bb8b71d0c0f59b97a5789f057b6`), story horário `0f394e147b31cb4497f4e6ef22a32032` (release `896cd8dde97ee9f6c8da23506ff9037c`, 19:50Z), story já saiu `69bdc3640c215e0d41ed780d94cc1909` (release `78d13dc47032d39f417de33befdfa13b`, 22:51Z); 3 pending
+- [ ] Pendências: hashtag nova `#mecanica`; gancho final puxa o farol (qui 12/11 07:05 SP; comentário diz "amanhã cedo")
+
+## Paraquedas e ponte: finalizados e agendados (08/11/2026)
+- [x] `paraquedas` (ep22, NAS `21-paraquedas/`): voz do cache (0 crédito), final `episodios/paraquedas/final.mp4` (2:23,3, −14,0 LUFS, pico −2,6 dBTP), pacote `publicacao/` (capa quadro 150). **AGENDADO qua 11/11 10:20Z (07:20 SP; teaser 07:20Z "Hoje às 7h20", já saiu 10:21Z)**, número 22: vídeo `f7e4f9af68d7ac3963d6fec25ddd7125` (release `e2969d877de07c6fb7720ea8efa1e0cb`), story horário `ce46db66fc6ad09585ef41400fab023d` (release `79f833f3b3ee702c16deadd82fc721b6`), story já saiu `7b34cd1574852d89440110d4ff002284` (release `337aab8635fd631253e62d87db16c61c`). Hashtag nova `#gravidade` (aprovar).
+- [x] `ponte` (ep23, NAS `22-ponte/`): voz nova, 1 pedido de 2635 caracteres (~2.600 créditos); `tasks/geradores/ponte.py` passou a ler os tempos reais de `ep23/episode.json`; final `episodios/ponte/final.mp4` (2:23,2, −14,0 LUFS, pico −2,8 dBTP), capa quadro 400. **AGENDADO qua 11/11 15:15Z (12:15 SP; teaser 12:15Z "Hoje às 12h15", já saiu 15:16Z)**, número 23: vídeo `e0f3093d6a703f82b2caf3fc484f7779` (release `eebda5cfa55146f74f83342ba8220295`), story horário `816c68273ccb74c5993ee634be52ce6f` (release `5d0fb7b1546f2696f7e01e19d907ae73`), story já saiu `aa97ba63589d6d32721e500675c766a3` (release `c5f2abdb094315d9ddf87c3c2e8b7679`). Gancho: relógio (qua 11/11 19:50 SP). Hashtag `#engenharia` (aprovar).

@@ -200,3 +200,69 @@
 - **Regra:** peça de cenário que não recebe `x` (andor, cruz) vai num `<group position>` do palco; confira no quadro que ela aparece junto das pessoas.
 - **Regra:** boca aberta de bicho: interior escuro entre o focinho e a mandíbula, a mandíbula desce, a língua apoia nela; nunca uma faixa rosa solta abaixo do queixo.
 - **Regra:** ao calcular quadros de conferência, leia o `fps` do `episode.json` (30), nunca suponha 25.
+
+## Câmera: de vez em quando cinematográfica (04/11/2026, pedido da pessoa; ajustado no mesmo dia)
+
+- As câmeras estavam estáticas demais, mas **nem toda batida precisa de movimento**. Regra: **de vez em quando** um ângulo ou movimento cinematográfico (diagonal três quartos, aproximação lenta, órbita curta, deslize, vista aérea, plano baixo), para o vídeo ficar com tom mais profissional.
+- Dosagem: câmera parada é normal em batidas de leitura (rótulo, número, cartão); reserve o movimento para viradas, revelações, vitórias e aberturas. Evite o contrário: vídeo inteiro parado, ou vídeo inteiro balançando.
+- **Diagonal** (três quartos, ~25 a 40°) como padrão em vez de "chapado" de frente; frente pura para efeito deliberado (final, cartão).
+- Cenário com vida (fumaça, nuvem, luz, paralaxe) em todos os planos, mesmo com câmera parada.
+- Movimento suave (easing), curto, sem cortes bruscos; a câmera serve à explicação e aproxima da peça que a fala explica.
+- Referências da pessoa (reels de procissão e panela de pressão): travelling, vista aérea, close na peça.
+
+## NUNCA gore; machucado e morte só simbólicos e leves (04/11/2026, regra permanente da série educativa)
+
+- O canal é educativo e de tema adulto, mas os desenhos low poly parecem infantis e atraem criança. **Nunca gore**: sem sangue, ferida aberta, osso, corpo destroçado, queimadura realista.
+- **Machucado pode, mas bem leve e simbólico:** o jeito aprovado é o do episódio da airfryer (o braço do Zeca fica **vermelho**, com um susto/careta). Use para simbolizar queimadura, batida, prensada etc. Sem sangue, sem curativo dramático.
+- **Morte só quando o tema exigir** (ex.: não comer cogumelo da floresta): dizer na fala que "faz mal e pode matar"; se aparecer o boneco, **olhos em X (dois X)**, nada além disso, sem corpo caído em destaque, sem sangue. Estritamente quando necessário, nunca por efeito.
+- O perigo continua sendo mostrado principalmente no objeto e no ambiente (teto quebrado, feijão espirrando, vapor forte, faísca, susto do Zeca recuando).
+- Todo agente de roteiro/montagem recebe esta regra no prompt; vale para todas as séries educativas.
+- **Estilo do machucado (04/11/2026): desenho animado, estilo Looney Tunes.** A parte atingida (ex.: mão presa na porta) **não machuca nem arranca**: ela **incha** (escala maior, em pulsos), **pulsa vermelho** e leva **efeito de impacto** (raios/estrelinhas/linhas de choque), com careta ou pulinho do Zeca. Sem sangue, sem ferida, sem deformação real. Combina com o braço vermelho da airfryer.
+
+## Mecanismos muito bem animados: zíper e relógio (04/11/2026, pedido da pessoa)
+
+- **Zíper:** animação de detalhe absurdo: os dentes esquerdo e direito **intercalando** em zigue-zague, o cursor juntando e separando em close/macro, cada dente entrando, fisicamente certo ao subir e descer.
+- **Relógio:** monta-se **peça a peça**; as engrenagens vão **diminuindo** até virar relógio de pulso; todas as engrenagens estão lá, engrenando dente a dente, **movimento bonito e funcionando**; ponteiros certos; no fim o **vidro desce** sobre o mostrador e mostra como a **coroa (botão da direita)** funciona (puxar, acertar a hora, dar corda).
+- Vale para a montagem de cena: dar tempo de tela ao mecanismo; macro em diagonal; nada de peças fingidas.
+
+## Machucado de desenho animado: como fazer direito (elevador, 05/11/2026)
+
+- A parte atingida **incha rápido e volta ao normal, várias vezes** (3 a 5 pulsos em ~1,5 s), pulsando vermelho, com **estrelas, raios e linhas de choque** em volta, estilo Tom & Jerry. **Uma bola vermelha parada não serve.**
+- O Zeca **reage à dor**: cara de dor (olhos, boca, sobrancelha), corpo se contorcendo, pulo num pé só, sacudindo a mão, segurando o braço. **Nunca fica estático** num momento de dor ou susto.
+- Cena que mostra algo acontecendo dentro de uma peça (mão encostando na parede do poço, por exemplo): câmera **dentro** da peça ou raio-X com contornos, mostrando a mão e a parede juntas e perto.
+
+## Piscada: parede que alterna translúcida/opaca e rodapé que treme (para-raios, 05/11/2026)
+
+- **O que aconteceu:** no rascunho do para-raios (1) em ~1:24 as paredes da casa piscavam entre translúcidas e opacas; (2) em ~1:03 o "rodapé" da casa tremia.
+- **Causa 1 (opacidade):** a parede só recebe `opacity` durante o raio-X, então o material muda de `transparent={false}` para `true` no meio do vídeo. No three.js a flag
+  entra no programa do shader (`opaque`, alfa fixo em 1) e mudar sem `needsUpdate` mantém o programa antigo. O render usa 16 abas em paralelo, e cada aba compilou o
+  material num momento diferente: os quadros saíam opacos ou translúcidos conforme a aba. Reproduzi isolando quadros 2500-2540 (diferença média de 13 a 22 entre quadros
+  vizinhos, contra ~2 depois da correção). Vale para todo material que alterna `transparent` (relogio-mec, abrigo, ponte, usina, submarino, paraquedas, ziper-mec, pista, cozinha-base...).
+- **Correção:** `MateriaisEstaveis` em `motor/src/v3d/Palco.tsx` (e no plugin, `nucleo/src/v3d/Palco.tsx`): a cada commit confere `material.transparent` e põe
+  `needsUpdate = true` quando mudou. Corrige o motor inteiro; nenhum cenário precisa de mudança.
+- **Causa 2 (rodapé):** o piso da casa (`Caixa` 6 x 0,1 x 5) tinha o mesmo contorno externo das paredes (x ±3, z -2,6): faces coplanares com cores diferentes brigam
+  (z-fighting) e piscam com a câmera. Correção: piso menor, por dentro das paredes (5,7 x 4,7).
+- **Regra:** nunca deixe duas faces de cores diferentes no mesmo plano (piso, rodapé, faixa, janela, calçada): recue 1 a 3 cm ou deixe uma peça por dentro da outra.
+- **Regra:** para suspeitar de piscada, renderize 30 a 70 quadros seguidos (`remotion render --sequence --frames=A-B`) e compare quadros vizinhos com PIL/numpy; saltos de diferença
+  que alternam fora de cortes são piscada. Cortes e fades legítimos aparecem como 1 a 5 quadros de salto grande seguidos de volta ao normal.
+- **Regra:** opacidade é função contínua do tempo (`valor`/`suave`); nunca `p > x` para trocar o material; sem `Math.random`, `Date` ou `performance.now`.
+
+## Transição entre batidas: fusão cruzada, nunca "fade a partir do preto" (05/11/2026, pedido da pessoa)
+
+- **O que acontecia:** toda batida entrava com opacidade 0→1 em 5 quadros sobre o fundo escuro: no corte o quadro ficava quase preto (salto de ~171 de diferença média) e depois uma rampa de ~34 por 5 quadros. Dava "piscada de preto" ~27 vezes por vídeo.
+- **Agora (motor, `v2/Episodio.tsx`):** padrão é **fusão cruzada** (`transicao: "fusao"`): a batida que sai fica por baixo, congelada no último quadro (`Freeze`, componente `Fusao`), e a que entra sobe de 0 a 1 em 8 quadros (0,25 s). A linha do tempo não muda (mesmos `Sequence`, mesmas durações). A camada de baixo some depois da fusão, então só há 2 canvas WebGL por ~8 quadros.
+- **Legenda** da batida que sai não aparece na camada de baixo; a da que entra fica fora da rampa (palavra no quadro certo, sem duplicar).
+- **Opções:** por batida `"transicao": "corte"|"fusao"|"fade"|"whip"` e `"transicaoDur"` (s); no topo do roteiro `transicao`, `transicaoDur`, `transicaoFinal` (cartão final). Batida 1 sempre em corte. Para voltar ao comportamento antigo num episódio: `"transicao": "fade"` no topo.
+- **Medição (ep16 quadros 420-510, ep13 1090-1160):** antes salto 163/173 + 5 quadros ~32-37 e luminância mínima 19,7; depois máx. 3,6 / 10,6 em torno do corte e luminância mínima 176/182. Teste sempre com `--frames=A-B` curto e PIL/numpy; não re-renderize episódio inteiro.
+
+## Toda pessoa em cena é Boneco3D (05/11/2026, cadeado e zíper)
+
+- Transeunte, ladrão, chefe, vizinho, figurante: **sempre personagem do rig `Boneco3D`** (zeca, homemA/B/C, mulher, menino, tio, coroinha etc., em `fieis.ts` / `usina.tsx`), com ação `andando` e braços balançando, expressão do rig e roupa própria. **Nunca cápsulas, caixas ou "duas formas geométricas".** Se o personagem não existe (chefe de camisa social e gravata), crie-o em `fieis.ts`.
+- Objeto de uso (ferrolho, mola, alicate, martelo) tem que ter função legível: ferrolho entra num furo do batente (latch), mola encosta nas duas pontas, alicate-corta-vergalhão com hastes cruzadas e pivô, martelo nas duas mãos com antecipação e impacto.
+- "Barbante" fica fora do vocabulário: é **corda**.
+
+## Ambiência contínua de baixa frequência cansa (elevador, 06/11/2026, pedido da pessoa)
+
+- **O que aconteceu:** no elevador (ep14) o loop `motor` (vol 0,1) ficou nas batidas 4 a 14 e o `zumbido` (0,06) em 15 a 17: ~82% do vídeo (113 s de 138) com um "drone" grave constante. Medido: piso de graves (40-250 Hz) a ~-27 dB entre 20 e 110 s, contra -35/-38 dB nas batidas sem ambiência.
+- **Regra:** ambiência contínua de baixa frequência (motor, zumbido, drone) cansa: só nas batidas da peça (onde o motor aparece), volume baixo (~0,03-0,06) e com fade (1 s); nunca durante quase todo o vídeo. As outras batidas ficam em `nenhuma` (os sfx cuidam) ou com ar muito discreto.
+- **Corrigir sem gastar voz:** editar `AMB` no gerador, o `ambiencia` do `roteiro.json` e o `som.json` (acrescentar `"fade": 1.0`), rodar `mixar.py ... --video <render sem áudio>` e `masterizar.sh`. Não rodar `narrar`. Medir antes/depois com o piso de graves por janelas de 10 s.

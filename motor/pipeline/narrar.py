@@ -340,7 +340,7 @@ def main():
     endcard_start = fim_fala + (TAIL if final else SEM_FINAL)
     total = endcard_start + (ENDCARD if final else 0)
     (out / "episode.json").write_text(json.dumps({
-        "version": 2, "slug": slug, "idioma": cfg_idioma, "series": ep.get("serie", slug), "episode": n, "clock": ep.get("relogio"), **({"tema": ep["tema"]} if ep.get("tema") else {}),
+        "version": 2, "slug": slug, "idioma": cfg_idioma, "series": ep.get("serie", slug), "episode": n, "clock": ep.get("relogio"), **({"tema": ep["tema"]} if ep.get("tema") else {}), **{k: ep[k] for k in ("transicao", "transicaoDur", "transicaoFinal") if k in ep},
         "fps": FPS, "audio": audio, "endcardStart": round(endcard_start, 3),
         "durationInFrames": int(total * FPS) + 1, "endcard": final, "beats": beats,
     }, ensure_ascii=False, indent=1))

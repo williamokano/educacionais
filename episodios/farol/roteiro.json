@@ -1,0 +1,1938 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 25,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] É noite sem lua, [leve] o GPS do seu barco _morreu_ [leve] e tem uma pedra em algum lugar. [leve] Seu único mapa: a memória do seu cunhado. [leve] A única luz na costa: um _luau_.",
+   "duracao": 9.2,
+   "cena": {
+    "cenario": "farol",
+    "luau": 1,
+    "gps": [
+     [
+      0,
+      1
+     ],
+     [
+      0.234,
+      1
+     ],
+     [
+      0.284,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "camera": {
+     "de": {
+      "pos": [
+       -3.8,
+       1.7,
+       8.8
+      ],
+      "alvo": [
+       -3.0,
+       1.4,
+       3.0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -0.5,
+       1.9,
+       7.2
+      ],
+      "alvo": [
+       2.5,
+       1.7,
+       -3.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.35,
+      "acao": "em-pe",
+      "exp": "medo",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "vento",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "queda_energia",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 4,
+      "volume": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A fogueira é fraca [leve] e _some_ atrás de uma onda. [leve] Então suba ela numa *torre*: [leve] lá no alto, dá pra ver de mais longe, [leve] e o fogo enxerga o mar inteiro.",
+   "duracao": 7.733,
+   "cena": {
+    "cenario": "farol",
+    "luau": 1,
+    "onda": [
+     [
+      0,
+      0
+     ],
+     [
+      0.095,
+      0
+     ],
+     [
+      0.195,
+      1
+     ],
+     [
+      0.335,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "torre": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.411,
+     "fim": 0.731
+    },
+    "fogoY": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.411,
+     "fim": 0.731
+    },
+    "etiq": [
+     "torre@0.471-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -4.0,
+       1.6,
+       9.0
+      ],
+      "alvo": [
+       3.0,
+       2.0,
+       -10.0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       -2.0,
+       11.0,
+       4.0
+      ],
+      "alvo": [
+       4.0,
+       9.5,
+       -13.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.35,
+      "acao": "em-pe",
+      "exp": "alivio",
+      "y": 0.0,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.35,
+       "dur": 9.2,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas fogueira gasta lenha, [leve] solta fumaça [leve] e o vento a deixa _tremida_. [leve] Troque por uma *lamparina*: [leve] chama firme e sem fumaça. [leve] O guardião agradece: acabou o olho vermelho.",
+   "duracao": 9.345,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "lenha": {
+     "de": 1,
+     "para": 0.3,
+     "ini": 0.0,
+     "fim": 0.457
+    },
+    "fumaca": {
+     "de": 0.2,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.407
+    },
+    "treme": {
+     "de": 0.3,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.417
+    },
+    "lamparina": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.437,
+     "fim": 0.537
+    },
+    "etiq": [
+     "lamparina@0.497-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       63.557,
+       2.083,
+       7.629
+      ],
+      "alvo": [
+       60.0,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       62.642,
+       1.986,
+       7.258
+      ],
+      "alvo": [
+       60.0,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 0.9,
+      "rot": 0.6,
+      "acao": "em-pe",
+      "exp": "cansado",
+      "y": 0.0,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.35,
+       "dur": 7.733,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas uma chama só ilumina _pouco_. [leve] Ponha um *espelho* curvo atrás: [leve] a luz que ia pra trás [leve] agora vai pro _mar_, [leve] igual a mão em concha atrás da lanterna.",
+   "duracao": 7.722,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "lenha": 0.0,
+    "fumaca": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "lamparina": 1,
+    "raios": [
+     [
+      0,
+      1
+     ],
+     [
+      0.263,
+      1
+     ],
+     [
+      0.403,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "espelho": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.263,
+     "fim": 0.383
+    },
+    "etiq": [
+     "espelho@0.323-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       63.041,
+       1.841,
+       8.177
+      ],
+      "alvo": [
+       59.4,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       61.325,
+       1.736,
+       7.72
+      ],
+      "alvo": [
+       59.4,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 0.9,
+      "rot": 0.7,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -1.7,
+       "y": 0.0,
+       "z": 0.9,
+       "rot": 0.6,
+       "dur": 9.345,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "metal",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o espelho aproveita só _uma parte_. [leve] Ponha uma *lente* na frente: [leve] ela junta a luz num feixe _forte_, [leve] como uma lupa fazendo um pontinho de sol.",
+   "duracao": 7.477,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "lamparina": 1,
+    "espelho": 1,
+    "lente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.33,
+     "fim": 0.43
+    },
+    "raios": 3,
+    "feixeLongo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.564,
+     "fim": 0.784
+    },
+    "etiq": [
+     "lente@0.38-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       64.602,
+       1.883,
+       8.54
+      ],
+      "alvo": [
+       60.8,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       63.766,
+       1.841,
+       8.513
+      ],
+      "alvo": [
+       61.0,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 0.9,
+      "rot": 0.7,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -1.7,
+       "y": 0.0,
+       "z": 0.9,
+       "rot": 0.7,
+       "dur": 7.722,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "metal",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas uma lente de vidro assim é _grossa_, pesada, [leve] e ninguém sobe aquilo de escada. [leve] Corte a lente em *anéis*: [leve] cada anel é fino, [leve] e a luz vai igual. [leve] Já passou de 30 quilômetros!",
+   "duracao": 9.601,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "lamparina": 1,
+    "espelho": 1,
+    "lente": 1,
+    "raios": 3,
+    "feixeLongo": 1,
+    "peso": [
+     [
+      0,
+      0
+     ],
+     [
+      0.145,
+      0
+     ],
+     [
+      0.205,
+      1
+     ],
+     [
+      0.513,
+      1
+     ],
+     [
+      0.593,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "aneis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.513,
+     "fim": 0.663
+    },
+    "etiq": [
+     "aneis@0.573-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       65.377,
+       1.778,
+       7.235
+      ],
+      "alvo": [
+       61.2,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       64.387,
+       2.292,
+       9.305
+      ],
+      "alvo": [
+       61.0,
+       0.9,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 0.9,
+      "rot": 0.7,
+      "acao": "em-pe",
+      "exp": "preocupado",
+      "y": 0.0,
+      "pose": [
+       [
+        0.613,
+        {
+         "ombroD.x": -0.95,
+         "ombroD.z": 0.4,
+         "cotoveloD.x": -2.35,
+         "cotoveloD.z": 0.15,
+         "ombroE.z": 0.12,
+         "cotoveloE.x": -0.18,
+         "maos": 0.4
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -1.7,
+       "y": 0.0,
+       "z": 0.9,
+       "rot": 0.7,
+       "dur": 7.477,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": ">30 km",
+      "trecho": 5,
+      "y": 40,
+      "tamanho": 90
+     }
+    ],
+    "sfx": [
+     {
+      "som": "impacto_seco",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 4,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o feixe aponta pra um lado só: [leve] o barco do outro lado fica no _escuro_. [leve] Faça a lente _girar_: [leve] o feixe varre o mar [leve] em piscadas, como a luz de uma ambulância. [leve] Antes, o barco do outro lado nem sabia da torre.",
+   "duracao": 10.8,
+   "cena": {
+    "cenario": "farol",
+    "torre": 1,
+    "lanternaTopo": 1,
+    "luau": 1,
+    "feixe": 1,
+    "gira": 0.95,
+    "barco2": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -10.299,
+       12.532,
+       17.131
+      ],
+      "alvo": [
+       2.0,
+       6.0,
+       -6.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       15.099,
+       12.532,
+       16.688
+      ],
+      "alvo": [
+       2.0,
+       6.0,
+       -6.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.35,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -1.7,
+       "y": 0.0,
+       "z": 0.9,
+       "rot": 0.7,
+       "dur": 9.601,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas toda torre pisca _igual_: [leve] qual é a minha? [leve] Dê a cada uma o seu _padrão_: [leve] duas piscadas e pausa, [leve] três piscadas... [leve] e o capitão confere na carta. [leve] E onde estão as pedras? [leve] Pinte um setor de _vermelho_: [leve] luz vermelha, perigo.",
+   "duracao": 12.822,
+   "cena": {
+    "cenario": "farol",
+    "torre": 1,
+    "lanternaTopo": 1,
+    "luau": 1,
+    "feixe": 0.4,
+    "gira": 0.25,
+    "torres": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.12
+    },
+    "carta": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.573,
+     "fim": 0.653
+    },
+    "setor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.739,
+     "fim": 0.889
+    },
+    "barco2": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -7.0,
+       3.2,
+       12.0
+      ],
+      "alvo": [
+       2.0,
+       3.0,
+       -8.0
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       -5.0,
+       3.6,
+       11.0
+      ],
+      "alvo": [
+       2.0,
+       3.2,
+       -8.0
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.35,
+      "acao": "em-pe",
+      "exp": "eureka",
+      "y": 0.0,
+      "pose": [
+       [
+        0.623,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3,
+         "cotoveloE.x": -0.7,
+         "cotoveloD.x": -0.7
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.35,
+       "dur": 10.8,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.035
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PADRÕES",
+      "trecho": 2,
+      "y": 40,
+      "tamanho": 90
+     },
+     {
+      "tipo": "rotulo",
+      "texto": "VERMELHO = PERIGO",
+      "trecho": 7,
+      "y": 40,
+      "tamanho": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.3
+     },
+     {
+      "som": "papel",
+      "trecho": 4,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 7,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a _neblina_ esconde a luz, [leve] e piscar não adianta. [leve] Junte um *sino* ou uma buzina _enorme_: [leve] a luz não passa, [leve] o som passa. [leve] O vizinho reclama, o barco agradece.",
+   "duracao": 9.178,
+   "cena": {
+    "cenario": "farol",
+    "torre": 1,
+    "lanternaTopo": 1,
+    "luau": 1,
+    "feixe": 1,
+    "gira": 0.9,
+    "neblina": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.013,
+     "fim": 0.153
+    },
+    "sino": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.347,
+     "fim": 0.447
+    },
+    "som": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.407,
+     "fim": 0.487
+    },
+    "vizinhoTapa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.754,
+     "fim": 0.824
+    },
+    "barcoX": {
+     "de": -3.0,
+     "para": 1.2,
+     "ini": 0.467,
+     "fim": 0.98
+    },
+    "barco2": 0,
+    "etiq": [
+     "sino@0.417-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       -7.0,
+       2.8,
+       12.0
+      ],
+      "alvo": [
+       1.0,
+       4.0,
+       -9.0
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       -4.0,
+       3.2,
+       10.0
+      ],
+      "alvo": [
+       2.0,
+       5.0,
+       -9.0
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.35,
+      "acao": "em-pe",
+      "exp": "preocupado",
+      "y": 0.0,
+      "pose": [
+       [
+        0.679,
+        {}
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -1.3,
+        "ombroD.x": -1.3,
+        "cotoveloE.x": -0.7,
+        "cotoveloD.x": -0.7
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.35,
+       "dur": 12.822,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "sino_longe",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas girar uma lente tão pesada dá _trabalho_: [leve] é uma geladeira de vidro. [leve] Deixe ela _boiando_ num banho de *mercúrio*: [leve] quase sem atrito.",
+   "duracao": 7.022,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "lamparina": 1,
+    "espelho": 1,
+    "lente": 1,
+    "aneis": 1,
+    "raios": 0,
+    "mercurio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.679,
+     "fim": 0.819
+    },
+    "dedo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.799,
+     "fim": 0.839
+    },
+    "giraL": {
+     "de": 0.0,
+     "para": 0.7,
+     "ini": 0.819,
+     "fim": 0.939
+    },
+    "etiq": [
+     "mercurio@0.779-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       63.563,
+       3.39,
+       8.818
+      ],
+      "alvo": [
+       60.0,
+       0.3,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       61.979,
+       2.758,
+       7.936
+      ],
+      "alvo": [
+       60.0,
+       0.1,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 0.9,
+      "rot": 0.7,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.z": 0.5,
+       "ombroD.z": -0.5,
+       "cotoveloE.x": -0.5,
+       "cotoveloD.x": -0.5,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.35,
+       "dur": 9.178,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "metal",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas alguém precisa dar _corda_ a cada duas horas, [leve] inclusive às três da manhã, [leve] e o guardião vira _rato de escada_. [leve] Troque por um *motor* elétrico: [leve] gira sozinho.",
+   "duracao": 8.2,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "lamparina": 1,
+    "espelho": 1,
+    "lente": 1,
+    "aneis": 1,
+    "mercurio": 1,
+    "escada": 1,
+    "giraL": [
+     [
+      0,
+      0
+     ],
+     [
+      0.776,
+      0
+     ],
+     [
+      0.856,
+      0.7
+     ],
+     [
+      1,
+      0.7
+     ]
+    ],
+    "motor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.756,
+     "fim": 0.856
+    },
+    "etiq": [
+     "motor@0.816-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       56.0,
+       -1.8,
+       13.0
+      ],
+      "alvo": [
+       60.0,
+       -3.0,
+       0.0
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       57.0,
+       -1.4,
+       12.0
+      ],
+      "alvo": [
+       60.0,
+       -2.8,
+       0.0
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "x": [
+       [
+        0.02,
+        2.0
+       ],
+       [
+        0.045,
+        0.0
+       ],
+       [
+        0.071,
+        -2.0
+       ],
+       [
+        0.096,
+        -0.0
+       ],
+       [
+        0.121,
+        2.0
+       ],
+       [
+        0.146,
+        0.0
+       ],
+       [
+        0.172,
+        -2.0
+       ],
+       [
+        0.197,
+        -0.0
+       ],
+       [
+        0.222,
+        2.0
+       ],
+       [
+        1,
+        2.0
+       ]
+      ],
+      "z": [
+       [
+        0.02,
+        0.0
+       ],
+       [
+        0.045,
+        2.0
+       ],
+       [
+        0.071,
+        0.0
+       ],
+       [
+        0.096,
+        -2.0
+       ],
+       [
+        0.121,
+        -0.0
+       ],
+       [
+        0.146,
+        2.0
+       ],
+       [
+        0.172,
+        0.0
+       ],
+       [
+        0.197,
+        -2.0
+       ],
+       [
+        0.222,
+        -0.0
+       ],
+       [
+        1,
+        -0.0
+       ]
+      ],
+      "rot": [
+       [
+        0.02,
+        -0.0
+       ],
+       [
+        0.045,
+        -1.571
+       ],
+       [
+        0.071,
+        -3.142
+       ],
+       [
+        0.096,
+        -4.712
+       ],
+       [
+        0.121,
+        -6.283
+       ],
+       [
+        0.146,
+        -7.854
+       ],
+       [
+        0.172,
+        -9.425
+       ],
+       [
+        0.197,
+        -10.996
+       ],
+       [
+        0.222,
+        -12.566
+       ],
+       [
+        1,
+        -12.566
+       ]
+      ],
+      "acao": [
+       [
+        0.222,
+        "andando",
+        "cansado"
+       ],
+       [
+        0.826,
+        "em-pe",
+        "cansado"
+       ],
+       [
+        1,
+        "em-pe",
+        "sorriso"
+       ]
+      ],
+      "exp": "sorriso",
+      "y": [
+       [
+        0.02,
+        -7.2
+       ],
+       [
+        0.045,
+        -6.338
+       ],
+       [
+        0.071,
+        -5.475
+       ],
+       [
+        0.096,
+        -4.612
+       ],
+       [
+        0.121,
+        -3.75
+       ],
+       [
+        0.146,
+        -2.888
+       ],
+       [
+        0.172,
+        -2.025
+       ],
+       [
+        0.197,
+        -1.162
+       ],
+       [
+        0.222,
+        -0.3
+       ],
+       [
+        1,
+        -0.3
+       ]
+      ],
+      "pose": [
+       [
+        0.876,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroD.x": -1.0,
+         "ombroD.z": 0.35,
+         "cotoveloD.x": -2.3,
+         "maos": 0.4,
+         "ombroE.z": 0.12
+        }
+       ]
+      ],
+      "quem": "b",
+      "esc": 0.95
+     },
+     {
+      "x": -3.2,
+      "z": 2.6,
+      "rot": 0.6,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroD.x": -1.2,
+       "ombroD.z": -0.5,
+       "dedo": 1
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "motor",
+     "volume": 0.035
+    },
+    "sfx": [
+     {
+      "som": "estalo",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a ilha não tem _tomada_. [leve] Ponha *painéis solares* e *LED*: [leve] a luz dura dezenas de milhares de horas [leve] e cuida de si mesma, [leve] e o guardião foi jantar em casa.",
+   "duracao": 8.176,
+   "cena": {
+    "cenario": "farol",
+    "palco": "lanterna",
+    "espelho": 1,
+    "lente": 1,
+    "aneis": 1,
+    "mercurio": 1,
+    "motor": 1,
+    "giraL": 0.7,
+    "solar": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.236,
+     "fim": 0.316
+    },
+    "led": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.345,
+     "fim": 0.415
+    },
+    "lamparina": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.335,
+     "fim": 0.385
+    },
+    "horas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.473,
+     "fim": 0.95
+    },
+    "etiq": [
+     "solar@0.266-0.5",
+     "led@0.395-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       61.0,
+       10.5,
+       6.5
+      ],
+      "alvo": [
+       60.0,
+       0.6,
+       0.0
+      ],
+      "fov": 52
+     },
+     "para": {
+      "pos": [
+       62.0,
+       3.6,
+       8.0
+      ],
+      "alvo": [
+       60.0,
+       0.8,
+       0.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 0.9,
+      "rot": 0.7,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "jingle",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar o *farol*. [leve] E o luau? [leve] Pode cantar em paz, [leve] e a pedra agora tem _endereço_.",
+   "duracao": 6.557,
+   "cena": {
+    "cenario": "farol",
+    "torre": 1,
+    "lanternaTopo": 1,
+    "luau": 1,
+    "feixe": 1,
+    "gira": 0.7,
+    "barco2": 1,
+    "luauPose": "acena",
+    "camera": {
+     "de": {
+      "pos": [
+       -1.118,
+       9.783,
+       11.373
+      ],
+      "alvo": [
+       3.0,
+       7.0,
+       -8.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -8.0,
+       20.0,
+       30.0
+      ],
+      "alvo": [
+       3.0,
+       3.0,
+       -8.0
+      ],
+      "fov": 56
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.35,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -1.7,
+       "y": 0.0,
+       "z": 0.9,
+       "rot": 0.7,
+       "dur": 8.176,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "vento",
+     "volume": 0.035
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "FAROL",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 100
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "sino_longe",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Manda pra quem _nunca_ sabe onde está. [leve] E como um navio de aço de milhares de toneladas _flutua_? [leve] *Siga* pra descobrir.",
+   "duracao": 5.934,
+   "cena": {
+    "cenario": "farol",
+    "torre": 1,
+    "lanternaTopo": 1,
+    "luau": 1,
+    "feixe": 1,
+    "gira": 0.5,
+    "navio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.1,
+     "fim": 0.4
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.726,
+     "fim": 0.826
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       -4.5,
+       2.8,
+       12.5
+      ],
+      "alvo": [
+       -4.0,
+       2.8,
+       -8.0
+      ],
+      "fov": 54
+     },
+     "para": {
+      "pos": [
+       -4.0,
+       3.0,
+       11.5
+      ],
+      "alvo": [
+       -4.0,
+       3.0,
+       -8.0
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": -0.5,
+      "acao": "em-pe",
+      "exp": "pensativo",
+      "y": 0.0,
+      "pose": {
+       "ombroD.x": -0.95,
+       "ombroD.z": 0.4,
+       "cotoveloD.x": -2.35,
+       "cotoveloD.z": 0.15,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18,
+       "maos": 0.4
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": 0.35,
+       "dur": 6.557,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* LUAU. [leve] *Compartilhe* [leve] e *siga* pra ver como as coisas *funcionam*.",
+   "duracao": 5.1,
+   "cena": {
+    "cenario": "farol",
+    "torre": 1,
+    "lanternaTopo": 1,
+    "luau": 1,
+    "feixe": 1,
+    "gira": 0.6,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.0,
+       3.6,
+       9.8
+      ],
+      "alvo": [
+       -3.0,
+       3.1,
+       3.0
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       -3.0,
+       3.55,
+       9.4
+      ],
+      "alvo": [
+       -3.0,
+       3.1,
+       3.0
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "x": 0.0,
+      "z": 0.0,
+      "rot": 0.0,
+      "acao": "acenando",
+      "exp": "sorriso",
+      "y": 0.0,
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -0.95,
+        "ombroD.z": 0.4,
+        "cotoveloD.x": -2.35,
+        "cotoveloD.z": 0.15,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18,
+        "maos": 0.4
+       },
+       "x": 0.0,
+       "y": 0.0,
+       "z": 0.0,
+       "rot": -0.5,
+       "dur": 5.934,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "LUAU"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.55
+     }
+    ]
+   }
+  }
+ ]
+}

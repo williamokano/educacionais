@@ -1,7 +1,9 @@
 import React, { useMemo } from "react";
+import { useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { clamp01, lerp, suave, valor } from "../../../src/v3d/anima";
 import { poseDe3D } from "../../../src/v3d/acoes";
+import { Anterior, poseGente, posicaoGente } from "../../../src/v3d/gente";
 import { Boneco3D, piscar } from "../../../src/v3d/personagem";
 import { Caixa, rnd } from "../../../src/v3d/qualidade";
 import { Cenario3D, Cenario3DProps, Expressao3D, Personagem3D, Pose3D, V3, Valor } from "../../../src/v3d/tipos";
@@ -9,6 +11,8 @@ import { Etiqueta, Fumaca, Halo, Liga, mistura, noCaminho, Seta, Texto3D, V } fr
 import { Lupa, LinhasZoom } from "./microondas-pecas";
 import { homemA, homemB, homemC, mulher } from "./fieis";
 import { zeca } from "./zeca";
+import { Bandeirinhas, Botao, BracoInchado, Controlador, COR_TIME, Escadaria, Fosso, Impacto, LupaFreio, LupaTrava, Raio, Sensor, TVJogo } from "./elevador-extra";
+import { posSeco, posSuave } from "./elevador-perfil";
 
 // Elevador (episódio 14, "como o elevador não cai quando a corda arrebenta"). Poço em corte, em metros: chão y = 0, plano das cordas z = 0, câmera do lado +z.
 // REGRA: o nome "elevador" só aparece na batida 17 (título e rótulos). A plataforma de madeira vira cabine fechada (campo `cabine`).
@@ -40,12 +44,12 @@ const chaves = (a: [number, number][], p: number) => {
   }
   return a[a.length - 1][1];
 };
-const POLIA_Y = 8.3;
+const POLIA_Y = 13.3; // casa de máquinas no alto do recorte (5 andares: lajes em y = 2,5·k − 0,1)
 const POL_CX = 0.7;
 const POL_R = 0.7;
 const CAB_H = 2.2;
 const CW_X = 1.4;
-const K_CW = 5.6;
+const K_CW = 10.6;
 const RX = 0.88;
 const ALT_TRILHO = 7.3;
 const WOOD = "#b4813f";
@@ -64,28 +68,32 @@ const ajudante2: Personagem3D = { ...ajudante, nome: "Ajudante 2", altura: 1.76,
 const casaca: Personagem3D = { nome: "Cavalheiro", altura: 1.74, pele: "#e3b48a", cabelo: "#3a2a1a", olhos: "#3b2415", camiseta: "#23262d", calca: "#2d2a2a", sapato: "#111111", bone: { cor: "#16171b", aba: "#16171b", virado: false }, bigode: "#3a2a1a", sobrancelha: "#3a2a1a", barriga: 0.2 };
 const ROUPAS = [["#5a4636", "#2b2b30"], ["#3a3f4a", "#3a342c"], ["#6a3b3b", "#2b2b30"], ["#4a5a3e", "#3a342c"], ["#7a6a52", "#2b2b30"], ["#2f4a63", "#3a342c"], ["#5b2f4a", "#2b2b30"], ["#8a7a5a", "#3a342c"]];
 const POVO: Personagem3D[] = [homemA, homemB, homemC, mulher].flatMap((b, i) => [0, 1].map((k) => ({ ...b, camiseta: ROUPAS[i * 2 + k][0], calca: ROUPAS[i * 2 + k][1], bone: k === 0 && i !== 3 ? { cor: "#1f1d1a", aba: "#1f1d1a", virado: false } : undefined })));
-const PERS: Record<string, Personagem3D> = { zeca, ajudante, ajudante2, casaca, homemA, homemB, homemC, mulher };
+const zecaJogo: Personagem3D = { ...zeca, macacao: false, camiseta: COR_TIME, calca: "#2b3a55", bolso: null };
+const ajT: Personagem3D = { ...ajudante, nome: "Amigo 1", camiseta: COR_TIME, calca: "#3a3f4a", bone: undefined, cabelo: "#1f1510" };
+const ajT2: Personagem3D = { ...ajudante2, nome: "Amigo 2", camiseta: COR_TIME, calca: "#2b3a55", bone: undefined, cabelo: "#0f0b08" };
+const PERS: Record<string, Personagem3D> = { zeca: zecaJogo, ajT, ajT2, ajudante, ajudante2, casaca, homemA, homemB, homemC, mulher };
 
 const palma = (t: number): Pose3D => {
   const s = Math.sin(t * 9);
   return { "ombroE.x": -0.75, "ombroD.x": -0.75, "cotoveloE.x": -1.5, "cotoveloD.x": -1.5, "ombroE.z": 0.22 + 0.2 * s, "ombroD.z": -0.22 - 0.2 * s, "maos": 0.8 };
 };
 
-type GenteE = { id?: string; x?: Valor; y?: Valor; z?: Valor; rot?: Valor; acao?: string | [number, string, string?][]; exp?: Expressao3D; pose?: Pose3D | [number, Pose3D][]; incl?: Valor; naPlat?: boolean; esc?: number; puxa?: Valor; suor?: number };
+type GenteE = { id?: string; x?: Valor; y?: Valor; z?: Valor; rot?: Valor; acao?: string | [number, string, string?][]; exp?: Expressao3D; ant?: Anterior; entradaDur?: number; pose?: Pose3D | [number, Pose3D][]; incl?: Valor; naPlat?: boolean; esc?: number; puxa?: Valor; suor?: number; vel?: number; prop?: string; deita?: Valor; dor?: Valor; solto?: Valor; susto?: Valor };
 
-const Pessoa: React.FC<{ g: GenteE; p: number; t: number; tAbs: number; plat: number }> = ({ g, p, t, tAbs, plat }) => {
-  const pers = PERS[g.id ?? "zeca"];
-  let acao = "em-pe";
-  let exp: Expressao3D = g.exp ?? "sorriso";
-  if (typeof g.acao === "string") acao = g.acao;
-  else if (Array.isArray(g.acao)) {
-    const e = g.acao.find((x) => p <= x[0]) ?? g.acao[g.acao.length - 1];
-    acao = e[1];
-    if (e[2]) exp = e[2] as Expressao3D;
+/** Campo numérico que também aceita lista de chaves [[progresso, valor], ...] com interpolação linear. */
+const vv = (v: unknown, p: number, pad = 0): number => {
+  if (Array.isArray(v) && Array.isArray(v[0])) {
+    const a = v as [number, number][];
+    if (p <= a[0][0]) return a[0][1];
+    for (let i = 1; i < a.length; i++) if (p <= a[i][0]) return lerp(a[i - 1][1], a[i][1], (p - a[i - 1][0]) / Math.max(a[i][0] - a[i - 1][0], 1e-6));
+    return a[a.length - 1][1];
   }
-  const extra: Pose3D = Array.isArray(g.pose) ? (g.pose.find((x) => p <= x[0]) ?? g.pose[g.pose.length - 1])[1] : (g.pose ?? {});
-  const pose: Pose3D = { ...poseDe3D(acao, t), ...extra };
-  pose["tronco.x"] = (pose["tronco.x"] ?? 0) + valor(g.incl, p, 0);
+  return valor(v as Valor, p, pad);
+};
+
+const Pessoa: React.FC<{ g: GenteE; p: number; t: number; tAbs: number; plat: number; bx?: number }> = ({ g, p, t, tAbs, plat, bx = 0 }) => {
+  const pers = PERS[g.id ?? "zeca"];
+  const { acao, exp, pose } = poseGente(g, { p, t: t, tAbs, vel: g.vel ?? 1, incl: valor(g.incl, p, 0) });
   const pu = valor(g.puxa, p, 0);
   if (pu > 0.02) {
     const s = Math.sin(tAbs * 5);
@@ -100,12 +108,48 @@ const Pessoa: React.FC<{ g: GenteE; p: number; t: number; tAbs: number; plat: nu
     pose["pernaE.x"] = -0.25;
     pose["pernaD.x"] = 0.25;
   }
-  const x = valor(g.x, p, 0);
-  const y = valor(g.y, p, 0) + (g.naPlat ? plat + 0.1 : 0);
-  const z = valor(g.z, p, 0);
+  // reações de desenho animado: dor (mão presa: puxões, pulos, pé só, sacode a mão, cabeça balançando) e susto
+  const dor = vv(g.dor, p, 0), solto = vv(g.solto, p, 0), susto = vv(g.susto, p, 0);
+  let expF: Expressao3D = exp;
+  let bocaF = 0;
+  const mix = (j: string, v: number, k: number) => { pose[j] = lerp(pose[j] ?? 0, v, k); };
+  if (dor > 0.02) {
+    const kk = suave(clamp01(dor));
+    const s1 = Math.sin(tAbs * 17), s2 = Math.sin(tAbs * 11 + 1), s3 = Math.sin(tAbs * 23);
+    mix("cabeca.y", 0.55 * s2, kk); mix("cabeca.z", 0.32 * s1, kk); mix("cabeca.x", -0.15, kk);
+    mix("tronco.x", lerp(-0.32 + 0.12 * s2, 0.62 + 0.08 * s1, solto), kk); mix("tronco.z", 0.16 * s1, kk);
+    mix("ombroD.z", lerp(-(1.7 + 0.5 * s1), -0.3, solto), kk); mix("ombroD.x", lerp(-0.45, -1.15, solto), kk);
+    mix("cotoveloD.x", lerp(-0.3, -1.75, solto), kk); mix("cotoveloD.z", lerp(-0.4 * s3, 0, solto), kk);
+    mix("ombroE.x", lerp(-1.5 + 0.18 * s1, -0.85 + 0.4 * s3, solto), kk); mix("cotoveloE.x", lerp(-0.08, -1.45 + 0.55 * s3, solto), kk);
+    mix("ombroE.z", lerp(0.05, 0.25, solto), kk); mix("maos", 1, kk);
+    const lado = Math.floor(tAbs * 1.5) % 2 === 0;
+    mix("pernaD.x", solto > 0.5 ? (lado ? -1.0 : 0) : 0.3 * s1, kk); mix("joelhoD.x", solto > 0.5 && lado ? 1.5 : 0, kk);
+    mix("pernaE.x", solto > 0.5 ? (lado ? 0 : -1.0) : -0.3 * s1, kk); mix("joelhoE.x", solto > 0.5 && !lado ? 1.5 : 0, kk);
+    pose["quadril.y"] = (pose["quadril.y"] ?? 0) + Math.abs(Math.sin(tAbs * 8)) * 0.16 * kk;
+    expF = Math.sin(tAbs * 4.5) > 0.3 ? "medo" : "dor";
+    bocaF = 0.55 + 0.45 * Math.abs(Math.sin(tAbs * 9));
+  } else if (susto > 0.02) {
+    const kk = suave(clamp01(susto));
+    mix("tronco.x", -0.28 + 0.06 * Math.sin(tAbs * 30), kk); mix("cabeca.x", -0.2, kk); mix("cabeca.z", 0.12 * Math.sin(tAbs * 28), kk);
+    mix("ombroE.z", 0.95, kk); mix("ombroD.z", -0.95, kk); mix("ombroE.x", -0.8, kk); mix("ombroD.x", -0.8, kk);
+    mix("cotoveloE.x", -0.6, kk); mix("cotoveloD.x", -0.6, kk); mix("maos", 1, kk);
+    pose["quadril.y"] = (pose["quadril.y"] ?? 0) + Math.abs(Math.sin(tAbs * 7)) * 0.1 * kk;
+    expF = "medo"; bocaF = 0.6;
+  }
+  const { x, y, z, rot } = posicaoGente(g, t, { x: vv(g.x, p, 0) + (g.naPlat ? bx : 0), y: vv(g.y, p, 0) + (g.naPlat ? plat + 0.1 : 0), z: vv(g.z, p, 0), rot: vv(g.rot, p, 0) });
+  const dt = suave(valor(g.deita, p, 0));
+  if (dt > 0.02) { pose["cabeca.z"] = 0.2 * dt; pose["ombroE.z"] = 1.1 * dt; pose["ombroD.z"] = -1.1 * dt; pose["cotoveloE.x"] = -0.2; pose["cotoveloD.x"] = -0.2; pose["maos"] = 1; }
   return (
-    <group position={[x, y, z]} rotation={[0, valor(g.rot, p, 0), 0]} scale={g.esc ?? 1.06}>
-      <Boneco3D p={pers} pose={pose} expressao={exp} pisca={piscar(tAbs + x * 3 + z)} boca={0} olhar={[0, 0]} suor={g.suor} t={tAbs} />
+    <group position={[x, y, z]} rotation={[0, rot, 0]} scale={g.esc ?? 1.06}>
+      <group position={[0, 0.2 * dt, 0]} rotation={[-1.5 * dt, 0, 0]}>
+        <Boneco3D p={pers} pose={pose} expressao={expF} pisca={piscar(tAbs + x * 3 + z)} boca={bocaF} olhar={[0, 0]} suor={g.suor} t={tAbs} />
+        {g.prop === "celular" && (
+          <group position={[0.1, 1.0, 0.33]} rotation={[-0.5, 0, 0]}>
+            <Caixa p={[0, 0, 0]} t={[0.11, 0.2, 0.02]} cor="#1c1f24" raio={0.01} sombra={false} />
+            <mesh position={[0, 0, 0.012]}><planeGeometry args={[0.095, 0.17]} /><meshBasicMaterial color="#9fdcff" /></mesh>
+          </group>
+        )}
+      </group>
     </group>
   );
 };
@@ -172,7 +216,7 @@ const Mola: React.FC<{ taut: number; k: number }> = ({ taut, k }) => {
 
 /* ---------- plataforma e cabine ---------- */
 
-const Plataforma: React.FC<{ plat: number; cabine: number; cabPorta: number; carga: number; mola: number; taut: number; garras: number; destaque: number; tAbs: number; veloz: number }> = ({ plat, cabine, cabPorta, carga, mola, taut, garras, destaque, tAbs, veloz }) => {
+const Plataforma: React.FC<{ plat: number; cabine: number; cabPorta: number; carga: number; mola: number; taut: number; garras: number; destaque: number; tAbs: number; veloz: number; sensor: number; sensorCorte: number; bate: number; esc: number; bx?: number; rz?: number; sapatas?: boolean }> = ({ bx = 0, rz = 0, sapatas = false, esc, plat, cabine, cabPorta, carga, mola, taut, garras, destaque, tAbs, veloz, sensor, sensorCorte, bate }) => {
   const cab = suave(cabine);
   const op = cab < 0.99 ? cab : undefined;
   const parede = "#dfe3e8";
@@ -183,7 +227,9 @@ const Plataforma: React.FC<{ plat: number; cabine: number; cabPorta: number; car
     return k > 0 && k < 1 ? Math.sin(k * Math.PI) : 0;
   };
   return (
-    <group position={[0, plat, 0]}>
+    <group position={[bx, plat + 0.03 * bate * Math.sin(tAbs * 40), 0]} rotation={[0, 0, rz]} scale={Math.max(suave(esc), 0.001)}>
+      {sapatas && [-1, 1].flatMap((sx) => [0.14, CAB_H - 0.2].map((yy) => <Caixa key={`${sx}${yy}`} p={[sx * 0.81, yy, 0]} t={[0.1, 0.2, 0.3]} cor="#ffd23f" raio={0.01} sombra={false} />))}
+      <Sensor k={sensor} corte={sensorCorte} t={tAbs} />
       <Caixa p={[0, 0.05, 0]} t={[1.5, 0.1, 1.5]} cor={cab > 0.5 ? "#6a7078" : WOOD} raio={0.015} />
       {[-1, 1].flatMap((sx) => [-1, 1].map((sz) => <Caixa key={`${sx}${sz}`} p={[sx * 0.7, CAB_H / 2, sz * 0.7]} t={[0.1, CAB_H, 0.1]} cor={cab > 0.5 ? inox : WOOD_D} raio={0.01} />))}
       <Caixa p={[0, CAB_H, 0]} t={[1.7, 0.12, 0.2]} cor={IRON} raio={0.01} />
@@ -296,10 +342,10 @@ const Contrapeso: React.FC<{ y: number; k: number; destaque: number }> = ({ y, k
   );
 };
 
-const Regulador: React.FC<{ k: number; plat: number; reg: number }> = ({ k, plat, reg }) => {
+const Regulador: React.FC<{ k: number; plat: number; reg: number; y?: number }> = ({ k, plat, reg, y }) => {
   if (k <= 0.02) return null;
-  const X = -1.35;
-  const Y = POLIA_Y - 0.05;
+  const X = -1.9;
+  const Y = y ?? POLIA_Y - 0.05;
   const r = 0.3;
   const ang = -plat / r;
   const abre = 0.1 + 0.12 * reg;
@@ -320,9 +366,8 @@ const Regulador: React.FC<{ k: number; plat: number; reg: number }> = ({ k, plat
         {reg > 0.5 && <Halo p={[0, 0, 0.2]} r={0.7} cor="#ff6a5a" op={0.8} />}
       </group>
       {/* cabo do regulador: sai da roda, desce pelo poço, volta por uma roda de baixo, preso na plataforma */}
-      <Liga a={[X - r, Y, Z]} b={[X - r, 0.25, Z]} w={0.018} cil cor="#2a2d33" />
-      <Liga a={[X + r, Y, Z]} b={[X + r, 0.25, Z]} w={0.018} cil cor="#2a2d33" />
-      <mesh position={[X, 0.25, Z]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[r, r, 0.06, 20]} /><meshStandardMaterial color="#8d949e" metalness={0.6} roughness={0.4} /></mesh>
+      <Liga a={[X - r, Y, Z]} b={[X - r, -30, Z]} w={0.018} cil cor="#2a2d33" />
+      <Liga a={[X + r, Y, Z]} b={[X + r, -30, Z]} w={0.018} cil cor="#2a2d33" />
       <Liga a={[-0.75, plat + 0.6, Z]} b={[X + r, plat + 0.6, Z]} w={0.04} cor="#ffd23f" e={0.04} />
       {reg > 0.5 && <Seta a={[X + r + 0.25, plat + 1.2, Z]} b={[X + r + 0.25, plat + 0.4, Z]} cor="#ff3b30" w={0.03} />}
     </group>
@@ -360,6 +405,9 @@ const Obra: React.FC = () => {
       <Halo p={[-3.6, 3.2, -1.5]} r={2.2} cor="#ffe3a8" op={0.35} />
       {[[-4.6, 0.3, 0.2], [-4.6, 0.8, 0.2], [-4.0, 0.3, 0.7]].map(([x, y, z], i) => <Caixa key={i} p={[x, y, z]} t={[0.7, 0.6, 0.7]} cor={WOOD} raio={0.03} />)}
       <mesh position={[4.9, 0.4, 0.4]}><cylinderGeometry args={[0.32, 0.32, 0.8, 16]} /><meshStandardMaterial color="#5a4632" roughness={0.8} /></mesh>
+      <Bandeirinhas a={[-4.8, 7.4, -1.4]} b={[5.6, 7.4, -1.4]} n={18} sag={0.5} />
+      <Bandeirinhas a={[-4.8, 6.3, -1.4]} b={[5.6, 6.3, -1.4]} n={18} sag={0.4} />
+      <TVJogo p={[-3.6, 4.6, -1.5]} w={1.1} gol={0} t={0} />
     </group>
   );
 };
@@ -374,9 +422,9 @@ const Mastro: React.FC<{ cor: string }> = ({ cor }) => (
   </group>
 );
 
-type PredioP = { sala: number; predio: number; raiox: number; frente: number; portas: number[]; pino: number };
+type PredioP = { sala: number; predio: number; raiox: number; frente: number; portas: number[]; pino: number; pisos: number; botaoK: number; lit: number[]; t: number };
 
-const Predio: React.FC<PredioP> = ({ sala, predio, raiox, frente, portas, pino }) => {
+const Predio: React.FC<PredioP> = ({ sala, predio, raiox, frente, portas, pino, pisos, botaoK, lit, t }) => {
   const op = raiox > 0.02 ? lerp(1, 0.2, suave(raiox)) : undefined;
   const laje = "#cfc8b8";
   const par = "#e4dfd2";
@@ -406,7 +454,7 @@ const Predio: React.FC<PredioP> = ({ sala, predio, raiox, frente, portas, pino }
             <group key={f}>
               <Caixa p={[(XL - 1.8) / 2, 2.5 * f - 0.1, 0]} t={[-1.8 - XL, 0.2, 2.0]} cor={laje} op={op} raio={0.01} />
               <Caixa p={[(2.0 + XR) / 2, 2.5 * f - 0.1, 0]} t={[XR - 2.0, 0.2, 2.0]} cor={laje} op={op} raio={0.01} />
-              {frente > 0.02 && <Caixa p={[CXp, 2.5 * f - 0.1, 1.8]} t={[W, 0.2, 1.6]} cor={laje} op={op} raio={0.01} />}
+              {(frente > 0.02 || pisos > 0.02) && <Caixa p={[CXp, 2.5 * f - 0.1, 1.8]} t={[W, 0.2, 1.6]} cor={laje} op={op} raio={0.01} />}
             </group>
           ))}
           {/* parede da frente com portas e travas */}
@@ -415,18 +463,159 @@ const Predio: React.FC<PredioP> = ({ sala, predio, raiox, frente, portas, pino }
             const ab = suave(portas[f] ?? 0);
             const pinoK = f === 1 ? pino : 1;
             return (
-              <group key={f}>
-                <Caixa p={[-1.175, y0 + 1.15, 1.0]} t={[1.25, 2.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
-                <Caixa p={[1.275, y0 + 1.15, 1.0]} t={[1.45, 2.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
-                <Caixa p={[0, y0 + 2.15, 1.0]} t={[1.1, 0.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
-                {[-1, 1].map((s) => <Caixa key={s} p={[s * (0.275 + 0.52 * ab), y0 + 1.0, 0.92]} t={[0.55, 2.0, 0.05]} cor="#aeb6c0" met={0.5} rug={0.4} raio={0.01} sombra={false} />)}
-                <Caixa p={[0, y0 + 2.28, 1.07]} t={[0.5, 0.1, 0.1]} cor={IRON} raio={0.01} sombra={false} />
-                <Caixa p={[0, y0 + 2.05 + (1 - pinoK) * 0.3, 1.08]} t={[0.1, 0.4, 0.08]} cor="#ffd23f" raio={0.01} sombra={false} />
+              <group key={f} position={[0, y0, 0]} scale={[1, suave(clamp01(frente)), 1]}>
+                <Caixa p={[-1.175, 1.15, 1.0]} t={[1.25, 2.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+                <Caixa p={[1.275, 1.15, 1.0]} t={[1.45, 2.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+                <Caixa p={[0, 2.15, 1.0]} t={[1.1, 0.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+                {[-1, 1].map((s) => <Caixa key={s} p={[s * (0.275 + 0.52 * ab), 1.0, 0.92]} t={[0.55, 2.0, 0.05]} cor="#aeb6c0" met={0.5} rug={0.4} raio={0.01} sombra={false} />)}
+                <Caixa p={[0, 2.28, 1.07]} t={[0.5, 0.1, 0.1]} cor={IRON} raio={0.01} sombra={false} />
+                <Caixa p={[0, 2.05 + (1 - pinoK) * 0.3, 1.08]} t={[0.1, 0.4, 0.08]} cor="#ffd23f" raio={0.01} sombra={false} />
               </group>
             );
           })}
+          {/* botão de chamada em cada andar (pedestal ao lado do poço) */}
+          {botaoK > 0.02 && [0, 1, 2].map((f) => (
+            <group key={f} position={[-1.25, 2.5 * f, 1.35]} scale={suave(botaoK)}><Botao p={[0, 0, 0]} lit={lit[f] ?? 0} t={t} /></group>
+          ))}
         </group>
       )}
+    </group>
+  );
+};
+
+/* ---------- recorte do prédio: 5 andares, sem topo nem fundo ---------- */
+
+/** Trilhos-guia de aço (T liso) dos dois lados da cabine, com fixações a cada andar; crescem a partir do meio. */
+const TrilhosGuia: React.FC<{ k: number }> = ({ k }) => {
+  if (k <= 0.02) return null;
+  const L = 80;
+  const fix = Array.from({ length: 33 }).map((_, i) => 2.5 * (i - 16) + 1.2);
+  return (
+    <group position={[0, 5, 0]} scale={[1, suave(k), 1]}>
+      {[-1, 1].map((s) => (
+        <group key={s} position={[s * RX, 0, 0]}>
+          <Caixa p={[0, 0, 0]} t={[0.07, L, 0.24]} cor="#b4c4d8" met={0.75} rug={0.3} raio={0.004} sombra={false} />
+          <Caixa p={[-s * 0.05, 0, 0]} t={[0.04, L, 0.12]} cor="#e6f0fb" met={0.8} rug={0.25} raio={0.003} sombra={false} />
+          {fix.map((y, i) => <Caixa key={i} p={[s * 0.1, y, 0]} t={[0.14, 0.12, 0.34]} cor={IRON} raio={0.01} sombra={false} />)}
+        </group>
+      ))}
+    </group>
+  );
+};
+
+const texturaBlocos = () => {
+  const c = document.createElement("canvas");
+  c.width = 256; c.height = 256;
+  const g = c.getContext("2d")!;
+  g.fillStyle = "#9a8f84"; g.fillRect(0, 0, 256, 256);
+  for (let r = 0; r < 4; r++) {
+    g.fillStyle = "#6e655c"; g.fillRect(0, r * 64, 256, 4);
+    for (let i = 0; i < 2; i++) g.fillRect(((i * 128 + (r % 2) * 64) % 256), r * 64, 4, 64);
+    g.fillStyle = r % 2 ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.07)"; g.fillRect(0, r * 64 + 4, 256, 60);
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.repeat.set(2, 100);
+  return t;
+};
+
+type PredioRP = { sala: number; raiox: number; frente: number; portas: number[]; pino: number; pisos: number; botaoK: number; lit: number[]; t: number; vao: number; fosso: boolean; viga: boolean };
+
+const PredioR: React.FC<PredioRP> = ({ sala, raiox, frente, portas, pino, pisos, botaoK, lit, t, vao, fosso, viga }) => {
+  const tex = useMemo(() => texturaBlocos(), []);
+  const op = raiox > 0.02 ? lerp(1, 0.2, suave(raiox)) : undefined;
+  const laje = "#cfc8b8";
+  const par = "#e4dfd2";
+  const XL = -3.0, XR = 6.6, XS0 = -1.25, XS1 = 2.0;
+  const W = XR - XL;
+  const CXp = (XL + XR) / 2;
+  const comSala = sala > 0.02;
+  const y0 = fosso ? 0 : -40;
+  const y1 = comSala ? 12.4 : 60;
+  const len = y1 - y0;
+  const mid = (y0 + y1) / 2;
+  const kmin = fosso ? 1 : -6;
+  const kmax = comSala ? 4 : 10;
+  const ks = Array.from({ length: kmax - kmin + 1 }).map((_, i) => kmin + i);
+  const e = suave(clamp01(vao));
+  const hw = (XS1 - XS0) / 2;
+  return (
+    <group>
+      {/* paredes do prédio, do poço e fundos (se estendem para fora do quadro) */}
+      <Caixa p={[CXp, mid, -1.06]} t={[W, len, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+      <Caixa p={[(XS0 + XS1) / 2, mid, -0.99]} t={[XS1 - XS0, len, 0.06]} cor="#262a31" raio={0.01} sombra={false} />
+      {[XS0, XS1].map((x) => <Caixa key={x} p={[x, mid, 0]} t={[0.12, len, 2.0]} cor="#8d949e" op={op ?? 0.55} raio={0.01} sombra={false} />)}
+      {[XL, XR].map((x) => <Caixa key={x} p={[x, mid, 0]} t={[0.2, len, 2.0]} cor={par} op={op ?? 0.35} raio={0.01} sombra={false} />)}
+      <mesh position={[XS0 + 0.075, mid, 0]} rotation={[0, Math.PI / 2, 0]} scale={[1, len / 100, 1]}><planeGeometry args={[2.0, 100]} /><meshStandardMaterial map={tex} roughness={0.95} transparent={op !== undefined} opacity={op ?? 1} /></mesh>
+      {/* lajes dos andares; as tampas do vão deslizam para os lados */}
+      {ks.map((k) => {
+        const y = 2.5 * k - 0.1;
+        return (
+          <group key={k}>
+            <Caixa p={[(XL + XS0) / 2, y, 0]} t={[XS0 - XL, 0.2, 2.0]} cor={laje} op={op} raio={0.01} />
+            <Caixa p={[(XS1 + XR) / 2, y, 0]} t={[XR - XS1, 0.2, 2.0]} cor={laje} op={op} raio={0.01} />
+            {e < 0.99 && k <= 4 && (
+              <>
+                <Caixa p={[XS0 + (hw * (1 - e)) / 2, y, 0]} t={[hw * (1 - e), 0.2, 2.0]} cor="#a8946f" raio={0.005} />
+                <Caixa p={[XS1 - (hw * (1 - e)) / 2, y, 0]} t={[hw * (1 - e), 0.2, 2.0]} cor="#a8946f" raio={0.005} />
+              </>
+            )}
+            {(frente > 0.02 || pisos > 0.02) && <Caixa p={[CXp, y, 1.8]} t={[W, 0.2, 1.6]} cor={laje} op={op} raio={0.01} />}
+          </group>
+        );
+      })}
+      {comSala && (
+        <group>
+          <Caixa p={[CXp, 12.4, 0]} t={[W, 0.2, 2.0]} cor={laje} op={op} raio={0.01} />
+          <Caixa p={[CXp, 14.7, 0]} t={[W, 0.2, 2.0]} cor={laje} op={op} raio={0.01} />
+          <Caixa p={[CXp, 13.55, -1.0]} t={[W, 2.1, 0.12]} cor={par} op={op} raio={0.01} sombra={false} />
+          {[XL, XR].map((x) => <Caixa key={x} p={[x, 13.55, 0]} t={[0.2, 2.1, 2.0]} cor={par} op={op ?? 0.35} raio={0.01} sombra={false} />)}
+        </group>
+      )}
+      {viga && !comSala && (
+        <group>
+          <Caixa p={[0.55, 14.35, -0.2]} t={[6.0, 0.28, 0.4]} cor={IRON} raio={0.02} />
+          {[-1, 1].map((s) => <Caixa key={s} p={[POL_CX, 14.0, s * 0.3]} t={[0.14, 0.9, 0.06]} cor={IRON} raio={0.01} sombra={false} />)}
+        </group>
+      )}
+      {/* parede da frente com portas */}
+      {frente > 0.02 && ks.filter((k) => k >= (fosso ? 1 : -2) && k <= 5).map((k) => {
+        const yy = 2.5 * k;
+        const ab = suave(portas[k - 1] ?? 0);
+        const pinoK = k === 2 ? pino : 1;
+        return (
+          <group key={k} position={[0, yy, 0]} scale={[1, suave(clamp01(frente)), 1]}>
+            <Caixa p={[-1.775, 1.15, 1.0]} t={[2.45, 2.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+            <Caixa p={[3.575, 1.15, 1.0]} t={[6.05, 2.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+            <Caixa p={[0, 2.15, 1.0]} t={[1.1, 0.3, 0.1]} cor={par} op={op} raio={0.01} sombra={false} />
+            {[-1, 1].map((s) => <Caixa key={s} p={[s * (0.275 + 0.52 * ab), 1.0, 0.92]} t={[0.55, 2.0, 0.05]} cor="#aeb6c0" met={0.5} rug={0.4} raio={0.01} sombra={false} />)}
+            <Caixa p={[0, 2.28, 1.07]} t={[0.5, 0.1, 0.1]} cor={IRON} raio={0.01} sombra={false} />
+            <Caixa p={[0, 2.05 + (1 - pinoK) * 0.3, 1.08]} t={[0.1, 0.4, 0.08]} cor="#ffd23f" raio={0.01} sombra={false} />
+          </group>
+        );
+      })}
+      {/* botão de chamada em cada andar */}
+      {botaoK > 0.02 && ks.filter((k) => k >= (fosso ? 1 : -2) && k <= 5).map((k) => (
+        <group key={k} position={[-1.25, 2.5 * k, 1.35]} scale={suave(botaoK)}><Botao p={[0, 0, 0]} lit={lit[k - 1] ?? 0} t={t} /></group>
+      ))}
+    </group>
+  );
+};
+
+/** Poeira e faíscas onde a mão raspa na parede do poço (k 0..1). */
+const Raspa: React.FC<{ p: V; k: number; t: number }> = ({ p, k, t }) => {
+  if (k <= 0.02) return null;
+  return (
+    <group position={p}>
+      {Array.from({ length: 6 }).map((_, i) => {
+        const u = (t * 2.2 + i / 6) % 1;
+        return <mesh key={i} position={[0.12 * u + 0.05 * Math.sin(i * 2), -0.1 - 0.5 * u, 0.1 + 0.06 * Math.sin(i)]} scale={0.07 + 0.12 * u}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color="#d9d2c4" transparent opacity={0.8 * (1 - u) * k} /></mesh>;
+      })}
+      {Array.from({ length: 8 }).map((_, i) => {
+        const u = (t * 3.1 + i * 0.13) % 1;
+        return <Liga key={`s${i}`} a={[0.05 + 0.2 * u, -0.05 - 0.35 * u, 0.12]} b={[0.07 + 0.26 * u, -0.1 - 0.45 * u, 0.12]} w={0.025} cil cor={i % 2 ? "#ffd23f" : "#ff8a1f"} basico />;
+      })}
     </group>
   );
 };
@@ -494,13 +683,59 @@ const Povo: React.FC<{ aplauso: number; tAbs: number }> = ({ aplauso, tAbs }) =>
   );
 };
 
-const Machado: React.FC<{ k: number }> = ({ k }) => {
-  // k: 0 baixo (junto ao corpo) · 0,5 erguido · 1 acertou a corda
-  const a = k < 0.5 ? lerp(-0.4, 0.35, suave(k * 2)) : lerp(0.35, 1.75, suave((k - 0.5) * 2) ** 0.6);
+const Machado: React.FC<{ k: number; pos: V }> = ({ k, pos }) => {
+  // k: 0 baixo (junto ao corpo) · 0,5 erguido · 1 acertou a corda (à direita de quem corta)
+  const a = k < 0.5 ? lerp(0.35, -0.3, suave(k * 2)) : lerp(-0.3, -1.45, suave((k - 0.5) * 2) ** 0.6);
   return (
-    <group position={[1.8, 1.5, 0]} rotation={[0, 0, a]}>
+    <group position={pos} rotation={[0, 0, a]}>
       <Liga a={[0, -0.05, 0]} b={[0, 0.78, 0]} w={0.05} cil cor="#7a5a38" />
-      <Caixa p={[-0.12, 0.5, 0]} t={[0.24, 0.3, 0.05]} cor="#c9ced6" met={0.7} rug={0.3} raio={0.01} sombra={false} />
+      <Caixa p={[0.12, 0.62, 0]} t={[0.24, 0.3, 0.05]} cor="#c9ced6" met={0.7} rug={0.3} raio={0.01} sombra={false} />
+    </group>
+  );
+};
+
+/** Chão da rua com o fosso (buraco x ±1,9, z ±1) aberto. */
+const ChaoFosso: React.FC = () => {
+  const geo = useMemo(() => {
+    const sh = new THREE.Shape();
+    sh.moveTo(-15, -5); sh.lineTo(15, -5); sh.lineTo(15, 9); sh.lineTo(-15, 9); sh.closePath();
+    const h = new THREE.Path();
+    h.moveTo(-1.9, -1); h.lineTo(-1.9, 1); h.lineTo(1.9, 1); h.lineTo(1.9, -1); h.closePath();
+    sh.holes.push(h);
+    const g = new THREE.ShapeGeometry(sh);
+    g.rotateX(-Math.PI / 2);
+    return g;
+  }, []);
+  return <mesh geometry={geo} receiveShadow><meshStandardMaterial color="#6e737c" roughness={0.9} side={THREE.DoubleSide} /></mesh>;
+};
+
+/** Laje do primeiro andar da obra com o vão: duas tampas deslizam para os lados (k 0 fechado, 1 aberto). */
+const LajeVao: React.FC<{ k: number }> = ({ k }) => {
+  const e = suave(k);
+  const cor = "#a8946f";
+  return (
+    <group>
+      <Caixa p={[-3.1, 3.0, 0]} t={[4.2, 0.2, 2.4]} cor={cor} raio={0.005} />
+      <Caixa p={[2.5, 3.0, 0]} t={[3.0, 0.2, 2.4]} cor={cor} raio={0.005} />
+      {[-1, 1].map((sg) => <Caixa key={sg} p={[sg * (0.5 + 1.5 * e), 3.0, 0]} t={[1.0, 0.18, 2.4]} cor={cor} raio={0.005} sombra={false} />)}
+    </group>
+  );
+};
+
+/** Fio amarelo dos botões até o controlador (em cx, cy), com pulsos correndo; `motor` = fio do controlador até o motor (acima do quadro). */
+const FioControle: React.FC<{ k: number; t: number; cx: number; cy: number; motor?: boolean }> = ({ k, t, cx, cy, motor }) => {
+  const pts: V[] = [[-1.25, -20, 1.35], [-1.25, cy + 0.45, 1.35], [cx, cy + 0.45, 0.5], [cx, cy + 0.3, 0.4]];
+  const mp: V[] = [[cx, cy + 0.5, 0.3], [cx, 30, 0.3]];
+  const L = Math.hypot(0, cy + 20.45) + Math.hypot(cx + 1.25, 0.2) + 0.2;
+  return (
+    <group>
+      {pts.slice(1).map((b, i) => <Liga key={i} a={pts[i]} b={b} w={0.03} cil cor="#ffd23f" op={k} />)}
+      {Array.from({ length: 8 }).map((_, i) => {
+        const c = noCaminho(pts, ((t * 5 + i * (L / 8)) % L));
+        return <mesh key={i} position={c.p} scale={0.06}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color="#fff6b0" /></mesh>;
+      })}
+      {motor && <Liga a={mp[0]} b={mp[1]} w={0.045} cil cor="#6dff9a" />}
+      {motor && Array.from({ length: 6 }).map((_, i) => <mesh key={`m${i}`} position={[cx, cy + 0.6 + ((t * 4 + i * 2.2) % 13), 0.3]} scale={[0.09, 0.2, 0.09]}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color="#c8ffd8" /></mesh>)}
     </group>
   );
 };
@@ -611,27 +846,32 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
     if (Array.isArray(v)) return chaves(v as [number, number][], p);
     return valor(n0(v), p, pad);
   };
-  const feira = cena.feira === true;
-  const gente = (cena.gente as GenteE[] | undefined) ?? [];
-  const predio = n("predio");
+  const feiraDe = cena.feiraDe as number | undefined;
+  const feira = cena.feira === true || (feiraDe !== undefined && p >= feiraDe); // vinheta de 1854: troca o cenário no meio da batida
+  const gente = ((feira && cena.genteF ? cena.genteF : cena.gente) as GenteE[] | undefined) ?? [];
+  const predio = feira ? 0 : n("predio");
   const aco = n("aco") > 0.5;
-  const cordas = n("cordas", 1);
-  const cwK = n("cw");
-  const corte = n("corte");
+  const cordas = feira ? 1 : n("cordas", 1);
+  const cwK = feira ? 0 : n("cw");
+  const corte = feira ? n("corteF") : n("corte");
   const lado = (cena.corteLado as string | undefined) ?? "esq";
-  const mola = n("mola");
-  const motor = n("motor");
-  const ajuda = n("ajuda");
+  const mola = feira ? 0 : n("mola");
+  const motor = feira ? 0 : n("motor");
+  const ajuda = feira ? 0 : n("ajuda");
   const desfia = n("desfia");
+  const quebra = n("quebra");
 
   // altura da plataforma: base, queda livre (g constante) e freada
-  let plat = n("plat", 0.6);
+  let plat = feira ? n("platF", 0.6) : n("plat", 0.6);
   const qi = (cena.quedaIni as number | undefined) ?? 0;
   const qf = (cena.quedaFim as number | undefined) ?? 1;
-  const q = clamp01((p - qi) / Math.max(qf - qi, 1e-6));
+  const q = feira ? 0 : clamp01((p - qi) / Math.max(qf - qi, 1e-6));
   plat -= n("quedaD") * q * q;
-  const fr = n("freia");
-  plat -= n("freiaD") * (1 - (1 - fr) ** 3);
+  const pA = cena.perfilA as number[] | undefined;
+  const pB = cena.perfilB as number[] | undefined;
+  if (pA && pB && !feira) plat = p < pB[2] ? pA[0] + (pA[1] - pA[0]) * posSeco(clamp01((p - pA[2]) / (pA[3] - pA[2]))) : pB[0] + (pB[1] - pB[0]) * posSuave(clamp01((p - pB[2]) / (pB[3] - pB[2])));
+  const fr = feira ? n("freiaF") : n("freia");
+  plat -= (feira ? n("freiaDF") : n("freiaD")) * (1 - (1 - fr) ** 3);
 
   const taut = 1 - suave(clamp01(corte * 2.2));
   const hh = mola > 0.02 ? 0.07 + lerp(0.02, 0.32, taut) * suave(mola) : 0;
@@ -641,13 +881,13 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
 
   const nc = Math.max(1, Math.round(cordas));
   const sep = suave(clamp01((cordas - 1) / 3));
-  const cor = mistura(ROPE_H, ROPE_S, n("aco"));
+  const cor = mistura(ROPE_H, "#4d545e", n("aco"));
   const w = lerp(0.075, 0.055, n("aco"));
   const zi = (i: number) => lerp(0, TZ[i], sep);
-  const aparece = (i: number) => (i === 0 ? 1 : clamp01(cordas - i));
+  const aparece = (i: number) => (i === 0 ? clamp01(cordas * 20) : clamp01(cordas - i));
 
-  const corteAt = (cena.corteAt as number | undefined) ?? plat;
-  const off = (cena.corteOff as number | undefined) ?? 1.2;
+  const corteAt = ((feira ? cena.corteAtF : cena.corteAt) as number | undefined) ?? plat;
+  const off = ((feira ? cena.corteOffF : cena.corteOff) as number | undefined) ?? 1.2;
   const breakY0 = corteAt + CAB_H + 0.06 + (mola > 0.02 ? 0.38 : 0) + off;
   const sway = Math.sin(tEpisodio * 9) * 0.1 * corte;
   const KY = 1.35; // altura do corte do lado direito (machado)
@@ -657,14 +897,16 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
     if (aparece(i) < 0.02) return null;
     const z = zi(i);
     const esc = suave(aparece(i));
-    if (corte > 0.02 && lado === "esq") {
+    const ck = corte > 0.02 && lado === "esq" ? corte : i === 3 ? quebra : 0;
+    if (ck > 0.02) {
       const alto = POLIA_Y;
       return (
         <group key={i}>
-          <Liga a={[0, topoY, z]} b={[sway, topoY + off * (1 - 0.15 * corte), z]} w={w} cil cor={cor} />
-          <Fio p={[sway, topoY + off * (1 - 0.15 * corte), z]} dir={1} t={tEpisodio} cor="#e6d4a0" />
-          <Liga a={[0, alto, z]} b={[-sway, breakY0 + 0.9 * suave(corte), z]} w={w} cil cor={cor} />
-          <Fio p={[-sway, breakY0 + 0.9 * suave(corte), z]} dir={-1} t={tEpisodio} cor="#e6d4a0" />
+          <Liga a={[0, topoY, z]} b={[sway * ck, topoY + off * (1 - 0.15 * ck), z]} w={w} cil cor={cor} />
+          <Fio p={[sway * ck, topoY + off * (1 - 0.15 * ck), z]} dir={1} t={tEpisodio} cor="#e6d4a0" />
+          <Liga a={[0, alto, z]} b={[-sway * ck, breakY0 + 0.9 * suave(ck), z]} w={w} cil cor={cor} />
+          <Fio p={[-sway * ck, breakY0 + 0.9 * suave(ck), z]} dir={-1} t={tEpisodio} cor="#e6d4a0" />
+          {i === 3 && quebra > 0.02 && <Halo p={[0, breakY0 + 0.4, z + 0.2]} r={0.7} cor="#ff6a5a" op={0.7 * (0.6 + 0.4 * Math.sin(tEpisodio * 20))} />}
         </group>
       );
     }
@@ -695,14 +937,15 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
     const xr = CW_X;
     if (cwK > 0.02) return <Liga key={i} a={[xr, fim, z]} b={[xr, cwTop, z]} w={w} cil cor={cor} />;
     if (i === 0 && ajuda > 0.02) {
-      const pts: V[] = [[xr, fim, z], [xr, 1.0, z], [xr + 2.6, 1.0, z]];
+      const AJY = n("ajudaY", 1);
+      const pts: V[] = [[xr, fim, z], [xr, AJY, z], [xr + 2.6, AJY, z]];
       return (
         <group key={i}>
           <Liga a={pts[0]} b={pts[1]} w={w} cil cor={cor} />
           <Liga a={pts[1]} b={pts[2]} w={w} cil cor={cor} />
           {Array.from({ length: 7 }).map((_, k) => { const s = (((k * 1.35 + plat) % 9.4) + 9.4) % 9.4; const c = noCaminho(pts, s); return <mesh key={k} position={c.p}><sphereGeometry args={[0.065, 8, 6]} /><meshStandardMaterial color="#8d7444" roughness={0.9} /></mesh>; })}
-          <mesh position={[xr, 1.0, z]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.16, 0.16, 0.1, 16]} /><meshStandardMaterial color={IRON} metalness={0.5} roughness={0.5} /></mesh>
-          <Caixa p={[xr, 0.5, -0.12]} t={[0.1, 1.0, 0.08]} cor={WOOD_D} raio={0.01} sombra={false} />
+          <mesh position={[xr, AJY, z]} rotation={[Math.PI / 2, 0, 0]}><cylinderGeometry args={[0.16, 0.16, 0.1, 16]} /><meshStandardMaterial color={IRON} metalness={0.5} roughness={0.5} /></mesh>
+          <Caixa p={[xr, AJY - 0.5, -0.12]} t={[0.1, 1.0, 0.08]} cor={WOOD_D} raio={0.01} sombra={false} />
         </group>
       );
     }
@@ -726,31 +969,45 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
     );
   });
 
+  const andarY = n("andarY", 5);
+  const ctrlX = n("ctrlX", 2.75);
+  const ctrlY = n("ctrlY", 13.55);
+  const regY = n("regY", POLIA_Y - 0.05);
+  const bal = n("balanca");
+  const bx = Math.sin(tEpisodio * 3.3) * 0.3 * bal;
+  const rz = Math.sin(tEpisodio * 3.3 + 1) * 0.05 * bal;
   const lupaK = n("lupa");
   const lx = n("lupaX", 0);
   const ly = n("lupaY", 3);
   const LR = n("lupaR", 0.3);
   const modo = (cena.lupaModo as string | undefined) ?? "mola";
-  const ancoraLupa: V = modo === "mola" ? [0, plat + CAB_H + 0.2, 0.1] : modo === "sulcos" ? [POL_CX + 0.55, POLIA_Y + 0.45, 0.2] : modo === "corda" ? [0, plat + CAB_H + 1.2, 0.1] : [0, 2.5 + 2.1, 1.1];
+  const ancoraLupa: V = modo === "mola" ? [0, plat + CAB_H + 0.2, 0.1] : modo === "sulcos" ? [POL_CX + 0.55, POLIA_Y + 0.45, 0.2] : modo === "corda" ? [0, plat + CAB_H + 1.2, 0.1] : modo === "freio" ? [POL_CX, POLIA_Y - 0.1, 1.1] : modo === "trava" ? [RX, plat, 0.1] : [0, andarY + 2.1, 1.1];
 
   const S = n("etiqS", 1);
   const Kt = n("etiqK", 1);
   const etOff = n("etiqOff", 1);
-  const garrasK = n("garras");
+  const garrasK = feira ? n("garrasF") : n("garras");
   const et: Record<string, EtiqDef> = {
     corda: { texto: "CORDA", para: [0, plat + CAB_H + 1.4, 0], off: [-1.4, 0.5], cor: "#ffd9a0" },
     polia: { texto: "POLIA", para: [POL_CX + 0.5, POLIA_Y + 0.5, 0.2], off: [1.5, 0.9] },
     mola: { texto: "MOLA", para: [0.3, topoY - 0.05, 0.1], off: [1.5, 0.4], cor: "#ffb26b" },
-    trilho: { texto: "TRILHO", para: [-RX - 0.1, plat + 1.2, 0.1], off: [-1.5, 0.3], cor: "#9fdcff" },
+    trilho: { texto: "TRILHOS", para: [-RX - 0.1, plat + 1.2, 0.1], off: [-1.5, 0.9], cor: "#9fdcff" },
     trava: garrasK > 0.5
       ? { texto: "TRAVA", para: [RX, plat - 0.02, 0.1], off: [1.5, -0.5], cor: "#ffd23f" }
       : { texto: "TRAVA", para: [0.86, topoY - 0.02, 0.1], off: [1.5, 0.9], cor: "#ff8f84" },
     motor: { texto: "MOTOR", para: [POL_CX, POLIA_Y - 0.1, 1.3], off: [-1.6, 0.9], cor: "#7cc4ff" },
     contrapeso: { texto: "CONTRAPESO", para: [CW_X, cwY + 0.7, 0.5], off: [1.4, 0.7], cor: "#ffe9a8" },
-    cordas: { texto: "CORDAS", para: [0.1, plat + CAB_H + 1.3, 0.3], off: [-1.4, 0.7], cor: "#ffd9a0" },
-    regulador: { texto: "REGULADOR", para: [-1.35, POLIA_Y - 0.05, 0.45], off: [-0.4, -1.6], cor: "#ff8f84" },
-    porta: { texto: "PORTA", para: [-0.35, 3.5, 1.1], off: [-1.3, 0.8] },
-    pino: { texto: "TRAVA DA PORTA", para: [0, 2.5 + 2.1, 1.15], off: [1.2, 0.9], cor: "#ffd23f" },
+    cordas: { texto: "CABOS", para: [0.1, plat + CAB_H + 1.3, 0.3], off: [-1.4, 0.7], cor: "#ffd9a0" },
+    plataforma: { texto: "PLATAFORMA", para: [-0.75, plat + 0.3, 0.6], off: [-1.5, 0.6], cor: "#ffe0a8" },
+    controlador: { texto: "CONTROLADOR", para: [ctrlX, ctrlY - 0.05, 0.5], off: ctrlX > 0 ? [0.4, -2.1] : [0.2, 1.5], cor: "#9fffb8" },
+    botao: { texto: "BOTÃO", para: [-1.25, andarY + 1.07, 1.5], off: [-1.1, 0.7], cor: "#ffd23f" },
+    freio: { texto: "FREIO", para: [lx, ly + LR * 0.95, 0.95], off: [0, 0.9], cor: "#ff9f6a" },
+    sensor: { texto: "SENSOR", para: [0.47, plat + 1.05, 0.82], off: [1.4, 0.8], cor: "#ff8f84" },
+    amortecedor: { texto: "AMORTECEDOR", para: [0.45, -0.7, 0.3], off: [1.0, 1.1], cor: "#ffb26b" },
+    elevador: { texto: "ELEVADOR", para: [0, plat + 2.4, 0.5], off: [0, 1.2], cor: "#ffd23f" },
+    regulador: { texto: "REGULADOR", para: [-1.9, regY, 0.45], off: [0.5, -1.6], cor: "#ff8f84" },
+    porta: { texto: "PORTA", para: [-0.35, andarY + 1.0, 1.1], off: [-1.3, 0.8] },
+    pino: { texto: "TRAVA DA PORTA", para: [0, andarY + 2.1, 1.15], off: [1.2, 0.9], cor: "#ffd23f" },
     cabine: { texto: "CABINE", para: [-0.75, plat + 1.1, 0.5], off: [-1.6, 0.5], cor: "#9fdcff" },
   };
   const etiqs = ((cena.etiq as string[] | undefined) ?? []).map((e) => {
@@ -760,61 +1017,103 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
   }).filter((x) => x.ok);
 
   const portas = [n("porta1"), n("porta2"), n("porta3")];
-  const X0 = feira ? 40 : 0;
   const interroga = n("interroga");
   const escada = n("escada");
-  const esforco = n("esforco");
-  const sala = n("sala");
-  const noPredio = predio > 0.02;
   const pulsa = 0.65 + 0.35 * Math.sin(tEpisodio * 8);
+  const sala = feira ? 0 : n("sala");
+  const esforco = feira ? 0 : n("esforco");
+  const luz = n("luz", 1);
+  const { scene } = useThree();
+  if (luz < 0.999 || scene.environmentIntensity < 0.54) scene.environmentIntensity = 0.55 * (0.1 + 0.9 * luz);
+  const escadaria = !feira && n("escadaria") > 0.5;
+  const noPredio = !feira && !escadaria;
+  const fosso = n("fosso");
+  const sacode = n("sacode");
+  const sx = sacode > 0.02 ? Math.sin(tEpisodio * 47) * 0.05 * sacode : 0;
+  const sy = sacode > 0.02 ? Math.cos(tEpisodio * 53) * 0.05 * sacode : 0;
+  const maoK = n("incha");
+  const bate = n("bate");
+  const vao = n("vao");
+  const lit = [n("lit0"), n("lit1"), n("lit2")];
+  const hemi = (c1: string, c2: string, i: number): [string, string, number] => [c1, c2, i * (0.12 + 0.88 * luz)];
+  const lupaPos = (cena.lupaAncora as V | undefined);
+  const ancora: V = lupaPos ?? ancoraLupa;
 
   return (
-    <group position={[X0, 0, 0]}>
-      <hemisphereLight args={feira ? ["#f4f9ff", "#9a7f5a", 1.05] : noPredio ? ["#e8eef7", "#4a4f58", 0.95] : ["#fff3dd", "#7a5a3a", 0.95]} />
-      <directionalLight position={[-2.5, 9, 7]} intensity={feira ? 2.3 : 2.0} color="#fff0d2" castShadow shadow-mapSize={[2048, 2048]} shadow-camera-left={-8} shadow-camera-right={8} shadow-camera-top={11} shadow-camera-bottom={-2} shadow-camera-near={1} shadow-camera-far={30} shadow-bias={-0.0004} />
+    <group position={[sx, sy, 0]}>
+      <hemisphereLight args={feira ? hemi("#f4f9ff", "#9a7f5a", 1.05) : noPredio ? hemi("#e8eef7", "#4a4f58", 0.95) : escadaria ? hemi("#f2ede0", "#6a6f78", 1.0) : hemi("#fff3dd", "#7a5a3a", 0.95)} />
+      <directionalLight position={[-2.5, noPredio ? 13 : 9, 7]} intensity={(feira ? 2.3 : 2.0) * (0.12 + 0.88 * luz)} color="#fff0d2" castShadow shadow-mapSize={[2048, 2048]} shadow-camera-left={-9} shadow-camera-right={9} shadow-camera-top={17} shadow-camera-bottom={-5} shadow-camera-near={1} shadow-camera-far={34} shadow-bias={-0.0004} />
+      {escadaria && <directionalLight position={[-4, 40, 9]} intensity={0.9} color="#fff0d2" />}
 
-      {feira ? <Palacio /> : noPredio ? (
+      {escadaria ? <Escadaria gol={n("gol")} t={tEpisodio} /> : feira ? <Palacio /> : (
         <group>
-          <mesh position={[0.5, 0, 2]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow><planeGeometry args={[30, 14]} /><meshStandardMaterial color="#6e737c" roughness={0.9} /></mesh>
-          <mesh position={[0.5, 6, -1.5]}><planeGeometry args={[30, 12]} /><meshStandardMaterial color="#8c939c" roughness={0.9} /></mesh>
+          {fosso > 0.02 && <ChaoFosso />}
+          {n("bandeiras") > 0.5 && [8.6, 7.7].map((y) => <Bandeirinhas key={y} a={[-2.8, y, 1.3]} b={[6.2, y, 1.3]} n={22} sag={0.5} />)}
         </group>
-      ) : <Obra />}
-      {!noPredio && <Mastro cor={WOOD_D} />}
-      <Predio sala={sala} predio={predio} raiox={n("raiox")} frente={n("frente")} portas={portas} pino={n("pino", 1)} />
+      )}
+      {noPredio && <PredioR sala={sala} raiox={n("raiox")} frente={n("frente")} portas={portas} pino={n("pino", 1)} pisos={n("pisos")} botaoK={n("botaoK")} lit={lit} t={tEpisodio} vao={n("vao", 1)} fosso={fosso > 0.02} viga={n("viga") > 0.5} />}
       {feira && <Povo aplauso={n("aplauso")} tAbs={tEpisodio} />}
-      {feira && n("machado") > 0.001 && <Machado k={n("machado")} />}
-
-      <Trilhos k={n("trilhos")} aco={noPredio} />
-      <Plataforma plat={plat} cabine={n("cabine")} cabPorta={n("cabPorta")} carga={n("carga")} mola={mola} taut={taut} garras={garrasK} destaque={n("destaque")} tAbs={tEpisodio} veloz={n("veloz")} />
+      {feira && n("machado") > 0.001 && <Machado k={n("machado")} pos={(cena.machadoPos as V | undefined) ?? [-0.1, 2.4, 1.0]} />}
+      {feira && <Caixa p={[-0.35, 0.25, 1.0]} t={[0.7, 0.5, 0.7]} cor="#7a5a38" raio={0.03} />}
+      {feira && <Trilhos k={1} aco />}
+      {noPredio && <TrilhosGuia k={n("trilhos")} />}
+      {fosso > 0.02 && [-1, 1].map((s) => <Caixa key={s} p={[s * RX + (s > 0 ? 0.085 : -0.085), -0.65, 0]} t={[0.17, 1.3, 0.16]} cor={STEEL} met={0.6} rug={0.5} raio={0.01} sombra={false} />)}
+      {fosso > 0.02 && <Fosso k={n("amort")} comp={n("comp")} />}
+      {!escadaria && <Plataforma plat={plat} cabine={feira ? 0 : n("cabine")} cabPorta={n("cabPorta")} carga={n("carga")} mola={mola} taut={taut} garras={garrasK} destaque={n("destaque")} tAbs={tEpisodio} veloz={feira ? 0 : n("veloz")} sensor={n("sensor")} sensorCorte={n("sensorCorte")} bate={bate} esc={n("platK", 1)} bx={bx} rz={rz} sapatas={noPredio && n("trilhos") > 0.9} />}
 
       {/* polia, cordas */}
-      <Polia ang={ang} sulcos={n("sulcos")} nCordas={cordas} />
-      {Array.from({ length: 4 }).map((_, i) => aparece(i) > 0.02 && (i > 0 || corte < 0.02 || true) ? (
+      {!escadaria && n("poliaK", 1) > 0.02 && <group position={[POL_CX, POLIA_Y, 0]} scale={suave(n("poliaK", 1))}><group position={[-POL_CX, -POLIA_Y, 0]}><Polia ang={ang} sulcos={n("sulcos")} nCordas={cordas} /></group></group>}
+      {!escadaria && n("poliaK", 1) > 0.02 && Array.from({ length: 4 }).map((_, i) => aparece(i) > 0.02 ? (
         <mesh key={i} position={[POL_CX, POLIA_Y, zi(i)]} scale={[1, 1, aparece(i)]}><torusGeometry args={[POL_R + 0.01, w / 2, 8, 40, Math.PI]} /><meshStandardMaterial color={cor} roughness={0.8} /></mesh>
       ) : null)}
-      {cordasEsq}
-      {cordasDir}
+      {!escadaria && cordasEsq}
+      {!escadaria && cordasDir}
       <Motor k={motor} ang={ang * 2.2} esf={esforco} t={tEpisodio} />
+      {motor > 0.5 && n("suor") > 0.02 && Array.from({ length: 4 }).map((_, i) => {
+        const u = (tEpisodio * 1.6 + i * 0.27) % 1;
+        return <mesh key={i} position={[POL_CX - 0.3 + i * 0.2, POLIA_Y + 0.45 - u * 0.9, 1.3]} scale={[0.05, 0.08, 0.05]}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color="#8fd3ff" /></mesh>;
+      })}
       {esforco > 0.3 && <Fumaca p={[POL_CX, POLIA_Y + 0.6, 0.95]} t={tEpisodio} k={esforco} cor="#d8d8d8" alt={0.8} larg={0.4} op={0.6} n={9} />}
       {esforco > 0.3 && <Halo p={[POL_CX, POLIA_Y, 1.3]} r={1.0} cor="#ff6a3a" op={0.45 * esforco * pulsa} />}
       <Contrapeso y={cwY} k={cwK} destaque={n("destaque")} />
-      <Regulador k={n("regOn")} plat={plat} reg={n("reg")} />
+      <Controlador p={[ctrlX, ctrlY, 0.3]} k={n("controlador")} t={tEpisodio} />
+      {n("controlador") > 0.5 && n("botaoK") > 0.5 && <FioControle k={n("botaoK")} t={tEpisodio} cx={ctrlX} cy={ctrlY} motor={n("fioMotor") > 0.5} />}
+      {luz < 0.5 && <Halo p={[POL_CX, POLIA_Y, 1.6]} r={0.01} cor="#000000" op={0} />}
+      <Regulador k={feira ? 0 : n("regOn")} plat={plat} reg={n("reg")} y={regY} />
       {n("fagulha") > 0.02 && [-1, 1].flatMap((s) => Array.from({ length: 6 }).map((_, i) => {
         const u = n("fagulha");
         const a = rnd(i + 3 * s + 10) * Math.PI;
         return <mesh key={`${s}${i}`} position={[s * (RX + 0.1 * u * Math.cos(a) * 2), plat - 0.1 + 0.4 * u * Math.sin(a) - 0.5 * u * u, 0.15]} scale={0.03 * (1 - u * 0.6)}><sphereGeometry args={[1, 6, 6]} /><meshBasicMaterial color="#ffd23f" /></mesh>;
       }))}
+      {feira && n("fagulhaF") > 0.02 && [-1, 1].flatMap((s) => Array.from({ length: 6 }).map((_, i) => {
+        const u = n("fagulhaF");
+        const a = rnd(i + 3 * s + 10) * Math.PI;
+        return <mesh key={`f${s}${i}`} position={[s * (RX + 0.1 * u * Math.cos(a) * 2), plat - 0.1 + 0.4 * u * Math.sin(a) - 0.5 * u * u, 0.15]} scale={0.03 * (1 - u * 0.6)}><sphereGeometry args={[1, 6, 6]} /><meshBasicMaterial color="#ffd23f" /></mesh>;
+      }))}
 
       <Escada k={escada} t={tEpisodio} />
-      {interroga > 0.02 && <Texto3D texto="?" p={[-2.8, 3.6 + 0.6 * suave(interroga) + 0.03 * Math.sin(tEpisodio * 3), 0.9]} h={1.7} escala={suave(clamp01(interroga * 2)) * (1 - 0.9 * escada)} />}
+      {interroga > 0.02 && <Texto3D texto="?" p={[-2.8, n("interrogaY", 8.6) + 0.6 * suave(interroga) + 0.03 * Math.sin(tEpisodio * 3), 0.9]} h={1.7} escala={suave(clamp01(interroga * 2)) * (1 - 0.9 * escada)} />}
+      <Raio p={[4.3, n("raioY", 9.4), -1.6]} k={n("raio")} t={tEpisodio} h={6.5} />
+      {n("tvApe") > 0.02 && (
+        <group position={[2.7, n("tvY", 10), 0.2]} scale={suave(n("tvApe"))}>
+          <Caixa p={[0, 0.25, 0]} t={[0.8, 0.5, 0.5]} cor="#6a3b3b" raio={0.04} />
+          <TVJogo p={[0, 1.0, -0.35]} w={0.95} gol={n("golApe")} t={tEpisodio} rot={-0.25} />
+          <Caixa p={[0, 0.5, -0.35]} t={[1.1, 0.6, 0.3]} cor="#5b4636" raio={0.03} />
+        </group>
+      )}
+      {n("raspa") > 0.02 && <Raspa p={(cena.raspaPos as V | undefined) ?? [-1.18, plat + 1.3, 0.2]} k={n("raspa")} t={tEpisodio} />}
+      <BracoInchado p={(cena.maoPos as V | undefined) ?? [0, 3.6, 1.0]} dir={(cena.maoDir as V | undefined) ?? [-0.8, -0.1, 0.57]} k={maoK} t={tEpisodio} />
+      <Impacto p={(cena.maoPos as V | undefined) ?? [0, 3.6, 1.0]} k={n("impacto")} t={tEpisodio} r={0.6} />
 
       {/* lupa */}
-      <LinhasZoom de={ancoraLupa} p={[lx, ly, 0.9]} R={LR} k={lupaK} />
+      <LinhasZoom de={ancora} p={[lx, ly, 0.9]} R={LR} k={lupaK} />
       <Lupa p={[lx, ly, 0.9]} R={LR} k={lupaK}>
         {modo === "mola" && <LupaMola r={LR} taut={taut} cortada={corte > 0.02} t={tEpisodio} />}
         {modo === "sulcos" && <LupaSulcos r={LR} t={tEpisodio} />}
         {modo === "corda" && <LupaCorda r={LR} rompe={n("rompe")} t={tEpisodio} />}
         {modo === "pino" && <LupaPino r={LR} pino={n("pino", 1)} />}
+        {modo === "freio" && <LupaFreio r={LR} solto={n("freio", 1)} luz={luz} t={tEpisodio} />}
+        {modo === "trava" && <LupaTrava r={LR} fecha={garrasK} t={tEpisodio} />}
       </Lupa>
 
       {etiqs.map(({ c, ini }) => {
@@ -823,7 +1122,7 @@ const ElevadorCena: React.FC<Cenario3DProps> = ({ cena, progresso: p, t, tEpisod
         return <Etiqueta key={c} texto={d.texto} de={de} para={d.para} k={Kt} cor={d.cor} ymax={n("etiqYmax", 0.64)} pop={p > 0 ? clamp01((t * (p - ini)) / (p * 0.25)) : 1} />;
       })}
 
-      {gente.map((gd, i) => <Pessoa key={i} g={gd} p={p} t={t} tAbs={tEpisodio} plat={plat} />)}
+      {gente.map((gd, i) => <Pessoa key={i} g={gd} p={p} t={t} tAbs={tEpisodio} plat={plat} bx={bx} />)}
     </group>
   );
 };
@@ -833,7 +1132,7 @@ const c = (pos: V3, alvo: V3, fov = 50) => ({ pos, alvo, fov });
 export const elevador: Cenario3D = {
   Cena: ElevadorCena,
   padrao: "geral",
-  fundo: (cena, p) => (cena.feira === true ? "#cfe0ee" : valor(n0(cena.predio), p, 0) > 0.02 ? "#1b2028" : "#3a2c1e"),
+  fundo: (cena, p) => (cena.feira === true || (cena.feiraDe !== undefined && p >= (cena.feiraDe as number)) ? "#cfe0ee" : n0(cena.escadaria) ? "#aecbe6" : valor(n0(cena.predio), p, 0) > 0.02 ? "#1b2028" : "#3a2c1e"),
   luzPropria: true,
   cameras: { geral: c([-1.5, 3.6, 9.0], [0.5, 3.4, 0], 50) },
 };

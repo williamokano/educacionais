@@ -1,0 +1,2358 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 24,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Você chegou _atrasado_ de novo [leve] e jurou pro chefe: [leve] \"nublou, e a vareta de sombra _não marcou_!\" [leve] O chefe não achou graça.",
+   "duracao": 6.933,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "quintal",
+    "nuvem": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.357,
+     "fim": 0.507
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       3.6,
+       3.16,
+       14.0
+      ],
+      "alvo": [
+       1.0,
+       0.92,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.4,
+       2.23,
+       10.6
+      ],
+      "alvo": [
+       0.6,
+       0.958,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.2,
+      "z": 2.6,
+      "rot": 0.35,
+      "acao": [
+       [
+        0.5,
+        "andando"
+       ],
+       [
+        1,
+        "em-pe"
+       ]
+      ],
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.5,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ]
+     },
+     {
+      "quem": "chefe",
+      "x": 2.3,
+      "z": 0.9,
+      "rot": -0.7,
+      "acao": "bracos-cruzados",
+      "exp": "sorriso",
+      "gravata": true
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   },
+   "falante": "abertura"
+  },
+  {
+   "texto": "Então encha uma *ampulheta* de areia: [leve] funciona de noite e na chuva. [leve] [curious] Mas quando a areia acaba, [leve] alguém precisa _virar_, [leve] e o vigia contratado... _cochila_.",
+   "duracao": 8.451,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "ampulheta",
+    "areia": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.12,
+     "fim": 0.66
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       3.2,
+       2.95,
+       13.0
+      ],
+      "alvo": [
+       0.9,
+       1.39,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.6,
+       2.545,
+       11.5
+      ],
+      "alvo": [
+       0.9,
+       1.395,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.6,
+      "z": 2.4,
+      "rot": 0.4,
+      "acao": [
+       [
+        0.55,
+        "explicando",
+        "sorriso"
+       ],
+       [
+        1,
+        "em-pe",
+        "preocupado"
+       ]
+      ],
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -0.2,
+       "z": 2.6,
+       "rot": 0.35,
+       "dur": 6.933,
+       "mover": true
+      }
+     },
+     {
+      "quem": "vigia",
+      "x": 2.35,
+      "y": 0.06,
+      "z": 0.6,
+      "rot": -0.5,
+      "acao": "sentado",
+      "exp": "sorriso",
+      "pose": {
+       "cabeca.x": 0.55,
+       "ombroE.x": -0.3,
+       "ombroD.x": -0.3
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "AMPULHETA",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 84
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então pendure um peso num fio: [leve] o *pêndulo* balança sempre no _mesmo_ ritmo. [leve] [curious] Mas alguém tem que _contar_ os balanços, [leve] e você perde a conta no oitavo. [leve] Dedo não é contador.",
+   "duracao": 9.234,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "pendulo",
+    "cont": {
+     "de": 0,
+     "para": 8,
+     "ini": 0.534,
+     "fim": 0.812
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       2.2,
+       1.72,
+       6.4
+      ],
+      "alvo": [
+       1.0,
+       0.952,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.8,
+       2.675,
+       12.5
+      ],
+      "alvo": [
+       0.5,
+       1.425,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.7,
+      "z": 2.2,
+      "rot": 0.4,
+      "acao": "explicando",
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.5,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.6,
+       "z": 2.4,
+       "rot": 0.4,
+       "dur": 8.451,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "PÊNDULO",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 84
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então pendure um *peso* numa corda e ligue a *engrenagens* com ponteiro: [leve] ele conta _sozinho_. [leve] [curious] Mas o peso despenca [leve] e o dia inteiro passa em _cinco segundos_.",
+   "duracao": 8.2,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "torre": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.05
+    },
+    "placa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.05
+    },
+    "fonte": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.072,
+     "fim": 0.242
+    },
+    "mola": 0,
+    "trem": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.23,
+     "fim": 0.42
+    },
+    "ptC": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.333,
+     "fim": 0.443
+    },
+    "livre": 1,
+    "queda": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.634,
+     "fim": 0.97
+    },
+    "hm": 0.0,
+    "etiq": [
+     "peso@0.102-0.5",
+     "engren@0.26-0.7"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       2.8,
+       3.47,
+       9.0
+      ],
+      "alvo": [
+       0.2,
+       2.57,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.4,
+       3.805,
+       13.5
+      ],
+      "alvo": [
+       0.3,
+       2.455,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.9,
+      "z": 2.9,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.634,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": -0.7,
+       "z": 2.2,
+       "rot": 0.4,
+       "dur": 9.234,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "5 S",
+      "trecho": 3,
+      "y": 40,
+      "tamanho": 90
+     }
+    ],
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "queda_energia",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha uma roda de *dentes* e uma trava, a *âncora*: [leve] ela solta um dente _por vez_, [leve] como uma catraca que só deixa passar um de cada vez. [leve] [curious] Mas quem decide _quando_ a trava solta?",
+   "duracao": 9.733,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "torre": 1,
+    "placa": 1,
+    "fonte": 1,
+    "mola": 0,
+    "trem": 1,
+    "ptC": 1,
+    "queda": 0,
+    "livre": 0,
+    "esc": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.11,
+     "fim": 0.27
+    },
+    "anc": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.24,
+     "fim": 0.4
+    },
+    "ptE": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.13,
+     "fim": 0.23
+    },
+    "reg": 0,
+    "bat": {
+     "de": 0,
+     "para": 1.3,
+     "ini": 0.36,
+     "fim": 0.46
+    },
+    "amp": 1,
+    "dedo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.32,
+     "fim": 0.4
+    },
+    "hm": 0.0,
+    "etiq": [
+     "escape@0.13-0.55",
+     "ancora@0.26-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       3.358,
+       8.6
+      ],
+      "alvo": [
+       -0.3,
+       2.498,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.4,
+       3.192,
+       6.4
+      ],
+      "alvo": [
+       -0.8,
+       2.552,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.3,
+      "z": 1.6,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "surpreso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 1.9,
+       "z": 2.9,
+       "rot": -0.35,
+       "dur": 8.2,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "tique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "tique",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "O pêndulo! [leve] A cada balanço, a âncora solta um dente: [leve] _tique_, _taque_. [leve] [curious] Mas o pêndulo perde força [leve] e _para_ no meio da tarde.",
+   "duracao": 7.667,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "torre": 1,
+    "placa": 1,
+    "fonte": 1,
+    "mola": 0,
+    "trem": 1,
+    "ptC": 1,
+    "queda": 0,
+    "livre": 0,
+    "esc": 1,
+    "anc": 1,
+    "ptE": 1,
+    "pend": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "reg": 0,
+    "bat": 2.0,
+    "amp": [
+     [
+      0,
+      1
+     ],
+     [
+      0.652,
+      1
+     ],
+     [
+      0.952,
+      0.05
+     ],
+     [
+      1,
+      0.05
+     ]
+    ],
+    "ustop": 10.5,
+    "luz": {
+     "de": 0,
+     "para": 0.5,
+     "ini": 0.0,
+     "fim": 1.0
+    },
+    "hm": 0.0,
+    "camera": {
+     "de": {
+      "pos": [
+       2.6,
+       3.2,
+       10.0
+      ],
+      "alvo": [
+       -0.5,
+       2.2,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.2,
+       3.022,
+       7.4
+      ],
+      "alvo": [
+       -1.0,
+       2.282,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.85,
+      "z": 2.3,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.652,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 1.3,
+       "z": 1.6,
+       "rot": -0.35,
+       "dur": 9.733,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "tique_relogio",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "tique_relogio",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então a âncora devolve um _empurrãozinho_ a cada balanço: [leve] a energia vem do peso, [leve] igual empurrar o balanço no parquinho na hora certa. [leve] [amazed] Tique-taque sozinho! [leve] [curious] Mas o peso chega ao _chão_.",
+   "duracao": 9.633,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "torre": 1,
+    "placa": 1,
+    "fonte": 1,
+    "mola": 0,
+    "trem": 1,
+    "ptC": 1,
+    "esc": 1,
+    "anc": 1,
+    "ptE": 1,
+    "pend": 1,
+    "reg": 0,
+    "bat": 2.0,
+    "amp": [
+     [
+      0,
+      1
+     ],
+     [
+      0.934,
+      1
+     ],
+     [
+      0.99,
+      0.05
+     ],
+     [
+      1,
+      0.05
+     ]
+    ],
+    "ustop": 18.5,
+    "setas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.08
+    },
+    "hm": 0.0,
+    "livre": [
+     [
+      0,
+      0
+     ],
+     [
+      0.918,
+      0
+     ],
+     [
+      0.928,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "queda": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.928,
+     "fim": 0.97
+    },
+    "luz": 0.5,
+    "camera": {
+     "de": {
+      "pos": [
+       -2.8,
+       3.575,
+       12.5
+      ],
+      "alvo": [
+       0.0,
+       2.325,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.8,
+       3.825,
+       12.5
+      ],
+      "alvo": [
+       0.3,
+       2.325,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.85,
+      "z": 2.3,
+      "rot": -0.35,
+      "acao": [
+       [
+        0.928,
+        "comemorando"
+       ],
+       [
+        1,
+        "em-pe"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.928,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 1.85,
+       "z": 2.3,
+       "rot": -0.35,
+       "dur": 7.667,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "tique_relogio",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "impacto",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então _suba_ o peso de novo: [leve] dar corda. [leve] [curious] Mas peso e pêndulo ocupam uma parede [leve] e só funcionam _parados_. [leve] Troque o peso por uma *mola* enrolada: [leve] as engrenagens _encolhem_.",
+   "duracao": 9.6,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "torre": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.717,
+     "fim": 0.847
+    },
+    "placa": 1,
+    "fonte": 1,
+    "mola": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.747,
+     "fim": 0.867
+    },
+    "trem": 1,
+    "ptC": 1,
+    "esc": 1,
+    "anc": 1,
+    "ptE": 1,
+    "pend": 1,
+    "reg": 0,
+    "livre": [
+     [
+      0,
+      1
+     ],
+     [
+      0.245,
+      1
+     ],
+     [
+      0.255,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "queda": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.045,
+     "fim": 0.245
+    },
+    "bat": [
+     [
+      0,
+      0
+     ],
+     [
+      0.245,
+      0
+     ],
+     [
+      0.295,
+      2.0
+     ],
+     [
+      1,
+      2.0
+     ]
+    ],
+    "amp": 1,
+    "corda": 0.8,
+    "ms": {
+     "de": 1.0,
+     "para": 0.8,
+     "ini": 0.907,
+     "fim": 1.107
+    },
+    "hm": 0.0,
+    "etiq": [
+     "mola@0.747-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       2.4,
+       3.63,
+       11.0
+      ],
+      "alvo": [
+       0.0,
+       2.53,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.2,
+       3.636,
+       11.2
+      ],
+      "alvo": [
+       0.2,
+       2.516,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.85,
+      "z": 2.3,
+      "rot": -0.35,
+      "acao": [
+       [
+        0.245,
+        "explicando"
+       ],
+       [
+        0.552,
+        "cocando-cabeca"
+       ],
+       [
+        1,
+        "comemorando"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.552,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 1.85,
+       "z": 2.3,
+       "rot": -0.35,
+       "dur": 9.633,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "30 CM",
+      "trecho": 5,
+      "y": 40,
+      "tamanho": 90
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.12
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Troque o pêndulo por uma *roda de balanço* com uma *espiral*: [leve] ela vai e volta até em _movimento_. [leve] [curious] Mas a mola enfraquece [leve] e o tempo _desanda_.",
+   "duracao": 7.533,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "ptC": 1,
+    "esc": 1,
+    "anc": 1,
+    "ptE": 1,
+    "pend": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.096,
+     "fim": 0.166
+    },
+    "bal": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.146,
+     "fim": 0.306
+    },
+    "reg": 1,
+    "bat": [
+     [
+      0,
+      0
+     ],
+     [
+      0.196,
+      0
+     ],
+     [
+      0.266,
+      2.4
+     ],
+     [
+      0.757,
+      2.4
+     ],
+     [
+      0.957,
+      2.0
+     ],
+     [
+      1,
+      2.0
+     ]
+    ],
+    "amp": [
+     [
+      0,
+      1
+     ],
+     [
+      0.757,
+      1
+     ],
+     [
+      1.007,
+      0.7
+     ],
+     [
+      1,
+      0.7
+     ]
+    ],
+    "corda": {
+     "de": 0.7,
+     "para": 0.3,
+     "ini": 0.757,
+     "fim": 0.95
+    },
+    "ms": {
+     "de": 0.8,
+     "para": 0.7,
+     "ini": 0.55,
+     "fim": 0.9
+    },
+    "hm": 0.0,
+    "etiq": [
+     "roda@0.146-0.5",
+     "espiral@0.288-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.95,
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       3.5,
+       10.0
+      ],
+      "alvo": [
+       0.7,
+       2.5,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.6,
+       3.346,
+       8.2
+      ],
+      "alvo": [
+       0.3,
+       2.526,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.1,
+      "z": 1.6,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.757,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": 1.85,
+       "z": 2.3,
+       "rot": -0.35,
+       "dur": 9.6,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "6 CM",
+      "trecho": 3,
+      "y": 40,
+      "tamanho": 90
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.12
+     }
+    ]
+   }
+  },
+  {
+   "texto": "A espiral e a roda mandam no ritmo, [leve] não a força da mola. [leve] [curious] Mas ainda atrasa um pouco: [leve] gire o *regulador*, [leve] que encurta a espiral e o tempo _adianta_.",
+   "duracao": 7.974,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "ptC": 1,
+    "esc": 1,
+    "anc": 1,
+    "ptE": 1,
+    "bal": 1,
+    "reg": 1,
+    "marc": 1,
+    "reguV": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.7
+    },
+    "regu": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.69,
+     "fim": 0.94
+    },
+    "bat": 2.0,
+    "amp": 0.9,
+    "corda": {
+     "de": 0.45,
+     "para": 0.3,
+     "ini": 0.0,
+     "fim": 0.5
+    },
+    "ms": 0.7,
+    "hm": 0.0,
+    "etiq": [
+     "regulador@0.64-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.95,
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       3.488,
+       9.6
+      ],
+      "alvo": [
+       0.7,
+       2.528,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.6,
+       3.352,
+       8.4
+      ],
+      "alvo": [
+       0.3,
+       2.512,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.1,
+      "z": 1.6,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 1.1,
+       "z": 1.6,
+       "rot": -0.35,
+       "dur": 7.533,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas pra caber no pulso, as peças ficam _minúsculas_ [leve] e se gastam. [leve] Ponha *rubis* nos eixos: [leve] a pedra dura reduz o atrito.",
+   "duracao": 6.66,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "ptC": 1,
+    "esc": 1,
+    "anc": 1,
+    "ptE": 1,
+    "bal": 1,
+    "reg": 1,
+    "reguV": 1,
+    "regu": 1,
+    "bat": 2.4,
+    "amp": 0.9,
+    "corda": 0.5,
+    "hm": 0.0,
+    "ms": {
+     "de": 0.7,
+     "para": 0.6,
+     "ini": 0.0,
+     "fim": 0.3
+    },
+    "fagulha": [
+     [
+      0,
+      0
+     ],
+     [
+      0.339,
+      0
+     ],
+     [
+      0.419,
+      1
+     ],
+     [
+      0.519,
+      1
+     ],
+     [
+      0.579,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "rub": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.539,
+     "fim": 0.97
+    },
+    "etiq": [
+     "rubis@0.539-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.95,
+    "camera": {
+     "de": {
+      "pos": [
+       2.0,
+       3.488,
+       9.6
+      ],
+      "alvo": [
+       0.7,
+       2.528,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.5,
+       3.334,
+       7.8
+      ],
+      "alvo": [
+       0.3,
+       2.554,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.1,
+      "z": 1.6,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.539,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 1.1,
+       "z": 1.6,
+       "rot": -0.35,
+       "dur": 7.974,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "4 CM",
+      "trecho": 3,
+      "y": 40,
+      "tamanho": 90
+     }
+    ],
+    "sfx": [
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas ninguém lê engrenagem. [leve] Ligue três *ponteiros*: [leve] o dos _minutos_ dá doze voltas [leve] enquanto o das _horas_ dá uma, [leve] e o dos _segundos_ dá uma por minuto: [leve] o dedo-duro do atraso.",
+   "duracao": 9.677,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "esc": 1,
+    "anc": 1,
+    "bal": 1,
+    "reg": 1,
+    "reguV": 1,
+    "regu": 1,
+    "rub": 1,
+    "bat": 2.4,
+    "amp": 0.9,
+    "corda": 0.5,
+    "ms": 0.6,
+    "ptC": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.184,
+     "fim": 0.234
+    },
+    "ptE": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.184,
+     "fim": 0.234
+    },
+    "mostr": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.204,
+     "fim": 0.334
+    },
+    "mw": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.214,
+     "fim": 0.394
+    },
+    "pont": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.374,
+     "fim": 0.494
+    },
+    "hm": 0.1333,
+    "hh": 0.8444,
+    "hs": 0.0,
+    "ff": [
+     [
+      0,
+      0
+     ],
+     [
+      0.308,
+      0
+     ],
+     [
+      0.368,
+      0.02
+     ],
+     [
+      0.655,
+      0.02
+     ],
+     [
+      0.775,
+      0.9
+     ],
+     [
+      0.99,
+      1.4
+     ],
+     [
+      1,
+      1.4
+     ]
+    ],
+    "etiq": [
+     "horas@0.551-0.368",
+     "minutos@0.348-0.675",
+     "segundos@0.675-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       2.2,
+       3.43,
+       8.6
+      ],
+      "alvo": [
+       0.0,
+       2.398,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.6,
+       3.39,
+       7.8
+      ],
+      "alvo": [
+       0.0,
+       2.454,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.6,
+      "z": 2.0,
+      "rot": -0.35,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {
+        "ombroE.z": 0.5,
+        "ombroD.z": -0.5,
+        "cotoveloE.x": -0.5,
+        "cotoveloD.x": -0.5,
+        "maos": 1
+       },
+       "x": 1.1,
+       "z": 1.6,
+       "rot": -0.35,
+       "dur": 6.66,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "12 : 1",
+      "trecho": 5,
+      "y": 40,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.12
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas está tudo fechado: [leve] como dar corda e acertar a hora? [leve] Um botão na lateral, a *coroa*: [leve] gire pra dar corda, [leve] _puxe_ pra mover os ponteiros.",
+   "duracao": 8.089,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "esc": 1,
+    "anc": 1,
+    "bal": 1,
+    "reg": 1,
+    "reguV": 1,
+    "regu": 1,
+    "rub": 1,
+    "bat": 2.4,
+    "amp": 0.9,
+    "corda": {
+     "de": 0.3,
+     "para": 0.8,
+     "ini": 0.674,
+     "fim": 0.894
+    },
+    "ms": 0.6,
+    "mostr": 1,
+    "mw": 1,
+    "pont": 1,
+    "cor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.547,
+     "fim": 0.647
+    },
+    "hm": 0.1333,
+    "hh": 0.8444,
+    "hs": 0.0,
+    "gW": {
+     "de": 0,
+     "para": 3,
+     "ini": 0.674,
+     "fim": 0.894
+    },
+    "puxa": [
+     [
+      0,
+      0
+     ],
+     [
+      0.799,
+      0
+     ],
+     [
+      0.899,
+      1
+     ],
+     [
+      0.93,
+      1
+     ],
+     [
+      0.99,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "gS": [
+     [
+      0,
+      0
+     ],
+     [
+      0.919,
+      0
+     ],
+     [
+      0.88,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "etiq": [
+     "coroa@0.567-0.674",
+     "gira@0.674-0.819",
+     "puxa@0.819-0.9"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       2.4,
+       3.725,
+       10.5
+      ],
+      "alvo": [
+       0.9,
+       2.465,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.6,
+       3.732,
+       7.6
+      ],
+      "alvo": [
+       1.3,
+       2.668,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 2.0,
+      "z": 0.8,
+      "rot": -0.45,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 1.6,
+       "z": 2.0,
+       "rot": -0.35,
+       "dur": 9.677,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas poeira e dedo estragam os ponteiros. [leve] Feche o mostrador com um *vidro* por cima. [leve] Agora é só prender no pulso [leve] e chegar a tempo.",
+   "duracao": 7.239,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "esc": 1,
+    "anc": 1,
+    "bal": 1,
+    "reg": 1,
+    "reguV": 1,
+    "regu": 1,
+    "rub": 1,
+    "bat": 2.4,
+    "amp": 0.9,
+    "corda": 0.5,
+    "ms": 0.5,
+    "mostr": 1,
+    "mw": 1,
+    "pont": 1,
+    "cor": 1,
+    "hm": 0.1333,
+    "hh": 0.8444,
+    "hs": 0.0,
+    "mesa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "incl": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.2
+    },
+    "mx": {
+     "de": 0,
+     "para": 1.1,
+     "ini": 0.0,
+     "fim": 0.2
+    },
+    "my": {
+     "de": 4.0,
+     "para": 2.0,
+     "ini": 0.0,
+     "fim": 0.2
+    },
+    "mz": {
+     "de": -0.3,
+     "para": 0.6,
+     "ini": 0.0,
+     "fim": 0.2
+    },
+    "caixa": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.18,
+     "fim": 0.3
+    },
+    "vidro": [
+     [
+      0,
+      0.0
+     ],
+     [
+      0.482,
+      0.0
+     ],
+     [
+      0.802,
+      1.0
+     ],
+     [
+      1,
+      1.0
+     ]
+    ],
+    "pulseira": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.767,
+     "fim": 0.907
+    },
+    "gW": 3,
+    "gS": 2,
+    "puxa": 0,
+    "etiq": [
+     "vidro@0.502-0.9"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.95,
+    "camera": {
+     "de": {
+      "pos": [
+       2.4,
+       4.776,
+       6.2
+      ],
+      "alvo": [
+       1.1,
+       1.366,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.0,
+       8.53,
+       11.0
+      ],
+      "alvo": [
+       0.9,
+       0.83,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.7,
+      "z": 2.0,
+      "rot": 0.4,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 2.0,
+       "z": 0.8,
+       "rot": -0.45,
+       "dur": 8.089,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "tique_relogio",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "vidro",
+      "trecho": 1,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! [leve] Você acabou de inventar o *relógio* de pulso. [leve] E ninguém mais acredita em \"_nublou_\".",
+   "duracao": 5.261,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "esc": 1,
+    "anc": 1,
+    "bal": 1,
+    "reg": 1,
+    "reguV": 1,
+    "regu": 1,
+    "rub": 1,
+    "bat": 2.4,
+    "amp": 0.9,
+    "corda": 0.5,
+    "ms": 0.045,
+    "mostr": 1,
+    "mw": 1,
+    "pont": 1,
+    "cor": 1,
+    "hm": 0.1333,
+    "hh": 0.8444,
+    "hs": 0.0,
+    "caixa": 1,
+    "pulseira": 1,
+    "vidro": 1,
+    "gW": 3,
+    "gS": 2,
+    "puxa": 0,
+    "mx": 1.76,
+    "my": 1.15,
+    "mz": 2.5,
+    "rotY": -0.2,
+    "etiq": [
+     "relogio@0.05-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       1.6,
+       1.228,
+       3.6
+      ],
+      "alvo": [
+       1.6,
+       1.048,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.6,
+       1.822,
+       7.4
+      ],
+      "alvo": [
+       0.8,
+       1.082,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.4,
+      "z": 2.2,
+      "rot": -0.2,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -1.2,
+       "ombroE.z": 0.1,
+       "cotoveloE.x": -1.0,
+       "maos": 0.3
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -1.7,
+       "z": 2.0,
+       "rot": 0.4,
+       "dur": 7.239,
+       "mover": false
+      }
+     },
+     {
+      "quem": "chefe",
+      "x": -1.0,
+      "z": 1.0,
+      "rot": 0.5,
+      "acao": "bracos-cruzados",
+      "exp": "sorriso",
+      "gravata": true
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "RELÓGIO",
+      "trecho": 0,
+      "y": 40,
+      "tamanho": 96
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Manda pra quem _sempre_ chega atrasado. [leve] E como a luz de uma torre chega a um navio a 30 quilômetros? [leve] *Siga* pra descobrir.",
+   "duracao": 6.2,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "mar",
+    "luzMar": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.45,
+     "fim": 0.7
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       3.0,
+       2.1,
+       10.0
+      ],
+      "alvo": [
+       -1.2,
+       1.1,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.4,
+       2.058,
+       8.6
+      ],
+      "alvo": [
+       -1.2,
+       1.198,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.9,
+      "z": 2.4,
+      "rot": -0.9,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": {
+       "ombroE.x": -1.2,
+       "ombroE.z": 0.5,
+       "cotoveloE.x": -0.1,
+       "dedo": 1,
+       "ombroD.z": -0.12,
+       "cotoveloD.x": -0.18
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -1.2,
+        "ombroE.z": 0.1,
+        "cotoveloE.x": -1.0,
+        "maos": 0.3
+       },
+       "x": 1.4,
+       "z": 2.2,
+       "rot": -0.2,
+       "dur": 5.261,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* ATRASADO. [leve] *Compartilhe* [leve] e *siga* pra ver como as coisas *funcionam*.",
+   "duracao": 5.867,
+   "cena": {
+    "cenario": "relogio",
+    "tipo": "oficina",
+    "placa": 1,
+    "fonte": 1,
+    "mola": 1,
+    "trem": 1,
+    "esc": 1,
+    "anc": 1,
+    "bal": 1,
+    "reg": 1,
+    "reguV": 1,
+    "regu": 1,
+    "rub": 1,
+    "bat": 2.4,
+    "amp": 0.9,
+    "corda": 0.5,
+    "ms": 0.55,
+    "mostr": 1,
+    "mw": 1,
+    "pont": 1,
+    "cor": 1,
+    "hm": 0.1333,
+    "hh": 0.8444,
+    "hs": 0.0,
+    "caixa": 1,
+    "pulseira": 1,
+    "vidro": 1,
+    "gW": 3,
+    "gS": 2,
+    "puxa": 0,
+    "mx": 0.0,
+    "my": 3.7,
+    "mz": -0.3,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       2.76,
+       12.0
+      ],
+      "alvo": [
+       0.0,
+       2.16,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       0.0,
+       2.77,
+       11.5
+      ],
+      "alvo": [
+       0.0,
+       2.195,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -1.5,
+      "z": 2.0,
+      "rot": 0.3,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroD.x": -1.2,
+       "ombroD.z": -0.5,
+       "cotoveloD.x": -0.1,
+       "dedo": 1,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroE.x": -1.2,
+        "ombroE.z": 0.5,
+        "cotoveloE.x": -0.1,
+        "dedo": 1,
+        "ombroD.z": -0.12,
+        "cotoveloD.x": -0.18
+       },
+       "x": 0.9,
+       "z": 2.4,
+       "rot": -0.9,
+       "dur": 6.2,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "ATRASADO"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2,
+      "sub": "pra quem sempre chega atrasado"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.5
+     }
+    ]
+   }
+  }
+ ],
+ "vozes": {
+  "abertura": {
+   "estabilidade": 0.5
+  }
+ }
+}

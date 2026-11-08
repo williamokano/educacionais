@@ -1,0 +1,2680 @@
+{
+ "slug": "demo-3d",
+ "serie": "DEMO 3D",
+ "episodio": 18,
+ "voz": {
+  "tts": "elevenlabs",
+  "id": "RGymW84CSmfVugnA5tvA",
+  "modelo": "eleven_v4",
+  "idioma": "pt",
+  "velocidade": 1.2
+ },
+ "cartaoFinal": null,
+ "batidas": [
+  {
+   "texto": "[excited] Final do campeonato, pênalti no último minuto, [leve] e a luz _acaba_! [leve] Enquanto isso, um rio inteiro passa de graça na sua porta. [leve] Alguém precisa apresentar os dois. [leve] O tio, no escuro, ainda xinga o juiz.",
+   "duracao": 12.1,
+   "cena": {
+    "cenario": "usina",
+    "sala": true,
+    "tv": [
+     [
+      0,
+      1
+     ],
+     [
+      0.276,
+      1
+     ],
+     [
+      0.298,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "luzSala": [
+     [
+      0,
+      1
+     ],
+     [
+      0.276,
+      1
+     ],
+     [
+      0.298,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "vazao": 1.8,
+    "folhas": 1,
+    "camera": {
+     "de": {
+      "pos": [
+       -3.0,
+       1.7,
+       10.8
+      ],
+      "alvo": [
+       -4.0,
+       1.4,
+       3.2
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -2.65,
+       1.55,
+       1.9
+      ],
+      "alvo": [
+       -1.0,
+       -0.1,
+       -4.5
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -4.3,
+      "z": 6.0,
+      "rot": 0.15,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.286,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ]
+     },
+     {
+      "x": -3.6,
+      "z": 5.2,
+      "rot": -0.15,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "quem": "tio",
+      "esc": 1.0,
+      "pose": [
+       [
+        0.286,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ]
+     },
+     {
+      "x": -4.6,
+      "z": 4.5,
+      "rot": 0.25,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "quem": "mae",
+      "esc": 1.0,
+      "pose": [
+       [
+        0.286,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ]
+     },
+     {
+      "x": -3.7,
+      "z": 6.6,
+      "rot": -0.25,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "quem": "menino",
+      "esc": 1.0,
+      "pose": [
+       [
+        0.286,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ]
+      ]
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "queda_energia",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então ponha a família pra *pedalar* uma bicicleta ligada à lâmpada. [leve] [curious] Mas o tio pedala dois minutos, cansa [leve] e vira torcedor deitado no sofá, [leve] e a luz _apaga_ de novo.",
+   "duracao": 10.3,
+   "cena": {
+    "cenario": "usina",
+    "lampVis": 1,
+    "lampX": 2.6,
+    "lampZ": 2.9,
+    "lampAlt": 1.25,
+    "bike": 1,
+    "bikeX": 0.5,
+    "bikeZ": 3.4,
+    "bikeVel": [
+     [
+      0,
+      6
+     ],
+     [
+      0.567,
+      6
+     ],
+     [
+      0.617,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "luz": [
+     [
+      0,
+      1.0
+     ],
+     [
+      0.87,
+      1.0
+     ],
+     [
+      0.94,
+      0.0
+     ],
+     [
+      1,
+      0.0
+     ]
+    ],
+    "pisca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.567,
+     "fim": 0.9
+    },
+    "vazao": 1.5,
+    "camera": {
+     "de": {
+      "pos": [
+       4.415,
+       2.586,
+       11.9
+      ],
+      "alvo": [
+       0.9,
+       1.1,
+       3.2
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.955,
+       2.445,
+       11.442
+      ],
+      "alvo": [
+       0.9,
+       1.1,
+       3.2
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.28,
+      "z": 3.4,
+      "rot": 1.5707963267948966,
+      "acao": "sentado",
+      "exp": "cansado",
+      "quem": "tio",
+      "esc": 1.0,
+      "y": 0.22,
+      "pedala": {
+       "de": 1,
+       "para": 0,
+       "ini": 0.567,
+       "fim": 0.617
+      },
+      "pose": [
+       [
+        0.567,
+        {}
+       ],
+       [
+        1,
+        {
+         "tronco.x": 0.95,
+         "cabeca.x": 0.55,
+         "ombroE.x": -1.3,
+         "ombroD.x": -1.3
+        }
+       ]
+      ]
+     },
+     {
+      "x": -0.9,
+      "z": 4.0,
+      "rot": 0.6,
+      "acao": "explicando",
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "whoosh",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "pisca",
+      "trecho": 2,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então deixe o rio fazer a força: [leve] ponha uma *roda* na água. [leve] [curious] Mas a roda gira, gira, [leve] e a lâmpada continua _apagada_: [leve] a água empurra a roda, mas girar não é acender.",
+   "duracao": 11.0,
+   "cena": {
+    "cenario": "usina",
+    "lampVis": 1,
+    "lampX": 0.55,
+    "lampZ": 1.7,
+    "lampAlt": 1.1,
+    "luz": 0,
+    "fio": 1,
+    "vazao": 1.6,
+    "rodaVis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.261,
+     "fim": 0.361
+    },
+    "rodaY": {
+     "de": 2.4,
+     "para": 0,
+     "ini": 0.261,
+     "fim": 0.381
+    },
+    "giro": [
+     [
+      0,
+      0
+     ],
+     [
+      0.281,
+      0
+     ],
+     [
+      0.421,
+      0.9
+     ],
+     [
+      1,
+      0.9
+     ]
+    ],
+    "etiq": [
+     "roda@0.311-0.95"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       3.633,
+       2.823,
+       10.894
+      ],
+      "alvo": [
+       -0.9,
+       1.0,
+       1.6
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.131,
+       2.563,
+       9.929
+      ],
+      "alvo": [
+       -0.9,
+       1.0,
+       1.6
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": 3.3,
+      "rot": 0.6,
+      "acao": [
+       [
+        0.656,
+        "em-pe"
+       ],
+       [
+        1,
+        "cocando-cabeca"
+       ]
+      ],
+      "exp": "sorriso"
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "estalo",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Prenda *ímãs* no eixo e enrole *fio* em volta: [leve] o ímã passando perto empurra a eletricidade pelo fio. [leve] [amazed] Essa peça é o *gerador*: [leve] a luz _acendeu_!",
+   "duracao": 9.0,
+   "cena": {
+    "cenario": "usina",
+    "lampVis": 1,
+    "lampX": 0.55,
+    "lampZ": 1.7,
+    "lampAlt": 1.1,
+    "vazao": 1.6,
+    "rodaVis": 1,
+    "giro": 0.9,
+    "geradorVis": {
+     "de": 0,
+     "para": 1,
+     "ini": -0.022,
+     "fim": 0.088
+    },
+    "lupa": {
+     "de": 0,
+     "para": 1,
+     "ini": -0.002,
+     "fim": 0.138
+    },
+    "lupaX": -0.62,
+    "lupaY": 2.5,
+    "lupaR": 0.4,
+    "fio": 1,
+    "corrente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.547,
+     "fim": 0.657
+    },
+    "luz": {
+     "de": 0,
+     "para": 1.0,
+     "ini": 0.922,
+     "fim": 1.012
+    },
+    "etiq": [
+     "ima@0.058-0.99",
+     "bobina@0.251-0.99",
+     "gerador@0.846-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       2.672,
+       2.598,
+       11.413
+      ],
+      "alvo": [
+       -0.9,
+       1.5,
+       1.6
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       1.386,
+       2.593,
+       10.767
+      ],
+      "alvo": [
+       -0.9,
+       1.6,
+       1.6
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.1,
+      "z": 3.4,
+      "rot": 0.5,
+      "acao": [
+       [
+        0.846,
+        "explicando"
+       ],
+       [
+        1,
+        "comemorando"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.846,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "cocando-cabeca",
+       "pose": {},
+       "x": -2.0,
+       "z": 3.3,
+       "rot": 0.6,
+       "dur": 11.0,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "jingle",
+      "trecho": 3,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a roda só gira com correnteza forte, [leve] e na seca o rio vira um _fiozinho_ [leve] e a lâmpada pisca de preguiça.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "usina",
+    "lampVis": 1,
+    "lampX": 0.55,
+    "lampZ": 1.7,
+    "lampAlt": 1.1,
+    "rodaVis": 1,
+    "geradorVis": 1,
+    "fio": 1,
+    "corrente": {
+     "de": 1,
+     "para": 0.15,
+     "ini": 0.3,
+     "fim": 0.9
+    },
+    "nivelRio": {
+     "de": 1,
+     "para": 0.06,
+     "ini": 0.375,
+     "fim": 0.782
+    },
+    "vazao": {
+     "de": 1.6,
+     "para": 0.2,
+     "ini": 0.3,
+     "fim": 0.9
+    },
+    "folhas": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.2,
+     "fim": 0.8
+    },
+    "giro": {
+     "de": 5.0,
+     "para": 0.4,
+     "ini": 0.3,
+     "fim": 0.9
+    },
+    "luz": [
+     [
+      0,
+      1.0
+     ],
+     [
+      0.405,
+      1.0
+     ],
+     [
+      0.782,
+      0.25
+     ],
+     [
+      1,
+      0.2
+     ]
+    ],
+    "pisca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.768,
+     "fim": 1.0
+    },
+    "camera": {
+     "de": {
+      "pos": [
+       3.306,
+       2.723,
+       10.846
+      ],
+      "alvo": [
+       -0.9,
+       0.9,
+       1.4
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       2.082,
+       2.602,
+       10.579
+      ],
+      "alvo": [
+       -0.9,
+       0.9,
+       1.4
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -2.1,
+      "z": 3.4,
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "preocupado",
+      "pose": {
+       "ombroD.x": -0.95,
+       "ombroD.z": 0.4,
+       "cotoveloD.x": -2.35,
+       "cotoveloD.z": 0.15,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18,
+       "maos": 0.4
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -2.1,
+       "z": 3.4,
+       "rot": 0.5,
+       "dur": 9.0,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "pisca",
+      "trecho": 1,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Então feche o rio com uma *barragem*: [leve] a água se junta num lago, [leve] bem mais *alta* do que o rio lá embaixo.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "usina",
+    "vazao": 1.5,
+    "rodaVis": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.1
+    },
+    "lampVis": 0,
+    "barragem": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.293,
+     "fim": 0.545
+    },
+    "lago": [
+     [
+      0,
+      -0.5
+     ],
+     [
+      0.545,
+      -0.5
+     ],
+     [
+      0.732,
+      3.3
+     ],
+     [
+      1,
+      3.3
+     ]
+    ],
+    "vazaoJus": {
+     "de": 1.4,
+     "para": 0.3,
+     "ini": 0.545,
+     "fim": 0.95
+    },
+    "alturaSetas": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.632,
+     "fim": 0.762
+    },
+    "etiq": [
+     "barragem@0.373-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.85,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       10.5,
+       14.0
+      ],
+      "alvo": [
+       1.0,
+       0.8,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.4,
+       5.0,
+       11.5
+      ],
+      "alvo": [
+       1.2,
+       1.6,
+       0.0
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.5,
+      "z": 3.0,
+      "rot": 0.45,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -0.95,
+        "ombroD.z": 0.4,
+        "cotoveloD.x": -2.35,
+        "cotoveloD.z": 0.15,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18,
+        "maos": 0.4
+       },
+       "x": -2.1,
+       "z": 3.4,
+       "rot": 0.5,
+       "dur": 7.6,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Do lago, solte a água por um *cano* grosso ladeira abaixo, [leve] direto numa *turbina*, uma hélice dentro do cano, que pega a água toda e não só um pedaço. [leve] Quanto mais alta a água, mais forte ela _empurra_.",
+   "duracao": 13.1,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.322,
+     "fim": 0.422
+    },
+    "helice": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.342,
+     "fim": 0.442
+    },
+    "plinto": 0,
+    "comporta": -1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.184,
+     "fim": 0.322
+    },
+    "aguaTubo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.234,
+     "fim": 0.392
+    },
+    "raiox": 1,
+    "lago": 3.3,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "fluxoTurb": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.392,
+     "fim": 0.542
+    },
+    "saidaAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.442,
+     "fim": 0.592
+    },
+    "giro": [
+     [
+      0,
+      0
+     ],
+     [
+      0.342,
+      0
+     ],
+     [
+      0.974,
+      3.0
+     ],
+     [
+      1,
+      11
+     ]
+    ],
+    "fio": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.442,
+     "fim": 0.542
+    },
+    "corrente": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.492,
+     "fim": 0.642
+    },
+    "luz": {
+     "de": 0,
+     "para": 1.6,
+     "ini": 0.874,
+     "fim": 0.98
+    },
+    "vazaoJus": 0.5,
+    "etiq": [
+     "turbina@0.382-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       4.276,
+       4.591,
+       11.098
+      ],
+      "alvo": [
+       0.8,
+       2.2,
+       0.4
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       6.627,
+       3.995,
+       11.563
+      ],
+      "alvo": [
+       3.0,
+       1.5,
+       0.4
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.2,
+      "z": 3.2,
+      "rot": 0.5,
+      "acao": [
+       [
+        0.974,
+        "explicando"
+       ],
+       [
+        1,
+        "comemorando"
+       ]
+      ],
+      "exp": "sorriso",
+      "pose": [
+       [
+        0.974,
+        {}
+       ],
+       [
+        1,
+        {
+         "ombroE.x": -0.4,
+         "ombroD.x": -0.4,
+         "ombroE.z": 2.4,
+         "ombroD.z": -2.4,
+         "cotoveloE.z": 0.3,
+         "cotoveloD.z": -0.3,
+         "maos": 1
+        }
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": -0.5,
+       "z": 3.0,
+       "rot": 0.45,
+       "dur": 7.6,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a água sai o tempo todo, [leve] mesmo quando ninguém precisa de luz. [leve] Então ponha uma *comporta*, [leve] que abre e fecha a passagem.",
+   "duracao": 7.9,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": [
+     [
+      0,
+      -1
+     ],
+     [
+      0.656,
+      -1
+     ],
+     [
+      0.736,
+      1
+     ],
+     [
+      0.813,
+      1
+     ],
+     [
+      0.87,
+      0
+     ],
+     [
+      0.98,
+      0
+     ],
+     [
+      1.03,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.3,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": [
+     [
+      0,
+      10
+     ],
+     [
+      0.9,
+      10
+     ],
+     [
+      0.97,
+      0.5
+     ],
+     [
+      1.02,
+      0.5
+     ],
+     [
+      1.09,
+      10
+     ],
+     [
+      1,
+      10
+     ]
+    ],
+    "luz": [
+     [
+      0,
+      1.4
+     ],
+     [
+      0.9,
+      1.4
+     ],
+     [
+      0.97,
+      0.1
+     ],
+     [
+      1.02,
+      0.1
+     ],
+     [
+      1.09,
+      1.4
+     ],
+     [
+      1,
+      1.4
+     ]
+    ],
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": [
+     [
+      0,
+      1
+     ],
+     [
+      0.863,
+      1
+     ],
+     [
+      0.91,
+      0
+     ],
+     [
+      1.01,
+      0.0
+     ],
+     [
+      1.07,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": [
+     [
+      0,
+      1
+     ],
+     [
+      0.91,
+      1
+     ],
+     [
+      0.97,
+      0
+     ],
+     [
+      1.02,
+      0
+     ],
+     [
+      1.07,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "fluxoComporta": [
+     [
+      0,
+      -1
+     ],
+     [
+      0.656,
+      -1
+     ],
+     [
+      0.736,
+      1
+     ],
+     [
+      0.813,
+      1
+     ],
+     [
+      0.87,
+      0
+     ],
+     [
+      0.98,
+      0
+     ],
+     [
+      1.03,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "etiq": [
+     "comporta@0.716-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       6.082,
+       4.599,
+       11.889
+      ],
+      "alvo": [
+       1.9,
+       2.0,
+       0.4
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.992,
+       4.353,
+       11.599
+      ],
+      "alvo": [
+       2.2,
+       1.9,
+       0.4
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.2,
+      "z": 3.2,
+      "rot": 0.5,
+      "acao": [
+       [
+        0.646,
+        "pensando"
+       ],
+       [
+        1,
+        "explicando"
+       ]
+      ],
+      "exp": "sorriso",
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": 1.2,
+       "z": 3.2,
+       "rot": 0.5,
+       "dur": 13.1,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "agua",
+      "trecho": 0,
+      "volume": 0.35
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 3,
+      "volume": 0.35
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas o lago traz galho, lixo e até peixe [leve] direto pra dentro da turbina. [leve] Então ponha uma *grade* na entrada do cano.",
+   "duracao": 7.6,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": 1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.3,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": 1,
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": 1,
+    "galhos": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.05,
+     "fim": 0.823
+    },
+    "peixeGrade": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.314,
+     "fim": 0.793
+    },
+    "grade": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.773,
+     "fim": 0.873
+    },
+    "etiq": [
+     "grade@0.813-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       4.69,
+       6.09,
+       8.294
+      ],
+      "alvo": [
+       -0.9,
+       3.0,
+       0.6
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.091,
+       5.315,
+       7.729
+      ],
+      "alvo": [
+       -0.7,
+       3.0,
+       0.6
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -0.6,
+      "z": 2.9,
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.673,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 1.2,
+       "z": 3.2,
+       "rot": 0.5,
+       "dur": 7.9,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "clique",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas se você fechar a comporta rápido demais, [leve] a água em movimento _bate_ no cano como um soco. [leve] Ao lado, uma *chaminé de equilíbrio* amortece a pancada.",
+   "duracao": 9.3,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": [
+     [
+      0,
+      1
+     ],
+     [
+      0.091,
+      1
+     ],
+     [
+      0.151,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.3,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": [
+     [
+      0,
+      1
+     ],
+     [
+      0.091,
+      1
+     ],
+     [
+      0.151,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": [
+     [
+      0,
+      1
+     ],
+     [
+      0.091,
+      1
+     ],
+     [
+      0.151,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "grade": 1,
+    "fluxoComporta": [
+     [
+      0,
+      1
+     ],
+     [
+      0.091,
+      1
+     ],
+     [
+      0.151,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "golpe": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.344,
+     "fim": 0.98
+    },
+    "chamine": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.758,
+     "fim": 0.858
+    },
+    "etiq": [
+     "chamine@0.828-0.99"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.9,
+    "camera": {
+     "de": {
+      "pos": [
+       4.876,
+       4.887,
+       10.229
+      ],
+      "alvo": [
+       0.5,
+       2.6,
+       0.4
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.945,
+       3.779,
+       9.592
+      ],
+      "alvo": [
+       1.6,
+       1.7,
+       0.4
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 0.8,
+      "z": 3.4,
+      "rot": 0.5,
+      "acao": "em-pe",
+      "exp": "surpreso",
+      "pose": [
+       [
+        0.544,
+        {
+         "ombroE.z": 0.5,
+         "ombroD.z": -0.5,
+         "cotoveloE.x": -0.5,
+         "cotoveloD.x": -0.5,
+         "maos": 1
+        }
+       ],
+       [
+        1,
+        {}
+       ]
+      ],
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": -0.6,
+       "z": 2.9,
+       "rot": 0.5,
+       "dur": 7.6,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "clique",
+      "trecho": 0,
+      "volume": 0.45
+     },
+     {
+      "som": "impacto_seco",
+      "trecho": 1,
+      "volume": 0.55
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas se chover demais, o lago *transborda*. [leve] Então abra um *vertedouro*: [leve] um toboágua pra água que sobra: [leve] a cheia passa por ali, e não por cima da parede.",
+   "duracao": 9.7,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": 1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": [
+     [
+      0,
+      3.3
+     ],
+     [
+      0.164,
+      3.3
+     ],
+     [
+      0.314,
+      3.74
+     ],
+     [
+      0.657,
+      3.55
+     ],
+     [
+      1,
+      3.5
+     ]
+    ],
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": 1,
+    "vazao": 2.2,
+    "vazaoJus": 1.8,
+    "saidaAgua": 1,
+    "grade": 1,
+    "chamine": 1,
+    "cidade": 0,
+    "chuva": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.264
+    },
+    "vert": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.337,
+     "fim": 0.557
+    },
+    "vertAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.477,
+     "fim": 0.657
+    },
+    "divisor": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.557,
+     "fim": 0.707
+    },
+    "etiq": [
+     "vert@0.387-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       6.647,
+       4.694,
+       8.241
+      ],
+      "alvo": [
+       1.6,
+       1.8,
+       -0.5
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.72,
+       3.271,
+       7.872
+      ],
+      "alvo": [
+       2.0,
+       1.4,
+       -0.5
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 2.4,
+      "z": 3.2,
+      "rot": 0.5,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 0.8,
+       "z": 3.4,
+       "rot": 0.5,
+       "dur": 9.3,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "chuva",
+     "volume": 0.1
+    },
+    "sfx": [
+     {
+      "som": "chuva",
+      "trecho": 0,
+      "volume": 0.3
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a parede fechou o caminho dos peixes. [leve] Então faça uma *escada de peixes*: [leve] degraus de água pra eles subirem, [leve] já que muitos peixes precisam subir o rio.",
+   "duracao": 9.7,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": 1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.5,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": 1,
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": 1,
+    "grade": 1,
+    "chamine": 1,
+    "vert": 1,
+    "vertAgua": 0.5,
+    "escada": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.373,
+     "fim": 0.493
+    },
+    "peixeTenta": {
+     "de": 1,
+     "para": 0,
+     "ini": 0.0,
+     "fim": 0.433
+    },
+    "peixeSobe": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.493,
+     "fim": 0.98
+    },
+    "etiq": [
+     "escada@0.493-0.99"
+    ],
+    "etiqS": 1.7,
+    "camera": {
+     "de": {
+      "pos": [
+       6.274,
+       5.893,
+       9.975
+      ],
+      "alvo": [
+       0.2,
+       1.5,
+       2.2
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       5.21,
+       5.496,
+       10.377
+      ],
+      "alvo": [
+       0.1,
+       1.6,
+       2.2
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": 1.0,
+      "z": 5.9,
+      "rot": 0.6,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 2.4,
+       "z": 3.2,
+       "rot": 0.5,
+       "dur": 9.7,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "agua",
+      "trecho": 2,
+      "volume": 0.35
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[curious] Mas a eletricidade perde força pelo caminho. [leve] Um *transformador* aumenta a tensão, [leve] e as *linhas de alta tensão* levam a luz até a sua casa: [leve] com tensão alta, a mesma energia viaja com menos perda.",
+   "duracao": 12.1,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": 1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.5,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": 1,
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": 1,
+    "casa": 1,
+    "grade": 1,
+    "chamine": 1,
+    "vert": 1,
+    "vertAgua": 0.5,
+    "escada": 1,
+    "trafo": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.209,
+     "fim": 0.309
+    },
+    "torres": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.35,
+     "fim": 0.6
+    },
+    "cidade": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.6,
+     "fim": 0.92
+    },
+    "etiq": [
+     "trafo@0.259-0.5",
+     "linhas@0.43-0.99"
+    ],
+    "etiqS": 1.0,
+    "camera": {
+     "de": {
+      "pos": [
+       8.15,
+       4.861,
+       11.03
+      ],
+      "alvo": [
+       4.5,
+       2.2,
+       1.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       8.4,
+       5.4,
+       9.0
+      ],
+      "alvo": [
+       11.0,
+       2.2,
+       -8.0
+      ],
+      "fov": 54
+     }
+    },
+    "gente": [
+     {
+      "x": 3.6,
+      "z": 3.2,
+      "rot": -0.2,
+      "acao": "explicando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {},
+       "x": 1.0,
+       "z": 5.9,
+       "rot": 0.6,
+       "dur": 9.7,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "zumbido",
+      "trecho": 1,
+      "volume": 0.4
+     },
+     {
+      "som": "whoosh",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "[amazed] Parabéns! Você acabou de inventar a *usina hidrelétrica*: [leve] a água cai, gira a turbina, [leve] e a turbina gira o ímã.",
+   "duracao": 6.9,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": 1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.45,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": 1,
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": 1,
+    "casa": 1,
+    "grade": 1,
+    "chamine": 1,
+    "vert": 1,
+    "vertAgua": 0.6,
+    "escada": 1,
+    "trafo": 1,
+    "torres": 1,
+    "cidade": 1,
+    "interroga": 0,
+    "etiq": [
+     "comporta@0.12-0.4",
+     "tubo@0.24-0.6",
+     "turbina@0.36-0.82",
+     "vert@0.54-0.97",
+     "casa@0.66-0.97"
+    ],
+    "etiqS": 1.0,
+    "etiqK": 0.8,
+    "etiqYmax": 0.62,
+    "camera": {
+     "de": {
+      "pos": [
+       6.606,
+       3.623,
+       9.446
+      ],
+      "alvo": [
+       2.4,
+       1.8,
+       0.0
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       4.2,
+       8.6,
+       17.0
+      ],
+      "alvo": [
+       3.4,
+       1.2,
+       -1.0
+      ],
+      "fov": 52
+     }
+    },
+    "gente": [
+     {
+      "x": -2.0,
+      "z": 3.0,
+      "rot": 0.45,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "explicando",
+       "pose": {},
+       "x": 3.6,
+       "z": 3.2,
+       "rot": -0.2,
+       "dur": 12.1,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": {
+     "som": "passaros",
+     "volume": 0.05
+    },
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "USINA HIDRELÉTRICA",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 66
+     }
+    ],
+    "sfx": [
+     {
+      "som": "jingle",
+      "trecho": 0,
+      "volume": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "texto": "No Brasil, *mais da metade* da eletricidade vem da água. [leve] Só a usina de Itaipu tem *20 turbinas* gigantes. [leve] Aquele rio da porta agora acende o _jogo inteiro_, [leve] e o tio vê o replay.",
+   "duracao": 11.7,
+   "cena": {
+    "cenario": "usina",
+    "segs": [
+     "mapa",
+     "itaipu",
+     "sala",
+     "sala"
+    ],
+    "sala": true,
+    "tv": 1,
+    "luzSala": 1,
+    "luzesMapa": {
+     "de": 0.3,
+     "para": 1,
+     "ini": 0.0,
+     "fim": 0.25
+    },
+    "barraAgua": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.039,
+     "fim": 0.265
+    },
+    "itaipu": {
+     "de": 0,
+     "para": 20,
+     "ini": 0.28,
+     "fim": 0.6
+    },
+    "vazao": 1.2,
+    "camera": {
+     "de": {
+      "pos": [
+       0.0,
+       17.0,
+       12.0
+      ],
+      "alvo": [
+       0.0,
+       0.0,
+       2.2
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       3.6,
+       2.8,
+       9.0
+      ],
+      "alvo": [
+       0.0,
+       1.0,
+       2.2
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -4.2,
+      "z": 5.8,
+      "rot": 0.2,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -2.0,
+       "z": 3.0,
+       "rot": 0.45,
+       "dur": 6.9,
+       "mover": false
+      }
+     },
+     {
+      "x": -3.4,
+      "z": 5.3,
+      "rot": -0.1,
+      "acao": "comemorando",
+      "exp": "sorriso",
+      "quem": "tio",
+      "esc": 1.0,
+      "pose": {
+       "ombroE.x": -0.4,
+       "ombroD.x": -0.4,
+       "ombroE.z": 2.4,
+       "ombroD.z": -2.4,
+       "cotoveloE.z": 0.3,
+       "cotoveloD.z": -0.3,
+       "maos": 1
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "rotulo",
+      "texto": "20 × 700 MW",
+      "trecho": 1,
+      "y": 40,
+      "tamanho": 60
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.4
+     },
+     {
+      "som": "jingle",
+      "trecho": 3,
+      "volume": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "texto": "Manda pro tio que desistiu de pedalar. [leve] E um barco que *afunda* de propósito e volta? [leve] *Siga* pra descobrir.",
+   "duracao": 6.6,
+   "cena": {
+    "cenario": "usina",
+    "sala": true,
+    "tv": 1,
+    "luzSala": 1,
+    "vazao": 1.6,
+    "sub": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.12,
+     "fim": 0.8
+    },
+    "interroga": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.529,
+     "fim": 0.729
+    },
+    "lampadaMarca": {
+     "de": 0,
+     "para": 1,
+     "ini": 0.792,
+     "fim": 0.942
+    },
+    "interrogaX": -4.0,
+    "interrogaY": 2.7,
+    "interrogaZ": 5.2,
+    "camera": {
+     "de": {
+      "pos": [
+       -0.34,
+       2.792,
+       14.018
+      ],
+      "alvo": [
+       -3.4,
+       1.4,
+       4.6
+      ],
+      "fov": 50
+     },
+     "para": {
+      "pos": [
+       -2.132,
+       2.68,
+       13.622
+      ],
+      "alvo": [
+       -3.4,
+       1.4,
+       4.6
+      ],
+      "fov": 50
+     }
+    },
+    "gente": [
+     {
+      "x": -3.9,
+      "z": 5.4,
+      "rot": 0.25,
+      "acao": "em-pe",
+      "exp": "sorriso",
+      "pose": {
+       "ombroD.x": -1.2,
+       "ombroD.z": -0.5,
+       "cotoveloD.x": -0.1,
+       "dedo": 1,
+       "ombroE.z": 0.12,
+       "cotoveloE.x": -0.18
+      },
+      "ant": {
+       "acao": "comemorando",
+       "pose": {
+        "ombroE.x": -0.4,
+        "ombroD.x": -0.4,
+        "ombroE.z": 2.4,
+        "ombroD.z": -2.4,
+        "cotoveloE.z": 0.3,
+        "cotoveloD.z": -0.3,
+        "maos": 1
+       },
+       "x": -4.2,
+       "z": 5.8,
+       "rot": 0.2,
+       "dur": 11.7,
+       "mover": true
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.4
+     },
+     {
+      "som": "ding",
+      "trecho": 1,
+      "volume": 0.45
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.45
+     }
+    ]
+   }
+  },
+  {
+   "texto": "*Curta.* [leve] *Comente* LUZ. [leve] *Compartilhe* [leve] e *siga* pra ver como as coisas *funcionam*.",
+   "duracao": 4.1,
+   "cena": {
+    "cenario": "usina",
+    "barragem": 1,
+    "turbX": 2.0,
+    "turbY": 0.7,
+    "turbVis": 1,
+    "helice": 1,
+    "plinto": 0,
+    "comporta": 1,
+    "comportaY": 3.0,
+    "comportaX": 0.58,
+    "tuboForcado": 1,
+    "aguaTubo": 1,
+    "raiox": 1,
+    "lago": 3.45,
+    "lampModo": "poste",
+    "lampVis": 1,
+    "giro": 9,
+    "luz": 1.2,
+    "fio": 1,
+    "corrente": 1,
+    "fluxoTurb": 1,
+    "vazao": 1.4,
+    "vazaoJus": 1.4,
+    "saidaAgua": 1,
+    "casa": 1,
+    "grade": 1,
+    "chamine": 1,
+    "vert": 1,
+    "escada": 1,
+    "trafo": 1,
+    "torres": 1,
+    "cidade": 1,
+    "entardecer": 0.7,
+    "camera": {
+     "de": {
+      "pos": [
+       1.8,
+       3.3,
+       10.2
+      ],
+      "alvo": [
+       1.8,
+       2.9,
+       3.0
+      ],
+      "fov": 46
+     },
+     "para": {
+      "pos": [
+       1.8,
+       3.25,
+       9.7
+      ],
+      "alvo": [
+       1.8,
+       2.9,
+       3.0
+      ],
+      "fov": 46
+     }
+    },
+    "gente": [
+     {
+      "x": 1.8,
+      "z": 3.0,
+      "rot": 0.0,
+      "acao": "acenando",
+      "exp": "sorriso",
+      "ant": {
+       "acao": "em-pe",
+       "pose": {
+        "ombroD.x": -1.2,
+        "ombroD.z": -0.5,
+        "cotoveloD.x": -0.1,
+        "dedo": 1,
+        "ombroE.z": 0.12,
+        "cotoveloE.x": -0.18
+       },
+       "x": -3.9,
+       "z": 5.4,
+       "rot": 0.25,
+       "dur": 6.6,
+       "mover": false
+      }
+     }
+    ],
+    "ambiencia": "nenhuma",
+    "cartoes": [
+     {
+      "tipo": "chamada",
+      "icone": "curtir",
+      "texto": "CURTA",
+      "trecho": 0
+     },
+     {
+      "tipo": "chamada",
+      "icone": "comentar",
+      "texto": "COMENTE",
+      "trecho": 1,
+      "sub": "LUZ"
+     },
+     {
+      "tipo": "chamada",
+      "icone": "compartilhar",
+      "texto": "COMPARTILHE",
+      "trecho": 2
+     },
+     {
+      "tipo": "chamada",
+      "icone": "seguir",
+      "texto": "SIGA",
+      "trecho": 3,
+      "sub": "PRA SABER COMO AS COISAS FUNCIONAM"
+     }
+    ],
+    "sfx": [
+     {
+      "som": "pop",
+      "trecho": 0,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 1,
+      "volume": 0.5
+     },
+     {
+      "som": "pop",
+      "trecho": 2,
+      "volume": 0.5
+     },
+     {
+      "som": "ding",
+      "trecho": 3,
+      "volume": 0.55
+     }
+    ]
+   }
+  }
+ ]
+}

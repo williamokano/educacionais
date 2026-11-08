@@ -490,8 +490,9 @@ const Perna: React.FC<{ p: Personagem3D; lado: 1 | -1; pose: Pose3D }> = ({ p, l
         {/* bota */}
         <group position={[0, -0.27, 0.035]} rotation={[-(g(`perna${k}.x`) + g(`joelho${k}.x`)) * 0.6, 0, 0]}>
           <Esfera r={0.1} p={[0, 0.0, 0]} esc={[0.85, 0.62, 1.35]} cor={p.sapato} rug={0.5} verniz={0.4} />
-          <mesh position={[0, -0.045, 0.005]} castShadow>
-            <boxGeometry args={[0.17, 0.025, 0.27]} />
+          {/* sola: mesma elipse do sapato, ligeiramente maior e achatada, só na parte de baixo */}
+          <mesh position={[0, -0.004, 0]} scale={[0.85 * 1.04, 0.62, 1.35 * 1.04]} castShadow>
+            <sphereGeometry args={[0.1, 32, 16, 0, Math.PI * 2, Math.PI * 0.62, Math.PI * 0.38]} />
             <Mat cor="#2a211b" rug={0.8} />
           </mesh>
         </group>

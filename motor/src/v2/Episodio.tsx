@@ -21,6 +21,9 @@ import { cenario3d, Palco } from "../v3d/Palco";
 
 const FADE = 5; // quadros
 const WHIP = 7; // quadros
+const FUSAO_FRAMES = 8; // fusão cruzada padrão: ~0,25 s a 30 fps
+const FUSAO_CARTAO = 10; // o cartão final padrão sobe em 10 quadros
+type Transicao = NonNullable<CenaV2["transicao"]>;
 const MISTURA = 0.35; // s: transição entre poses
 const DESLIZE = 0.5; // s: x que muda entre batidas sem `de`
 
@@ -252,8 +255,12 @@ const Diagramas: React.FC<{ cena: CenaV2; progresso: number; t: number; trechos:
 
 /* ---------- batida: câmera, transição, cenário, personagens, HUD, legenda ---------- */
 
-export const Batida: React.FC<{ b: BatidaV2; frames: number; offset: number; primeira: boolean; anterior?: { b: BatidaV2; frames: number; offset: number } }> = ({
-  b, frames, offset, primeira, anterior,
+export const Batida: React.FC<{
+  b: BatidaV2; frames: number; offset: number; primeira: boolean; anterior?: { b: BatidaV2; frames: number; offset: number };
+  /** transição de entrada já resolvida (padrão do episódio incluído); sem ela vale a da cena, ou "fade" */
+  transicao?: Transicao; fusaoFrames?: number; semLegenda?: boolean;
+}> = ({
+  b, frames, offset, primeira, anterior, transicao: transicaoProp, fusaoFrames = FUSAO_FRAMES, semLegenda,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -267,8 +274,11 @@ export const Batida: React.FC<{ b: BatidaV2; frames: number; offset: number; pri
   const Cenario = em3d ? null : buscar(pacote.cenarios, CENARIOS_GENERICOS, cena.cenario, "cenário");
 
   // transição de entrada
-  const transicao = primeira ? "corte" : cena.transicao ?? "fade";
-  const opacity = transicao === "fade" ? interpolate(frame, [0, FADE], [0, 1], { extrapolateRight: "clamp" }) : 1;
+  // "fusao": a batida anterior fica congelada embaixo (ver `Fusao`) e esta sobe de 0 a 1 por cima, sem passar pelo preto
+  const transicao: Transicao = primeira ? "corte" : transicaoProp ?? cena.transicao ?? "fade";
+  const opacity = transicao === "fade" ? interpolate(frame, [0, FADE], [0, 1], { extrapolateRight: "clamp" })
+    : transicao === "fusao" ? interpolate(frame, [0, Math.max(fusaoFrames, 1)], [0, 1], { extrapolateRight: "clamp" }) : 1;
+  const opacidadeLegenda = transicao === "fade" ? opacity : 1; // na fusão a legenda não acompanha a rampa: palavra no instante certo
   const kw = clamp01(frame / WHIP);
   const whipX = transicao === "whip" ? (1 - suave(kw)) * W * 0.35 : 0;
   const whipBlur = transicao === "whip" ? (1 - kw) * 26 : 0;
@@ -295,7 +305,8 @@ export const Batida: React.FC<{ b: BatidaV2; frames: number; offset: number; pri
   };
 
   return (
-    <AbsoluteFill style={{ opacity, transform: `translateX(${whipX}px)`, filter: whipBlur ? `blur(${whipBlur}px)` : undefined }}>
+    <AbsoluteFill style={{ transform: `translateX(${whipX}px)`, filter: whipBlur ? `blur(${whipBlur}px)` : undefined }}>
+     <AbsoluteFill style={{ opacity }}>
       <AbsoluteFill style={{ transform: `translateX(${dx + pan}px) scale(${zoom})`, transformOrigin: origem }}>
        <AbsoluteFill style={{ filter: cena.clima ? FILTROS_CLIMA[cena.clima] : undefined }}>
         {em3d ? (
@@ -320,7 +331,8 @@ export const Batida: React.FC<{ b: BatidaV2; frames: number; offset: number; pri
         )}
       </AbsoluteFill>
       <Cartoes cena={cena} progresso={progresso} t={t} frames={frames} trechos={trechos} />
-      <Legenda words={b.words} offset={offset} posicao={cena.legenda} />
+     </AbsoluteFill>
+      {!semLegenda && <AbsoluteFill style={{ opacity: opacidadeLegenda }}><Legenda words={b.words} offset={offset} posicao={cena.legenda} /></AbsoluteFill>}
     </AbsoluteFill>
   );
 };
@@ -336,6 +348,7 @@ export const pacoteDo = (data: EpisodioV2, episode: string): Pacote => {
 };
 
 /** Quadros de cada batida: do início dela até o início da próxima (a última vai até o cartão final). */
+type Janela = { b: BatidaV2; from: number; frames: number; offset: number };
 export const janelas = (data: EpisodioV2) => {
   const fim = Math.round(data.endcardStart * data.fps);
   return data.beats.map((b, i) => {
@@ -345,11 +358,44 @@ export const janelas = (data: EpisodioV2) => {
   });
 };
 
+/**
+ * Transição de entrada da batida `i`: a da cena, senão a do episódio (`transicao`), senão fusão cruzada.
+ * A primeira batida sempre abre em corte. `transicaoDur` (s) na cena ou no episódio muda a duração da fusão (padrão 0,25 s);
+ * limitada a uma batida curta (nunca mais que a batida entrando nem que a que sai).
+ */
+export const transicaoDa = (data: EpisodioV2, i: number, frames: number, framesAnterior: number): { transicao: Transicao; frames: number } => {
+  if (i === 0) return { transicao: "corte", frames: 0 };
+  const cena = data.beats[i].scene;
+  const t: Transicao = cena.transicao ?? data.transicao ?? "fusao";
+  const dur = cena.transicaoDur ?? data.transicaoDur;
+  const n = dur != null ? Math.round(dur * data.fps) : FUSAO_FRAMES;
+  const frames_ = Math.max(Math.min(n, frames - 1, framesAnterior), 0);
+  return t === "fusao" && frames_ > 0 ? { transicao: "fusao", frames: frames_ } : { transicao: t === "fusao" ? "corte" : t, frames: 0 };
+};
+
+/**
+ * Camada de baixo da fusão cruzada: a batida que sai, congelada no último quadro (sem legenda; ela é da batida que entra).
+ * Só existe nos `n` primeiros quadros da batida que entra: depois o componente é desmontado e o canvas WebGL dela é descartado
+ * (no máximo 2 contextos ao mesmo tempo).
+ */
+const Fusao: React.FC<{ saindo: Janela; antesDela?: Janela; n: number }> = ({ saindo, antesDela, n }) => {
+  const frame = useCurrentFrame();
+  if (frame >= n) return null;
+  return (
+    <AbsoluteFill>
+      <Freeze frame={saindo.frames - 1}>
+        <Batida b={saindo.b} frames={saindo.frames} offset={saindo.offset} primeira={false} anterior={antesDela} transicao="corte" semLegenda />
+      </Freeze>
+    </AbsoluteFill>
+  );
+};
+
 export const EpisodioV2Comp: React.FC<{ episode: string; data: EpisodioV2 | null }> = ({ episode, data }) => {
   if (!data) return null;
   const pacote = pacoteDo(data, episode);
   const js = janelas(data);
   const fim = Math.round(data.endcardStart * data.fps);
+  const ult = js[js.length - 1];
   const Final = pacote.cartaoFinal ?? CartaoFinalPadrao;
   return (
     <PacoteCtx.Provider value={pacote}><IdiomaCtx.Provider value={idiomaDe(data.idioma)}>
@@ -357,11 +403,21 @@ export const EpisodioV2Comp: React.FC<{ episode: string; data: EpisodioV2 | null
         {data.audio && <Audio src={staticFile(data.audio)} />}
         {js.map((j, i) => (
           <Sequence key={i} from={j.from} durationInFrames={j.frames} name={`batida ${i + 1} · ${j.b.scene.cenario}`}>
-            <Batida b={j.b} frames={j.frames} offset={j.offset} primeira={i === 0} anterior={i > 0 ? js[i - 1] : undefined} />
+            {(() => {
+              const f = transicaoDa(data, i, j.frames, i > 0 ? js[i - 1].frames : 0);
+              return (
+                <>
+                  {f.transicao === "fusao" && <Fusao saindo={js[i - 1]} antesDela={i > 1 ? js[i - 2] : undefined} n={f.frames} />}
+                  <Batida b={j.b} frames={j.frames} offset={j.offset} primeira={i === 0} anterior={i > 0 ? js[i - 1] : undefined}
+                    transicao={f.transicao} fusaoFrames={f.frames} />
+                </>
+              );
+            })()}
           </Sequence>
         ))}
         {data.endcard && (
           <Sequence from={fim} name="cartão final">
+            {ult && data.transicaoFinal !== "corte" && <Fusao saindo={ult} antesDela={js.length > 1 ? js[js.length - 2] : undefined} n={FUSAO_CARTAO} />}
             <Final ep={data} />
           </Sequence>
         )}

@@ -50,7 +50,9 @@ export type CenaV2 = {
   clima?: "neutro" | "manha" | "entardecer" | "noite" | "tensao" | "perigo" | "lembranca" | "recap";
   hud?: boolean; // false = sem HUD (cold open)
   legenda?: "topo" | "padrao"; // topo = y 420–640, quando a ação ocupa a parte de baixo
-  transicao?: "fade" | "corte" | "whip";
+  /** entrada da batida: fusao (fusão cruzada, padrão) · corte (seco) · fade (a partir do escuro, legado) · whip */
+  transicao?: "fusao" | "fade" | "corte" | "whip";
+  transicaoDur?: number; // s da fusão cruzada nesta batida (padrão 0,25)
   personagens?: PersonagemEmCena[];
   diagramas?: Diagrama[];
   cartoes?: Cartao[];
@@ -79,6 +81,9 @@ export type EpisodioV2 = {
   series: string;
   episode: number;
   clock?: string;
+  transicao?: "fusao" | "corte" | "fade"; // padrão das batidas que não dizem a sua (padrão: fusao)
+  transicaoDur?: number; // s da fusão cruzada (padrão 0,25)
+  transicaoFinal?: "fusao" | "corte"; // entrada do cartão final (padrão: fusao)
   tema?: string; // sobrescreve o tema do pacote (banco/temas)
   fps: number;
   audio: string | null; // null = vídeo mudo (cena avulsa)

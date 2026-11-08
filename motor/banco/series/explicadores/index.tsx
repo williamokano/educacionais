@@ -17,12 +17,22 @@ import { panela } from "./panela";
 import { elevador } from "./elevador";
 import { pararaios } from "./pararaios";
 import { aviao } from "./aviao";
+import { banheiro } from "./banheiro";
+import { usina } from "./usina";
+import { submarino } from "./submarino";
+import { cadeado } from "./cadeado";
+import { ziper } from "./ziper";
+import { paraquedas } from "./paraquedas";
+import { ponte } from "./ponte";
+import { relogio } from "./relogio";
+import { farol } from "./farol";
 import { FIEIS } from "./fieis";
 import { CARTOES_BUNKER } from "./cartoes-bunker";
 import { CARTOES_AIRFRYER } from "./cartoes-airfryer";
 import { MORADORES } from "./moradores";
 import { CARTOES_FREIO } from "./cartoes-freio";
 import { CARTOES_AR } from "./cartoes";
+import { Curva } from "./cartao-curva";
 import { ciclo } from "./ciclo";
 import { salaBalde } from "./sala";
 import { zeca } from "./zeca";
@@ -69,7 +79,7 @@ export const explicadores: Pacote = {
   nome: "Explicadores 3D",
   personagens: {},
   personagens3d: { zeca, eletricista, ...MORADORES, ...FIEIS },
-  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas, inducao, procissao, panela, elevador, pararaios, aviao },
-  cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER, ...CARTOES_AIRFRYER },
+  cenarios3d: { "sala-balde": salaBalde, ciclo, bancada, banho, solar, inversor, pista, abrigo, cozinha, microondas, inducao, procissao, panela, elevador, pararaios, aviao, banheiro, usina, submarino, cadeado, ziper, paraquedas, ponte, relogio, farol },
+  cartoes: { rotulo: Rotulo, medida: Medida, ...CARTOES_AR, ...CARTOES_FREIO, ...CARTOES_BUNKER, ...CARTOES_AIRFRYER, curva: Curva },
   qualidade3d: "suave",
 };
